@@ -1,0 +1,14 @@
+{
+  "C": {
+    "max_dH2_pct_nominal": 0.02857664078729624,
+    "gate_pct": 0.5,
+    "status": "PASS",
+    "H2_drop_over_20min_pct": 1.6328274042835549
+  },
+  "M": {
+    "max_dH2_pct_nominal": 0.0006270965312022678,
+    "gate_pct": 0.5,
+    "status": "PASS",
+    "H2_drop_over_20min_pct": 10.763591689828138
+  }
+}

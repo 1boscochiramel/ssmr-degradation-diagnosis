@@ -34,6 +34,14 @@ for c in ('CS1', 'CS2T', 'CS2P'):
 put('cs1_contaminated', ml['contaminated_first_session']['CS1_vs_published_pct'])
 put('gap_ratio_cs2t', (2.62e-4 - cs2t['conventional_iae_mol']) / (2.76379e-4 * .1))
 put('step_tau', step['tau_min']); put('step_delay', step['delay_min'])
+put('step_iae_screen', fr['STEP']['IAE_rel_diff_pct_screen'])
+cs2p = J(PKG / 'outputs' / 'CS2P_extended' / 'result.json')['tracking']
+put('gap_ratio_cs2p', (2.48e-4 - cs2p['conventional_iae_mol']) / (2.76379e-4 * .1))
+oc = J(PKG / 'octave' / 'comparison.json')
+put('oct_step', oc['STEP_np50_p6/wsl64']['vs_python']['STEP']['max_dH2_pct_nominal'])
+put('oct_cs1', oc['CS1_np50_p6/wsl64']['vs_python']['CS1']['max_dH2_pct_nominal'])
+v2 = J(D / 'validation_mode2.json')
+put('V1m2_C', v2['C']['max_dH2_pct_nominal']); put('V1m2_M', v2['M']['max_dH2_pct_nominal'])
 
 # ---- M2-M4 numbers
 put('V1_C', val['V1']['C']['max_dH2_pct_nominal']); put('V1_M', val['V1']['M']['max_dH2_pct_nominal'])
@@ -50,15 +58,20 @@ put('move_cost', m3['move_cost_ethanol_mol'])
 
 def frac(df, mode, s, mv):
     d = df[(df.scale == 1.0) & (df['mode'] == mode) & (df.set == s) & (df.move == mv) & (df.region != 'UNREACHABLE')]
-    return int((d.region == 'DISTINGUISHABLE').sum()), int((d.region == 'DIFFERENT_ACTION').sum()), len(d)
+    return int((d.region == 'DISTINGUISHABLE').sum()), int((d.region == 'DIFFERENT_ACTION').sum()), len(d), int((d.region == 'SAME_ACTION').sum())
+
+
+for nm, df in (('frozen', reg), ('A1', regA)):
+    dd = df[(df.scale == .5) & (df['drop'] == .01) & (df.region == 'DISTINGUISHABLE')]
+    put(f'one_pct_half_{nm}', int(len(dd)))
 
 
 rows = []
 for mode in (1, 2):
     for s in ('S1', 'S2', 'S3', 'S4'):
         for mv in (False, True):
-            a, b, n = frac(reg, mode, s, mv); a1, b1, _ = frac(regA, mode, s, mv)
-            rows.append((mode, s + ('+E' if mv else ''), n, a, b, a1, b1))
+            a, b, n, sm = frac(reg, mode, s, mv); a1, b1, _, sm1 = frac(regA, mode, s, mv)
+            rows.append((mode, s + ('+E' if mv else ''), n, a, sm, b, a1, sm1, b1))
             put(f'dist_m{mode}_{s}{"E" if mv else ""}', [a, b, a1, b1, n])
 for mode in (1, 2):
     for key in ('S1+E', 'S3', 'S4', 'S4+E'):
@@ -79,7 +92,7 @@ f3 = lambda x: f'{x:.3f}'
 f4 = lambda x: f'{x:.4f}'
 um = lambda x: f'{1e6 * x:.1f}'
 
-table_rows = '\n'.join(f'{m} & {s} & {n} & {a} & {b} & {a1} & {b1} \\\\' for m, s, n, a, b, a1, b1 in rows)
+table_rows = '\n'.join(f'{m} & {s} & {n} & {a} & {sm} & {b} & {a1} & {sm1} & {b1} \\\\' for m, s, n, a, sm, b, a1, sm1, b1 in rows)
 
 TEX = r'''\documentclass[10pt,a4paper]{article}
 \usepackage[margin=2.2cm]{geometry}
@@ -92,9 +105,9 @@ TEX = r'''\documentclass[10pt,a4paper]{article}
 \begin{abstract}\noindent
 When delivered hydrogen falls in a membrane reformer, can an operator tell catalyst deactivation from membrane fouling, feed shortfall or hydrogen-meter drift, and does it matter for what they do next?
 On the published SSMR benchmark (Arcila-Osorio et al., 2026), reproduced in Python and checked against the authors' code in MATLAB (largest hydrogen difference <<ml_max_dH2>>\% of nominal), we map each cause and loss level to three regions: distinguishable, indistinguishable with the same action, and indistinguishable with a different action.
-With the hydrogen flow alone none of the reachable scenarios is distinguishable, because a slow meter drift can mimic any process loss and calls for the opposite action.
+With the hydrogen flow alone none of the reachable scenarios is distinguishable, because an offset of the hydrogen meter can mimic any process loss and calls for the opposite action.
 A bounded six-minute feed move of +0.0003 mol/min, costing <<move_cost>> mol of ethanol, separates catalyst from membrane loss at a 5\% hydrogen drop by <<m3_move_sd>> noise standard deviations and resolves most losses of 5\% or more, while extra steady sensors without the move add less.
-These are simulation results on the authors' exponential deterioration mechanisms with a declared noise model; no 1\% loss is distinguishable under any measurement set tested.
+These are simulation results on the authors' exponential deterioration mechanisms with a declared noise model; at the declared noise level no 1\% loss is distinguishable under any measurement set tested.
 \end{abstract}
 
 \section{Problem}
@@ -104,7 +117,7 @@ The benchmark of Arcila-Osorio, Destro, Ocampo-Martinez, Llorca and Braatz \cite
 Serra, Ocampo-Martinez, Li and Llorca \cite{serra} designed linear MPC for an ethanol steam reformer with Pd-Ag membrane separation on a model fitted to the same group's experiments; they do not address degradation diagnosis. Scott, Findeisen, Braatz and Raimondo \cite{scott} and Raimondo, Marseglia, Braatz and Scott \cite{raimondo} design open- and closed-loop inputs that guarantee fault diagnosis for faults modelled as switches between linear systems with bounded uncertainty (zonotopes). The feed move below is an active-diagnosis input in their sense. What this note adds is narrower and practical: a computed map, on this nonlinear benchmark, of where the cause is identifiable from the signals an operator has, where the distinction changes the operating action, and what a one-step bounded move buys in operator units. We make no claim about optimal input design. The broader fault-diagnosis benchmark literature was not surveyed for this draft (see Limitations).
 
 \section{Baseline reproduction (M1)}
-The released MATLAB code (commit c628084) was run untouched in MATLAB R2026a for the four reference cases; only the README case settings were changed, in copies. A vectorised Python port of the same equations was compared on matched samples (Table~\ref{tab:m1}). Every approved equivalence gate passes: largest hydrogen difference <<ml_max_dH2>>\% of nominal (gate 0.5\%), largest IAE difference <<ml_max_dIAE>>\% (gate 1\%).
+The released MATLAB code (commit c628084) was run in MATLAB R2026a for the four reference cases with only the README case settings changed, in copies, plus one inserted line applying the ethanol step in the open-loop STEP case. A vectorised Python port of the same equations was compared on matched samples (Table~\ref{tab:m1}). Every approved equivalence gate passes: largest hydrogen difference <<ml_max_dH2>>\% of nominal (gate 0.5\%), largest IAE difference <<ml_max_dIAE>>\% over the three closed-loop cases (gate 1\%). For the open-loop STEP case IAE against the set-point is not a gate; it differed by <<step_iae_screen>>\% only because the MATLAB integral spanned one more sample (41 against 40 rows).
 
 \begin{table}[h]\centering\small
 \caption{Native MATLAB versus Python port, and MATLAB versus the paper's reported IAE.}\label{tab:m1}
@@ -116,30 +129,30 @@ CS2T & <<CS2T_dH>> & <<CS2T_dU>> & <<CS2T_dI>> & <<ml_CS2T_vs_pub>>\% \\
 CS2P & <<CS2P_dH>> & <<CS2P_dU>> & <<CS2P_dI>> & <<ml_CS2P_vs_pub>>\% \\\bottomrule
 \end{tabular}\end{table}
 
-Case study 1 reproduces the paper. The disturbance cases do not, in MATLAB either, so the difference is between the released code and the paper, not in the port. For CS2T the gap equals <<gap_ratio_cs2t>> times one 0.1-min sample of full set-point error at the steam-only start; this pattern was found after the comparison and is a question for the authors, not a pass. The paper's ``time constant 0.25~min'' is not what a first-order-plus-dead-time fit returns (<<step_tau>>~min with <<step_delay>>~min dead time); the elapsed time from the input change to 63.2\% of the rise is close to 0.25~min. Two further findings: \texttt{control.m} keeps PID state in persistent variables that the script's \texttt{clear} does not reset, so running cases back to back moved CS1's IAE by <<cs1_contaminated>>\%; and GNU Octave's \texttt{ode15s} ignores the \texttt{NonNegative} option and cannot integrate the Mode~2 steam-only start, so Octave is not a substitute reference for Mode~2.
+Case study 1 reproduces the paper. The disturbance cases do not, in MATLAB either, so the difference is between the released code and the paper, not in the port. For CS2T the gap equals <<gap_ratio_cs2t>> times one 0.1-min sample of full set-point error at the steam-only start (for CS2P <<gap_ratio_cs2p>>, a weaker match); this pattern was found after the comparison and is a question for the authors, not a pass. The paper's ``time constant 0.25~min'' is not what a first-order-plus-dead-time fit returns (<<step_tau>>~min with <<step_delay>>~min dead time); the elapsed time from the input change to 63.2\% of the rise is close to 0.25~min. Two further findings: \texttt{control.m} keeps PID state in persistent variables that the script's \texttt{clear} does not reset, so running cases back to back moved CS1's IAE by <<cs1_contaminated>>\%; and GNU Octave's \texttt{ode15s} ignores the \texttt{NonNegative} option and cannot integrate the Mode~2 steam-only start, so Octave is not a substitute reference for Mode~2. In Mode~1 Octave agrees with Python on CS1 (<<oct_cs1>>\% of nominal) but narrowly fails the 0.5\% gate on STEP (<<oct_step>>\%, in the two steepest samples of the rise).
 
 \section{Method (M2--M4)}
-\textbf{Quasi-steady map.} Deterioration is slow against the reactor response, so steady states were computed on a grid of catalyst multiplier $a_c$, membrane multiplier $a_m$ (0.4--1) and ethanol feed (0.0018--0.0024 mol/min), 210 points, all converged, and interpolated. Gate V1: against full dynamic runs of the authors' two deterioration schedules over 20~min the map differs by at most <<V1_C>>\% (catalyst) and <<V1_M>>\% (membrane) of nominal hydrogen (gate 0.5\%). Gate V2: held-out points differ by at most <<V2_max>>\%. (Figure~\ref{fig:v1}.)
+\textbf{Quasi-steady map.} Deterioration is slow against the reactor response, so steady states were computed along two single-fault lines per mode (catalyst multiplier $a_c$ from 1 to 0.4 with the membrane nominal, and membrane multiplier $a_m$ from 0.95 to 0.4 with the catalyst nominal), each at seven ethanol feeds (0.0018--0.0024 mol/min): 105 points per mode, 210 in all, all converged, interpolated by splines. The map has no joint $(a_c,a_m)$ points; the 2-D grid used in M6/M7 is separate. Gate V1: against full dynamic runs of the authors' two deterioration schedules over 20~min the map differs by at most <<V1_C>>\% (catalyst) and <<V1_M>>\% (membrane) of nominal hydrogen in Mode~1, and <<V1m2_C>>\% and <<V1m2_M>>\% in Mode~2 (gate 0.5\%; Mode~2 added by a dated amendment after review). Gate V2: held-out points differ by at most <<V2_max>>\%. (Figure~\ref{fig:v1}.)
 
 \textbf{Measurement layer.} Declared scenario values, not instrument specifications: hydrogen flow noise 0.5\% of nominal with an unknown constant bias of up to 0.5\%; outlet temperature 0.5~K noise, 1~K bias; waste-gas flow 1\%/2\%; micro-GC mole fractions of H$_2$, CH$_4$, CO, CO$_2$ at 1\% relative noise, 2\% bias, every 3~min with 3~min delay; a 10-min decision window. Measurement sets: S1 = H$_2$ flow; S2 = + outlet temperature; S3 = + waste flow; S4 = + mole fractions; ``+E'' adds the feed move (+0.0003 mol/min held 5~min after 1~min settling).
 
-\textbf{Hypotheses and test.} Catalyst loss, membrane loss, feed shortfall (delivered ethanol a fraction of the command) and additive hydrogen-meter drift, each with one scalar severity, set to give 1, 2, 5, 10 or 20\% hydrogen drop at the mode's nominal feed. For each alternative cause the severity that best explains the data is fitted; its bias-robust statistic $\Lambda$ is compared with a $\chi^2_{0.99}$ threshold. The frozen protocol used $k-1$ degrees of freedom; because this penalises larger sensor sets, a dated amendment (A1) with one degree of freedom is reported beside it. Local structural identifiability: the noise-scaled sensitivity matrix has rank <<rank_m1_S1E>> for S1+E and <<rank_m1_S4E>> for S4+E in Mode~1 (four parameters).
+\textbf{Hypotheses and test.} Catalyst loss, membrane loss, feed shortfall (delivered ethanol a fraction of the command) and an additive hydrogen-meter offset (constant over the decision window), each with one scalar severity, set to give 1, 2, 5, 10 or 20\% hydrogen drop at the mode's nominal feed. For each alternative cause the severity that best explains the data is fitted; its bias-robust statistic $\Lambda$ is compared with a $\chi^2_{0.99}$ threshold. The frozen protocol used $k-1$ degrees of freedom; because this penalises larger sensor sets, a dated amendment (A1) with one degree of freedom is reported beside it. Local structural identifiability: the noise-scaled sensitivity matrix has rank <<rank_m1_S1E>> for S1+E and <<rank_m1_S4E>> for S4+E in Mode~1 (four parameters).
 
 \textbf{Actions.} For a process loss, the operator raises ethanol to restore the set-point if that is feasible within the 0.0024~mol/min bound; otherwise the component must be serviced. For meter drift, the action is to recalibrate and not change the feed. Costs of acting on the wrong cause are hydrogen shortfall or wasted ethanol, in mol/min.
 
 \section{Results}
-\textbf{Worked ambiguity case (M3).} In Mode~1 at 0.0021~mol/min, catalyst activity <<thC>> and membrane factor <<thM>> both give a 5\% hydrogen drop. Hydrogen, outlet temperature and waste flow differ by less than the bias bound; methane mole fraction differs by <<m3_ch4_sd>> noise units after bias. After the feed move, the hydrogen response differs by <<m3_move_sd>> standard deviations of the measured difference; $\Lambda$ for the wrong cause is <<m3_lambda_E5>> (truth catalyst) and <<m3_lambda_E5_M>> (truth membrane), above the threshold of 6.63, so the stopping rule declares the right cause after 5~min for every measurement set (Figure~\ref{fig:m3}). Over 30~min, the authors' catalyst schedule $e^{-0.01t}$ produces the same hydrogen signal as a membrane decaying at only <<m3_keq>>/min: hydrogen here is far more sensitive to the membrane than to the catalyst, which is why the catalyst cannot reach a 20\% hydrogen drop inside the tested range.
+\textbf{Worked ambiguity case (M3).} In Mode~1 at 0.0021~mol/min, catalyst activity <<thC>> and membrane factor <<thM>> both give a 5\% hydrogen drop. Hydrogen, outlet temperature and waste flow differ by less than the bias bound; methane mole fraction differs by <<m3_ch4_sd>> noise units after bias. After the feed move, the hydrogen response differs by <<m3_move_sd>> standard deviations of the measured difference; $\Lambda$ for the wrong cause is <<m3_lambda_E5>> (truth catalyst) and <<m3_lambda_E5_M>> (truth membrane), above the threshold of 6.63, so the stopping rule declares the right cause after 5~min for every measurement set (Figure~\ref{fig:m3}); this rule compares catalyst against membrane only, the other two causes being handled by the map below. Over 30~min, the authors' catalyst schedule $e^{-0.01t}$ produces the same hydrogen signal as a membrane decaying at roughly <<m3_keq>>/min (fitted over the 30~min): hydrogen here is far more sensitive to the membrane than to the catalyst, which is why the catalyst cannot reach a 20\% hydrogen drop inside the tested range.
 
-\textbf{Operating map (M4).} Table~\ref{tab:map} counts the reachable scenarios (four causes, five loss levels) per set. With S1 no scenario is distinguishable in either mode, under either threshold. The feed move is what changes the picture (Figure~\ref{fig:map}). No 1\% loss is distinguishable under any set or threshold. Under A1 with halved or doubled noise, S1+E distinguishes <<sens_half_0>> and <<sens_double_0>> of the <<sens_half_1>> reachable scenarios across both modes (<<sens_base>> at nominal noise).
+\textbf{Operating map (M4).} Table~\ref{tab:map} counts the reachable scenarios (four causes, five loss levels) per set; in Mode~2 the feed shortfall is unreachable because the nominal feed already sits at the 0.0018~mol/min lower bound, and a 20\% meter offset lies outside its range, leaving 12. With S1 no scenario is distinguishable in either mode, under either threshold. The feed move is what changes the picture (Figure~\ref{fig:map}). At the declared noise level no 1\% loss is distinguishable under any set or threshold; with half the noise, <<one_pct_half_frozen>> (frozen) and <<one_pct_half_A1>> (A1) one-percent scenarios become distinguishable. Under A1 with halved or doubled noise, S1+E distinguishes <<sens_half_0>> and <<sens_double_0>> of the <<sens_half_1>> reachable scenarios across both modes (<<sens_base>> at nominal noise).
 
 \begin{table}[h]\centering\small
-\caption{Reachable scenarios that are distinguishable (D) or indistinguishable with a different action (X), frozen threshold and amendment A1.}\label{tab:map}
-\begin{tabular}{llrrrrr}\toprule
-mode & set & $n$ & D frozen & X frozen & D (A1) & X (A1) \\\midrule
+\caption{Reachable scenarios per set: distinguishable (D), indistinguishable with the same action (s), indistinguishable with a different action (X); frozen threshold and amendment A1.}\label{tab:map}
+\begin{tabular}{llrrrrrrr}\toprule
+mode & set & $n$ & D & s & X & D (A1) & s (A1) & X (A1) \\\midrule
 <<TABLE_ROWS>>
 \bottomrule\end{tabular}\end{table}
 
-\textbf{Value of information (Figure~\ref{fig:voi}).} Averaged over the scenarios, and relative to S1, the feed move avoids <<voiA_m1_S1E_EtOH>>~$\mu$mol/min of wasted ethanol and <<voiA_m1_S1E_H2>>~$\mu$mol/min of hydrogen shortfall in Mode~1 (A1), and <<voiA_m2_S1E_EtOH>> and <<voiA_m2_S1E_H2>>~$\mu$mol/min in Mode~2. The move itself costs <<move_cost>>~mol of ethanol, repaid in about <<payback>>~min of avoided waste in Mode~1. Adding waste flow and mole fractions without the move avoids <<voiA_m1_S4_EtOH>>~$\mu$mol/min in Mode~1: the move is worth more than the extra sensors.
+\textbf{Value of information (Figure~\ref{fig:voi}).} Averaged over the scenarios, and relative to S1, the feed move avoids <<voiA_m1_S1E_EtOH>>~$\mu$mol/min of wasted ethanol and <<voiA_m1_S1E_H2>>~$\mu$mol/min of hydrogen shortfall in Mode~1 (A1), and <<voiA_m2_S1E_EtOH>> and <<voiA_m2_S1E_H2>>~$\mu$mol/min in Mode~2. The move itself costs <<move_cost>>~mol of ethanol, repaid in about <<payback>>~min of avoided waste in Mode~1. These averages assume equal odds among the causes that survive the test and weight every scenario equally. Adding waste flow and mole fractions without the move avoids <<voiA_m1_S4_EtOH>>~$\mu$mol/min in Mode~1: the move is worth more than the extra sensors.
 
 \section{What to measure next on the rig}
 On the authors' Pd-Ag rig: at steady operation, record permeate hydrogen (Bronkhorst meter) for 10~min, step ethanol by +0.0003~mol/min for 6~min, return. Predicted responses under each cause come from \texttt{diag/m3\_case.py}. Declare catalyst or membrane loss when exactly one hypothesis survives the $\Lambda$ test; if both survive, repeat with a 10-min hold; if both still survive, report ``deteriorated, cause not established''. Recalibrating the hydrogen meter against the soap-bubble retentate balance before the move removes the drift hypothesis, which is the most costly confusion in the map.
@@ -148,7 +161,7 @@ On the authors' Pd-Ag rig: at steady operation, record permeate hydrogen (Bronkh
 \begin{enumerate}\itemsep0pt
 \item \emph{Simulation only.} No experimental data; the deterioration laws are the authors' scenarios, not lifetime models. Conceded.
 \item \emph{Noise and bias values are declared, not measured.} Sensitivity at $\times0.5$ and $\times2$ is reported; instrument data would replace them.
-\item \emph{Quasi-steady approximation.} Checked against full dynamics (V1) for Mode~1 only.
+\item \emph{Quasi-steady approximation.} Checked against full dynamics (V1) in both modes for the authors' two schedules; faster or oscillating faults are not covered.
 \item \emph{Threshold choice.} The frozen rule penalises extra sensors; A1 is post-hoc. Both are shown; the main conclusions hold under both.
 \item \emph{Paper mismatch.} CS2T/CS2P and the time constant do not match the paper, in MATLAB too; the author questions are open.
 \item \emph{Single faults, np = 50, Modes 1--2.} Simultaneous faults, the fine grid and Mode~3 are not covered.
@@ -157,7 +170,7 @@ On the authors' Pd-Ag rig: at steady operation, record permeate hydrogen (Bronkh
 \end{enumerate}
 
 \section*{Reproducibility}
-One command rebuilds every number (\texttt{run\_all.py}); protocols are frozen and hashed before results; \texttt{verify\_note.py} asserts every number in this note against the output files. Upstream code: MIT licence.
+The repository-root \texttt{run\_all.py} rebuilds every report, table and figure from saved outputs (--full also recomputes them); native MATLAB numbers are transcribed from MATLAB Online, with screenshots archived. Protocols were written before their runs and amended in place with dated amendments; the stored hashes certify the current text, and the pre-result hash history is recorded separately. \texttt{verify\_note.py} asserts every printed number against the output files. Upstream code: MIT licence.
 
 \begin{thebibliography}{9}\small
 \bibitem{bench} M.~Arcila-Osorio, F.~Destro, C.~Ocampo-Martinez, J.~Llorca, R.~D.~Braatz, A benchmark simulator for advanced control of ethanol steam reforming, Renewable Energy 256 (2026) 124743, doi:10.1016/j.renene.2025.124743. Code: github.com/arcmateo/SSMR\_Benchmark.
@@ -187,7 +200,7 @@ repl = {
     'voiA_m1_S1E_EtOH': um(N['voiA_m1_S1+E_EtOH']), 'voiA_m1_S1E_H2': um(N['voiA_m1_S1+E_H2']),
     'voiA_m2_S1E_EtOH': um(N['voiA_m2_S1+E_EtOH']), 'voiA_m2_S1E_H2': um(N['voiA_m2_S1+E_H2']),
     'voiA_m1_S4_EtOH': um(N['voiA_m1_S4_EtOH']), 'payback': f'{N["payback_min_m1"]:.0f}',
-    'TABLE_ROWS': table_rows}
+    'TABLE_ROWS': table_rows, 'step_iae_screen': f"{N['step_iae_screen']:.1f}", 'gap_ratio_cs2p': f3(N['gap_ratio_cs2p']), 'oct_step': f3(N['oct_step']), 'oct_cs1': f"{N['oct_cs1']:.2f}", 'V1m2_C': f3(N['V1m2_C']), 'V1m2_M': f"{N['V1m2_M']:.4f}", 'one_pct_half_frozen': str(N['one_pct_half_frozen']), 'one_pct_half_A1': str(N['one_pct_half_A1'])}
 for c in ('STEP', 'CS1', 'CS2T', 'CS2P'):
     repl[f'{c}_dH'] = f4(fr[c]['max_dH2_pct_nominal_vs_python']); repl[f'{c}_dU'] = f4(fr[c]['max_dEtOH_pct_nominal'])
     if c != 'STEP':

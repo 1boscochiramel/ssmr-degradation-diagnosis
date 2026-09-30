@@ -51,7 +51,7 @@ def build():
     ml = json.loads((PKG / 'matlab_native' / 'MATLAB_NATIVE_RESULTS.json').read_text())
     fr = ml['fresh_session_results']
     L += ['## Bottom line', '',
-          f"1. **Native MATLAB reference obtained** ({ml['runtime']}): the untouched author script was run for STEP, CS1, CS2T and CS2P. "
+          f"1. **Native MATLAB reference obtained** ({ml['runtime']}): the released author script was run for STEP, CS1, CS2T and CS2P with only the README case settings changed in copies (plus one inserted line applying the ethanol step in the open-loop STEP case). "
           f"Against it, the Python port's largest H2 difference is {max(fr[c]['max_dH2_pct_nominal_vs_python'] for c in ('STEP','CS1','CS2T','CS2P')):.4f}% of nominal "
           f"and its largest IAE difference {max(fr[c]['IAE_rel_diff_pct'] for c in ('CS1','CS2T','CS2P')):.3f}%: every approved equivalence gate passes for all four cases (section 2a).",
           f"2. CS1 reproduces the paper: MATLAB IAE {fr['CS1']['IAE_matlab_mol']:.4e} mol ({fr['CS1']['matlab_vs_published_pct']:+.2f}% vs published), Python {100*(py('CS1')['tracking']['conventional_iae_mol']-PUB['CS1_iae_mol'])/PUB['CS1_iae_mol']:+.2f}%.",
@@ -62,7 +62,7 @@ def build():
           f"running cases back to back in one MATLAB session changed CS1's IAE by {ml['contaminated_first_session']['CS1_vs_published_pct']:+.2f}% vs published. `clear control` fixes it.",
           "5. The paper's 'time constant 0.25 min' is not what a first-order-plus-dead-time fit returns (about 0.05 min); the elapsed time from the input step "
           'to 63.2% of the rise is about 0.25 min (section 6). The frozen time-constant gate stays failed.',
-          '6. Octave cannot integrate the Mode 2 steam startup (NonNegative is ignored by Octave ode15s; section 4). Octave agrees with Python on Mode 1.',
+          '6. Octave cannot integrate the Mode 2 steam startup (NonNegative is ignored by Octave ode15s; section 4). In Mode 1, Octave agrees with Python on CS1 (max dH2 0.12% of nominal) but STEP narrowly FAILS the 0.5% gate (0.566%, in the two steepest rows; section 3).',
           '7. M1 status: equivalence CLOSED (native MATLAB). Paper gates: CS1 PASS; CS2T, CS2P and the STEP time constant FAIL, attributed to the '
           'code-vs-paper definitions, pending the two author questions (AUTHOR_QUESTIONS_DRAFT.md, not sent).', '']
     L += ['## 2a. Equivalence against native MATLAB (primary)', '',
@@ -77,7 +77,7 @@ def build():
                  f"{r.get('IAE_matlab_mol', float('nan')):.6e} | {r.get('IAE_python_same_grid_mol', float('nan')):.6e} | "
                  f"{r.get('IAE_rel_diff_pct', float('nan')):.3f} | {'PASS' if ok else 'FAIL'} | "
                  f"{('%+.2f%%' % r['matlab_vs_published_pct']) if 'matlab_vs_published_pct' in r else 'n/a (open loop)'} |")
-    L += ['', f"Reproduce: `matlab_native/run_in_matlab_online.m`. CS2T first run vs fresh run: max |dH2| = {fr['CS2T']['first_run_vs_fresh_max_abs_dH2']} (deterministic).", '']
+    L += ['', f"STEP is open loop: IAE against the set-point is not a gate. MATLAB showed {fr['STEP']['IAE_rel_diff_pct_screen']:.3f}% IAE difference on screen, because its integral covered 41 rows (0-4.0 min) and the Python trace 40 (0-3.9 min); the row-matched H2 comparison above is the STEP evidence.", '', f"Reproduce: `matlab_native/run_in_matlab_online.m`. CS2T first run vs fresh run: max |dH2| = {fr['CS2T']['first_run_vs_fresh_max_abs_dH2']} (deterministic).", '']
 
     # ---- runs
     L += ['## 1. Runs (all attempts kept)', '',
@@ -134,8 +134,7 @@ def build():
           'reactor) with IDA "corrector convergence failed repeatedly or with |h| = hmin"; failure times are in the run table.',
           '- The Python port also needed a documented positivity extension to pass this startup (other lane, '
           '`NUMERICAL_EXTENSION_PROTOCOL.md`). No non-MATLAB solver tried so far integrates this startup as released.',
-          '- Consequence: Mode 2 equivalence against a native run is an open gap that needs MATLAB (MATLAB Online or an '
-          'author-supplied trace).', '']
+          '- Consequence: Octave cannot serve as the Mode 2 native reference; native MATLAB does (section 2a).', '']
 
     # ---- IAE offset
     L += ['## 5. The Mode 2 IAE gap is one sample of startup error (post-hoc)', '',
@@ -195,7 +194,7 @@ def build():
           '`AUTHOR_QUESTIONS_DRAFT.md`, not sent).',
           '3. If both answers match the readings above, re-run the frozen gates with the confirmed definitions, as a '
           'dated amendment; the current failures stay on the record.',
-          '4. Until then, no identifiability or diagnosis results (Bosco condition 3).', '']
+          '4. Bosco condition 3 (no diagnosis results before a native comparison) is met since the MATLAB check of section 2a; the M2-M4 results were produced under it.', '']
     return '\n'.join(L) + '\n'
 
 
