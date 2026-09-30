@@ -1,0 +1,379 @@
+{
+  "pdf_sha256": "87d520a64a3133d2e93e7d72cd3384f105b7d16dc90c59608a69dd33cb9bf3e5",
+  "generator_sha256": "28b39a228540f43a567048f090925bdf5c67029fca559f66ed9455b3c7585370",
+  "inputs": {
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\results\\diagnosis_summary.csv": "28177fd6e0fc18fc31d380b332295e520fca48512de2fa32ce26d7504e4e8414",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_feed_only_20260930\\outputs\\paired_summary.csv": "534198c69166425d707db4ae442185a72dffe3bb40f02a9a1a43f65c8c226a0d",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\outputs\\paired_summary.csv": "24c225aab4d6ed43f5a3e4e89336e61c346b3fefd92793f44f42fc1daa04df78",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\outputs\\paired_trials.csv": "0f83b7980ebbb22c817051a581e3aa44a8e4c973f7e0fb8a56d327b49995fc68",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\checks\\verification.json": "e3f9ed83a41cfdb2dfe6af62230a26cb58c5650ac88df48be7da74369e4f6185",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\benchmark_audit\\findings_evidence.json": "f808fd8626fd6b86fb882f8346ca6e216885cb4ff4de927865439265b72c6888",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\note\\tradeoff.png": "43580003cb723b7ca9ffa52e2346999ed29e8aa02fa80eba8b7e87e1ea36189d",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\note\\figure_coordinates.csv": "7d950789f8f5657e7c6bf5b67e173e16ddaa35bf502c7bef522ed6ba0ae9eb5c",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\work\\audit_check\\ssmr_native\\baseline\\CS1_np50_matlab.csv": "66d2394fb6b74e3118b3219f726f479c7c53385b373f06032929b4ce04e2f6fe",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\work\\audit_check\\ssmr_native\\baseline\\CS2T_np50_matlab.csv": "1f2d733225c6a3eb8c8f5e6e90576d944fa9795a172c85a91c7b8b776f75217b",
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\work\\audit_check\\ssmr_native\\baseline\\CS2P_np50_matlab.csv": "40438c850c020a6bddd062d089af3f0764c434b1a2d78c8294194891221defb1"
+  },
+  "claims": [
+    {
+      "kind": "computed",
+      "win": {
+        "m1_C_d05_r1": {
+          "diag": 843,
+          "blind": 157,
+          "tie": 0
+        },
+        "m1_M_d05_r1": {
+          "diag": 841,
+          "blind": 159,
+          "tie": 0
+        },
+        "m2_C_d05_r1": {
+          "diag": 981,
+          "blind": 19,
+          "tie": 0
+        },
+        "m2_M_d05_r1": {
+          "diag": 998,
+          "blind": 2,
+          "tie": 0
+        }
+      },
+      "split": {
+        "m1_C_d05_r1": {
+          "C": {
+            "n": 882,
+            "mean_mmol": 0.000265365555159371,
+            "share_mmol": 0.00023405241965056522
+          },
+          "INCONCLUSIVE": {
+            "n": 113,
+            "mean_mmol": 0.0005273856351119836,
+            "share_mmol": 5.959457676765415e-05
+          },
+          "MODEL_INCOMPATIBLE": {
+            "n": 5,
+            "mean_mmol": 0.1305170937275203,
+            "share_mmol": 0.0006525854686376015
+          }
+        },
+        "m1_M_d05_r1": {
+          "M": {
+            "n": 1000,
+            "mean_mmol": 2.7095334538147005e-05,
+            "share_mmol": 2.7095334538147005e-05
+          }
+        },
+        "m2_C_d05_r1": {
+          "C": {
+            "n": 638,
+            "mean_mmol": -0.00048186755414117606,
+            "share_mmol": -0.00030743149954207035
+          },
+          "INCONCLUSIVE": {
+            "n": 344,
+            "mean_mmol": -0.00042848370304112527,
+            "share_mmol": -0.00014739839384614708
+          },
+          "MODEL_INCOMPATIBLE": {
+            "n": 18,
+            "mean_mmol": 0.14568347250814906,
+            "share_mmol": 0.002622302505146683
+          }
+        },
+        "m2_M_d05_r1": {
+          "M": {
+            "n": 998,
+            "mean_mmol": -0.00033791436679749464,
+            "share_mmol": -0.00033723853806389965
+          },
+          "MODEL_INCOMPATIBLE": {
+            "n": 2,
+            "mean_mmol": 0.2450256232524047,
+            "share_mmol": 0.0004900512465048094
+          }
+        }
+      },
+      "iae": {
+        "CS1": {
+          "eq13": 7.932138421375991e-05,
+          "vs_paper_pct": -0.2246739449560811,
+          "trapz_abs": 7.946054110076992e-05,
+          "eq13_vs_trapz_pct": 0.17512703170940336
+        },
+        "CS2T": {
+          "eq13": 0.00022678832222826004,
+          "vs_paper_pct": -13.43957166860305,
+          "trapz_abs": 0.00023443976811259005,
+          "eq13_vs_trapz_pct": 3.26371500276156
+        },
+        "CS2P": {
+          "eq13": 0.00021770597336353504,
+          "vs_paper_pct": -12.21533332115523,
+          "trapz_abs": 0.00022493308876134503,
+          "eq13_vs_trapz_pct": 3.213006782420523
+        }
+      },
+      "rel_pct": {
+        "m1_C_d05_r1": 0.8675295180594492,
+        "m1_M_d05_r1": 0.03218052298662926,
+        "m2_C_d05_r1": 1.580724504122308,
+        "m2_M_d05_r1": 0.14642336049256136
+      },
+      "delta_mmol": {
+        "m1_C_d05_r1": 0.0009462324650558209,
+        "m1_M_d05_r1": 2.7095334538147005e-05,
+        "m2_C_d05_r1": 0.0021674726117584656,
+        "m2_M_d05_r1": 0.00015281270844090978
+      }
+    },
+    {
+      "kind": "diagnosis",
+      "case_id": "m1_C_d05_r1",
+      "displayed": [
+        "M1 C",
+        673,
+        882,
+        0,
+        118
+      ]
+    },
+    {
+      "kind": "diagnosis",
+      "case_id": "m1_M_d05_r1",
+      "displayed": [
+        "M1 M",
+        939,
+        1000,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "diagnosis",
+      "case_id": "m2_C_d05_r1",
+      "displayed": [
+        "M2 C",
+        349,
+        638,
+        0,
+        362
+      ]
+    },
+    {
+      "kind": "diagnosis",
+      "case_id": "m2_M_d05_r1",
+      "displayed": [
+        "M2 M",
+        972,
+        998,
+        0,
+        2
+      ]
+    },
+    {
+      "kind": "s1_mode1",
+      "displayed": {
+        "m1_C_d05_r1": [
+          1,
+          13
+        ],
+        "m1_M_d05_r1": [
+          141,
+          920
+        ]
+      }
+    },
+    {
+      "kind": "stress",
+      "group": "kinetic_mismatch",
+      "displayed": [
+        "kinetic mismatch",
+        "0.0%-0.0%",
+        "100.0%",
+        "99.6%-100.0%",
+        "0.0%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "double_noise",
+      "displayed": [
+        "double noise",
+        "0.0%-70.9%",
+        "99.8%",
+        "99.3%-100.0%",
+        "17.4%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "drifting_bias",
+      "displayed": [
+        "drifting bias",
+        "0.0%-91.0%",
+        "94.1%",
+        "92.5%-95.5%",
+        "17.0%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "gain_error",
+      "displayed": [
+        "gain error",
+        "0.0%-97.3%",
+        "93.1%",
+        "91.3%-94.6%",
+        "7.5%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "strong_correlation",
+      "displayed": [
+        "strong correlation",
+        "0.0%-78.9%",
+        "86.5%",
+        "84.2%-88.6%",
+        "16.4%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "heldout_parameters",
+      "displayed": [
+        "heldout parameters",
+        "0.0%-99.9%",
+        "15.5%",
+        "13.3%-17.9%",
+        "7.3%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "faster_deterioration",
+      "displayed": [
+        "faster deterioration",
+        "0.3%-99.9%",
+        "5.1%",
+        "3.8%-6.7%",
+        "2.9%"
+      ]
+    },
+    {
+      "kind": "stress",
+      "group": "half_noise",
+      "displayed": [
+        "half noise",
+        "0.0%-100.0%",
+        "0.0%",
+        "0.0%-0.4%",
+        "0.0%"
+      ]
+    },
+    {
+      "kind": "equal",
+      "case_id": "m1_C_d05_r1",
+      "displayed": [
+        "M1 C",
+        "69.5",
+        "0.1100",
+        "0.1091",
+        "+0.00095 (+0.9%)",
+        "843/1000"
+      ]
+    },
+    {
+      "kind": "equal",
+      "case_id": "m1_M_d05_r1",
+      "displayed": [
+        "M1 M",
+        "70.5",
+        "0.0842",
+        "0.0842",
+        "+0.00003 (+0.0%)",
+        "841/1000"
+      ]
+    },
+    {
+      "kind": "equal",
+      "case_id": "m2_C_d05_r1",
+      "displayed": [
+        "M2 C",
+        "59.9",
+        "0.1393",
+        "0.1371",
+        "+0.00217 (+1.6%)",
+        "981/1000"
+      ]
+    },
+    {
+      "kind": "equal",
+      "case_id": "m2_M_d05_r1",
+      "displayed": [
+        "M2 M",
+        "60.6",
+        "0.1045",
+        "0.1044",
+        "+0.00015 (+0.1%)",
+        "998/1000"
+      ]
+    },
+    {
+      "kind": "control",
+      "case_id": "m1_H",
+      "displayed": [
+        "M1 H",
+        "523/1000",
+        "527/1000",
+        "498/1000",
+        "0.24900 to 0.26350"
+      ]
+    },
+    {
+      "kind": "control",
+      "case_id": "m2_H",
+      "displayed": [
+        "M2 H",
+        "520/1000",
+        "517/1000",
+        "525/1000",
+        "0.51700 to 0.52500"
+      ]
+    },
+    {
+      "kind": "control",
+      "case_id": "m1_S_d05_r0",
+      "displayed": [
+        "M1 S",
+        "947/1000",
+        "890/1000",
+        "338/1000",
+        "0.34500 to 1.02075"
+      ]
+    },
+    {
+      "kind": "control",
+      "case_id": "m2_S_d05_r0",
+      "displayed": [
+        "M2 S",
+        "0/1000",
+        "11/1000",
+        "17/1000",
+        "0.00000 to 0.01700"
+      ]
+    },
+    {
+      "kind": "healthy_range",
+      "lo": 498,
+      "hi": 527,
+      "m1_S_S1_actions": 947,
+      "m1_S_S1_ethanol_mmol": 1.0207499999999177
+    }
+  ],
+  "pages": 6,
+  "different_model_review": "done 2026-10-01 on V3 (gpt-oss:120b-cloud via tools/ask_model.ps1); findings addressed in V4",
+  "user_rewrite": "pending",
+  "created_utc": "2026-09-30T18:56:23.651267+00:00"
+}

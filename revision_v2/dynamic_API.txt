@@ -1,0 +1,100 @@
+DYNAMIC ENGINE INTERFACE -- ENGINEERING CONTRACT, BEFORE CAMPAIGN FREEZE
+
+Module: dynamics.py
+Immutable equations and initial conditions: reference/reformer_diag and reference/upstream.
+This engine generates deterministic physical truth. It does not generate random
+measurement errors, sensor arrivals, diagnostic fits, decisions, or economic costs.
+
+run_truth(mode, h, drop=.05, active=False, duration_min=21,
+          move_mol_min=.0003, controls=None, sample_min=.1,
+          rtol=1e-6, atol=1e-8, max_step_min=.1,
+          demand_mol_min=None, initialization='preconditioned', output_dir=None)
+
+mode is 1 or 2; h is H, C, M, F, S, or CM. Healthy H requires drop=0.
+drop is NOMINAL QUASI-STEADY MAP H2 LOSS AT t10, not actual dynamic loss.
+Unreachable map anchors raise UnreachableScenario; the caller records explicit
+ineligibility before calibration. Controls accept:
+  rate_per_min, theta10 (explicit stress anchor), sensor_slope_per_min,
+  theta_c10, theta_m10, rate_c_per_min, rate_m_per_min, kinetic_scales.
+CM requires explicit theta_c10 and theta_m10; its drop field is a scenario label,
+not a claimed combined dynamic loss. kinetic_scales has four positive multipliers.
+
+C/M/F health is min(1, theta10*exp(-rate_per_min*(t-10))). No lower clipping.
+S is additive H2 measurement offset theta10+sensor_slope_per_min*(t-10),
+while its physical process remains healthy. CM evolves both components independently.
+Default rates are engineering convenience values; the campaign must pass all
+intended rates explicitly. Core initialization is fixed-health preconditioning:
+start from the supplied full-feed np50 state, hold health=scenario.health(0) and
+baseline command, and settle before physical time0. Settling does not age faults.
+Compare all seven physical features at each minute with their half-minute values.
+Converged means every absolute difference <= feature_abs_tol + 1e-6 times the
+larger absolute endpoint magnitude, after at least2 and at most20 settling min.
+Absolute tolerances: H2=1e-12 mol/min; temperature=1e-5K; waste=1e-12 m3/min;
+each gas fraction=1e-8. The same BDF tolerances/maxstep as the main solve apply.
+Failure raises PreconditioningFailure, retaining evidence on the exception and
+writing precondition evidence when output_dir is supplied. No failed initial
+state enters an ordinary core truth run. kinetic_scales also apply while settling.
+initialization='healthy_ic_stress' explicitly retains the original healthy-IC
+start without settling; this is a named stress case, not the core assumption.
+
+Baseline command u0 is .0021 in Mode1 and .0018 in Mode2. Command bounds are
+[.0018,.0024] mol/min. Active command is clipped u0+move from10 to the requested
+horizon. Passive remains u0. BDF evolves health continuously within each RHS
+evaluation and segments exactly at10. It never restarts the physical state.
+
+Return dictionary:
+  trace: pandas DataFrame, one row at0,.1,...,21 (211 rows at defaults).
+    time_min; a_c/a_m/feed_gain/sensor_bias_mol_min;
+    command_mol_min, command_next_mol_min, actual_ethanol_mol_min, water_mol_min;
+    demand_mol_min; health_in_map_domain and feed_in_map_domain;
+    true_FEATURE and observed_FEATURE for all seven features:
+    H2_mol_min,T_out_K,waste_m3_min,y_H2,y_CH4,y_CO,y_CO2.
+    observed_* includes deterministic H2 sensor bias only. All other measurement
+    effects are the caller's responsibility. t10 is the pre-move observation;
+    command_next declares the post-event command. Domain flags do not clip truth.
+  states: full float64 state array aligned with trace; np50 has800 states.
+  preconditioning: separate half-minute trace, full states, state0 and metadata;
+    metadata declares gates, measured differences, status/minutes, fixed health,
+    starter-state hash and final-state hash. None for healthy_ic_stress.
+  snapshots: exact saved arrays keyed '10.0','16.0','21.0' when present.
+  intervals: independent rows for each within-segment interval. Contains
+    t_start,t_end,commanded_ethanol_mol_min,command_start_mol_min,command_end_mol_min,
+    actual_ethanol_start,actual_ethanol_end,actual_ethanol_mol,commanded_ethanol_mol,
+    H2_start_mol_min,H2_end_mol_min,H2_produced_mol,H2_demand_mol,H2_shortfall_mol.
+    Command is constant within each row; command integral is exact. Actual feed
+    and physical H2 use endpoint composite trapezoids. Positive H2 shortfall uses
+    endpoint max(demand-H2,0) before integration. No global trapezoid crosses an
+    input discontinuity. Mean physical rates have units mol/min, amounts mol.
+  scenario: complete serialized deterministic controls.
+  metadata: solver settings, source/input/wrapper hashes, solver diagnostics,
+    initialization/event/drop/quadrature semantics, states checksum,
+    healthy dynamic H2 reference at10 and actual true/observed loss at10.
+    The healthy reference may be reused in memory for identical mode/settings;
+    it is freshly computed from the staged original source, never archive output.
+
+continue_truth(truth, decision_min, command_mol_min, horizon_end_min=31,
+               duration_min=None, output_dir=None)
+Branches from the EXACT full state saved at decision_min. Health still uses
+absolute time, and command is constant through the requested endpoint. Passing
+duration_min explicitly overrides horizon_end_min; normal campaign use should
+retain the common clock31. Branch metadata identifies parent state hash and
+branch initial state hash. The first branch observation uses the new command;
+the underlying physical state matches the parent's decision state bit-for-bit.
+
+policy_cost(truth, continuation)
+Checks parent identity, then sums the original intervals from0 through decision
+and the branch thereafter. The acquisition tail after decision is excluded.
+Returns common start/end times plus actual and commanded ethanol, produced and
+demanded H2, and H2 shortfall. No post-decision truth enters the decision process.
+This helper performs physical accounting only and does not select an action.
+
+save_truth(result, output_dir)
+Refuses an existing output_dir. Writes truth.csv, intervals.csv, states.npz,
+precondition_trace.csv, precondition_states.npz (when applicable), and
+metadata.json with output hashes. Parent runner supplies scenario/split/seed IDs
+and acquisition sample IDs/noise/arrival provenance. Files are new evidence,
+not patches to original or full_rerun results.
+
+Current engineering-only smoke: dynamic_smoke.py. Failed initial arithmetic
+expectation retained; corrected before freeze. No held-out classification campaign
+has been run by this lane. A frozen checker and protocol must precede that run.

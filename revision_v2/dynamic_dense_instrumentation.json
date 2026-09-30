@@ -1,0 +1,69 @@
+{
+  "scope": "Diagnostic instrumentation only; original solver called unchanged; no campaign files edited",
+  "calls": [
+    {
+      "interval": [
+        0.0,
+        1.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": true,
+      "dense_left_max_abs_difference": 0.0
+    },
+    {
+      "interval": [
+        1.0,
+        2.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": false,
+      "dense_left_max_abs_difference": 2.802596928649634e-45
+    },
+    {
+      "interval": [
+        0.0,
+        10.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": false,
+      "dense_left_max_abs_difference": 6.842277657836021e-49
+    },
+    {
+      "interval": [
+        10.0,
+        21.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": true,
+      "dense_left_max_abs_difference": 0.0
+    },
+    {
+      "interval": [
+        0.0,
+        1.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": true,
+      "dense_left_max_abs_difference": 0.0
+    },
+    {
+      "interval": [
+        1.0,
+        2.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": true,
+      "dense_left_max_abs_difference": 0.0
+    },
+    {
+      "interval": [
+        0.0,
+        10.0
+      ],
+      "solver_y0_bitwise_matches_input": true,
+      "dense_left_bitwise_matches_input": true,
+      "dense_left_max_abs_difference": 0.0
+    }
+  ],
+  "all_solver_initial_states_exact": true
+}

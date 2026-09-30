@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-30T18:15:04.150401+00:00",
+  "scope": "Document checks before new experiment outcomes; no favorable-sign requirement",
+  "files": {
+    "NOTE_SPEC.json": "1a7cee5d5ae25e30d71b63f470b9d289ad5e3b797dcfc199fa81586f4985a395",
+    "verify_note.py": "7318d1800e48751e43eaecda256684cab7358409f5b76bb5333471085438d2dd"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "ssmr.checker-identity-amendment.v1",
+  "created_utc": "2026-09-30T09:31:05.199364+00:00",
+  "original_sha256": "2956f2bf140285b84d48c4b94fbd21461adbcf6ebe053a889a269edb81bd2a6b",
+  "corrected_sha256": "00e86dc5772549dcd6500c9b55b408eea8bd064fefcedf9f9f519ca1af891277",
+  "changes": [
+    "Parent lookup key includes canonical scenario as well as physical state hash."
+  ],
+  "preserved": "Every numerical, exact-state and physical-integral acceptance gate is unchanged; original checker and failure output preserved.",
+  "reason": "Healthy and sensor-only cases legitimately share bit-identical physical state arrays. The original dictionary overwrote their different scenario identities.",
+  "synthetic_collision_test_pass": true,
+  "scientific_tolerance_changes": false
+}

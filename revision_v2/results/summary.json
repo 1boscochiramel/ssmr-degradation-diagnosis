@@ -1,0 +1,25 @@
+{
+  "schema": "ssmr.revision.summary.v2",
+  "complete": true,
+  "protocol_sha256": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+  "design_freeze_sha256": "136e30577be11f4ee944fa2d77fedd88c9ff562f830c551e6b89912c2bae6385",
+  "policy_amendment_sha256": "6d24e847d6a14e1549593b9b7b73202c5fb62463648242b8ff9a04dcd4d66261",
+  "calibration_sha256": "16ddb6b680e9491e2f6f156895ee1ef1e4e15d3e1d35873ea9967e2e5b06985f",
+  "dynamic_status_sha256": "3bd8a41fd32e4dec7f3953fd689d14094242ad1f36c88780f890d2c7a3eb0217",
+  "diagnosis_rows": 780,
+  "covered_grid_cells": 366,
+  "policy_trial_rows": 54000,
+  "maximum_covered_true_rejection_rate": 0.056,
+  "maximum_covered_wrong_singleton_rate": 0.033,
+  "maximum_covered_true_rejection_upper95": 0.0721077462832527,
+  "minimum_covered_correct_singleton_rate": 0.0,
+  "created_utc": "2026-09-30T14:12:53.181167+00:00",
+  "interpretation": "Conditional simulation results under declared finite scenarios, observation assumptions and policy. Pointwise binomial intervals; paired policies share noise draws. No economic payback, laboratory accuracy or universal nuisance-space calibration claim.",
+  "files": {
+    "diagnosis_summary.csv": "28177fd6e0fc18fc31d380b332295e520fca48512de2fa32ce26d7504e4e8414",
+    "policy_summary.csv": "cafb0490767645590670ee7215819efda09c0cda3176d3b472b35282a3a47c28",
+    "policy_trials.csv": "857425c0452f2124c36a8753b50583f1b507817e8cae51a0c75c66087ffb78f9",
+    "policy_paired_differences.csv": "528894cd158261d3bf9713558ba31ef66e776648a4a196eb0eb6761e20a26cb5",
+    "calibration.json": "16ddb6b680e9491e2f6f156895ee1ef1e4e15d3e1d35873ea9967e2e5b06985f"
+  }
+}

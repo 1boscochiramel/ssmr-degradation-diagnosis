@@ -1,0 +1,196 @@
+{
+  "status": "FULL_TEXT_REVIEWED",
+  "recorded_utc": "2026-09-30T16:01:01.046136+00:00",
+  "reviewer": "cx-paper, Codex internal literature lane",
+  "pdf_path": "C:\\Users\\Admin\\Downloads\\1-s2.0-S009813542600181X-main.pdf",
+  "pdf_sha256": "b7406abd151cafae6a4b761d6d48994b2472ee842f0eb0baac8c645887184f12",
+  "page_count": 18,
+  "pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "doi": "10.1016/j.compchemeng.2026.109728",
+  "title": "Koopman–PCE-based confidence-bounded fault diagnosis and recovery for hydrogen demand tracking in a membrane reactor",
+  "author": "Srimanta Santra",
+  "pdf_and_printed_page_numbers_correspond": true,
+  "access_provenance": "User-supplied exact PDF, explicitly authorized; original read-only; no access circumvention",
+  "own_read_review_completed": true,
+  "read_review_completed": true,
+  "read_coverage": "All text, equations, captions, case descriptions, limitations, conclusion and reference list",
+  "rendered_pages_inspected": [
+    3,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "all_figures_and_tables_inspected": true,
+  "mechanical_identity_and_anchor_checks_pass": true,
+  "mechanical_checks_do_not_prove_human_or_agent_reading": true,
+  "comparison_sentence": "Santra (2026) studies actuator-fault estimation and tracking recovery on a three-state reformer surrogate, whereas this note uses the distributed benchmark dynamics to test calibrated diagnosis of catalyst, membrane, feed and meter faults and measure the hydrogen-ethanol trade-off of diagnosis-based action beyond the feed pulse.",
+  "detailed_comparison_sentence": "Santra (2026) studies Koopman-PCE/adaptive-control recovery from actuator effectiveness loss and input bias on a three-state SSMR-inspired surrogate, whereas our study uses the distributed benchmark ODE to test calibrated catalyst/membrane/feed/meter-bias discrimination under assumed measurement noise and compare bounded follow-up actions with feed-only continuations matched to the same diagnostic pulse and stopping time.",
+  "source_claims": [
+    {
+      "id": "S1",
+      "claim": "Implemented case uses a three-state SSMR-inspired surrogate",
+      "pages": [
+        11
+      ],
+      "section": "6.1, after Eq.113 and explicit surrogate dynamics",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "id": "S2",
+      "claim": "Task is actuator effectiveness/input-bias estimation and hydrogen-demand tracking recovery",
+      "pages": [
+        2,
+        3,
+        10,
+        11
+      ],
+      "section": "2, Eqs.2-12; 6 opening; 6.1",
+      "verdict": "PARAPHRASED"
+    },
+    {
+      "id": "S3",
+      "claim": "Koopman-PCE regularized FDI drives nominal reconfiguration and selected-layer neural adaptation",
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "section": "5-5.2, Eqs.73-84; Algorithm1; 6.1",
+      "verdict": "PARAPHRASED"
+    },
+    {
+      "id": "S4",
+      "claim": "Uncertainty bands do not provide rigorous frequentist coverage",
+      "pages": [
+        8,
+        9,
+        11,
+        14
+      ],
+      "section": "5.1 Eqs.82-83 and p9 Remark; 6.1; Fig6",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "id": "S5",
+      "claim": "Main closed-loop case adds no measurement noise beyond identification excitation",
+      "pages": [
+        11
+      ],
+      "section": "6.1, lower right column",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "id": "S6",
+      "claim": "Input excitation is already recognized as necessary for separating effectiveness and disturbance",
+      "pages": [
+        9
+      ],
+      "section": "5.2, Proposition5.1 and Remarks",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "id": "S7",
+      "claim": "UUB and residual-improvement statements have explicit assumptions",
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "section": "4.2 and Theorem4.1; 5.3 and Theorem5.4",
+      "verdict": "PARAPHRASED"
+    },
+    {
+      "id": "S8",
+      "claim": "Paper distinguishes average tracking performance from peak-error attenuation",
+      "pages": [
+        12,
+        15,
+        17
+      ],
+      "section": "Table2, 6.2, Fig14, Conclusion",
+      "verdict": "CONFIRMED_AS_REPORTED_NOT_RERUN"
+    },
+    {
+      "id": "S9",
+      "claim": "Numerical case rather than new physical validation; mostly single-seed main results",
+      "pages": [
+        11,
+        12,
+        18
+      ],
+      "section": "6.1; Data availability",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "id": "L1",
+      "claim": "Local study has multiple cause hypotheses, finite-stratum calibration, and schedule-matched downstream-action comparison",
+      "local_sources": [
+        "dynamics.py",
+        "revision_model.py",
+        "revision_policy.py",
+        "protocol.json",
+        "amendment_feed_only_20260930/amendment_protocol.json",
+        "amendment_feed_only_20260930/checks/verification.json"
+      ],
+      "verdict": "CONFIRMED_LOCAL_SOURCE_AND_CHECKS"
+    }
+  ],
+  "original_method_hashes": {
+    "dynamics.py": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+    "dynamic_API.txt": "f98e280d00df67956720309dedbeab6ad0324e90e3ed7ffb0514bf2801cdcf4a",
+    "revision_model.py": "2291aad06beebe0ec49b900f89d048069483b5021059102adb41d68bdd42c5be",
+    "revision_policy.py": "fcfcbcaa7454cb65ba48626506a862cb0aaa3f76e1ede4aad1fef5c8ae8dcfa2",
+    "protocol.json": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+    "checks/final_check.json": "2a7d797d29675edad02e9904d2c844cf4da2b934b2fb0eddf1fc9cfeb04aba74",
+    "amendment_feed_only_20260930/amendment_protocol.json": "1028dfeaf0dfa3043483833fd2d7f6d4035c4168a08115a0d43ca8c181f0586b",
+    "amendment_feed_only_20260930/checks/verification.json": "ccfcb0f0e2ac3aac5874325148ffa798be9ff9c3eb12e0cfd99ef7b3c46bdd51"
+  },
+  "fulltext_review_sha256": "a2a31a17ca6eb4f36257c2cad2a8f7c80228e4f4588598787a5c2625ad86cbf4",
+  "extracted_text_sha256": "18ef9c15ef4dcb5994037ec359c978e7b66a458f8c4ea1f9b9a3f4c294e5c65c",
+  "earlier_abstract_only_records_preserved": {
+    "COMPARISON.txt": "709e92654ed70be5411c563b715c78866bee1896c42f03a03ec11fd1f2cd84ec",
+    "access_manifest.json": "3e9bc1fd4accb56ff2fabe62d2badc06152d8b6a07f6dc124e645677d580ea17"
+  },
+  "no_external_performance_values_imported": true,
+  "independent_numerical_reproduction_of_Santra_completed": false,
+  "formal_proof_audit_completed": false,
+  "all_cited_references_independently_retrieved": false,
+  "field_wide_novelty_or_superiority_certified": false,
+  "current_access_gap_resolved": true,
+  "historical_gap_id": "616394bf",
+  "exclude_from_shareable_pack": [
+    "original source PDF",
+    "internal_fulltext/",
+    "raw retrieval captures"
+  ],
+  "shareable_files": [
+    "fulltext_review.txt",
+    "fulltext_access_manifest.json"
+  ]
+}

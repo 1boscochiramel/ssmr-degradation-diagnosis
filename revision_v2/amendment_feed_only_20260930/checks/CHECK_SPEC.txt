@@ -1,0 +1,69 @@
+Independent checker specification: dated feed-only amendment
+
+Scope is frozen before new amendment integrations and numerical contrasts.
+This is an outcome-known amendment to an already inspected simulation study,
+not retroactive preregistration or a new independent noise experiment.
+The parent diagnostic model, thresholds, policy, truth, decisions and report
+remain unchanged. Verification is same-model internal computation checking.
+
+Physical comparator
+For every original prespecified policy case, predeclare two blind schedules:
+baseline commanded ethanol from physical time zero through minute10, the
+original feed increment until fixed minute16 or21, then baseline commanded
+ethanol through the original common horizon31. A fixed schedule does not read
+diagnostic calls, sensor measurements, confidence sets or fitted parameters.
+Both durations must be published separately; neither is selected by favorable
+results. Newly integrated nominal continuations must exactly reproduce the
+corresponding archived active acquisition/nominal-command continuation.
+
+Primary paired contrast
+For each existing active policy case/sensor-set/noise-record, retrieve its
+original actual stop time and chosen command without recomputing diagnosis.
+Compare its original full-horizon physical costs with the predeclared blind
+schedule having that same pulse-end time. This is a schedule-yoked conditional
+downstream-action ablation: acquisition prefix, physical stop state and duration
+are matched. The comparator's command after the pulse is always nominal.
+Its selection for this contrast borrows a diagnosis-dependent duration from the
+original policy. It is not an autonomous no-diagnosis stopping rule, not the
+effect of an entire diagnostic policy against one fixed blind policy, and not
+an information-only causal effect or economic value estimate.
+
+Outputs and arithmetic
+Retain fixed-arm raw states, observation/truth trace, interval trace and metadata.
+Report full0..31 H2 shortfall, H2 produced, commanded ethanol, actual ethanol
+and H2 demand in mol. Integrate command exactly per constant-input interval;
+integrate true H2 and actual feed by the original endpoint quadrature within
+intervals. Never bridge a feed discontinuity with a single global trapezoid.
+Full-horizon costs include the acquisition prefix and only the chosen
+continuation. Shared prefix contributions cancel in paired differences; check
+both the complete accounts and the downstream difference independently.
+Define every signed contrast as original active policy minus matched feed-only.
+Report per-case/sensor mean, sample standard deviation, minimum and maximum;
+retain the original denominator and each pulse-end frequency. No favorable
+sign, significance, payback or superiority is an acceptance requirement.
+
+Integrity and matching
+Require the complete parent-protocol policy-case list, both fixed durations,
+every original active trial and every original sensor set; exact key uniqueness.
+Check no extra/missing/cross-mode cases or changes to diagnostic stop/command.
+Check fresh source identity, case/scenario/settings identity, parent-state hash,
+saved parent decision-state hash and command schedule. The parent's explained
+dense-output first-sample qualification is inherited explicitly; do not relabel
+that original failed bitwise exported-input gate as a pass.
+Require new full state/time arrays identical to matching archived arrays and
+new truth/interval CSV bytes identical to the corresponding archived bytes.
+Recompute all physical amounts from raw interval endpoints; compare reported
+costs/contrasts with absolute1e-13 plus relative1e-9 tolerance, the same frozen
+arithmetic tolerance used in the parent physical-accounting checker. Exact
+identity checks use no tolerance. Timing/runtime metadata are not outcomes.
+
+Preserve/hash the parent scientific sources, protocol, decision and cost data,
+all reused raw physical files, final qualified checker and report provenance.
+The amendment comparator has no stochastic input and adds no random draws.
+Checker fixtures must reject a wrong pulse end, wrong nominal command, wrong
+parent/case, duplicate or missing pairing, altered source hash and incorrect
+physical-integral/sign arithmetic. Relabelling a diagnostic call while keeping
+case and original stop fixed cannot change comparator selection or command.
+
+The exact file interface and source hashes will be bound in CHECK_FREEZE.json
+after the parent amendment protocol and runner are staged, before new runs.

@@ -1,0 +1,285 @@
+{
+ "pdf": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\output\\pdf\\SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf",
+ "checks": [
+  {
+   "pass": true,
+   "string": "69.5",
+   "why": "m1_C_d05_r1 matched ethanol"
+  },
+  {
+   "pass": true,
+   "string": "0.1100",
+   "why": "m1_C_d05_r1 diagnostic shortfall"
+  },
+  {
+   "pass": true,
+   "string": "0.1091",
+   "why": "m1_C_d05_r1 blind shortfall"
+  },
+  {
+   "pass": true,
+   "string": "+0.00095 (+0.9%)",
+   "why": "m1_C_d05_r1 mean difference"
+  },
+  {
+   "pass": true,
+   "string": "843/1000",
+   "why": "m1_C_d05_r1 diagnostic-better count"
+  },
+  {
+   "pass": true,
+   "string": "0.13",
+   "why": "m1_C_d05_r1 incompatible cost"
+  },
+  {
+   "pass": true,
+   "string": "70.5",
+   "why": "m1_M_d05_r1 matched ethanol"
+  },
+  {
+   "pass": true,
+   "string": "0.0842",
+   "why": "m1_M_d05_r1 diagnostic shortfall"
+  },
+  {
+   "pass": true,
+   "string": "0.0842",
+   "why": "m1_M_d05_r1 blind shortfall"
+  },
+  {
+   "pass": true,
+   "string": "+0.00003 (+0.0%)",
+   "why": "m1_M_d05_r1 mean difference"
+  },
+  {
+   "pass": true,
+   "string": "841/1000",
+   "why": "m1_M_d05_r1 diagnostic-better count"
+  },
+  {
+   "pass": true,
+   "string": "59.9",
+   "why": "m2_C_d05_r1 matched ethanol"
+  },
+  {
+   "pass": true,
+   "string": "0.1393",
+   "why": "m2_C_d05_r1 diagnostic shortfall"
+  },
+  {
+   "pass": true,
+   "string": "0.1371",
+   "why": "m2_C_d05_r1 blind shortfall"
+  },
+  {
+   "pass": true,
+   "string": "+0.00217 (+1.6%)",
+   "why": "m2_C_d05_r1 mean difference"
+  },
+  {
+   "pass": true,
+   "string": "981/1000",
+   "why": "m2_C_d05_r1 diagnostic-better count"
+  },
+  {
+   "pass": true,
+   "string": "0.15",
+   "why": "m2_C_d05_r1 incompatible cost"
+  },
+  {
+   "pass": true,
+   "string": "60.6",
+   "why": "m2_M_d05_r1 matched ethanol"
+  },
+  {
+   "pass": true,
+   "string": "0.1045",
+   "why": "m2_M_d05_r1 diagnostic shortfall"
+  },
+  {
+   "pass": true,
+   "string": "0.1044",
+   "why": "m2_M_d05_r1 blind shortfall"
+  },
+  {
+   "pass": true,
+   "string": "+0.00015 (+0.1%)",
+   "why": "m2_M_d05_r1 mean difference"
+  },
+  {
+   "pass": true,
+   "string": "998/1000",
+   "why": "m2_M_d05_r1 diagnostic-better count"
+  },
+  {
+   "pass": true,
+   "string": "0.25",
+   "why": "m2_M_d05_r1 incompatible cost"
+  },
+  {
+   "pass": true,
+   "string": "within 1.6% in all four",
+   "why": "headline relative bound"
+  },
+  {
+   "pass": true,
+   "string": "in 841 to 998 of 1000 episodes",
+   "why": "headline win range"
+  },
+  {
+   "pass": true,
+   "string": "through the 0 to 18 episodes",
+   "why": "headline incompatible range"
+  },
+  {
+   "pass": true,
+   "string": "-0.00048",
+   "why": "m2_C_d05_r1 C mean"
+  },
+  {
+   "pass": true,
+   "string": "-0.00043",
+   "why": "m2_C_d05_r1 INCONCLUSIVE mean"
+  },
+  {
+   "pass": true,
+   "string": "-0.00034",
+   "why": "m2_M_d05_r1 M mean"
+  },
+  {
+   "pass": true,
+   "string": "+0.00027",
+   "why": "m1_C_d05_r1 C mean"
+  },
+  {
+   "pass": true,
+   "string": "all but one of the episodes",
+   "why": "Mode 2 all-but-one wording"
+  },
+  {
+   "pass": true,
+   "string": "within 0.2% of the published 7.95e-5",
+   "why": "CS1 gap"
+  },
+  {
+   "pass": true,
+   "string": "13.4%",
+   "why": "CS2T gap vs paper"
+  },
+  {
+   "pass": true,
+   "string": "3.3%",
+   "why": "CS2T convention difference"
+  },
+  {
+   "pass": true,
+   "string": "12.2%",
+   "why": "CS2P gap vs paper"
+  },
+  {
+   "pass": true,
+   "string": "3.2%",
+   "why": "CS2P convention difference"
+  },
+  {
+   "pass": true,
+   "string": "523/1000",
+   "why": "m1_H S1 actions"
+  },
+  {
+   "pass": true,
+   "string": "527/1000",
+   "why": "m1_H S3 actions"
+  },
+  {
+   "pass": true,
+   "string": "498/1000",
+   "why": "m1_H S4 actions"
+  },
+  {
+   "pass": true,
+   "string": "520/1000",
+   "why": "m2_H S1 actions"
+  },
+  {
+   "pass": true,
+   "string": "517/1000",
+   "why": "m2_H S3 actions"
+  },
+  {
+   "pass": true,
+   "string": "525/1000",
+   "why": "m2_H S4 actions"
+  },
+  {
+   "pass": true,
+   "string": "947/1000",
+   "why": "m1_S_d05_r0 S1 actions"
+  },
+  {
+   "pass": true,
+   "string": "890/1000",
+   "why": "m1_S_d05_r0 S3 actions"
+  },
+  {
+   "pass": true,
+   "string": "338/1000",
+   "why": "m1_S_d05_r0 S4 actions"
+  },
+  {
+   "pass": true,
+   "string": "0/1000",
+   "why": "m2_S_d05_r0 S1 actions"
+  },
+  {
+   "pass": true,
+   "string": "11/1000",
+   "why": "m2_S_d05_r0 S3 actions"
+  },
+  {
+   "pass": true,
+   "string": "17/1000",
+   "why": "m2_S_d05_r0 S4 actions"
+  },
+  {
+   "pass": true,
+   "string": "49.8-52.7% of episodes",
+   "why": "healthy range"
+  },
+  {
+   "pass": true,
+   "string": "1.02 mmol",
+   "why": "M1 S S1 ethanol"
+  },
+  {
+   "pass": true,
+   "string": "673 882 0 118",
+   "why": "m1_C_d05_r1 diagnosis row"
+  },
+  {
+   "pass": true,
+   "string": "939 1000 0 0",
+   "why": "m1_M_d05_r1 diagnosis row"
+  },
+  {
+   "pass": true,
+   "string": "349 638 0 362",
+   "why": "m2_C_d05_r1 diagnosis row"
+  },
+  {
+   "pass": true,
+   "string": "972 998 0 2",
+   "why": "m2_M_d05_r1 diagnosis row"
+  },
+  {
+   "pass": true,
+   "string": "from 141 to 920 out of 1000",
+   "why": "S1 membrane"
+  },
+  {
+   "pass": true,
+   "string": "from 1 to 13",
+   "why": "S1 catalyst"
+  }
+ ]
+}

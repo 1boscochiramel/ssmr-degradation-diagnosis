@@ -1,0 +1,10 @@
+{
+  "schema": "ssmr.resume-metadata-guard.v1",
+  "checked_batch_metadata": 122,
+  "hashes_checked": 322,
+  "scope": "Existing cache identities only; does not certify campaign completeness or scientific acceptance.",
+  "action_on_failure": "Stop resume and investigate; this guard never changes, deletes or rebuilds caches.",
+  "issues": [],
+  "pass": true,
+  "guard_sha256": "7496ba3ed6e25849b72291eb385b3f9f13cb1dc2e9898d82d47b9e4179f78a8f"
+}

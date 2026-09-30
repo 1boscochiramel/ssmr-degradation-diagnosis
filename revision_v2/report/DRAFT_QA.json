@@ -1,0 +1,9 @@
+{
+  "scope": "Draft layout only; no unchecked results displayed",
+  "pdf_sha256": "af0e1a823f40aa5b4c9a2981cb27d405b9487104de0ecd360cc7f59de8a41da5",
+  "visual_review": "All draft page contact sheets inspected; changed pages 1,2,10,15 inspected at page resolution after final draft revision. No clipping or overlap observed.",
+  "automatic_bounds": "PASS on all rendered pages",
+  "final_mode_negative_control": "Final mode refused missing campaign/check outputs with exit code 1",
+  "final_results_review": "PENDING completed campaign and checker",
+  "reviewed_utc": "2026-09-30T09:18:28.738457+00:00"
+}

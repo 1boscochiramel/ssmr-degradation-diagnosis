@@ -1,0 +1,6 @@
+{
+  "python": "3.13.9",
+  "numpy": "2.4.6",
+  "source_manifest_sha256": "69f23d6af254fe3c524fb683c6eb7f32a9def38b96d7f7bd5c20f01eb5f195d1",
+  "pipeline_sha256": "2c79d4c5b0fabee86bd0b15a3eeb58d91cacf7523eaa36efa808db24b3e69e34"
+}

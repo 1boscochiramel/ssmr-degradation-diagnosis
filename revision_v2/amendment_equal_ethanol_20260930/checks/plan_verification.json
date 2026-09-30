@@ -1,0 +1,14 @@
+{
+  "schema": "ssmr.equal-ethanol-plan-check.v1",
+  "created_utc": "2026-09-30T18:13:33.011954+00:00",
+  "issues": [],
+  "complete": false,
+  "coverage": {
+    "parent_files_preserved": 4266,
+    "unique_arms": 13,
+    "paired_trials": 4000,
+    "new_noise_draws": 0
+  },
+  "scope": "Pre-outcome original-resource, schedule and pairing check only; no new trajectory examined.",
+  "pass": true
+}

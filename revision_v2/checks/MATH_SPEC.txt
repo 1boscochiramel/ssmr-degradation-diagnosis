@@ -1,0 +1,62 @@
+PRE-EVALUATION INDEPENDENT MATHEMATICAL ACCEPTANCE SPECIFICATION
+
+The checker treats whole independently generated noise records as sampling
+units. It uses finite-rank quantiles ceil((n+1)(1-alpha)), returning +infinity
+when the rank is unavailable, retaining equality at the threshold. The score
+is a finite-bank minimum of squared residuals whitened by the full declared
+covariance. It never assigns a generating hypothesis a known-zero score.
+
+For stationary AR1 measurement noise with standard deviation sigma and
+correlation phi, covariance of samples i,j is sigma_i*sigma_j*phi^abs(i-j)
+within the same instrument. A single independent Uniform[-B,B] run bias adds
+B_i*B_j/3 to all same-instrument pairs. Different instruments are independent
+under this declared model. A linear summary matrix A transforms covariance
+to A K A^T. Changing the noise law while using this covariance makes it a
+working nominal covariance, not the changed law's actual covariance.
+
+Sequential retention is the intersection of nonrejected labels across causal
+looks; an early singleton is final. At the final look an empty set yields
+MODEL_INCOMPATIBLE and multiple survivors INCONCLUSIVE. No-call stop time is
+not a diagnosis time. Calibration of the trajectory-maximum score protects
+the declared finite covered strata under exchangeability of entire records;
+it makes no guarantee for stress/model-mismatched/continuous nuisance settings.
+
+All proportions have explicit event counts and independent-record denominators.
+Exact pointwise Clopper-Pearson intervals are recomputed from integer counts.
+Intervals over pooled heterogeneous fixed strata are not exact binomial
+confidence statements. No desired empirical success rate is an integrity gate.
+
+Physical feed commands are constant within their declared intervals, with
+exact command integral sum(command*duration). Delivered feed and H2 amounts
+use the predeclared endpoint trapezoid within each interval. H2 shortfall
+integrates positive endpoint deficits; an action label never overrides the
+physical feed/H2 arithmetic. A fixed common horizon and diagnostic prefix
+plus continued-state branch are required for policy comparisons.
+
+Numerical arithmetic tolerances for the integration audit:
+- JSON labels, counts, seed membership and trial/sample IDs: exact.
+- Probability counts and confidence interval input integers: exact.
+- Means and physical integrals from 17-digit raw floats: abs1e-13+rel1e-9;
+  exact state chains and stored file hashes remain exact.
+- Covariance reconstructed from fixed formulas: abs1e-20+rel1e-10.
+- Bank Mahalanobis scores: abs1e-8+rel1e-7; independent chosen-template score
+  must equal minimum within this tolerance. Numerically tied template IDs
+  may differ; classification thresholds and actual recorded decisions are
+  checked using the stored score and independent score, with near-boundary
+  numerical ambiguity explicitly reported, not forced to a preferred label.
+- Rank thresholds use their stored calibration scores exactly for ranking;
+  the independent score audit checks those inputs separately.
+
+Analytic fixtures are in test_reference_math.py and verify_model_analytic.py.
+The latter imports the author module only as the test target; reference_math.py
+imports no author/scientific simulator module. It exercises manufactured
+observations, not calibration/evaluation data. Freeze this spec and the three
+math files before campaign execution. File-format integration may be frozen in
+a second manifest before any evaluation artifacts are inspected; chronology
+and any pre-result amendments must remain explicit.
+
+Source basis: Lei et al. split-rank exchangeability argument (section2),
+https://www.stat.berkeley.edu/~ryantibs/papers/conformal-jasa.pdf ; exact binomial
+limits, https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbici.htm .
+The maximum-over-looks and maximum-over-finite-strata application is this
+reviewer's inference. This remains same-model internal computational checking.

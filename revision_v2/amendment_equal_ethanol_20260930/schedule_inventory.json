@@ -1,0 +1,254 @@
+{
+  "schema": "ssmr.equal-ethanol-schedules.v1",
+  "created_utc": "2026-09-30T18:09:14.328529+00:00",
+  "schedules": [
+    {
+      "schedule_id": "m1_C_d05_r1_b0d9415db8671ebce",
+      "case_id": "m1_C_d05_r1",
+      "mode": 1,
+      "true_h": "C",
+      "parent_key": "m1_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0484,
+      "budget_float_hex": "0x1.8c7e28240b780p-5",
+      "constant_command_mol_min": 0.0023047619047619045,
+      "command_float_hex": "0x1.2e16fa0314edbp-9",
+      "state10_sha256": "48a5644537eb218b61c3fafb9aadb812e2dcccb28589247d649108e58a76d981"
+    },
+    {
+      "schedule_id": "m1_C_d05_r1_b2cbdbd4a944011d4",
+      "case_id": "m1_C_d05_r1",
+      "mode": 1,
+      "true_h": "C",
+      "parent_key": "m1_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0474,
+      "budget_float_hex": "0x1.844d013a92a30p-5",
+      "constant_command_mol_min": 0.002257142857142857,
+      "command_float_hex": "0x1.27d92581f5d18p-9",
+      "state10_sha256": "48a5644537eb218b61c3fafb9aadb812e2dcccb28589247d649108e58a76d981"
+    },
+    {
+      "schedule_id": "m1_C_d05_r1_bd162620d6c595127",
+      "case_id": "m1_C_d05_r1",
+      "mode": 1,
+      "true_h": "C",
+      "parent_key": "m1_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.04815,
+      "budget_float_hex": "0x1.8a71de69ad42cp-5",
+      "constant_command_mol_min": 0.002292857142857143,
+      "command_float_hex": "0x1.2c8784e2cd26bp-9",
+      "state10_sha256": "48a5644537eb218b61c3fafb9aadb812e2dcccb28589247d649108e58a76d981"
+    },
+    {
+      "schedule_id": "m1_C_d05_r1_bf09fe6c215dd53bd",
+      "case_id": "m1_C_d05_r1",
+      "mode": 1,
+      "true_h": "C",
+      "parent_key": "m1_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0489,
+      "budget_float_hex": "0x1.9096bb98c7e28p-5",
+      "constant_command_mol_min": 0.0023285714285714285,
+      "command_float_hex": "0x1.3135e443a47bdp-9",
+      "state10_sha256": "48a5644537eb218b61c3fafb9aadb812e2dcccb28589247d649108e58a76d981"
+    },
+    {
+      "schedule_id": "m1_M_d05_r1_b058f73c2d5250147",
+      "case_id": "m1_M_d05_r1",
+      "mode": 1,
+      "true_h": "M",
+      "parent_key": "m1_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0494,
+      "budget_float_hex": "0x1.94af4f0d844d0p-5",
+      "constant_command_mol_min": 0.002352380952380952,
+      "command_float_hex": "0x1.3454ce843409ep-9",
+      "state10_sha256": "b16ebef125ac88fc8efe195d374efcddad04db9ef5b736ff7535679544cc8d7d"
+    },
+    {
+      "schedule_id": "m1_M_d05_r1_b3b8b514d0f148e19",
+      "case_id": "m1_M_d05_r1",
+      "mode": 1,
+      "true_h": "M",
+      "parent_key": "m1_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.04989999999999999,
+      "budget_float_hex": "0x1.98c7e28240b77p-5",
+      "constant_command_mol_min": 0.0023761904761904758,
+      "command_float_hex": "0x1.3773b8c4c397fp-9",
+      "state10_sha256": "b16ebef125ac88fc8efe195d374efcddad04db9ef5b736ff7535679544cc8d7d"
+    },
+    {
+      "schedule_id": "m1_M_d05_r1_b5873bf85354e3031",
+      "case_id": "m1_M_d05_r1",
+      "mode": 1,
+      "true_h": "M",
+      "parent_key": "m1_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.04964999999999999,
+      "budget_float_hex": "0x1.96bb98c7e2823p-5",
+      "constant_command_mol_min": 0.0023642857142857137,
+      "command_float_hex": "0x1.35e443a47bd0ep-9",
+      "state10_sha256": "b16ebef125ac88fc8efe195d374efcddad04db9ef5b736ff7535679544cc8d7d"
+    },
+    {
+      "schedule_id": "m1_M_d05_r1_bf09fe6c215dd53bd",
+      "case_id": "m1_M_d05_r1",
+      "mode": 1,
+      "true_h": "M",
+      "parent_key": "m1_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0489,
+      "budget_float_hex": "0x1.9096bb98c7e28p-5",
+      "constant_command_mol_min": 0.0023285714285714285,
+      "command_float_hex": "0x1.3135e443a47bdp-9",
+      "state10_sha256": "b16ebef125ac88fc8efe195d374efcddad04db9ef5b736ff7535679544cc8d7d"
+    },
+    {
+      "schedule_id": "m2_C_d05_r1_b83df563656092b28",
+      "case_id": "m2_C_d05_r1",
+      "mode": 2,
+      "true_h": "C",
+      "parent_key": "m2_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0411,
+      "budget_float_hex": "0x1.50b0f27bb2fecp-5",
+      "constant_command_mol_min": 0.001957142857142857,
+      "command_float_hex": "0x1.0086d1214b6ccp-9",
+      "state10_sha256": "7d5cbeb0c9fbbba29295abe381cd074e8027122fb0aa9d8968d90e991cbc6ec4"
+    },
+    {
+      "schedule_id": "m2_C_d05_r1_bbd03a67a428e98fb",
+      "case_id": "m2_C_d05_r1",
+      "mode": 2,
+      "true_h": "C",
+      "parent_key": "m2_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0486,
+      "budget_float_hex": "0x1.8e219652bd3c3p-5",
+      "constant_command_mol_min": 0.002314285714285714,
+      "command_float_hex": "0x1.2f568ae9b4c02p-9",
+      "state10_sha256": "7d5cbeb0c9fbbba29295abe381cd074e8027122fb0aa9d8968d90e991cbc6ec4"
+    },
+    {
+      "schedule_id": "m2_C_d05_r1_be39e8a1ba91e50b9",
+      "case_id": "m2_C_d05_r1",
+      "mode": 2,
+      "true_h": "C",
+      "parent_key": "m2_C_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0421,
+      "budget_float_hex": "0x1.58e219652bd3cp-5",
+      "constant_command_mol_min": 0.0020047619047619046,
+      "command_float_hex": "0x1.06c4a5a26a88fp-9",
+      "state10_sha256": "7d5cbeb0c9fbbba29295abe381cd074e8027122fb0aa9d8968d90e991cbc6ec4"
+    },
+    {
+      "schedule_id": "m2_M_d05_r1_b83df563656092b28",
+      "case_id": "m2_M_d05_r1",
+      "mode": 2,
+      "true_h": "M",
+      "parent_key": "m2_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0411,
+      "budget_float_hex": "0x1.50b0f27bb2fecp-5",
+      "constant_command_mol_min": 0.001957142857142857,
+      "command_float_hex": "0x1.0086d1214b6ccp-9",
+      "state10_sha256": "1f7044fc933fa9280fb8f23f69226b09aaca1147e4bfa31d7cb6ff145a10ed3b"
+    },
+    {
+      "schedule_id": "m2_M_d05_r1_bc0285e14801e9cc5",
+      "case_id": "m2_M_d05_r1",
+      "mode": 2,
+      "true_h": "M",
+      "parent_key": "m2_M_d05_r1_active",
+      "start_min": 10.0,
+      "end_min": 31.0,
+      "budget_10_31_mol": 0.0426,
+      "budget_float_hex": "0x1.5cfaacd9e83e4p-5",
+      "constant_command_mol_min": 0.0020285714285714286,
+      "command_float_hex": "0x1.09e38fe2fa171p-9",
+      "state10_sha256": "1f7044fc933fa9280fb8f23f69226b09aaca1147e4bfa31d7cb6ff145a10ed3b"
+    }
+  ],
+  "case_info": {
+    "m1_C_d05_r1": {
+      "parent_key": "m1_C_d05_r1_active",
+      "demand": 0.000227354,
+      "prefix": {
+        "actual_ethanol_mol": 0.020999999999999998,
+        "commanded_ethanol_mol": 0.020999999999999998,
+        "H2_produced_mol": 0.0021670191130399395,
+        "H2_demand_mol": 0.00227354,
+        "H2_shortfall_mol": 0.00010652088696006043
+      },
+      "state10_sha256": "48a5644537eb218b61c3fafb9aadb812e2dcccb28589247d649108e58a76d981",
+      "nominal_mol_min": 0.0021,
+      "original_probe_mol_min": 0.0024
+    },
+    "m1_M_d05_r1": {
+      "parent_key": "m1_M_d05_r1_active",
+      "demand": 0.000227354,
+      "prefix": {
+        "actual_ethanol_mol": 0.020999999999999998,
+        "commanded_ethanol_mol": 0.020999999999999998,
+        "H2_produced_mol": 0.0021918080448504085,
+        "H2_demand_mol": 0.00227354,
+        "H2_shortfall_mol": 8.173195514959141e-05
+      },
+      "state10_sha256": "b16ebef125ac88fc8efe195d374efcddad04db9ef5b736ff7535679544cc8d7d",
+      "nominal_mol_min": 0.0021,
+      "original_probe_mol_min": 0.0024
+    },
+    "m2_C_d05_r1": {
+      "parent_key": "m2_C_d05_r1_active",
+      "demand": 0.000276379,
+      "prefix": {
+        "actual_ethanol_mol": 0.018,
+        "commanded_ethanol_mol": 0.018,
+        "H2_produced_mol": 0.0026308513711189043,
+        "H2_demand_mol": 0.00276379,
+        "H2_shortfall_mol": 0.00013293862888109564
+      },
+      "state10_sha256": "7d5cbeb0c9fbbba29295abe381cd074e8027122fb0aa9d8968d90e991cbc6ec4",
+      "nominal_mol_min": 0.0018,
+      "original_probe_mol_min": 0.0021
+    },
+    "m2_M_d05_r1": {
+      "parent_key": "m2_M_d05_r1_active",
+      "demand": 0.000276379,
+      "prefix": {
+        "actual_ethanol_mol": 0.018,
+        "commanded_ethanol_mol": 0.018,
+        "H2_produced_mol": 0.0026635052413509093,
+        "H2_demand_mol": 0.00276379,
+        "H2_shortfall_mol": 0.00010028475864909068
+      },
+      "state10_sha256": "1f7044fc933fa9280fb8f23f69226b09aaca1147e4bfa31d7cb6ff145a10ed3b",
+      "nominal_mol_min": 0.0018,
+      "original_probe_mol_min": 0.0021
+    }
+  },
+  "deduplication": "Only exact (case_id, IEEE754 budget.hex()) equality; no tolerance merge, rounding or clipping",
+  "feasibility": {
+    "all_within_original_bounds": true,
+    "command_min": 0.001957142857142857,
+    "command_max": 0.0023761904761904758,
+    "unique_schedules": 13,
+    "paired_records": 4000
+  }
+}

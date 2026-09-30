@@ -1,0 +1,184 @@
+SSMR MAJOR REVISION V2 -- ACCESS, VERIFICATION, AND FRESH REPLAY
+
+Scope and recorded status
+This revision uses Python for continuous ODE truth, calibrated simulation records,
+and physical feed/H2 accounting. It does not require MATLAB, a browser session,
+credentials, or an external API. Native MATLAB evidence belongs to the separately
+completed original audit; this revision does not claim new laboratory validation.
+The physical phase completed on 2026-09-30: 170 truth paths and 252 continuation
+branches, all processes returned successfully. Process completion is not numerical
+acceptance; the exact exported-state qualification below remains applicable.
+dynamic_status.json is the authoritative physical stage record.
+The statistical phase is separate: results/summary.json and independent checker
+reports establish whether calibration/evaluation/policy reporting is complete.
+Copied or previous checker reports never establish that a NEW replay completed.
+
+Required runtime and inputs
+Recorded interpreter on this host:
+C:/Users/Admin/Desktop/WHEC/.venv/Scripts/python.exe
+Python 3.13.9, NumPy 2.4.6, SciPy 1.17.1, pandas 3.0.3 on Windows 10 build 19045.
+Exact runtime details are in dynamic_environment.json. Two ODE workers are used;
+BLAS/OpenMP/NumExpr thread counts are capped at one by dynamic_campaign.py.
+All model equations, MAT initial states, nominal map inputs, and supporting files
+are staged under reference/ and hashed in SOURCE_MANIFEST.json. Preserve that
+complete tree and the frozen protocol/checker files. The nominal map CSVs are
+declared inputs, not new physical trajectories. New campaign output directories
+must start empty; never copy old truth, branch, calibration, or trial arrays into
+a fresh run. No confidential plant data is required or included by this lane.
+
+Frozen design and exact commands on this host
+In PowerShell, define:
+  $py = 'C:/Users/Admin/Desktop/WHEC/.venv/Scripts/python.exe'
+  $r = 'C:/Users/Admin/Desktop/WHEC/reviews/ssmr_external_20260930/major_revision_v2'
+
+The physical protocol SHA256 is:
+1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d
+The dynamic engine SHA256 is:
+c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27
+PROTOCOL_FREEZE.json freezes the physical/statistical design. The separate
+POLICY_AMENDMENT_FREEZE.json records the pre-evaluation policy correction;
+the physical protocol and branch bank were unchanged. The checker freeze files
+are under checks/. Do not rerun protocol/source generators to redefine a replay.
+
+To check the existing physical evidence without rerunning or overwriting it:
+  & $py "$r/dynamic_portable_verify.py" --root $r --out "$r/dynamic_portable_verification_recheck.json"
+This verifies physical file hashes, frozen sources, and completeness only. It
+does not replace the independent numerical/statistical checks or establish that
+the reactor equations are independently validated.
+
+For the complete archived campaign audit on this host, run the following on a
+working copy if the existing checker reports must remain byte-for-byte intact:
+  $audit = 'C:/Users/Admin/Desktop/WHEC/reviews/ssmr_external_20260930'
+  $originalZip = 'C:/Users/Admin/Downloads/ssmr-degradation-diagnosis_audit_2026-09-30.zip'
+  & $py "$r/checks/run_revision_checks.py" --root $r --prior-audit-root $audit --original-archive-path $originalZip
+The checker writes reports under checks/. It verifies the statistical and
+physical records, the separately preserved forensic evidence, and preservation
+of the earlier submission/rerun. This is a completed-record audit, not a command
+to generate new simulation data. Read its scope and qualifications with its pass
+status; a passing physical accounting check is not physical model validation.
+
+To rebuild the report after that completed audit:
+  & $py "$r/report/build_revision_document.py"
+The report builder uses ReportLab and PyMuPDF and refuses missing, stale, or
+unqualified final-check evidence. Its input manifest is
+report/document_input_manifest.json. The optional --draft switch withholds
+unchecked results; a draft is not a released report.
+
+To create a fresh replay, choose a NEW destination and run:
+  $new = 'C:/Users/Admin/Desktop/WHEC/reviews/ssmr_replay_new'
+  & $py "$r/dynamic_prepare_replay.py" --source $r --destination $new
+The preparation helper refuses an existing destination and copies only source,
+declared input maps/ICs, frozen design, checker/guard/forensic programs, and
+pre-evaluation checker provenance. It does not copy truth arrays, branch arrays,
+calibration/evaluation batches, policy results, or successful final run status.
+The old run-specific forensic freeze is kept only under provenance_original/;
+it is not an active freeze or evidence for the new run. dynamic_STAGING.json
+records the new source inventory.
+
+Run stages in this order in the new tree:
+  & $py "$new/dynamic_campaign.py" --frozen-protocol-sha256 1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d --workers 2
+  & $py "$new/validate_resume.py" --root $new --out "$new/checks/resume_before_calibration_new.json"
+  & $py "$new/statistical_campaign.py" calibrate
+  & $py "$new/validate_resume.py" --root $new --out "$new/checks/resume_before_evaluation_new.json"
+  & $py "$new/statistical_campaign.py" evaluate
+  & $py "$new/validate_resume.py" --root $new --out "$new/checks/resume_before_policy_new.json"
+  & $py "$new/statistical_campaign.py" policy
+Run each command only after the preceding command exits successfully. A failed
+guard means stop and investigate, not delete/rebuild caches to force a pass.
+Guard output filenames must be new; they refuse overwriting. For an interrupted
+stochastic phase, run validate_resume.py again after the old writer has stopped,
+then resume that same phase only if identities pass. The guard checks cached
+metadata/seed/noise/source/array identities; it does not certify scientific success.
+
+Then run the independent checks against the NEW tree and retain full outputs.
+For example, the frozen statistical audit has this standalone entrypoint:
+  & $py "$new/checks/verify_statistical.py" --root $new --phase all --out "$new/checks/statistical_fresh_verification.json"
+The complete archived-campaign wrapper additionally requires new run-specific
+forensic evidence when an exact export gate fails; old evidence cannot stand in
+for a new run. The statistical stages must keep the frozen templates, observation
+assumptions, seed rules, thresholds, and policy amendment. An adverse result is
+a result, not permission to alter the design. Recorded wall time is retained in
+dynamic_status.json; runtime elsewhere is not guaranteed.
+
+An interrupted physical run can be resumed at the SAME path with the same
+command plus --resume, only after the original process has stopped. The runner
+verifies sources and completed evidence, preserves scientific failures, and
+refuses unsafe incomplete-output reuse. Do not start concurrent supervisors.
+Do not run the statistical commands into existing completed results/ casually:
+their outputs can be overwritten. Use a fresh replay tree for a new experiment.
+
+Extracted ZIP and portability
+On another computer, $py must identify an equivalent installed Python runtime,
+and $r must identify the extracted artifact root. The source engine and runner
+locate reference/ relative to themselves, so a NEW run can use the extracted
+tree or the source-only replay tree prepared above. The staged MAT/CSV inputs
+remain necessary; no path in the guide is a promise those host paths exist there.
+
+Historical metadata stores absolute source/IC paths from this host. Therefore
+the original resume loader and frozen source-path checks are not automatically
+portable for already-saved evidence. Do not edit those metadata records. The
+separate dynamic_portable_verify.py explicitly maps each recorded artifact-root
+prefix to the chosen extracted root and checks the same file hashes there.
+That adapter is limited to integrity/inventory. The final numerical wrapper uses
+checks/verify_dynamic_records_v3.py with checks/dynamic_source_resolver.py to map
+source hashing and MAT initial-condition reads to the extracted artifact root.
+The v3 path adapter preserves every numerical gate and does not rewrite records.
+DYNAMIC_PORTABLE_ADAPTER.json records its identity and scope. Freshly generated
+records carry the new local paths. Source-only relocation/import/IC loading and
+freeze checks were tested in dynamic_portability_smoke.json without running a
+duplicate campaign.
+
+For portable historical preservation checks, first extract the bundled
+historical/SSMR_EXTERNAL_AUDIT_AND_RERUN.zip into a NEW directory. That extraction
+must contain full_rerun/ and ssmr-degradation-diagnosis/ directly. Set $audit to
+that directory and $originalZip to historical/original_submission.zip from the
+outer package, then use the same run_revision_checks.py command with both path
+arguments. Passing only a revision root cannot verify unavailable historical
+artifacts; preserve that limitation instead of skipping it silently.
+Cross-platform timestamps, absolute-path metadata, and wall times will differ;
+do not demand byte-identical metadata as a substitute for numerical verification.
+
+Exact-state export qualification and forensic resolution
+The original exact exported-state gate FAILED and remains preserved. Eight truth
+records and 24 branch records contain a dense-output first-row difference from
+the exact solver input. The largest component difference is
+2.2420775429197073e-44. The physical integrator starts from the intended input.
+All 32 affected records were replayed under the frozen source/runtime with a
+separately frozen forensic comparator: complete regenerated state arrays and
+truth/interval CSVs match the originals exactly; solver initial states match
+their inputs exactly; dense(left) matches the archived exported first row exactly.
+Re-evaluating all seven initial features with the exact input gives identical
+values; H2 production/shortfall accounting is unchanged. This establishes the
+source of the reporting discrepancy. It does not turn the original byte-identity
+FAIL into a PASS or relax that gate. The final check retains qualified:true and
+the failed original reports; do not summarize it as all frozen gates passed.
+See dynamic_FORENSIC_FREEZE.json,
+dynamic_forensic_summary.json, dynamic_forensic_results/, and the independent
+forensic check. A separate checker identity amendment distinguishes healthy and
+sensor-only scenarios that legitimately share identical physical trajectories.
+
+Forensic source is included for inspection and fresh diagnosis. In a fresh tree,
+dynamic_dense_diagnosis.py generates that run's discrepancy inventory. Commands:
+  & $py "$new/dynamic_dense_diagnosis.py"
+  & $py "$new/dynamic_forensic_replay.py" freeze
+  & $py "$new/dynamic_forensic_replay.py" run
+These reproduce exact forensic comparisons for the original 32-record pattern.
+The helper
+deliberately stops if that pattern differs. This is this campaign's forensic
+design, not a promise of identical cross-platform discrepancies. Do not copy the
+old forensic arrays/summary as new evidence or change a guard to force acceptance.
+
+Evidence boundaries
+drop denotes the nominal quasi-steady map H2 loss at t10. Metadata reports the
+actual dynamic true and biased-observed loss separately. Core starts are settled
+at fixed scheduled t0 health with recorded convergence gates; deterioration then
+continues within the ODE. Commands change at 10 minutes, decisions use states at
+16 or 21 minutes, and physical costs use only the causal prefix plus the chosen
+branch through 31 minutes.
+Feed integrals respect command switches; actual feed/H2 use the declared 0.1 min
+trapezoidal quadrature. Sensor assumptions are synthetic and conditional on the
+declared instrument model; no measured-device accuracy or financial payback is
+established. Unsupported/excluded scenarios and failures must remain visible.
+Active-minus-passive outcomes describe the whole feed-and-measurement sequence.
+The feed pulse itself changes production; without a matched feed-only comparator,
+these differences are not an information-specific value-of-information estimate.

@@ -1,0 +1,20 @@
+{
+  "schema": "ssmr.feed-only-freeze.v1",
+  "created_utc": "2026-09-30T15:23:30.561408+00:00",
+  "scope": "Dated outcome-aware amendment; frozen before new executions and contrast analysis; diagnostic method unchanged",
+  "files": {
+    "PROTOCOL_AMENDMENT.txt": "da6a36196281ced386578f87c52cb71471a7f5c9c25b57efbf911cda224bda0d",
+    "amendment_protocol.json": "1028dfeaf0dfa3043483833fd2d7f6d4035c4168a08115a0d43ca8c181f0586b",
+    "checks/CHECK_FREEZE.json": "15a4e70fd6ac713f446b46f5c34551d8fae21ae3f2a1f35cffc1b32742b7a15e",
+    "checks/CHECK_SPEC.txt": "5eee3a2953271adc555460294d2a18bf0a73cc4961cb656eefda7b5956d58e00",
+    "checks/audit_math.py": "f64e8c819dea25893c4d1691335b098bd32750367f0eb9c9a3f2e292b0711a9e",
+    "checks/freeze_checker.py": "7cb53298f4b2d7af3eba893e3b54b364885d9a01d6ee7555673b6d7cd6618955",
+    "checks/math_selftest.json": "3c11b3468650c4be4a25271a3f01ffc056c58ea071051b80f00765b276ff3609",
+    "checks/math_selftest_initial_failure.txt": "e594b1b73dda42608f7f03145c55f4504eb9e9eda5c25884069de2451e317f93",
+    "checks/test_audit_math.py": "647d15a24f27dfb4a6c2c8c087edeac8ec3143aa429b31034b4dcd2b54da51d4",
+    "checks/verify_feed_only.py": "6125eda5ef6a0a67a94002a4e304cd8f73f91341cc1c84253fe9b64a843e3d0d",
+    "parent_inventory.json": "c70f38e81906c371459da1cc7b677bdbf8f498145a9600338b7022d0405c5e5f",
+    "prepare_amendment.py": "23f4ca01569679f33d6e73c97c217a93733e0bd9a5b7b6eae424f4fe2d867d03",
+    "run_feed_only.py": "850d225adad0fdd876fa3eaf6854a0a653f5c512cec4f8ac4ed90477653577ad"
+  }
+}

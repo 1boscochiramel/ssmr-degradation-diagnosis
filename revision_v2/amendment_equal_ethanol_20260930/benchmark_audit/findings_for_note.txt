@@ -1,0 +1,39 @@
+Findings on the benchmark code
+
+The audit also found three reproducibility issues worth discussing with the
+benchmark authors. First, the paper's Eq. (13) takes the absolute value after
+averaging adjacent signed errors. Applying the trapezoidal rule to the absolute
+errors gives a different result when the error changes sign. On the saved
+native traces, the two calculations differ by 0.18% in case study 1 and by
+3.26% and 3.21% in the temperature and pressure cases. Reporting the formula,
+sample times and integration interval would remove this ambiguity. These
+calculations do not replace the original paper-reproduction acceptance checks.
+
+Second, increasing the spatial grid from 50 to 200 points changes the recorded
+startup hydrogen flow by up to 12.08% of nominal at displayed time 0.4 min in
+both disturbance cases. Each grid uses its own supplied initial state. This
+measures sensitivity to that combined change, not convergence. The full startup
+must remain visible. Fine-grid reset logs are incomplete, so the result retains
+that provenance qualification.
+
+Third, control.m retains its integral and previous-error values between calls,
+while the simulation script starts with plain clear. Independent cases can
+therefore inherit controller state. Add clear control before each independent
+case, and record the reset. The source confirms the mechanism; this revision
+does not claim a newly measured native effect size.
+
+Source anchors: benchmark paper p.8, Eq.(13); saved baseline and fine-grid native
+CSV/MAT traces; control.m lines 3-4, 15-22; SSMR_simulation.m line 3. See the
+source trace for formula definitions and the retained provenance limits.
+
+Negative controls for page 5
+
+The policy chose a non-nominal follow-up feed command in 498-527 of 1000 healthy
+episodes in every tested sensor/mode cell. This counts the command after the
+decision, not the diagnostic pulse itself. In Mode 1, hydrogen shortfall changed
+by less than 0.00001 mmol; in Mode 2 it did not change. The Mode 1 meter-bias case
+with only the hydrogen meter led to 947 actions in 1000 episodes and 1.02075 mmol
+of extra ethanol on average relative to the same-pulse nominal-feed control,
+again with less than 0.00001 mmol of shortfall reduction. All healthy and
+meter-bias cells are retained in the companion table, including the benign
+Mode 2 meter-bias case.

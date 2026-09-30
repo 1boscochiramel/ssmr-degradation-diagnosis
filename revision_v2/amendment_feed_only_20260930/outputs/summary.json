@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "completed_utc": "2026-09-30T15:24:10.876406+00:00",
+  "physical_arms": 18,
+  "paired_trial_rows": 27000,
+  "paired_groups": 27,
+  "freeze_sha256": "582055dd290217dffc5786217087399773cd3494c13b66db38b3cd8258aa3e64",
+  "files": {
+    "outputs/feed_only_arm_costs.csv": "9fb720d0e8e4b2a321cb17eff31f8cb075631120033a9245a637d0d1784ffaff",
+    "outputs/paired_trials.csv": "54cb99cbc666d6f97d64674d0dc14d0483bb0535530841786e7d318ff30354cc",
+    "outputs/paired_summary.csv": "534198c69166425d707db4ae442185a72dffe3bb40f02a9a1a43f65c8c226a0d"
+  },
+  "interpretation": "Schedule-yoked conditional downstream-action ablation; fixed16/21 controls separately reported; not total information value or economic benefit",
+  "original_results_unchanged": true
+}

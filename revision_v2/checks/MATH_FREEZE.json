@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-09-30T09:04:23.875558+00:00",
+  "stage": "Core mathematical checker freeze before physical campaign/calibration/evaluation; schema integration to freeze separately before any evaluation inspection.",
+  "sha256": {
+    "MATH_SPEC.txt": "49df2f9c90c71cf3faa6fd349b936f1d851fac6aa6be1fe3d6179e90d667be89",
+    "reference_math.py": "88e3485e1d3e255775941aa3b72adfc2e3827a9523fb5950eec6794e03e1d84c",
+    "test_reference_math.py": "b72e65002b9a8f486cef744c2428dd2e41865b860def8414f60673fd1f0bb661",
+    "verify_model_analytic.py": "8cd61d1dfd4bbb2ecb391bb8f8067add9d4162714a6aa877492aef61f63f5014"
+  },
+  "analytic_evidence": [
+    "reference_math_selftest.json",
+    "model_analytic_selftest.json"
+  ],
+  "target_author_sha256": "2291aad06beebe0ec49b900f89d048069483b5021059102adb41d68bdd42c5be"
+}

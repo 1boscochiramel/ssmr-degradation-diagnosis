@@ -1,0 +1,42 @@
+Benchmark-code and non-nominal-action source check, 2026-09-30
+
+This is a supplemental audit of already observed evidence, not a preregistration
+of a new simulation or a different-model review. Freeze this file and the check
+script before executing the calculations. No source result is to be changed.
+
+1. Recompute conventional trapezoidal integral of absolute tracking error and
+the literal Eq. (13) absolute signed-pair average on each saved baseline native
+closed-loop trace. Report both and their difference, including all three cases.
+Use the same rows and displayed timestamps. Assert finite data, increasing time,
+and that the literal expression is no larger than the conventional expression.
+Check a sign-crossing fixture independently; these are distinct quadratures.
+Record that they do not resolve any published-target mismatch by themselves.
+
+2. Compare every np=50 and np=200 native trace on the recorded common times,
+without time shifting or removing startup. Recompute full maximum, its time,
+and descriptive after-one-minute maximum. Verify CSV arrays against saved MAT
+arrays and source IC identity. Report mesh plus supplied IC sensitivity, not
+convergence. Preserve missing fine-grid reset-log provenance flags from the
+prior checker and state these limitations prominently.
+
+3. Inspect original control.m and SSMR_simulation.m: persistent state variables,
+one-time initialization, update equations, and absence of clear control at start.
+Demonstrate state dependence with a short independent scalar translation and
+zero-error retained-state fixture. This is structural source verification, not
+a new native execution. Do not promote screenshot-transcribed run magnitudes
+to raw-trajectory evidence.
+
+4. Recompute every healthy and meter-bias case for all three sensor sets in
+both modes. For each of 12 active cells and 12 passive cells preserve all 1000
+trials in denominators and count non-nominal commands after the decision. This
+does not count the active diagnostic pulse itself. Compare with nominal at
+absolute tolerance 1e-12 mol/min. For active cells join all trials to the prior
+same-pulse feed-only comparison and report signed mean extra actual ethanol
+and shortfall difference in mmol. Check one-to-one trial identity and agreement
+of diagnostic costs between original trials and paired records. Never select
+the least damaging negative-control cell as representative.
+
+5. SHA256 every input and verify frozen-input identity before calculations.
+Write complete evidence JSON/CSV and a plain-language source trace. A passing
+arithmetic check is not physical validation, proof of practical diagnosis value,
+or different-model scientific review. No favorable-outcome pass threshold.

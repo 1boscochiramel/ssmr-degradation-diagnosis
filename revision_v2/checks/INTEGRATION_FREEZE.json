@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-09-30T09:20:44.506430+00:00",
+  "sha256": {
+    "integration_reference.py": "584eb233f35c4eb2b0f7c10be04a6a3da76202ae8bd79737513c6d9d6cfd0aa8",
+    "verify_statistical.py": "41920e87bda338a1c63310648a154df0274f2357a8ba7304759e455672cb6901",
+    "verify_policy_records.py": "d463f43ee6f224bd918c0bc340bfeea32145d0b7fc6e63ace9478ab05037a2d0",
+    "verify_dynamic_records.py": "2956f2bf140285b84d48c4b94fbd21461adbcf6ebe053a889a269edb81bd2a6b",
+    "test_integration_reference.py": "94c81fd252901aaef825e888b477b9e0f4c301f91c46377b5e60d8a243f1abef"
+  },
+  "math_freeze_sha256": "a8f59852ba6bf7224037992bf43bd1e8bc27501a46d1c7de6a6f493d0ba294fb",
+  "protocol_sha256": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+  "statistical_pipeline_sha256": "2c79d4c5b0fabee86bd0b15a3eeb58d91cacf7523eaa36efa808db24b3e69e34",
+  "synthetic_evidence_sha256": "a201074f97359ef61282260ab43dfbd0d7687d3c202ef8f15b42bb82ef367512",
+  "chronology": "Core math frozen before physical campaign. These raw-record/statistical/policy integration checks frozen before any stochastic calibration or evaluation was generated or inspected. Physical truths generated meanwhile; only engineering smoke inspected by checker so far. Final packaging/report-binding wrapper may follow without changing these acceptance functions."
+}

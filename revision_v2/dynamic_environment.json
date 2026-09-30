@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-30T09:16:40.332733+00:00",
+  "interpreter": "C:\\Users\\Admin\\Desktop\\WHEC\\.venv\\Scripts\\python.exe",
+  "python_version": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3"
+  },
+  "resource_settings_from_frozen_runner": {
+    "workers": 2,
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "runner_sha256": "2b2ce78f0b00b8d6dcc72e0fc18e1e05af0180b54ce7eb452cc1278f750571d5",
+  "note": "Read-only runtime inventory during campaign; no dependency installation or source changes."
+}

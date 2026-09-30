@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-09-30T09:06:06.630871+00:00",
+  "scope": "Engine and resource-only orchestrator before dynamic campaign launch; no scientific source changes after design freeze",
+  "files": {
+    "dynamics.py": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+    "dynamic_campaign.py": "2b2ce78f0b00b8d6dcc72e0fc18e1e05af0180b54ce7eb452cc1278f750571d5",
+    "dynamic_API.txt": "f98e280d00df67956720309dedbeab6ad0324e90e3ed7ffb0514bf2801cdcf4a"
+  },
+  "engineering_evidence": [
+    "dynamic_smoke_results/20260930T143057/smoke.json",
+    "dynamic_smoke_results/preconditioned_C_20260930T143140/smoke.json"
+  ],
+  "orchestrator_checks": "Syntax/import, all60 staged source hashes, frozen protocol/engine identity, completed engineering evidence roundtrip loading,170unique truth IDs and252branch count; no campaign execution during check."
+}

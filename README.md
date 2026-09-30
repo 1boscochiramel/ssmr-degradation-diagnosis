@@ -5,9 +5,23 @@ A reproducible extension of the SSMR ethanol-steam-reforming benchmark
 [doi:10.1016/j.renene.2025.124743](https://doi.org/10.1016/j.renene.2025.124743);
 code: [arcmateo/SSMR_Benchmark](https://github.com/arcmateo/SSMR_Benchmark), MIT).
 
-**Status: draft for the author's review (v0.1, 30 Sep 2026). Simulation only.** All claims are
-scoped to the benchmark model, the authors' exponential deterioration mechanisms, Modes 1-2,
-np = 50 and a declared noise model. No experimental, lifetime or savings claims.
+**Status: local review draft v0.2 (1 Oct 2026). Simulation only.** All claims are scoped to the
+benchmark model, the authors' exponential deterioration mechanisms, Modes 1-2, np = 50 and a declared
+noise model. No experimental, lifetime or savings claims. The current six-page note is
+[`revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf`](revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf);
+every number in it is recomputed from the staged CSVs by
+`revision_v2/amendment_equal_ethanol_20260930/note_v4_20261001/verify_note_v4.py` (56/56 checks).
+
+## What is where
+
+- `reformer_diag/` : milestones M1-M7 of the first pass (Python port, native MATLAB and Octave
+  checks, measurement layer, operating map, note v1, estimators, controllers). Table below.
+- `revision_v2/` : the major revision (30 Sep - 1 Oct 2026): calibrated sequential-exclusion
+  diagnosis on the full dynamic model with 1000 evaluation episodes per cell, stress tests, the
+  feed policy, and two dated control amendments (same-pulse and equal-ethanol) with their frozen
+  protocols, independent checkers and the note builders. `revision_v2/STAGING_MANIFEST.json` lists
+  every staged file with its SHA-256 and names what is not redistributed (raw per-episode state
+  arrays, kept on the author's machine; third-party paper PDFs).
 
 ## What is here
 
@@ -25,17 +39,25 @@ Every milestone has a protocol frozen and SHA-256-hashed **before** its results;
 after seeing results are dated and labelled post-hoc, and the frozen result stays the primary
 record. Failed checks are kept, not removed.
 
-## Headline findings (details and scope in the reports)
+## Headline findings (details and scope in the note and reports)
 
-- The Python port matches the authors' code run natively in MATLAB for STEP, CS1, CS2T and CS2P
-  (largest H2 difference 0.0564% of nominal; largest IAE difference 0.141%).
-- CS1 reproduces the paper's IAE; CS2T and CS2P do not, **in MATLAB too** (about -10.5% and
-  -9.3%): the gap is between the released code and the paper, and for CS2T equals one 0.1-min
-  sample of start-up error (post-hoc observation, a question for the authors).
-- `control.m` keeps PID state in persistent variables that `clear` does not reset; running cases
-  back to back in one MATLAB session changes results (use `clear control`).
-- With the hydrogen flow alone, no degradation cause is distinguishable; a bounded six-minute
-  +0.0003 mol/min ethanol step separates catalyst from membrane loss at a 5% H2 drop.
+- **Equal ethanol:** a blind constant feed and the diagnosis-based command give the same mean
+  hydrogen shortfall within 1.6% in all four central cases. Per episode the diagnostic command is
+  better in 841-998 of 1000; the blind arm wins the mean only through the 0-18 episodes per case in
+  which the procedure declared the model incompatible and returned feed to nominal. The cost of
+  probing is paid when the procedure abstains.
+- **Diagnosis:** the feed pulse raises correct calls in the central all-sensor cases (e.g. Mode 1
+  catalyst 673 to 882 of 1000, Mode 2 catalyst 349 to 638) with zero wrong calls; hydrogen flow
+  alone stays uninformative for catalyst loss (1 to 13 of 1000). All kinetic-mismatch cases reject
+  the true cause; healthy plants receive a non-nominal command in about half of all episodes.
+- **Benchmark code, three findings for the authors:** (1) under the paper's own Eq. (13) the
+  native MATLAB run reproduces case study 1 within 0.2% but the two Mode 2 cases come out 13.4% and
+  12.2% below Table 3; (2) `control.m` keeps PID state in persistent variables that `clear` does
+  not reset, so back-to-back cases inherit controller history (`clear control`); (3) np = 200 uses
+  its own initial-state files and changes start-up hydrogen flow by up to 12% of nominal, so the
+  saved runs are not a mesh-convergence test.
+- **First pass (M1):** the Python port matches the authors' code run natively in MATLAB for STEP,
+  CS1, CS2T and CS2P (largest H2 difference 0.0564% of nominal).
 
 ## Reproduce
 
@@ -52,5 +74,7 @@ Native runs are not automated: `reformer_diag/matlab_native/run_in_matlab_online
 
 This project: MIT (see LICENSE). The benchmark model, parameters and initial conditions are the
 work of Arcila-Osorio et al. and are used under their MIT licence; they are fetched, not
-redistributed. Parts of this code were drafted with AI assistance (Claude, Codex) and checked by
-scripts and by the author.
+redistributed. Parts of this code and of the note drafts were produced with AI assistance (Claude, Codex) and
+checked by verification scripts, by a second model reading the note cold, and by the author, who is
+responsible for every claim. Some scripts under `revision_v2/` carry absolute paths from the
+author's machine; they document the recorded run and are not portable entry points (`run_all.py` is).

@@ -1,0 +1,8 @@
+Pre-freeze synthetic fixture failure, retained 2026-09-30.
+AssertionError: paired direction uses policy minus comparator
+The fixture expected (x+1)-x to equal one bit-for-bit for arbitrary decimal
+floating-point physical amounts. That is not an exact arithmetic identity in
+binary floating point. No amendment output was read and no scientific gate
+changed. Replace the sign-only fixture inputs with exactly representable 3 and2.
+The real reported physical comparisons retain the inherited absolute/relative
+tolerance; full trajectory/CSV identity checks retain exact comparison.

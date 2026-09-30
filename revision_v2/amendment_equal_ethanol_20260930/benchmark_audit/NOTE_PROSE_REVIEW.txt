@@ -1,0 +1,96 @@
+Focused prose/source review | cx-code-v3 | 30 September 2026
+
+Scope: inspect pending-build note/build_note.py against benchmark_audit sources,
+prior literature traces and exact source metadata. No equal-ethanol outcome
+review: those experiment files were pending. No rendered-page visual approval.
+This is another pass from the same model family, not different-model review.
+
+Reviewed corrected generator SHA256:
+2dfae4f63fda70e7ee70b7e66e790d26eea6a9ebc8a97031f5bfdeb43b7ae234
+
+Material findings and resolution
+
+1. RESOLVED, original factual error in page-1 IAE paragraph.
+The first draft said the MATLAB loop accumulates absolute error with the
+right-hand sample. The original SSMR_simulation.m does not have that IAE
+accumulator. The supported issue is the paper's Eq.(13): absolute value of the
+average signed errors differs from the trapezoidal average of absolute errors
+when adjacent signs differ. Root replaced the paragraph. Current line 84
+correctly describes that distinction, gives no unsupported magnitude and does
+not mistake a scoring difference for a different plant response. Primary anchor:
+benchmark.pdf p.8 Eq.(13), visually inspected in this lane; arithmetic already
+recomputed independently in findings_evidence.json.
+
+2. RESOLVED, original factual error in page-1 mesh paragraph.
+The first draft said the supplied initial conditions differed "including the
+ethanol feed". Saved first feed is the same across the two grids within each
+case: 0.0021 mol/min for STEP/CS1 and zero for CS2T/CS2P. The changed grid and
+different-dimensional supplied state are the proper description. Root removed
+the unsupported feed difference. Current line 85 correctly says mesh and
+initialization effects are mixed, does not claim convergence, and preserves the
+incomplete fine-grid reset-log qualification. The native comparison is saved
+evidence, not a new MATLAB run. Existing checks retain the full startup maximum.
+
+3. CONFIRMED, PID paragraph (current line 86).
+control.m lines 3-4 declares persistent integral_error and prev_error; lines
+15-23 initializes only when empty and then updates both. SSMR_simulation.m
+line 3 uses plain clear, which clears current-workspace variables. Back-to-back
+independent cases can therefore inherit the standalone controller's stored
+state. The suggestion clear control before each independent run is appropriate.
+It must not be applied every sample. No screenshot-derived effect magnitude is
+quoted, and no new native rerun is claimed. Official MathWorks documentation
+was checked to corroborate the language semantics:
+https://www.mathworks.com/help/matlab/ref/persistent.html (Description; Tips)
+https://www.mathworks.com/help/matlab/ref/clear.html (Description)
+
+4. CONFIRMED, healthy and meter-bias presentation (current lines 133-144).
+The four case rows retain S1/S3/S4 action counts for every healthy and meter-bias
+case. The term follow-up command distinguishes the decision's action from the
+planned pulse. The 49.8-52.7% healthy rate is bold and not concealed in a footnote;
+the previously omitted M1 meter-bias S1 cell is bold with 947/1000 and 1.0208 mmol
+extra ethanol. These agree with the complete raw-record check in this folder.
+The cost comparison is explicitly against the same-pulse control, not the new
+equal-ethanol control. Mode 1 changes are explicitly small and nonzero; exact zero
+is restricted to Mode 2 shortfall improvement. No new numerical correction is
+needed. The 0.5250 mmol healthy M2 S4 example remains in context rather than
+substituting for the full negative-control table.
+
+5. RESOLVED, incomplete bibliographic entries 6 and 7.
+Exact references supplied to root and now present in the corrected generator:
+
+[6] D. M. Raimondo, G. R. Marseglia, R. D. Braatz and J. K. Scott.
+Closed-loop input design for guaranteed fault diagnosis using set-valued
+observers. Automatica 74 (2016) 107-117.
+doi:10.1016/j.automatica.2016.07.033.
+Checked against supplied Raimondo_Automatica_2016.pdf page 1 (title, authors,
+journal, volume, pages and printed DOI) and prior_work_trace.txt. The publisher
+search result also agrees; a subsequent publisher page open returned HTTP403.
+
+[7] M. Serra, C. Ocampo-Martinez, M. Li and J. Llorca.
+Model predictive control for ethanol steam reformers with membrane separation.
+International Journal of Hydrogen Energy 42(4) (2017) 1949-1961.
+doi:10.1016/j.ijhydene.2016.10.110.
+Title and author list were read from supplied Postprint_Serra2017.pdf page 1.
+Journal, issue, pages and DOI are verified in the authors' institution record:
+https://www.iri.upc.edu/publications/show/1812
+This page was successfully opened and read. Its alternative apollo.upc.es URL
+returned a timeout when opened directly. The same bibliographic metadata is
+also present as reference [25] in the local benchmark paper. The root's current
+compact reference omits issue (4), which is not a scientific or citation-identity
+error; adding it is optional if space permits.
+
+6. No release approval inferred.
+The Santra comparison matches the full-text trace: actual implemented three-state
+surrogate, actuator faults and recovery versus this distributed-benchmark
+diagnosis and blind-control comparison. The note admits retrospective resource
+matching and changed timing; it must retain that caveat whatever outcome occurs.
+The diagram's 27-point completeness and black-and-white legibility still require
+the separate figure and rendered-page checks. Equal-resource signs and amounts,
+new result provenance and final six-page layout remain for the execution/release
+checks. Do not describe this focused pass as journal review or as cross-model
+validation. No generator, literature source, raw result or original note was
+edited by this reviewing lane.
+
+Recommendation: proceed to the pending experiment and normal document checks.
+No unresolved material source/prose issue was found in this bounded review
+after the two factual corrections and reference replacements above.

@@ -1,0 +1,14 @@
+{
+  "schema": "ssmr.design-freeze.v2",
+  "frozen_utc": "2026-09-30T09:04:52.209082+00:00",
+  "files": {
+    "protocol.json": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+    "make_protocol.py": "a19b6a1ced1f2694452941d1c0609a851a95195447d9d980f233de7e9719866c",
+    "revision_model.py": "2291aad06beebe0ec49b900f89d048069483b5021059102adb41d68bdd42c5be",
+    "dynamics.py": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+    "SOURCE_MANIFEST.json": "69f23d6af254fe3c524fb683c6eb7f32a9def38b96d7f7bd5c20f01eb5f195d1",
+    "checks/MATH_FREEZE.json": "a8f59852ba6bf7224037992bf43bd1e8bc27501a46d1c7de6a6f493d0ba294fb"
+  },
+  "chronology": "Before any core/stress dynamic campaign or stochastic calibration/evaluation; engineering-only synthetic/healthy smokes and analytic checks precede this freeze.",
+  "source_status": "Reference model/maps already checked in prior audit; no claim of new preregistration for historical results."
+}

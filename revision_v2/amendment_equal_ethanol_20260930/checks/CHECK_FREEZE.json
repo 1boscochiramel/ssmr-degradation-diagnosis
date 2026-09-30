@@ -1,0 +1,29 @@
+{
+  "schema": "ssmr.equal-ethanol-check-freeze.v1",
+  "created_utc": "2026-09-30T18:17:22.136840+00:00",
+  "files": {
+    "audit_math.py": "68cb9240ef8c01f926eaaf62e689ca617feea89f668b7a3c2bff8c7a5c22d386",
+    "audit_records.py": "ce0728b864b1ef6e1c073f9dcb1733351599844ec647a1fcbeaff5187a22a3d1",
+    "CHECK_SPEC.txt": "3cc256851329349af4ddcc8fbb7a7765500036f1a655f96f38f0afafa224f31b",
+    "freeze_checker.py": "6b01c8d734643672588258524c89e3b1211b3110b424de5733cd6c5922f61961",
+    "math_selftest.json": "d97757e0f83420c89e04ea617d149a672c94186dff3fcb28df20da889fdb0ec1",
+    "plan_verification.json": "ea222c3c5b7866ffa155a051a835420f3d93e9e841074e8ab617453987fc1a90",
+    "plan_verification_initial_failure.json": "9319f3df6b2949b1f0e28cfd18b030c7fd5452f3bc8d85d5b5868d5ca5a9ad31",
+    "test_audit_math.py": "a7c226d61b3d766db4c0980073ce058c40aabcc98a48aee723a9dc6af202dc0f",
+    "verify_equal_ethanol.py": "30ca68ca19d144b53d0ea8b48f3ae6a489950eabccf70f4453ac36d4e33b841f"
+  },
+  "amendment_inputs": {
+    "protocol.json": "1b76b51ec1b1fa10cbea65af78c58557a2fa19d6a5b370e0ba910a31765c4864",
+    "PROTOCOL_AMENDMENT.txt": "8c9365fd7784ae51f1fd1d98d95a8aaf7afc9ab3b2344284f6d361a2b7363d82",
+    "prepare_equal_ethanol.py": "dfeedf001dad5ca45026ddabbe0a0a8ca736fbc60ada52c5dd3d1124598b78d2",
+    "run_equal_ethanol.py": "950678e5403d2ed864385d401351a9f58457e6e3c0f280879d1d2ed6aa2a82cd",
+    "parent_inventory.json": "8f1c7128ddc4b905289daba99e2ef26856f981c92f58bf8e87e0902eaf4f29df",
+    "schedule_inventory.json": "64029740dbf708b72456cb2e683ea3299ddfbf5229e8a4186427072d15562dd5",
+    "trial_schedule_map.csv": "7b6d6d9ec648b3e1229614a67806a53fb2a81235ba6117daf3e334b3bb1d02b3"
+  },
+  "new_outcomes_absent_at_freeze": true,
+  "engineering_math_pass": true,
+  "original_resource_plan_pass": true,
+  "prior_draft_failure_preserved": "plan_verification_initial_failure.json",
+  "scope": "Independent same-model checker frozen before new constant-feed trajectories. Exact source and solver-input identity; independent endpoint resource/shortfall arithmetic. No favorable outcome gate."
+}

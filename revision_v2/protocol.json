@@ -1,0 +1,1415 @@
+{
+  "schema": "ssmr.revision.protocol.v2",
+  "created_utc": "2026-09-30T09:01:53.380867+00:00",
+  "scope": "Simulation-only major revision; original submission and audit are preserved.",
+  "alpha": 0.05,
+  "n_calibration": 499,
+  "n_evaluation": 1000,
+  "n_stress": 1000,
+  "seed_rule": "batch_seed=20260930+case.index*100000+phase_offset; offsets calibration0,evaluation10000,stress20000+stress_index*1000. Same draws paired between active/passive; independent across phases.",
+  "seed_base": 20260930,
+  "phase_offsets": {
+    "calibration": 0,
+    "evaluation": 10000,
+    "stress": 20000
+  },
+  "looks_min": [
+    16.0,
+    21.0
+  ],
+  "baseline_min": [
+    0.0,
+    10.0
+  ],
+  "active_move_start_min": 10.0,
+  "active_feed_increment": 0.0003,
+  "measurement_windows_min": [
+    [
+      0.0,
+      5.0
+    ],
+    [
+      5.0,
+      10.0
+    ],
+    [
+      11.0,
+      16.0
+    ],
+    [
+      16.0,
+      21.0
+    ]
+  ],
+  "sensor_sets": {
+    "S1": [
+      "H2_mol_min"
+    ],
+    "S3": [
+      "H2_mol_min",
+      "T_out_K",
+      "waste_m3_min"
+    ],
+    "S4": [
+      "H2_mol_min",
+      "T_out_K",
+      "waste_m3_min",
+      "y_H2",
+      "y_CH4",
+      "y_CO",
+      "y_CO2"
+    ]
+  },
+  "observation_models": {
+    "1": {
+      "H2_mol_min": {
+        "sd": 1.13677e-06,
+        "bias_bound": 1.13677e-06,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "T_out_K": {
+        "sd": 0.5,
+        "bias_bound": 1.0,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "waste_m3_min": {
+        "sd": 2.8582009053610006e-06,
+        "bias_bound": 5.716401810722001e-06,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "y_H2": {
+        "sd": 0.003968058689622914,
+        "bias_bound": 0.007936117379245829,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CH4": {
+        "sd": 0.001,
+        "bias_bound": 0.0013355467834782623,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CO": {
+        "sd": 0.001,
+        "bias_bound": 0.0006267339338901059,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CO2": {
+        "sd": 0.0013789514041146788,
+        "bias_bound": 0.0027579028082293576,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      }
+    },
+    "2": {
+      "H2_mol_min": {
+        "sd": 1.381895e-06,
+        "bias_bound": 1.381895e-06,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "T_out_K": {
+        "sd": 0.5,
+        "bias_bound": 1.0,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "waste_m3_min": {
+        "sd": 1.9048656564380004e-06,
+        "bias_bound": 3.809731312876001e-06,
+        "period_min": 0.1,
+        "delay_min": 0.0,
+        "phi": 0.6
+      },
+      "y_H2": {
+        "sd": 0.002744411741858906,
+        "bias_bound": 0.005488823483717812,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CH4": {
+        "sd": 0.001,
+        "bias_bound": 0.0016827042722216343,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CO": {
+        "sd": 0.001,
+        "bias_bound": 0.00037478024872837206,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      },
+      "y_CO2": {
+        "sd": 0.0011254552841471043,
+        "bias_bound": 0.0022509105682942086,
+        "period_min": 3.0,
+        "delay_min": 3.0,
+        "phi": 0.3
+      }
+    }
+  },
+  "stochastic_scope": "Independent Gaussian AR1 innovations per instrument; one uniform persistent bias per instrument per record. Exact instruments/noise measurements absent; these are declared assumptions.",
+  "score": "Minimum full-covariance Mahalanobis distance to frozen finite evolving quasi-steady template bank; absolute window means, causal historical GC samples; no chi-square reference and no truth-labelled zero score.",
+  "calibration": "Within each covered finite truth stratum, calibrate maximum true-hypothesis score over both looks by order statistic ceil((n+1)*(1-alpha)); threshold per mode/activity/sensor/hypothesis is maximum across included strata. Membership is retained cumulatively (no reentry). Rank bound marginal over fresh calibration and test draws for each covered fixed truth; no continuum/misspecification guarantee.",
+  "stopping": "First singleton at16 is final. Otherwise sample to21; final singleton is diagnosis, nonempty multiple set INCONCLUSIVE, empty MODEL_INCOMPATIBLE. Report no-call delays censored; time21 is acquisition completion, not diagnosis time.",
+  "support": {
+    "1": [
+      "C",
+      "M",
+      "F",
+      "S",
+      "H"
+    ],
+    "2": [
+      "C",
+      "M",
+      "S",
+      "H"
+    ]
+  },
+  "diagnostic_reporting": "Per-cell true rejection, wrong singleton, correct singleton, inconclusive and incompatible; exact pointwise binomial95% intervals. All trials in denominators. No pooled scenario-average disguised as population rate.",
+  "initial_state": "Precondition supplied initial state at scheduled t0 health with health held fixed; then continuous deterioration inside unchanged ODE RHS. Preserve convergence evidence.",
+  "solver": {
+    "method": "BDF",
+    "np": 50,
+    "rtol": 1e-06,
+    "atol": 1e-08,
+    "max_step_min": 0.1,
+    "sample_min": 0.1
+  },
+  "policy": {
+    "horizon_end_min": 31.0,
+    "decision_times_min": [
+      16.0,
+      21.0
+    ],
+    "command_points": 7,
+    "command_range": "u0 to0.0024 inclusive",
+    "rule": "Maximum minimum-restoring grid command across retained fitted candidate paths to31; infeasible predictions choose upper bound and flagged; empty set keeps baseline and flags incompatibility. No monetary service/recalibration benefits assumed.",
+    "report": "Whole0..31 true hydrogen shortfall, produced H2, commanded and actual delivered ethanol; prefix+post-decision branch, diagnostic pulse included. Report paired active/passive policy differences and feed-shortfall tradeoff; no single scalar VOI/payback claim.",
+    "selection": "Predeclared central5% mid-rate C/M/F, constant S and H in covered modes; no outcome-based case selection."
+  },
+  "observation_stress": [
+    {
+      "name": "half_noise",
+      "noise_scale": 0.5
+    },
+    {
+      "name": "double_noise",
+      "noise_scale": 2.0
+    },
+    {
+      "name": "strong_correlation",
+      "fast_phi": 0.9,
+      "gc_phi": 0.7
+    },
+    {
+      "name": "drifting_bias",
+      "drift_scale": 2.0
+    },
+    {
+      "name": "gain_error",
+      "gain_sd": 0.01
+    }
+  ],
+  "stress_scope": "Frozen nominal thresholds/covariance used unchanged. Observation stresses use policy-selected core cases; physical stresses have independent parameter histories. All are outside exact covered-grid calibration unless stated. Combined/mode2F have no true supported label.",
+  "cases": [
+    {
+      "id": "m1_C_d02_r0",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 0
+    },
+    {
+      "id": "m1_C_d02_r1",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 1
+    },
+    {
+      "id": "m1_C_d02_r2",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 2
+    },
+    {
+      "id": "m1_C_d05_r0",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 3
+    },
+    {
+      "id": "m1_C_d05_r1",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 4
+    },
+    {
+      "id": "m1_C_d05_r2",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 5
+    },
+    {
+      "id": "m1_C_d10_r0",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 6
+    },
+    {
+      "id": "m1_C_d10_r1",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 7
+    },
+    {
+      "id": "m1_M_d02_r0",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 8
+    },
+    {
+      "id": "m1_M_d02_r1",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 9
+    },
+    {
+      "id": "m1_M_d02_r2",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 10
+    },
+    {
+      "id": "m1_M_d05_r0",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 11
+    },
+    {
+      "id": "m1_M_d05_r1",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 12
+    },
+    {
+      "id": "m1_M_d05_r2",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 13
+    },
+    {
+      "id": "m1_M_d10_r0",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 14
+    },
+    {
+      "id": "m1_M_d10_r1",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 15
+    },
+    {
+      "id": "m1_M_d10_r2",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 16
+    },
+    {
+      "id": "m1_F_d02_r0",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 17
+    },
+    {
+      "id": "m1_F_d02_r1",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 18
+    },
+    {
+      "id": "m1_F_d02_r2",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 19
+    },
+    {
+      "id": "m1_F_d05_r0",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 20
+    },
+    {
+      "id": "m1_F_d05_r1",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 21
+    },
+    {
+      "id": "m1_F_d05_r2",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 22
+    },
+    {
+      "id": "m1_F_d10_r0",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 23
+    },
+    {
+      "id": "m1_F_d10_r1",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 24
+    },
+    {
+      "id": "m1_F_d10_r2",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 25
+    },
+    {
+      "id": "m1_S_d02_r0",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 26
+    },
+    {
+      "id": "m1_S_d02_r1",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": -4.5470800000000006e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 27
+    },
+    {
+      "id": "m1_S_d02_r2",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": -2.27354e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 28
+    },
+    {
+      "id": "m1_S_d05_r0",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 29
+    },
+    {
+      "id": "m1_S_d05_r1",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": -4.5470800000000006e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 30
+    },
+    {
+      "id": "m1_S_d05_r2",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": -2.27354e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 31
+    },
+    {
+      "id": "m1_S_d10_r0",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 32
+    },
+    {
+      "id": "m1_S_d10_r1",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": -4.5470800000000006e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 33
+    },
+    {
+      "id": "m1_S_d10_r2",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": -2.27354e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 34
+    },
+    {
+      "id": "m1_H",
+      "mode": 1,
+      "h": "H",
+      "drop": 0.0,
+      "controls": {},
+      "category": "covered_grid",
+      "policy": true,
+      "index": 35
+    },
+    {
+      "id": "m1_C_offgrid_d035",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.035,
+      "controls": {
+        "rate_per_min": 0.0075
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 36
+    },
+    {
+      "id": "m1_C_offgrid_d075",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.075,
+      "controls": {
+        "rate_per_min": 0.0075
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 37
+    },
+    {
+      "id": "m1_M_offgrid_d035",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.035,
+      "controls": {
+        "rate_per_min": 0.0045
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 38
+    },
+    {
+      "id": "m1_M_offgrid_d075",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.075,
+      "controls": {
+        "rate_per_min": 0.0045
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 39
+    },
+    {
+      "id": "m1_F_offgrid_d035",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.035,
+      "controls": {
+        "rate_per_min": 0.0015
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 40
+    },
+    {
+      "id": "m1_F_offgrid_d075",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.075,
+      "controls": {
+        "rate_per_min": 0.0015
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 41
+    },
+    {
+      "id": "m1_S_offgrid_d035",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.035,
+      "controls": {
+        "sensor_slope_per_min": -1.13677e-07
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 42
+    },
+    {
+      "id": "m1_S_offgrid_d075",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.075,
+      "controls": {
+        "sensor_slope_per_min": -1.13677e-07
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 43
+    },
+    {
+      "id": "m1_C_kinetic",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005,
+        "kinetic_scales": [
+          1.1,
+          0.9,
+          1.2,
+          0.8
+        ]
+      },
+      "category": "kinetic_mismatch",
+      "policy": false,
+      "index": 44
+    },
+    {
+      "id": "m1_C_fast",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.015
+      },
+      "category": "faster_deterioration",
+      "policy": false,
+      "index": 45
+    },
+    {
+      "id": "m1_M_kinetic",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003,
+        "kinetic_scales": [
+          1.1,
+          0.9,
+          1.2,
+          0.8
+        ]
+      },
+      "category": "kinetic_mismatch",
+      "policy": false,
+      "index": 46
+    },
+    {
+      "id": "m1_M_fast",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.009000000000000001
+      },
+      "category": "faster_deterioration",
+      "policy": false,
+      "index": 47
+    },
+    {
+      "id": "m1_CM",
+      "mode": 1,
+      "h": "CM",
+      "drop": 0.05,
+      "controls": {
+        "theta_c10": 0.824826758109723,
+        "theta_m10": 0.9743920091093516,
+        "rate_c_per_min": 0.005,
+        "rate_m_per_min": 0.003
+      },
+      "category": "out_of_family",
+      "policy": false,
+      "index": 48
+    },
+    {
+      "id": "m2_C_d02_r0",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 49
+    },
+    {
+      "id": "m2_C_d02_r1",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 50
+    },
+    {
+      "id": "m2_C_d02_r2",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 51
+    },
+    {
+      "id": "m2_C_d05_r0",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 52
+    },
+    {
+      "id": "m2_C_d05_r1",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 53
+    },
+    {
+      "id": "m2_C_d05_r2",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 54
+    },
+    {
+      "id": "m2_M_d02_r0",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 55
+    },
+    {
+      "id": "m2_M_d02_r1",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 56
+    },
+    {
+      "id": "m2_M_d02_r2",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 57
+    },
+    {
+      "id": "m2_M_d05_r0",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 58
+    },
+    {
+      "id": "m2_M_d05_r1",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 59
+    },
+    {
+      "id": "m2_M_d05_r2",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 60
+    },
+    {
+      "id": "m2_M_d10_r0",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 61
+    },
+    {
+      "id": "m2_M_d10_r1",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 62
+    },
+    {
+      "id": "m2_M_d10_r2",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.006
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 63
+    },
+    {
+      "id": "m2_S_d02_r0",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 64
+    },
+    {
+      "id": "m2_S_d02_r1",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": -5.52758e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 65
+    },
+    {
+      "id": "m2_S_d02_r2",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.02,
+      "controls": {
+        "sensor_slope_per_min": -2.76379e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 66
+    },
+    {
+      "id": "m2_S_d05_r0",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 67
+    },
+    {
+      "id": "m2_S_d05_r1",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": -5.52758e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 68
+    },
+    {
+      "id": "m2_S_d05_r2",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": -2.76379e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 69
+    },
+    {
+      "id": "m2_S_d10_r0",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 70
+    },
+    {
+      "id": "m2_S_d10_r1",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": -5.52758e-08
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 71
+    },
+    {
+      "id": "m2_S_d10_r2",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.1,
+      "controls": {
+        "sensor_slope_per_min": -2.76379e-07
+      },
+      "category": "covered_grid",
+      "policy": false,
+      "index": 72
+    },
+    {
+      "id": "m2_H",
+      "mode": 2,
+      "h": "H",
+      "drop": 0.0,
+      "controls": {},
+      "category": "covered_grid",
+      "policy": true,
+      "index": 73
+    },
+    {
+      "id": "m2_C_offgrid_d035",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.035,
+      "controls": {
+        "rate_per_min": 0.0075
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 74
+    },
+    {
+      "id": "m2_M_offgrid_d035",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.035,
+      "controls": {
+        "rate_per_min": 0.0045
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 75
+    },
+    {
+      "id": "m2_M_offgrid_d075",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.075,
+      "controls": {
+        "rate_per_min": 0.0045
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 76
+    },
+    {
+      "id": "m2_S_offgrid_d035",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.035,
+      "controls": {
+        "sensor_slope_per_min": -1.381895e-07
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 77
+    },
+    {
+      "id": "m2_S_offgrid_d075",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.075,
+      "controls": {
+        "sensor_slope_per_min": -1.381895e-07
+      },
+      "category": "heldout_parameters",
+      "policy": false,
+      "index": 78
+    },
+    {
+      "id": "m2_C_kinetic",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005,
+        "kinetic_scales": [
+          1.1,
+          0.9,
+          1.2,
+          0.8
+        ]
+      },
+      "category": "kinetic_mismatch",
+      "policy": false,
+      "index": 79
+    },
+    {
+      "id": "m2_C_fast",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.015
+      },
+      "category": "faster_deterioration",
+      "policy": false,
+      "index": 80
+    },
+    {
+      "id": "m2_M_kinetic",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003,
+        "kinetic_scales": [
+          1.1,
+          0.9,
+          1.2,
+          0.8
+        ]
+      },
+      "category": "kinetic_mismatch",
+      "policy": false,
+      "index": 81
+    },
+    {
+      "id": "m2_M_fast",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.009000000000000001
+      },
+      "category": "faster_deterioration",
+      "policy": false,
+      "index": 82
+    },
+    {
+      "id": "m2_CM",
+      "mode": 2,
+      "h": "CM",
+      "drop": 0.05,
+      "controls": {
+        "theta_c10": 0.7363952659111984,
+        "theta_m10": 0.9737606273598114,
+        "rate_c_per_min": 0.005,
+        "rate_m_per_min": 0.003
+      },
+      "category": "out_of_family",
+      "policy": false,
+      "index": 83
+    },
+    {
+      "id": "m2_F_offdomain",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "theta10": 0.95,
+        "rate_per_min": 0.001
+      },
+      "category": "out_of_family",
+      "policy": false,
+      "index": 84
+    }
+  ],
+  "excluded": [
+    {
+      "id": "m1_C_d10_r2",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "reason": "Scheduled acquisition leaves the supported map domain before21"
+    },
+    {
+      "id": "m2_C_d10_r0",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_C_d10_r1",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_C_d10_r2",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.01
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d02_r0",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d02_r1",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d02_r2",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.02,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d05_r0",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d05_r1",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d05_r2",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d10_r0",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d10_r1",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    },
+    {
+      "id": "m2_F_d10_r2",
+      "mode": 2,
+      "h": "F",
+      "drop": 0.1,
+      "controls": {
+        "rate_per_min": 0.002
+      },
+      "reason": "Nominal-map anchor unreachable in declared input domain"
+    }
+  ],
+  "raw_evidence": "All deterministic ODE traces, states, branch intervals; all stochastic summary vectors, candidate scores, fit indices, decisions, trial IDs and batch seeds; raw sample exemplars and deterministic regeneration.",
+  "success_rule": "Computational integrity and arithmetic must pass frozen independent checks. Scientific calibration/power/cost failures retained; no mandatory positive benefit, no threshold changes after evaluation. Investigate only implementation defects with versioned reruns. No claim of laboratory validation, universal identifiability, optimal design, or economic payback."
+}

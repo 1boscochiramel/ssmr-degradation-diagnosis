@@ -1,0 +1,33 @@
+{
+  "schema": "ssmr.six-page-note-author-qa.v1",
+  "created_utc": "2026-09-30T17:50:15.333466+00:00",
+  "pass": true,
+  "issues": [],
+  "pdf_sha256": "d972d6ce42e2f76e940ad01ab415c0c203578cbff761a6d4d53be5b328f20cc3",
+  "pages": 6,
+  "manually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "render_scale": 1.6,
+  "manual_visual_findings": "No clipped/overlapping text, broken glyphs, table overflow or unreadable labels identified on the six current page images.",
+  "text_checks_pass": true,
+  "bounds_issues": [],
+  "full_paper_read_completed": true,
+  "original_qualified_status_retained": true,
+  "input_manifest_sha256": "ff2ac2735dda518d0a78ce187538fc59fdb7f5ff5454de62402cacaeb982f967",
+  "extracted_text_sha256": "69bdf164a6b3a8647327d4e03501a97c3e5a493fa851fdb7e9bbe0a35fded571",
+  "page_images_sha256": {
+    "qa/page-1.png": "fb4a5325ac58a60c1ed5cf9f2fbaf0fab6f28bbf7feba624cb1e20bdb010ef62",
+    "qa/page-2.png": "6c832b2cfdfbea957f33f9560b9ece26472503bb77ea3c856626c54b3348c3f0",
+    "qa/page-3.png": "203339a467882b04ebc94abf9006c3ca467a7f0e10be07454979857054d8d07d",
+    "qa/page-4.png": "9f207f09859faee71b9b3c578b3737faeee490de3e7253e31077481005ba6c89",
+    "qa/page-5.png": "4193cba56e707641eee772f6aa994c458f1d420651237f686c544854431ece70",
+    "qa/page-6.png": "b0268eb41c68e24b3d3057ce5421fb6674fe8578e59ba864bec13f2c1a31e72a"
+  },
+  "scope": "Author visual/text QA and input identity checks; independent scientific amendment check and root release QA are separate."
+}

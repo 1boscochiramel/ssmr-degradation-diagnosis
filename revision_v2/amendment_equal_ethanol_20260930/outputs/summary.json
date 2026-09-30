@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "completed_utc": "2026-09-30T18:19:18.758572+00:00",
+  "coverage": {
+    "paired_records": 4000,
+    "paired_groups": 4,
+    "unique_schedules": 13,
+    "max_abs_actual_budget_error_mol": 6.938893903907228e-18,
+    "max_abs_commanded_budget_error_mol": 6.938893903907228e-18,
+    "new_noise_draws": 0
+  },
+  "files": {
+    "outputs/arm_costs.csv": "57dce1203546ddeee2525082ee7558cc188c48ac0adb1132fddd535d8a3b11fd",
+    "outputs/paired_trials.csv": "0f83b7980ebbb22c817051a581e3aa44a8e4c973f7e0fb8a56d327b49995fc68",
+    "outputs/paired_summary.csv": "24c225aab4d6ed43f5a3e4e89336e61c346b3fefd92793f44f42fc1daa04df78"
+  },
+  "freeze_sha256": "2c1928c98c377bc26297bc0f4e455f243c0cb30bde7743805ee546b24016e733",
+  "scope": "Retrospective resource-budget-conditioned control; feed profile changes. Not uniquely diagnostic information, optimized input, all blind controls, deployable ex-ante policy, or economic superiority.",
+  "original_qualified_status_retained": true
+}

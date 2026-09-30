@@ -1,0 +1,216 @@
+{
+  "checked": true,
+  "check_path": "checks/verification.json",
+  "source_hashes": {
+    "branches/m1_C_d05_r1_t16/amendment_execution.json": "d4b65bf1a15ae350bb34fa9763c6d11eaeacd109851fbac757f0c81993830f00",
+    "branches/m1_C_d05_r1_t16/intervals.csv": "1056db63012a47ec91e62d9cc1b79b182555f9d2a160451ba451e11be6424f06",
+    "branches/m1_C_d05_r1_t16/metadata.json": "73f586cc9978657b86cd88ddf6d992c75db09dbd00010ba14bb3030a60db4c29",
+    "branches/m1_C_d05_r1_t16/states.npz": "6340a869e18789c740199efe73c76de1c54fba4c44e4f9463e3ccf7712dd3402",
+    "branches/m1_C_d05_r1_t16/truth.csv": "598294d36ce11c6ef6df5a9492ab992a638ec02d3d5e76964a19a313b05b6f75",
+    "branches/m1_C_d05_r1_t21/amendment_execution.json": "a3955d9858e985a7c8e73ae5f2d079dca3bad61c3d87128f3d0889433207cce3",
+    "branches/m1_C_d05_r1_t21/intervals.csv": "e908630d8030344289f37031b9e1ea06db0e08c48ae7f189df444ad64232d5c9",
+    "branches/m1_C_d05_r1_t21/metadata.json": "a87fcf1ff5658035270cf182d01bbe48d6a1d315eb4cfacb700dfea7af68daa1",
+    "branches/m1_C_d05_r1_t21/states.npz": "1bcf3281f01d8887c8a3e5aa4bea26693261505892ab37d3b1f1222c7fbc1a49",
+    "branches/m1_C_d05_r1_t21/truth.csv": "9317ce027be16a0e0bd51e9ed935f0fb165cc7349d54c2b132b8aec1bed8ba8a",
+    "branches/m1_F_d05_r1_t16/amendment_execution.json": "6ebf5f200db8ad14c8ce36bc228dfe66938a1c42313034a82f73ea8b212528b9",
+    "branches/m1_F_d05_r1_t16/intervals.csv": "c15e382f75c5fb5bb3b1ac675eae11cf254b4987cc3ccd045353178b54791757",
+    "branches/m1_F_d05_r1_t16/metadata.json": "a6dc1e80331febdd725e966145bf36c1fcc56d9f6dba36a7a6417739c67c1e44",
+    "branches/m1_F_d05_r1_t16/states.npz": "0216c4110a82c65dfeb453c59c9c2e12705c934a181a83be5e817f4ac7bccf32",
+    "branches/m1_F_d05_r1_t16/truth.csv": "501cc1f935de7394786d2d726403dd6c8912a023ecbeb223d8fea266bda9e04c",
+    "branches/m1_F_d05_r1_t21/amendment_execution.json": "95ebf4bafda07badd24ff8dcae1c2b3cb914a6179c2bf5148f7aa16df0d27d8f",
+    "branches/m1_F_d05_r1_t21/intervals.csv": "6bdadcd2aa2154ae1fd1732e0dbf902c4345d29f690a1f03550e2c5bf2fb20c5",
+    "branches/m1_F_d05_r1_t21/metadata.json": "ad0e6a7c298050dd03580ad17cea6bb03cffe4116f5d34cd99db10ffa0b6586a",
+    "branches/m1_F_d05_r1_t21/states.npz": "9e95aba947422faccfe395594d1c71831604560014871664a5bad7c55f2b9c57",
+    "branches/m1_F_d05_r1_t21/truth.csv": "a92d76467e382c8b180a0d957c46e80a1bd87f5b13b92eba20e2825c5ba50fe2",
+    "branches/m1_H_t16/amendment_execution.json": "d423cae823cae70dbaac29770e6d2e46a5c3fb5210b35bef3cf8d63dbbe3e867",
+    "branches/m1_H_t16/intervals.csv": "e3695ab71cd6cec27e5a838d370509fb2e0be3eac3b8f274f60e162fc713bdfd",
+    "branches/m1_H_t16/metadata.json": "02d4d03ba784d0e22327b26e58f2c263e4fd265be0c59f39b3b553ec952b8f18",
+    "branches/m1_H_t16/states.npz": "411fc675878bc250e9fff7d3be8f6100d2dc7d1493863f4cb7e9509511261ba9",
+    "branches/m1_H_t16/truth.csv": "ebb6ee381db26c2c2e4d6a65a0572de2345c8094373336662cf4fb2804335b7e",
+    "branches/m1_H_t21/amendment_execution.json": "21eaea62aafe2ea4fc04348f702c6dab9ca8829543e632bef15745ba5652b286",
+    "branches/m1_H_t21/intervals.csv": "0ca167c8c8e129a599f9b22fee1f6d8ce3b203cde55d6ee44eb998901433aa30",
+    "branches/m1_H_t21/metadata.json": "de5785b1fc2b54eb806dd61086a4d29365e35eb21b529d50759ad755fec92e2f",
+    "branches/m1_H_t21/states.npz": "beef440743eb4a5e94097366d83bed0d395a66a17d6c5cbe9a8ca55e95a025ca",
+    "branches/m1_H_t21/truth.csv": "617cfb10b56bbb634165e12f95eee6fec00d9019a8f8f8281be4f76964760a71",
+    "branches/m1_M_d05_r1_t16/amendment_execution.json": "43fa02a1a7f71f3d94e8d8a1a5058f69ca0b674a93771ad56dfb3c5a729d4bf9",
+    "branches/m1_M_d05_r1_t16/intervals.csv": "0e2f09ad895ec7cf2a8bd2704faca036d08d229eac4c58e5a7682f105b319c47",
+    "branches/m1_M_d05_r1_t16/metadata.json": "9502791bdbb724d125e1fb5da6497fd99d1d4e35cf3821a35e50ca82eec13a74",
+    "branches/m1_M_d05_r1_t16/states.npz": "4070e9fcdf1f853a2e6740c5d43fb4b908e9e950a1246112d82b90cb5fb111c9",
+    "branches/m1_M_d05_r1_t16/truth.csv": "122c0f84965594add813b4277ecdc32bf9e6a9ec04157368ba26a5f8a22ccbd5",
+    "branches/m1_M_d05_r1_t21/amendment_execution.json": "fa052428bf5e9ac3a84548a138d838f672910c587f3e7020069be8075fd65e08",
+    "branches/m1_M_d05_r1_t21/intervals.csv": "7c71e7c55171126c6b2ebdb1995e22c9b96e35aef4c99572378b6526f493c2c9",
+    "branches/m1_M_d05_r1_t21/metadata.json": "406af3040730ab1e75ee6a5c3689f52a186b8b99b7e1a03c67e2ebc78a9401d4",
+    "branches/m1_M_d05_r1_t21/states.npz": "d7bc3457dfe084ca343de056fe964d8ee278d950a0f8ff73045a37a07f6b8827",
+    "branches/m1_M_d05_r1_t21/truth.csv": "c952650a5a5eed7d9737f31effadebc95adb818b7dc353d1a0d34156618e67a9",
+    "branches/m1_S_d05_r0_t16/amendment_execution.json": "6fd66bec0e1a44eb8247fd16c06807fa192e4fc9b236ed44f2bef8f4ae637d9f",
+    "branches/m1_S_d05_r0_t16/intervals.csv": "e3695ab71cd6cec27e5a838d370509fb2e0be3eac3b8f274f60e162fc713bdfd",
+    "branches/m1_S_d05_r0_t16/metadata.json": "3cb0c18dc99f02b0447a64f6fb7efea503c6701f6a46c0aaea65de9151b7299d",
+    "branches/m1_S_d05_r0_t16/states.npz": "411fc675878bc250e9fff7d3be8f6100d2dc7d1493863f4cb7e9509511261ba9",
+    "branches/m1_S_d05_r0_t16/truth.csv": "c6f1eef962145b1f75af872493d6aae9e5a8205a6cb24a9d2b786f8d721a4cc7",
+    "branches/m1_S_d05_r0_t21/amendment_execution.json": "15089b3ad5136d026e4eb9a30cc237df9a45b86117db7693a67a8ddc757540ee",
+    "branches/m1_S_d05_r0_t21/intervals.csv": "0ca167c8c8e129a599f9b22fee1f6d8ce3b203cde55d6ee44eb998901433aa30",
+    "branches/m1_S_d05_r0_t21/metadata.json": "4414461ef9ba6078fcb045596c724461bb4eca21e64a571a4d88c23ba8954a23",
+    "branches/m1_S_d05_r0_t21/states.npz": "beef440743eb4a5e94097366d83bed0d395a66a17d6c5cbe9a8ca55e95a025ca",
+    "branches/m1_S_d05_r0_t21/truth.csv": "ff1057bb8c6e46df8edcb45770462fd62f6718045690c1fc3585756e0c847cb4",
+    "branches/m2_C_d05_r1_t16/amendment_execution.json": "12aa166d830a30d60dbb680e8aa9c2abb4c137fcd31eba91411cbf43a0dec223",
+    "branches/m2_C_d05_r1_t16/intervals.csv": "0153d80ac80e5d2023be2479cf0ef83bf579dc433b82375306ba2f1960d10203",
+    "branches/m2_C_d05_r1_t16/metadata.json": "a059c12a715c038418423e75e25b57f5c6e24398b3ad3f6a70d7ac55eed76b25",
+    "branches/m2_C_d05_r1_t16/states.npz": "68f0635a44acca849ecfe2f1a1ff1b3a4c3d4ab5ea07f80c594df51ee1e1e1a4",
+    "branches/m2_C_d05_r1_t16/truth.csv": "9cd91376b49c39f0a68518a1c30809aa92bec8b4de9e804305493293c16ddfa9",
+    "branches/m2_C_d05_r1_t21/amendment_execution.json": "0cbba92fb60b4a580cf77b2ea894ed693e4f1c2ed18b30d29d1e8083591ab21c",
+    "branches/m2_C_d05_r1_t21/intervals.csv": "9d2d998ba0694c43a28cf4581ad5576bbf93e6b3c6cb522ee96a1ecb04ca6836",
+    "branches/m2_C_d05_r1_t21/metadata.json": "3e7bc8bf454343e715470a9cffd27476460cb77fc63a4f66c082cfd262f4cd06",
+    "branches/m2_C_d05_r1_t21/states.npz": "ede680e81f33f57e403086f16caf0a796920aa304c7cdfa89ab8d06f9dff4b1f",
+    "branches/m2_C_d05_r1_t21/truth.csv": "019364056c196656fc7b75099dafa0b5536e13a250933772c8b0b69dcc658520",
+    "branches/m2_H_t16/amendment_execution.json": "b075ea48e51885321fa54c05a6901bbc23852c08fe31a99142f12c03192fd5da",
+    "branches/m2_H_t16/intervals.csv": "029f97e4106643bd66b210a1115c23bb9b81eadea0571b29d36cd70baa39f873",
+    "branches/m2_H_t16/metadata.json": "4103f825660917e29cdf20fd6a6ddd0dcdc38cd973d40d6be5a7927aac5495a5",
+    "branches/m2_H_t16/states.npz": "e96e4239d4081fa730538fd678e2cae338bf08b5581d972683aff47014f21af5",
+    "branches/m2_H_t16/truth.csv": "cc21c4ed0990b549c35224a4b8d15908b2cbb86f62f760dbfe42b822e4e7e94f",
+    "branches/m2_H_t21/amendment_execution.json": "fe79d0c79e2e8377a1f9bc299f8a83d0cc6272f6d97e9d0ef139ea3eb7fff725",
+    "branches/m2_H_t21/intervals.csv": "7cf3ce377e33762baef8984aeda253fd07707fdd24fba9961650cf40f5b7986d",
+    "branches/m2_H_t21/metadata.json": "2b75729904e4bb0b7a5b9da0f5164a7ea88bac6852a83d517a4c53b845bc6d27",
+    "branches/m2_H_t21/states.npz": "72673e6ffe1bb15040525e66d1a8475a3f885c88ab6ff1ceb4f6feacdb12680f",
+    "branches/m2_H_t21/truth.csv": "ff63fcfd3f6c81b71f69f5a1681f91c6d7a8f3989a8b2a722054e215fd71a817",
+    "branches/m2_M_d05_r1_t16/amendment_execution.json": "c000c48e7134a079620d09e3e254f47e43897ee456235e36b44accba0668aa0d",
+    "branches/m2_M_d05_r1_t16/intervals.csv": "5992d1c476363dad78630ffc02ab2fd0f7429343c2073f92d7565d91aea01c80",
+    "branches/m2_M_d05_r1_t16/metadata.json": "d04bd32c6b6bed4a1d0617738769bbdeb89542136b9ff0c982b37c0ad6636249",
+    "branches/m2_M_d05_r1_t16/states.npz": "23d94b3ac9ccc276a1defe94e69661713c2720b26e1ed6a02a653e71994269c0",
+    "branches/m2_M_d05_r1_t16/truth.csv": "4ded7c316f81cf7dbed29fcb6931168e387da2c7b0c6a5e1a020a90812cfbc8a",
+    "branches/m2_M_d05_r1_t21/amendment_execution.json": "a9f9fe18f664a0c9b8963c09381ee0ffd5519dae26a3a29ad234a9338f314eda",
+    "branches/m2_M_d05_r1_t21/intervals.csv": "7c169ef795c2eda3497af751aca803182254f5db520082f22e32926350fa7b16",
+    "branches/m2_M_d05_r1_t21/metadata.json": "b6ddfbceb2c43cfed9fbcc246d8b0e7016256d1a269816fd5df4d063f205cfc0",
+    "branches/m2_M_d05_r1_t21/states.npz": "0d4baf820ba0f3542419c012f7f46835f8a2dfef7b72522cda93ca970cf868df",
+    "branches/m2_M_d05_r1_t21/truth.csv": "b1c985b42c947c1393c385681c7bcafa2d56dd5ccb0420af31c8303f16a9a291",
+    "branches/m2_S_d05_r0_t16/amendment_execution.json": "f3ecef1cbdb50340e764bc64bbf2c4947a8e4ce831424ca06d6caed382070181",
+    "branches/m2_S_d05_r0_t16/intervals.csv": "029f97e4106643bd66b210a1115c23bb9b81eadea0571b29d36cd70baa39f873",
+    "branches/m2_S_d05_r0_t16/metadata.json": "04069162d3cecc47478e1a4cc8ddfb9619508a7c0e14ed5531be1ece8c58dc60",
+    "branches/m2_S_d05_r0_t16/states.npz": "e96e4239d4081fa730538fd678e2cae338bf08b5581d972683aff47014f21af5",
+    "branches/m2_S_d05_r0_t16/truth.csv": "d9023a08f68a7d35710aef310973bbddc196d77a76e3aa9e5eae0c2473fdd44e",
+    "branches/m2_S_d05_r0_t21/amendment_execution.json": "4944320ab07867e4c7ba167757a32005e58d9c4da0c050304ce3b1e5c99bb1e2",
+    "branches/m2_S_d05_r0_t21/intervals.csv": "7cf3ce377e33762baef8984aeda253fd07707fdd24fba9961650cf40f5b7986d",
+    "branches/m2_S_d05_r0_t21/metadata.json": "a1f4ddc6dfc17ee4fb199b5f3c20178fc3b54b8637b8013b94f332c784903ea7",
+    "branches/m2_S_d05_r0_t21/states.npz": "72673e6ffe1bb15040525e66d1a8475a3f885c88ab6ff1ceb4f6feacdb12680f",
+    "branches/m2_S_d05_r0_t21/truth.csv": "f13719a550f811c06c19e1f60a4d8cad501514c984b89614e57989768679e11c",
+    "amendment_protocol.json": "1028dfeaf0dfa3043483833fd2d7f6d4035c4168a08115a0d43ca8c181f0586b",
+    "AMENDMENT_FREEZE.json": "582055dd290217dffc5786217087399773cd3494c13b66db38b3cd8258aa3e64",
+    "parent_inventory.json": "c70f38e81906c371459da1cc7b677bdbf8f498145a9600338b7022d0405c5e5f",
+    "checks/CHECK_FREEZE.json": "15a4e70fd6ac713f446b46f5c34551d8fae21ae3f2a1f35cffc1b32742b7a15e",
+    "outputs/summary.json": "a71c372b6865f70a8fe29c3ff4e68271ac30dbdc7f8933d6e62dde6031fa4796",
+    "outputs/feed_only_arm_costs.csv": "9fb720d0e8e4b2a321cb17eff31f8cb075631120033a9245a637d0d1784ffaff",
+    "outputs/paired_trials.csv": "54cb99cbc666d6f97d64674d0dc14d0483bb0535530841786e7d318ff30354cc",
+    "outputs/paired_summary.csv": "534198c69166425d707db4ae442185a72dffe3bb40f02a9a1a43f65c8c226a0d",
+    "run_status.json": "efea22cd796abae722be897b38e81a509c4e2c5e3db3448edeebca0f7136c9d5",
+    "checks/verification.json": "ccfcb0f0e2ac3aac5874325148ffa798be9ff9c3eb12e0cfd99ef7b3c46bdd51"
+  },
+  "table_rows": [
+    [
+      "M1 C",
+      "0.2650",
+      "0.1100",
+      "-0.1549",
+      "+1.7060"
+    ],
+    [
+      "M1 M",
+      "0.3750",
+      "0.0842",
+      "-0.2908",
+      "+3.6225"
+    ],
+    [
+      "M2 C",
+      "0.2967",
+      "0.1393",
+      "-0.1574",
+      "+1.0835"
+    ],
+    [
+      "M2 M",
+      "0.4518",
+      "0.1045",
+      "-0.3472",
+      "+2.9940"
+    ]
+  ],
+  "interpretation": "In these four central S4 cases, the downstream diagnostic command reduced mean hydrogen shortfall in 4 cases and used more actual ethanol in 4. These are paired physical outcome vectors, not a significance test or net economic benefit.",
+  "counterexamples": "The Mode 2 healthy S4 case used 0.5250 mmol more ethanol with exactly zero change in hydrogen shortfall. In the Mode 2 meter-bias S1 case, the diagnostic policy selected nominal feed for every record and did not change hydrogen shortfall. These examples prevent favorable deterioration results from being mistaken for a universal benefit or cost.",
+  "takeaway": "With the feed pulse and its end time matched, the later diagnostic action reduced mean hydrogen shortfall in 4 of the four central all-channel cases and increased ethanol use in 4.",
+  "claim_ledger": [
+    {
+      "case_id": "m1_C_d05_r1",
+      "set": "S4",
+      "trials": 1000,
+      "columns_mmol": [
+        0.2649596508548818,
+        0.11001830959411399,
+        -0.15494134126076786,
+        1.7059999999999182
+      ]
+    },
+    {
+      "case_id": "m1_M_d05_r1",
+      "set": "S4",
+      "trials": 1000,
+      "columns_mmol": [
+        0.3750071169331578,
+        0.08422502632964629,
+        -0.29078209060351157,
+        3.622499999999908
+      ]
+    },
+    {
+      "case_id": "m2_C_d05_r1",
+      "set": "S4",
+      "trials": 1000,
+      "columns_mmol": [
+        0.29672200797821124,
+        0.13928640801801,
+        -0.15743559996020123,
+        1.0834999999999
+      ]
+    },
+    {
+      "case_id": "m2_M_d05_r1",
+      "set": "S4",
+      "trials": 1000,
+      "columns_mmol": [
+        0.45175258986675276,
+        0.10451642513120298,
+        -0.34723616473554986,
+        2.993999999999899
+      ]
+    },
+    {
+      "kind": "central_S4_signs",
+      "shortfall_reduced": 4,
+      "ethanol_increased": 4,
+      "denominator": 4
+    },
+    {
+      "kind": "healthy_bias_S4_ranges_mmol",
+      "case_ids": [
+        "m1_H",
+        "m2_H",
+        "m1_S_d05_r0",
+        "m2_S_d05_r0"
+      ],
+      "ethanol": [
+        0.01699999999992218,
+        0.5249999999999457
+      ],
+      "shortfall": [
+        -1.6725215523836288e-06,
+        0.0
+      ]
+    },
+    {
+      "kind": "negative_controls",
+      "m2_H_S4_H2_shortfall_difference_mmol": 0,
+      "m2_H_S4_actual_ethanol_difference_mmol": 0.5249999999999457,
+      "m2_S_d05_r0_S1_non_nominal_action_count": 0,
+      "m2_S_d05_r0_S1_H2_shortfall_difference_mmol": 0
+    }
+  ],
+  "scope": "Four central S4 cases displayed; all27 case/set groups checked."
+}

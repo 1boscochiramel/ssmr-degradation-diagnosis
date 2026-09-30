@@ -1,0 +1,50 @@
+EQUAL-ETHANOL CONTROL AMENDMENT | 30 September 2026
+
+This outcome-aware amendment follows inspection of the original study and its
+feed-only amendment. It is not retrospective preregistration. Freeze this
+protocol, the exact schedule inventory, original-input inventory, runner and
+independent checker before generating the new physical trajectories. No original
+equation, diagnostic score, threshold, observation law, policy or result changes.
+
+Scope: the four original central catalyst/membrane cases in Modes1/2, S4 only,
+all1000 original active records per case. No new noise draws, refitting or tuning.
+The common physical state at minute10 precedes the diagnostic pulse. The new
+control holds a single ethanol command from minute10 through minute31 and uses
+no observation, diagnostic label, confidence set or feedback during that period.
+
+Resource matching: reconstruct the original diagnostic record's actual ethanol
+from raw interval endpoints on [10,31], including acquisition from10 to the
+original stop and only the originally chosen continuation thereafter. Never
+divide the full0..31 total by21. The new constant command is this exact float
+budget divided by21; no clipping, rounding or discrete-grid projection. For these
+C/M causes, delivery gain is one, so actual and commanded ethanol coincide.
+Commands must satisfy the original physical bounds. An infeasible budget is a
+reported failure, not a reason to adjust it. Deduplicate only identical case and
+IEEE754 budget values; near-equal budgets are not merged by a tolerance.
+
+The original diagnostic trajectory determines the budget retrospectively. The
+comparison is therefore conditioned on that resource budget and changes the
+feed profile. It compares the diagnostic sequence with one constant-feed blind
+control, not every blind control, uniquely diagnostic information, optimized
+excitation, an ex-ante deployable budget rule, or economic superiority.
+
+Integrate every distinct new schedule freshly with the unchanged dynamics.py,
+saved settings, np50 state and absolute-time deterioration. Preserve the common
+0..10 prefix only for whole-horizon accounting. Save raw states, true observations,
+intervals and metadata. A read-only solve_ivp wrapper captures supplied y0 and
+the solver's sol.y[:,0] arrays and hashes; both must equal the exact saved t10
+state. Record the dense-output exported first sample identity separately. Do not
+overwrite that distinction or relax the inherited failed exact-export gate.
+
+Report both [10,31] and full[0,31] hydrogen shortfall, actual/commanded ethanol,
+H2 production and demand. Account commands exactly per interval and H2/actual
+feed by the original endpoint trapezoids. Signed contrasts are diagnostic minus
+equal-ethanol. Preserve all4000 paired rows and four summaries with mean, sample
+standard deviation, minimum and maximum, plus distinct schedule/trial counts.
+Check actual and commanded resource equality with atol1e-12 mol + rtol1e-12;
+this numeric accounting tolerance never replaces an exact state/source gate.
+No favorable sign, superiority or significance is required for acceptance.
+
+Two compute workers maximum, each with BLAS/OpenMP threads capped at one. Retain
+all errors and logs. Do not start until independent checks and amendment sources
+are frozen and root explicitly says GO. All earlier evidence remains unchanged.

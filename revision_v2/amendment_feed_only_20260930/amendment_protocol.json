@@ -1,0 +1,143 @@
+{
+  "schema": "ssmr.feed-only-amendment.v1",
+  "date": "2026-09-30",
+  "created_utc": "2026-09-30T15:16:56.191358+00:00",
+  "status": "Outcome-aware supplemental analysis; freeze before new comparison, not retrospective preregistration",
+  "cases": [
+    {
+      "id": "m1_C_d05_r1",
+      "mode": 1,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 4
+    },
+    {
+      "id": "m1_M_d05_r1",
+      "mode": 1,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 12
+    },
+    {
+      "id": "m1_F_d05_r1",
+      "mode": 1,
+      "h": "F",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.001
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 21
+    },
+    {
+      "id": "m1_S_d05_r0",
+      "mode": 1,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 29
+    },
+    {
+      "id": "m1_H",
+      "mode": 1,
+      "h": "H",
+      "drop": 0.0,
+      "controls": {},
+      "category": "covered_grid",
+      "policy": true,
+      "index": 35
+    },
+    {
+      "id": "m2_C_d05_r1",
+      "mode": 2,
+      "h": "C",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.005
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 53
+    },
+    {
+      "id": "m2_M_d05_r1",
+      "mode": 2,
+      "h": "M",
+      "drop": 0.05,
+      "controls": {
+        "rate_per_min": 0.003
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 59
+    },
+    {
+      "id": "m2_S_d05_r0",
+      "mode": 2,
+      "h": "S",
+      "drop": 0.05,
+      "controls": {
+        "sensor_slope_per_min": 0.0
+      },
+      "category": "covered_grid",
+      "policy": true,
+      "index": 67
+    },
+    {
+      "id": "m2_H",
+      "mode": 2,
+      "h": "H",
+      "drop": 0.0,
+      "controls": {},
+      "category": "covered_grid",
+      "policy": true,
+      "index": 73
+    }
+  ],
+  "pulse_start_min": 10.0,
+  "pulse_end_min": [
+    16.0,
+    21.0
+  ],
+  "increment_mol_min": 0.0003,
+  "horizon_end_min": 31.0,
+  "nominal_mol_min": {
+    "1": 0.0021,
+    "2": 0.0018
+  },
+  "sensor_sets": [
+    "S1",
+    "S3",
+    "S4"
+  ],
+  "trials_per_cell": 1000,
+  "measures": [
+    "H2_shortfall_mol",
+    "actual_ethanol_mol",
+    "commanded_ethanol_mol",
+    "H2_produced_mol"
+  ],
+  "primary_contrast": "Original active diagnostic action minus feed-only with same original pulse end; all trials retained",
+  "interpretation": "Schedule-yoked conditional downstream-action ablation; fixed16/21 controls separately reported; not total information value or economic benefit",
+  "original_protocol_sha256": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+  "original_engine_sha256": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+  "original_final_check_sha256": "2a7d797d29675edad02e9904d2c844cf4da2b934b2fb0eddf1fc9cfeb04aba74",
+  "amendment_text_sha256": "da6a36196281ced386578f87c52cb71471a7f5c9c25b57efbf911cda224bda0d",
+  "new_physical_arms": 18,
+  "new_noise_draws": 0
+}

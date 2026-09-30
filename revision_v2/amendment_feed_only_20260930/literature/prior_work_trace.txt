@@ -1,0 +1,23 @@
+PRIOR-WORK SOURCE TRACE | 30 September 2026 | cx-trace
+Same-model internal source check; not external peer review or a novelty certification.
+
+Coverage: Scott et al. (2014) and Raimondo et al. (2016), complete supplied PDF text, including theory, examples and conclusions. Serra et al., supplied postprint: abstract, introduction, Sections 3.8-3.9, 4-6; other sections not fully reviewed. Local study comparison checked against major_revision_v2/protocol.json and this amendment's PROTOCOL_AMENDMENT.txt. No new scientific outcomes are asserted here.
+
+1. CONFIRMED: active input design for fault diagnosis is established prior work.
+Scott, Findeisen, Braatz and Raimondo, "Input design for guaranteed fault diagnosis using zonotopes," Automatica 50 (2014), 1580-1589; doi:10.1016/j.automatica.2014.03.016. Section 2 (PDF p2 / journal p1581) specifies linear fault scenarios and zonotopically bounded initial states, disturbances and measurement errors. Section 4, Definition 1 and Theorem 3 (PDF p3 / p1582), characterizes separation through disjoint reachable output sets. Section 5 (PDF p4 / p1583), especially (18)-(33), optimizes a quadratic input cost subject to separation and input constraints, via a mixed-integer quadratic program. Section 9 (PDF pp9-10 / pp1588-1589) explicitly conditions guaranteed diagnosis on existence of separating inputs. Do not attribute invention of all active diagnosis to this paper: its introduction itself reviews earlier work.
+
+2. CONFIRMED, with assumptions: closed-loop diagnostic input optimization also predates this study.
+Raimondo, Marseglia, Braatz and Scott, "Closed-loop input design for guaranteed fault diagnosis using set-valued observers," Automatica 74 (2016), 107-117; doi:10.1016/j.automatica.2016.07.033. Section 1.1 (PDF p2 / p108) assumes one member of a linear model family remains active during the test and uncertainties lie within bounded convex polytopes. Sections 3-4 (PDF pp3-5 / pp109-111) use constrained zonotopes and measurement-updated observers in moving-horizon input design. Algorithm 1 and Theorem 5 (PDF p5 / p111) give finite-horizon diagnosis conditional on a finite feasible initial separation horizon. Section 5 (PDF pp6-7 / pp112-113) adds an explicit offline-computed alternative with observability assumptions. These are conditional model-based guarantees, not unconditional guarantees for arbitrary nonlinear deterioration.
+
+3. CONFIRMED novelty guard: membrane-reformer control and the hydrogen/feed trade-off already exist.
+Serra, Ocampo-Martinez, Li and Llorca, "Model Predictive Control for Ethanol Steam Reformers with Membrane Separation," supplied Postprint_Serra2017.pdf. Section 3.8 (PDF/printed pp11-12) derives a reduced linear prediction model; Sections 4.1.3-4.3 (pp14-15) formulate hydrogen-flow tracking plus ethanol-inlet minimization and receding-horizon control. Section 5 (pp16-17) reports simulations; Section 6 (p17) reiterates these contributions. The abstract distinguishes experimental model fitting from controller simulation. This supports prior membrane ESR control, not a claim that the supplied study's aging diagnosis has already been solved or experimentally validated.
+
+RECOMMENDED WORDING (supported synthesis):
+"Active fault-diagnosis input design is established, including optimized separating inputs under bounded model uncertainty (Scott et al., 2014; Raimondo et al., 2016). Here we evaluate a prespecified feed pulse with statistical calibration over declared finite fault histories, rather than solve their input-design problems or inherit their deterministic separation guarantees. Membrane-reformer predictive control with hydrogen tracking and ethanol minimization also predates this work (Serra et al.)."
+
+Boundary: finite-history rank protection concerns a stated rejection event under the assumed observation law; it does not ensure a unique diagnosis or continuous-domain coverage. This contrast describes scope, not proof of novelty. The same-pulse amendment evaluates downstream action at the original stopping schedule; it does not establish pure information value, optimized excitation, or economic superiority.
+
+SOURCE BYTE IDENTITIES (SHA-256; authorized Downloads files only)
+input_design_for_guaranteed_fault_diagnosis_using_zonotopes.pdf: 3aa9ddb81150d4e043d9a56a147ac00bcd2ed80a5972bd91d546af37e80c0637
+Raimondo_Automatica_2016.pdf: cf26542d1749811684b7a77123883aa399b59c31d9f7a4f2ea199a6528a8df84
+Postprint_Serra2017.pdf: d2d031980434a27aa9deacad91e674e6c939b40d48d51987b3c276ba99cac332

@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "nominal-pulse-nominal schedule",
+    "switch-safe command amount",
+    "actual delivered feed differs from command",
+    "shortfall physical amount",
+    "total hydrogen amount",
+    "demand amount",
+    "paired direction uses policy minus comparator",
+    "identical physical accounts give zero",
+    "sample standard deviation",
+    "same case and stop select same arm regardless of unused call",
+    "reject wrong pulse end",
+    "reject wrong pulse start",
+    "reject wrong original stop",
+    "reject invalid interval",
+    "complete keys accepted",
+    "reject duplicate",
+    "reject missing",
+    "reject wrong case",
+    "wrong reported integral rejected",
+    "wrong contrast sign rejected"
+  ],
+  "count": 20,
+  "scope": "Analytic fixtures before amendment outcomes; no reactor validation",
+  "pass": true
+}

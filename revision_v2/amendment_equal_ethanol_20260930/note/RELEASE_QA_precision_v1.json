@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "issues": [],
+  "pages": 6,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "table_claims_recomputed": 21,
+  "figure_points_recomputed": 27,
+  "pdf_sha256": "6dc255c25d90e66fe457428bfc0a5ad8eef035d8e28ed69ba8f25a8bff0618d9",
+  "freeze_sha256": "f492ee70d68319f0c836f065a5196893a36c9f2d6b7699d187309dfcfe23d71d",
+  "different_model_review": "pending",
+  "user_rewrite": "pending",
+  "created_utc": "2026-09-30T18:23:54.196106+00:00"
+}

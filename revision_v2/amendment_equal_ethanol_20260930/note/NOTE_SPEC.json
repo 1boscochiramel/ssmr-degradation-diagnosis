@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-30",
+  "purpose": "Local six-page revision for user rewrite and later different-model review",
+  "pages": 6,
+  "must_include": [
+    "Plain-language question and evidence-based main conclusion, without a predetermined favorable result",
+    "Half-page qualified benchmark code findings: IAE integration, np=200 startup, PID persistent state",
+    "Method on one page, diagnostic thresholds and machinery unchanged",
+    "Four central S4 diagnosis counts and complete existing stress-failure table",
+    "One monochrome figure with all 27 prior paired case/sensor points in mmol: shortfall avoided versus extra actual ethanol",
+    "Equal-actual-ethanol blind comparison for all four central S4 cases with all original episodes included",
+    "All healthy and meter-bias case/set action counts, with M1 meter-bias S1 ethanol and action count prominent",
+    "Budget matching is retrospective and changes the input time profile; cannot establish superiority over every blind policy or isolate information value",
+    "Kinetic mismatch failure, assumed noise, old failed exact export gate and independent-review status explicit",
+    "Full-paper Santra comparison and readable primary references"
+  ],
+  "release_checks": [
+    "Frozen scientific comparator checker passes or failure is explicitly reported without positive result claims",
+    "Every table and figure coordinate recomputed directly from source CSVs",
+    "Code findings bind to checked primary code or saved evidence; screenshot magnitudes excluded",
+    "Exactly six pages, no clipped text, readable in black and white; every page visually inspected",
+    "Source hashes, figure coordinates, note inputs and final PDF identity saved",
+    "Prior outputs read-only; new versioned PDF copied to Downloads with matching hash",
+    "No external distribution or cloud-model review; cross-model review and user rewrite pending"
+  ]
+}

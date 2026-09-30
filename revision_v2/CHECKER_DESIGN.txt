@@ -1,0 +1,203 @@
+INDEPENDENT CHECKER DESIGN - PROVISIONAL, NOT FROZEN
+Owner cx-check. Root must confirm implementation/schema before freeze.
+This is same-model internal verification, not cross-model or physical validation.
+
+Purpose
+Repair the specific statistical and accounting defects identified in the external
+review. A scientifically unsuccessful evaluation can pass the integrity checks.
+Do not tune thresholds, feature sets, candidate limits, seeds or stopping rules
+after viewing held-out evaluation. Preserve earlier frozen/A1/A2 evidence.
+
+Recommended statistical construction
+1. Freeze the candidate family, dynamic path parameterization, nuisance bias
+   treatment, all sensor acquisition rules, excitation, allowed decision looks,
+   score, fit grid/optimizer, noise law and the truth/noise strata before data.
+   Include healthy behavior or explicitly delimit its out-of-family status.
+2. Fit each candidate to actual simulated observations available at that look.
+   Never insert zero for the known generating label. The diagnostic function
+   must not receive true hypothesis, latent health, latent bias or future data.
+3. Use a joint score retaining shared-baseline covariance. For disjoint raw
+   mean errors e1,e2 with variances v1,v2 and a constant per-run bias b,
+   [mean1, mean2-mean1] has covariance [[v1,-v1],[-v1,v1+v2]] conditional on b.
+   If b is integrated as an independent random effect, add Var(b) to the first
+   diagonal only. A random bias is not fresh independent noise at every sample.
+   More generally use an explicit aggregation matrix A and raw covariance K:
+   summary covariance = A K A^T. Retain overlap, sensor correlation and missing
+   delayed samples. Constant bias must appear once per run/sensor or as a
+   shared nuisance parameter, never average away by increasing sample count.
+4. Calibrate the complete sequential event. For each independent calibration
+   trajectory take the maximum true-candidate score across all allowed looks
+   on the prespecified acquisition path. Use one rank threshold per candidate
+   and calibration stratum: k=ceil((n+1)*(1-alpha)), threshold=ordered score k.
+   If k>n use +infinity. Reject only for score>threshold (ties retained).
+   The same score/fitting/acquisition procedure must apply in calibration/eval.
+5. A maximum of per-stratum thresholds gives marginal protection for each
+   included finite stratum. Pooling fixed-grid strata instead supports only a
+   declared sampled mixture; do not claim coverage uniform over continuous
+   severities, unseen dynamics, arbitrary bias or model mismatch. A candidate
+   surviving every look may be retained by intersecting sets over looks.
+   Singleton wrong calls imply true-label exclusion only when truth is in the
+   covered candidate family. Empty set is MODEL_INCOMPATIBLE, not a
+   confident nearest-label diagnosis. Multiple survivors are INCONCLUSIVE.
+6. The rank argument treats whole independent trajectories as exchangeable
+   units, not the serial samples inside one trajectory. Adaptive acquisition
+   must match the calibrated policy; precomputing later unused data cannot
+   justify using it in an earlier decision. A fixed maximum over all scheduled
+   diagnostic looks is simplest; physical action may begin only after the
+   selected stopping time and is audited separately.
+
+Evaluation and uncertainty
+Use explicit disjoint seed namespaces for design/debug, calibration, evaluation,
+and mismatch sensitivity. Reusing deterministic noiseless plant trajectories
+across noise realizations is allowed but limits claims to those plant strata.
+Independent noise seeds alone do not constitute new independent physical plants.
+Report per-stratum and declared-mixture denominators, true-label ever-excluded,
+wrong singleton call, correct singleton call, inconclusive and empty-set rates.
+All trajectories remain in denominators, including failures. Report decision
+time distributions with no-call censoring and conditional denominators; do not
+present successful-only median as unconditional delay. Report onset-adjusted
+delay separately from simulation clock time.
+For independent evaluation seeds within a fixed stratum, provide exact binomial
+confidence intervals from the raw event counts. Correlated time points are not
+additional trials. Pooled heterogeneous deterministic-stratum counts must not
+be labelled exact binomial without iid mixture sampling. No empirical target is
+forced: report empirical rates and intervals. A claim of rate<=alpha requires
+its prespecified one-sided confidence upper bound<=alpha; lower>alpha contradicts
+that claim; otherwise evidence is insufficient for that empirical assertion.
+The marginal calibration statement is distinct from fixed-calibration empirical
+performance and needs its exchangeability/model assumptions stated.
+
+Physical actions and losses
+Actions are feed commands or feedback policies, with timestamps and actuator
+bounds, not names. For every truth trajectory and chosen alternative action,
+save actual feed and hydrogen production over the same fixed horizon. Integrate
+H2 shortfall=max(demand-production,0), total actual ethanol, and command ethanol
+separately if a feed-delivery fault exists. Compute differences against explicit
+paired baselines/oracle policies using the same truth/noise scenario and horizon.
+Include the excitation interval in total feed and hydrogen accounts. Never set
+loss differences to zero merely because both labels say COMPENSATE. Preserve
+signed net feed differences; distinguish excess feed from total feed. Service
+cost/downtime are unavailable: report service requests, not financial costs or
+payback. No optimally weighted VOI claim without an explicit prior/loss rule.
+If action outcomes use surrogate or lookup responses, label that scope and save
+the map/interpolation provenance; do not call them full dynamic plant reruns.
+
+Proposed raw interface (final file names can be agreed with implementation)
+protocol.json: revision ID, exact scenario/candidate/parameter grid, sensors,
+units, scheduled sample/arrival/decision times, covariance model, fitting rule,
+alpha, calibration strata, seed counts/namespaces, actions, quadrature, horizon,
+all source/input hashes. No unknown fields should control evaluation behavior.
+seed_manifest.csv: split, stratum_id, run_id, seed, RNG algorithm/version; no
+calibration/evaluation seed overlap. Shared sensor streams between compared
+policies must have explicit pairing IDs, never count as independent replication.
+observations.csv: run_id, sensor, sample_id, sample_time, arrival_time,
+truth_value, bias_component, noise_component, measured_value, used_phase.
+truth fields are for audit only and excluded from diagnostic function inputs.
+looks.jsonl: run_id, look_id, decision_time, consumed_sample_ids, aggregation
+matrix/order, observed summary, covariance, candidate fit parameters and
+predicted summary, residual, score, threshold, survivors, decision/reason.
+Full fit-grid objective vectors or a saved bounded search trace permit independent
+minimum checks; fitting status/bound contacts must be retained, never discarded.
+calibration.csv: candidate, stratum, seed/run_id, each true-candidate look score,
+maximum score. thresholds.json: n, alpha, rank, threshold and input hashes.
+physical_trace.csv: run_id, policy, interval start/end, demand, H2 production,
+command ethanol, actual ethanol, true evolving health/fault, phase, action ID.
+Use explicit interval-rate convention or endpoint samples plus fixed quadrature.
+outcomes.csv: run_id, truth, final outcome, stop/onset times, event flags, physical
+integrals and paired-reference IDs. These are recomputed, not trusted inputs.
+execution.json/source_inventory.json: start/end, exits/errors, input/source
+hashes, calibration/evaluation completion, file hashes and package versions.
+
+Checker acceptance
+Integrity PASS requires frozen hashes, source isolation, complete declared
+scenarios and seeds, no forbidden split leakage, finite raw records, causality,
+sampling/arrival correctness, true paths consistent with declared faults,
+independent covariance/score/threshold/decision reconstruction, physical-integral
+reconstruction and exact headline/denominator agreement. Numerical tolerances
+are frozen from declared output precision and solver settings, not chosen from
+observed discrepancies. Scientific performance is a separate result, not an
+integrity gate. A missing raw intermediate is UNCHECKABLE, not PASS.
+Negative controls before evaluation: seed overlap, true-label zero insertion,
+future GC use, wrong-sign covariance, threshold rank off-by-one, same-action
+zero cost, wrong quadrature, dropped inconclusive run and changed headline.
+
+Statistical source basis (read 2026-09-30)
+Lei et al., Distribution-Free Predictive Inference for Regression, section 2:
+https://www.stat.berkeley.edu/~ryantibs/papers/conformal-jasa.pdf
+The finite-sample rank statement applies to exchangeable scalar scores. The
+trajectory-maximum and finite-stratum construction above is this reviewer's
+application of that rank argument, not an assertion made about this benchmark
+by the cited authors. No guarantee is claimed under distribution shift.
+NIST exact binomial confidence limits:
+https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbici.htm
+SciPy exact interval implementation:
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html
+
+Implementation agreement update (before evaluation)
+Root accepts per-stratum maximum-over-looks rank thresholds, then maximum over
+covered finite strata per hypothesis/configuration; alpha=.05, calibration499,
+evaluation1000 per declared deterministic history. These are design inputs,
+not observed success counts. Covered truths and off-grid/model-mismatch stress
+sets are separate. Candidate sets use cumulative intersection and early
+singleton at16min; otherwise final look21min yields singleton, INCONCLUSIVE or
+MODEL_INCOMPATIBLE. A label confidence set is not a parameter confidence region.
+The fixed bank includes zero-fault paths under several labels, overlapping
+with H; those cases can legitimately remain inconclusive.
+Statistics use absolute disjoint-window means with full same-sensor AR1 and
+persistent uniform-bias covariance. Windows (0,5], (5,10], (11,16], and at21
+also (16,21]; every available historical GC sample is assigned by acquisition
+time, with arrival cutoff at each look. GC every3min, delay3min; fast every.1min.
+Correlation uses sample-order lag within each sensor, not arrival order.
+Noise/bias/phi stresses that keep nominal covariance are explicitly scored
+with a nominal working covariance. Separate calibration or stress labelling is
+required; true covariance equality cannot be claimed for altered noise laws.
+Physical commanded feed integrates constant command per interval exactly;
+actual feed under F uses that interval command times evolving F at endpoints.
+H2 and actual feed quadrature are endpoint trapezoids within each interval,
+without smearing a command switch across old and new commands. The active pulse
+ends when diagnosis stops; prefixes and branch continuations share exact states.
+Initial state protocol is being amended before freeze to fixed-health
+preconditioning from source IC, with serialized convergence gates and trace.
+Checker must verify source IC -> preconditioned state -> dynamic state0 ->
+decision state -> action branch chain. Historical healthy-IC initialization is
+a separate explicit stress. Mode2F nominal-map positive drops are unsupported:
+require explicit reachability mask/reasons instead of silent denominator loss.
+All diagnostic batch summaries/scores/fit IDs are saved. Full raw observation
+regeneration is acceptable from frozen RNG algorithm/version, batch seed,
+within-batch index, settings and noiseless truth-frame hash, with raw exemplars
+saved for cross-check; this is an explicitly checkable provenance mechanism.
+
+Recorded amendments and final evidence interpretation
+The original model/protocol and numerical acceptance functions remain frozen.
+The separate policy amendment uses the exact healthy map value at baseline
+command as its restoration target. Its zero-fault baseline-command checks were
+completed and frozen before any stochastic evaluation.
+
+The first complete dynamic audit exposed a checker parent-lookup defect: healthy
+and sensor-bias-only scenarios can have identical physical state hashes. A
+versioned correction includes scenario identity in the lookup key. It changes
+no numerical or exact-state requirement. A further read-only adapter maps the
+recorded source root to an explicitly supplied artifact root for source hashing
+and initial-condition reading; no recorded metadata is rewritten.
+
+The original exact exported-first-state gate remains failed. The separately
+frozen forensic replay tests a different statement: solver initial arrays equal
+the intended input arrays exactly, and the full original exported state arrays,
+truth CSV bytes and interval CSV bytes reproduce exactly. The discrepancy arises
+in dense-output evaluation at a segment's initial time. This is a post hoc
+provenance resolution, not a numerical tolerance change or a newly passed
+original gate. Original failure output is preserved in dynamic_verification.json.
+The final wrapper may accept explicitly qualified computational verification
+only when every remaining discrepancy is this identified export condition,
+every affected record has exact forensic replay evidence, and all original
+sources/results remain unchanged. It exposes original_frozen_dynamic_gate_pass
+as false and binds the forensic evidence and corrected checker separately.
+
+run_revision_checks.py is the final integration/report-binding entry point.
+Arguments --root, --prior-audit-root and --original-archive-path select the
+revision tree, extracted historical audit tree and original supplied ZIP.
+The final wrapper audits this recorded campaign including its preserved failure
+and forensic evidence. Fresh simulations must create their own raw checks and
+provenance evidence; copied old evidence cannot establish a fresh run's result.
+All verification remains internal and same-model, with no independent reactor
+equation implementation, cross-model gate or physical validation implied.

@@ -1,0 +1,21 @@
+{
+  "schema": "ssmr.equal-ethanol-freeze.v1",
+  "created_utc": "2026-09-30T18:17:51.837376+00:00",
+  "files": {
+    "PROTOCOL_AMENDMENT.txt": "8c9365fd7784ae51f1fd1d98d95a8aaf7afc9ab3b2344284f6d361a2b7363d82",
+    "checks/CHECK_FREEZE.json": "f861c8ee0fba8aa71d19214f17e434fdbbdcccc6de5146a1dd5a5e2c4d1795fd",
+    "checks/CHECK_SPEC.txt": "3cc256851329349af4ddcc8fbb7a7765500036f1a655f96f38f0afafa224f31b",
+    "checks/audit_math.py": "68cb9240ef8c01f926eaaf62e689ca617feea89f668b7a3c2bff8c7a5c22d386",
+    "checks/audit_records.py": "ce0728b864b1ef6e1c073f9dcb1733351599844ec647a1fcbeaff5187a22a3d1",
+    "checks/freeze_checker.py": "6b01c8d734643672588258524c89e3b1211b3110b424de5733cd6c5922f61961",
+    "checks/test_audit_math.py": "a7c226d61b3d766db4c0980073ce058c40aabcc98a48aee723a9dc6af202dc0f",
+    "checks/verify_equal_ethanol.py": "30ca68ca19d144b53d0ea8b48f3ae6a489950eabccf70f4453ac36d4e33b841f",
+    "parent_inventory.json": "8f1c7128ddc4b905289daba99e2ef26856f981c92f58bf8e87e0902eaf4f29df",
+    "prepare_equal_ethanol.py": "dfeedf001dad5ca45026ddabbe0a0a8ca736fbc60ada52c5dd3d1124598b78d2",
+    "protocol.json": "1b76b51ec1b1fa10cbea65af78c58557a2fa19d6a5b370e0ba910a31765c4864",
+    "run_equal_ethanol.py": "950678e5403d2ed864385d401351a9f58457e6e3c0f280879d1d2ed6aa2a82cd",
+    "schedule_inventory.json": "64029740dbf708b72456cb2e683ea3299ddfbf5229e8a4186427072d15562dd5",
+    "trial_schedule_map.csv": "7b6d6d9ec648b3e1229614a67806a53fb2a81235ba6117daf3e334b3bb1d02b3"
+  },
+  "scope": "Freeze before new equal-ethanol integrations; original outcomes already known; no favorable result required"
+}

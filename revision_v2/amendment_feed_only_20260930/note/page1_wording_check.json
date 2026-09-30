@@ -1,0 +1,13 @@
+{
+  "previous_pdf_sha256": "4f5a717ad7ccd2944efd7c51b80a932a8ab28660c0df30b1c205f56ff226f3f4",
+  "current_pdf_sha256": "d972d6ce42e2f76e940ad01ab415c0c203578cbff761a6d4d53be5b328f20cc3",
+  "pages_2_through_6_unchanged": {
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+  },
+  "change": "Only page1 pulse-end wording clarified",
+  "pass": true
+}

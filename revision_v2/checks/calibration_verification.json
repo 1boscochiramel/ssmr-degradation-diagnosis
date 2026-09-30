@@ -1,0 +1,986 @@
+{
+  "issues": [],
+  "phase": "calibration",
+  "batches": [
+    {
+      "id": "m1_C_d02_r0_passive_calibration",
+      "seed": 20260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "481df3788b0baeeb1f4acfcff05cf6c256018b8462f8ab9d69bca9b81c234842",
+      "npz_hash": "0773b5530ca1ac890b5a2ed3360c4a631a36ec291fc1439bde1155de5afb6182"
+    },
+    {
+      "id": "m1_C_d02_r0_active_calibration",
+      "seed": 20260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "92b3b524543a8c151ca1604ceeaed88de3ad8c77862966a8826393d6eb396011",
+      "npz_hash": "cca703c6cf4129239cc299b5675c84e798569bac9db54d2b8177447234a0ae4a"
+    },
+    {
+      "id": "m1_C_d02_r1_passive_calibration",
+      "seed": 20360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "17b8ccea0855d35034819072dcdc0a821c1cb40fea7ba74218f1567033d5a863",
+      "npz_hash": "92c0a88ebd249aaee1b607651292511909088a7c3c409eaf898957f995176d73"
+    },
+    {
+      "id": "m1_C_d02_r1_active_calibration",
+      "seed": 20360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "f10870734c3bd880a1aabc2027e3283ae3cd8cf785175af6a65753d4b34e44b3",
+      "npz_hash": "5b4bccae13ff9c0128d9dcb2621bf7e177f77eb682ae586c3ff7a2913fa9536b"
+    },
+    {
+      "id": "m1_C_d02_r2_passive_calibration",
+      "seed": 20460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "147bc296f4c0f8c50d0b007de9c5254d0b86b21c65e89de8c7ddb6f4b6c88632",
+      "npz_hash": "66c0a51c479c7be99e4b14838eb3cdbf2bba5940b2b3c08f0cc7a350fbb73f72"
+    },
+    {
+      "id": "m1_C_d02_r2_active_calibration",
+      "seed": 20460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "ddd7320eee8aba151dd0c6629cec71ca2ede4f1e1a018111e11355069b882a53",
+      "npz_hash": "a585af78767b2fb731efcb6e61f8eff381f5c2619a2aafb2ab88610029f7cf24"
+    },
+    {
+      "id": "m1_C_d05_r0_passive_calibration",
+      "seed": 20560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "4d64c7c3b77dea81c76ffef5a1beee4f016939e61432e90a91d8b9442c62f284",
+      "npz_hash": "e465afa53b447bddd4a7e80bfa3724d5b72e95a8ab52ae573191afbaa57888e5"
+    },
+    {
+      "id": "m1_C_d05_r0_active_calibration",
+      "seed": 20560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "4aeb0965d58e786ea3565348ea8b0a23d8fa489779b12a9b7e3f64450e57b088",
+      "npz_hash": "978b27ea9a649f052def98762a01dbbab4e6dd3c4976def517cf259f4d4adc10"
+    },
+    {
+      "id": "m1_C_d05_r1_passive_calibration",
+      "seed": 20660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "3cac76480ad11b8b858c4a888b686a996684fa764c4fe39b13c2847fb07de0e5",
+      "npz_hash": "3df9a67698dd2a11955d5bd7e05139c4384d38ba01199490ccc8df561e8bc84f"
+    },
+    {
+      "id": "m1_C_d05_r1_active_calibration",
+      "seed": 20660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "4c4e2991b58dba482e19ab816c1ee6f376cf91a8c9aaedf39df0e38e5c838705",
+      "npz_hash": "198d3e5cee9dbe38f168cdd3298e79cb27e4edc2d50a3c40d3d381913dd33baa"
+    },
+    {
+      "id": "m1_C_d05_r2_passive_calibration",
+      "seed": 20760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "87911498edc1885cdbd4933b97a73baf96e6c779e33fd4e0a7ed8968564ebf01",
+      "npz_hash": "3012589960d52de54a6b09b19c8ca636eb1c832696d4eaed8cc31883ef3e363e"
+    },
+    {
+      "id": "m1_C_d05_r2_active_calibration",
+      "seed": 20760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "e181d47184b688db0baf77f87ede1746600ddfda6298ac5b3fa8d6b6f61dde1e",
+      "npz_hash": "008bc0fc193ba94c4302456d0017e73979589cb56e3a9669c2b861465da1881a"
+    },
+    {
+      "id": "m1_C_d10_r0_passive_calibration",
+      "seed": 20860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "37505c1ac7fb51c909b28ca8919547bbc81639a29ed80cd62c424c594528ab9e",
+      "npz_hash": "06a927ed30d92a0c4c1cae2be20d451457aeb71782f9ecde9fa8c61994d659e8"
+    },
+    {
+      "id": "m1_C_d10_r0_active_calibration",
+      "seed": 20860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0879790fd391b99c8983cd9684c71ddc13fb90b313ae7605909aca58429a1f9e",
+      "npz_hash": "a60059a7122e7f4d6fb611d07cd4f9e5b748d07c527592367ff6e8492736dc24"
+    },
+    {
+      "id": "m1_C_d10_r1_passive_calibration",
+      "seed": 20960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c8f3bbff3a629cad2160fd619cdb652bd9eb9a9a1a94214a7e60e360a456096e",
+      "npz_hash": "bcb1a60c398e38f5ac417842c9b398c14be10d11627fe1d0b857fade52f704fd"
+    },
+    {
+      "id": "m1_C_d10_r1_active_calibration",
+      "seed": 20960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "2144a0291ed8599685f6be79d7ead94b3b59e3a6b19822fd062447f075e2826b",
+      "npz_hash": "1bf763f551f8f81a6d0ce05e57b063c2bd65ae19d0cbfcd507015953fe3a6b0f"
+    },
+    {
+      "id": "m1_M_d02_r0_passive_calibration",
+      "seed": 21060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c541f6d45f73f75347a653e794676ca5cd47e0bd2ad186fd111fabb5673d27ac",
+      "npz_hash": "87ad275e4f100278bf9efbefcaa516a52b8d2dac0154fd06930915fff585ac6c"
+    },
+    {
+      "id": "m1_M_d02_r0_active_calibration",
+      "seed": 21060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "b48628efc4138856d7b81d273e3a8c0ee78e055a34296ac30cd1c336dc3449ba",
+      "npz_hash": "d2886ae1ef60f04fe337380cdffd90af646092897235fd5b567c97e7adaa6014"
+    },
+    {
+      "id": "m1_M_d02_r1_passive_calibration",
+      "seed": 21160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "8baee14f0e6548cae017398651bdcc488a6bd6847eedfa865a002a291c79c4f9",
+      "npz_hash": "936184149dfa203154698c0439070a8fbb934db8311dc12379252c1c79c61911"
+    },
+    {
+      "id": "m1_M_d02_r1_active_calibration",
+      "seed": 21160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "8c6008aaad8113caa47c7358ceacda99c84c6c24ba74966b282a0bb51c6ec05a",
+      "npz_hash": "bc781f45b263dc571ced056a8539e49c8fdeecececa73e9780b5aac42d8f920c"
+    },
+    {
+      "id": "m1_M_d02_r2_passive_calibration",
+      "seed": 21260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "ebacaa909c3e732fffecf8859b98a569b18513edb7074372dd527ea8309dda0d",
+      "npz_hash": "c3177f9a26c2ce55b86f7426bb3750255618c05eee388bb756fa8d981376c116"
+    },
+    {
+      "id": "m1_M_d02_r2_active_calibration",
+      "seed": 21260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "08b00946130132330ce3f9f19e8d066bb71b1be2e61d94f8a71e457fb6b661ea",
+      "npz_hash": "96b024c492ee013c205bf33541c2fa3159be57f7d11e7d0a82c5cb5162881bd5"
+    },
+    {
+      "id": "m1_M_d05_r0_passive_calibration",
+      "seed": 21360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7c5617615bc267e9c4b2a3e9af4df33934aef4fc18564b2d03fe98e8ec31f259",
+      "npz_hash": "cc4b95125dae7df44f7fbebc639d2670252ed76c654d6820ba5cc93697ea6e31"
+    },
+    {
+      "id": "m1_M_d05_r0_active_calibration",
+      "seed": 21360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "58e65be9d5915415f3f885dad6555fcd797c9c23fcc59214238cc6add1c70db6",
+      "npz_hash": "b7870dc4fc619fe40ff5fdd680ef1745c02970d0fc7cc8a6386d661cb4dae676"
+    },
+    {
+      "id": "m1_M_d05_r1_passive_calibration",
+      "seed": 21460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0b97f988ff342ef676f6dc8bb8c7a0f7e71cebb19deeaeb98f573335b3e89c7d",
+      "npz_hash": "532b0fd5580f4cb20e07a6490cb5e06ebc575414a06fd846fd6a0ceeba67b343"
+    },
+    {
+      "id": "m1_M_d05_r1_active_calibration",
+      "seed": 21460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "cff1eda012246706fa8c0b09d2881f1bbc00ef7f5a7d85eabdcd824c525f4864",
+      "npz_hash": "85e4f783439c62a001aea9d31c4543b7beb280370dfd5ae1183322e7af386f36"
+    },
+    {
+      "id": "m1_M_d05_r2_passive_calibration",
+      "seed": 21560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7770f21714d0739e98ca184e2544e98822b0b29552012e51609280483e2ce601",
+      "npz_hash": "cd07d7e84f002f7df3a1d9c00ab7ea281c437c14fcb72767a7f3011a9c5aa8fc"
+    },
+    {
+      "id": "m1_M_d05_r2_active_calibration",
+      "seed": 21560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c37cc28d880c7409896302a8a41e8c33f8c92719832599a89706800fa354b299",
+      "npz_hash": "6f19a7bf8fd4b227cee56b610690d970a6f05f3de84365a44384e4233bc27853"
+    },
+    {
+      "id": "m1_M_d10_r0_passive_calibration",
+      "seed": 21660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "d840a75c3fe3f76e23788eadc4401fe26ef83a82de0ce220a2eaf74496d822dd",
+      "npz_hash": "71d57531a83a434a2a6a255bf17f5339442e92b82a48d89fe21c93d815a274c5"
+    },
+    {
+      "id": "m1_M_d10_r0_active_calibration",
+      "seed": 21660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "00b8db026969ed5f436e0f7316bd18e8848dc69022c88097771793b0fcb08c89",
+      "npz_hash": "30b3011316c6de1509d0fe53ba819a8e4382dde5b64ea7ac75c594fad8d5e938"
+    },
+    {
+      "id": "m1_M_d10_r1_passive_calibration",
+      "seed": 21760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "a10d4dc991d5d5497e88ffe06f7738c74fc44fa5d73b480b87b4669cb117c33c",
+      "npz_hash": "00b7e6fdad89e529e506968f8b654b3d6642d1fd9f5b48f93feefe5144000f5c"
+    },
+    {
+      "id": "m1_M_d10_r1_active_calibration",
+      "seed": 21760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "4ea7d15c139214b6002caa8eef5557805fea169b934898194302225d4049ec45",
+      "npz_hash": "b7efc0ccbe1ec145cd318a3f7676ffb6898c388b43be283aff7bca3b40143f83"
+    },
+    {
+      "id": "m1_M_d10_r2_passive_calibration",
+      "seed": 21860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "360bedb449109a78ac2704bfedef862491d20a88146e2b1564c650ed045d2d6b",
+      "npz_hash": "df264a22b13032b58525a72ad288179ccf65ca9385414e2c6cd8b4582f0fbf8d"
+    },
+    {
+      "id": "m1_M_d10_r2_active_calibration",
+      "seed": 21860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "ee0bd6ff7b589d4a7a57dd0c9d369ab7e71f86b9dd938ddb3a33c81fb79527f0",
+      "npz_hash": "826c7d8affe378d004a78e75a93166661c904b501bc1afca2c43a3a5b7cf2dc3"
+    },
+    {
+      "id": "m1_F_d02_r0_passive_calibration",
+      "seed": 21960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "605fce8a9a514e3a0cb55b5089ae66885851a4a1da4ea711ddfb76538be456cd",
+      "npz_hash": "4e9bdba685e7de9a932f426e1a15bab995fb4a8c2bbd452257b3e4484b7e9532"
+    },
+    {
+      "id": "m1_F_d02_r0_active_calibration",
+      "seed": 21960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "6b83dd90dc0ecde5753de3ad5a823c8d2c4360e94be0ceaf62d534117a182e70",
+      "npz_hash": "5164cd8fdcf2f648a4b06b4a22604d7d5bc028733773f3740dd3960c77b21d39"
+    },
+    {
+      "id": "m1_F_d02_r1_passive_calibration",
+      "seed": 22060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "11dc7b5ea2d0048259d45b7e2af7ef1d4737b2e69fc391a0919d7b1d199ac5c2",
+      "npz_hash": "107aba6989b1a76c2052104554b8991d84cf66307228ede97b13ef5b97d83d85"
+    },
+    {
+      "id": "m1_F_d02_r1_active_calibration",
+      "seed": 22060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "f0901e84ebeab6c103c167d2941a609135a8425b70e68caa3ab756a73b5c1550",
+      "npz_hash": "c7e23dbfecdc21e105467145409313fc6797ab0c947bd57be78748ee2149f657"
+    },
+    {
+      "id": "m1_F_d02_r2_passive_calibration",
+      "seed": 22160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "239296b9a0e5508328f6652451816c5de6b1d07be5ce9ab17f0d61800b22f0a8",
+      "npz_hash": "2e5cacd0bbe6fc69f1543660a052f5015add22e8c09a84d39f4420367f57cc52"
+    },
+    {
+      "id": "m1_F_d02_r2_active_calibration",
+      "seed": 22160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "5f5a104fd9fddc51a722676eb9f71e7009be37eff891cca0c559778b0d07a59c",
+      "npz_hash": "220456bef59ad79133830d0040954551373a5127fe4014676b9ab307ffd38c8e"
+    },
+    {
+      "id": "m1_F_d05_r0_passive_calibration",
+      "seed": 22260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "522a665d37fbdd2f008925dc0b1b034dbad98aa2dc22fc1648ff9a8dbee8ec39",
+      "npz_hash": "52a6f3223cd1decfa744ad179daa3a330999cf3dee16801866ab1003f82ecd13"
+    },
+    {
+      "id": "m1_F_d05_r0_active_calibration",
+      "seed": 22260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "d1b56314b4acd7832d693835fac2514a6aea87371f718feedf3210a082f103fa",
+      "npz_hash": "059e95e7933a747bdf276f74af7c23c80b8bc2a5d37dd40f2ff796e94a27cf0d"
+    },
+    {
+      "id": "m1_F_d05_r1_passive_calibration",
+      "seed": 22360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "67e0b68759fe70872227e90e0377eb9c210065edaa206feda5df8f4da5eb1638",
+      "npz_hash": "a0bd16ee9d2b96816b9be91005747d28623c8b05548c84ee0b51594d8b412027"
+    },
+    {
+      "id": "m1_F_d05_r1_active_calibration",
+      "seed": 22360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "6f7bd34e24dfb6436b5aaee6bed49c606d1356a6c5811f50f32983442b36aafb",
+      "npz_hash": "4c9e722039099906e2fec0e10c658c1ff6941dd1013364d4d4e397cd9c91e310"
+    },
+    {
+      "id": "m1_F_d05_r2_passive_calibration",
+      "seed": 22460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0ec03af27f36d81348321a2587f6f12049dddb6f4d0cae6f5ca1eea6a1e614b4",
+      "npz_hash": "155fe7424931d034913c27f06410433dfb55ca6fa5a6c4a4d2e50fe9a89149ae"
+    },
+    {
+      "id": "m1_F_d05_r2_active_calibration",
+      "seed": 22460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "287405138173af7dfc7b7d3d0e0547f22cca36303ec926c6fe502fe38a2f674e",
+      "npz_hash": "8ce28a2a7bd5b065016b956219e1761277a3ef2c9651412fb3099f912e893eb1"
+    },
+    {
+      "id": "m1_F_d10_r0_passive_calibration",
+      "seed": 22560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "372de6078d427f6c7608c164801dc2c21ceb1b109d20fb1c8bd94382034d43e0",
+      "npz_hash": "f8f5b673519b581d1970fa06356fb0ca375c9a7b2aa4df78f4ce2f7dbc6ab187"
+    },
+    {
+      "id": "m1_F_d10_r0_active_calibration",
+      "seed": 22560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "bbb036fb3c8bfc581760c06234d64d0cc08f4c95c2534777a511acfba96ada75",
+      "npz_hash": "4cdc5220d668a7b4b271ce656f0bfedc25b5dc888ae31e37a144ed7bbf5b0ff6"
+    },
+    {
+      "id": "m1_F_d10_r1_passive_calibration",
+      "seed": 22660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "151aec8d36922ba17636505e43e4ada9e8ecf270332b59f63983fc83379d2ab0",
+      "npz_hash": "9df6f3fc7acd813eedbb114798ca2a7b5222a9ad0099be2d35206efd52696b5a"
+    },
+    {
+      "id": "m1_F_d10_r1_active_calibration",
+      "seed": 22660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0019c01743eb857fe005636b94ea4ab3e027847b2a7a2ff9537ec95e4b26dde9",
+      "npz_hash": "bee89c9c357ebbeb318f7d753e6075a08df1b416505e6489ddae98293ce4cd7b"
+    },
+    {
+      "id": "m1_F_d10_r2_passive_calibration",
+      "seed": 22760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "aa3aaff58ef2cc32bb06c6f1e405617e976fc9dc9c4a8b398d8049803cc19fe7",
+      "npz_hash": "4f62739c369d76b9938f263dafef56fbc877028286ae6d781eb19d9af9bbd7c2"
+    },
+    {
+      "id": "m1_F_d10_r2_active_calibration",
+      "seed": 22760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7012f0db085a9d78f373741693f1c2cadd17a0bda696b88539fcc98904bf82bb",
+      "npz_hash": "bdf876c467d4c5763d46708b629dc308c6798159352f28abb480fe4473bc3a87"
+    },
+    {
+      "id": "m1_S_d02_r0_passive_calibration",
+      "seed": 22860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "d3ec3829ce18e20b851292709eb6334e328b21b2245ed9f6eea9c4df205a6bfd",
+      "npz_hash": "42344dbee0677cd1da7a2c6c9ece9e6cb4801aaa3758ec38bcc667f859c1ce9c"
+    },
+    {
+      "id": "m1_S_d02_r0_active_calibration",
+      "seed": 22860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "8bfea633fe1f86953cefbd259420c291d0c8ef571841462538fea38419302c6d",
+      "npz_hash": "8f8df05b30cbea5320c7a9ad933c2378c81adf2c8c739a016deb18c22b36c144"
+    },
+    {
+      "id": "m1_S_d02_r1_passive_calibration",
+      "seed": 22960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "dbe558a867a20e83109ad7866bddf4c812ca151dbdb41722bf9ef2988f71ca47",
+      "npz_hash": "caaa844f90738a12520fb81534df580a70d1313aaca23e5068c54978b17c04fc"
+    },
+    {
+      "id": "m1_S_d02_r1_active_calibration",
+      "seed": 22960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "027564ab11693861d93d610d764faa622607562c2b5305d047d6f9a415db10f9",
+      "npz_hash": "9e8a49f9d307ec9e25300200296438df1c096eea0254e492b4b2edd3724b13c7"
+    },
+    {
+      "id": "m1_S_d02_r2_passive_calibration",
+      "seed": 23060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "cd3d049c0298af98b6384a146719ecf77842c38ddabc6ae173573b96424c7c7b",
+      "npz_hash": "8bb6d44314405293b77c083b24a29b17c985b7ad4a2ce4c51ce9e7b6a9324e48"
+    },
+    {
+      "id": "m1_S_d02_r2_active_calibration",
+      "seed": 23060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "8b631572af929b3c058f4f12dd7940e81e331caa5fc361e1e1e1f3db9ff33cf8",
+      "npz_hash": "da88538073eb237fd6ea0cfc86cb70711719922cacb4da69a18f74cdd726bb48"
+    },
+    {
+      "id": "m1_S_d05_r0_passive_calibration",
+      "seed": 23160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "b8ab17dd6175e1f154307f7ee42b33d3255871b38f7c1fca1eb5ad8767847950",
+      "npz_hash": "7087cdf8dc2f2f9d46681bc6045b7e140285a02585c1ec4b604340122a4e4488"
+    },
+    {
+      "id": "m1_S_d05_r0_active_calibration",
+      "seed": 23160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "9a81d918d52c8d77e222a0eff346456f3c7d3e6899f79e5302d5d969a9d00eb2",
+      "npz_hash": "d945f50779643a495263e6827293d84bdeb3cb97dff1bda2556606f3228b63c0"
+    },
+    {
+      "id": "m1_S_d05_r1_passive_calibration",
+      "seed": 23260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "78031340eec633251f7126bf3fdd8de4c0069afac61379eb3ad4646c34c99e36",
+      "npz_hash": "926d2838484b9612e80c844f3c281ace60c59e7649332de7e12fdfb3ac0bdd67"
+    },
+    {
+      "id": "m1_S_d05_r1_active_calibration",
+      "seed": 23260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "44362cfe236a682c66098c05148269c2d400f8f1860ace9ad9d318988c269ead",
+      "npz_hash": "6ce969bb5f15cd98bbc853c70a6e44a624b4c352b22fd95b781399901469c5b4"
+    },
+    {
+      "id": "m1_S_d05_r2_passive_calibration",
+      "seed": 23360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "b68a8dff00592394b85ebdd9d23ad101ecddc5eb8ecfc5c29ce9361c47ec4024",
+      "npz_hash": "c694a5a0996094e390acf188a9b9cee31725b1e7729889e217b2f88fda613505"
+    },
+    {
+      "id": "m1_S_d05_r2_active_calibration",
+      "seed": 23360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "bfae13c6251440395678789742d2e1927b221b881ef5c6ab1138bc87cc32aa37",
+      "npz_hash": "25446407e65a36dd7eedbddbc3a214bb0c3f9b565706f83f11653b1e2d12c113"
+    },
+    {
+      "id": "m1_S_d10_r0_passive_calibration",
+      "seed": 23460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "2cc3c92fd5acc97bcd7b6cc6c1655232efc5d3647f3774299ca87e869c729555",
+      "npz_hash": "a2ff04b8f15a2504b2abb00027225e0b5f63ba182e5caf0b2f40570cc3b3a787"
+    },
+    {
+      "id": "m1_S_d10_r0_active_calibration",
+      "seed": 23460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "55ace02292d8ad38dd390508095e81a36692ec4c901065da2fe9dedb5ac8bad5",
+      "npz_hash": "f9bf28e6b587eb4ced70c81fcd463af8fbffd171ba90731a780c93ca8526e988"
+    },
+    {
+      "id": "m1_S_d10_r1_passive_calibration",
+      "seed": 23560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "1289d075a540b79c9337358ee9c479d4512cdf47e5a445bb4b55d780f70b200b",
+      "npz_hash": "eb10ec775c7bb694c901359802c278510dd13e4caf36182c9ac9de4a296248f0"
+    },
+    {
+      "id": "m1_S_d10_r1_active_calibration",
+      "seed": 23560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "9ae5422e582788a18196b3cc709de06395622a8e21742b4d24d17cf20fd02b9d",
+      "npz_hash": "31befdb9209de21582b9ef7f63e433d96c16e02ec0711b49194e90d9a31565c3"
+    },
+    {
+      "id": "m1_S_d10_r2_passive_calibration",
+      "seed": 23660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "fc353c77ce6b1b3f5d02506e626c52ba4d431b7b84187556a102e67fa4c788e5",
+      "npz_hash": "ef47dceb36f890e4b9e61030f86adc03b65828be1a2a480f861752aa6a2f9114"
+    },
+    {
+      "id": "m1_S_d10_r2_active_calibration",
+      "seed": 23660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "856519a9853be075b4f14def9f6c7e1dc3027be81a73d3d57e3267534fdeaf3f",
+      "npz_hash": "6b094a79e66d4c6e07cdc6cc5882fd62e065910bed6758dfe5e52a7f12056c80"
+    },
+    {
+      "id": "m1_H_passive_calibration",
+      "seed": 23760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7da3d68d811ff94ac2114011d734ea5add85874d62f78079a28ebd012695342c",
+      "npz_hash": "9c110c9aa183affe9bbb1fc73d00ffad6afdc638600f9b5047bbd5e240310a3f"
+    },
+    {
+      "id": "m1_H_active_calibration",
+      "seed": 23760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "799616e5ebbc6e959e272aa92f623e3ee6a1aa02761fd903ddeb78507ef496a9",
+      "npz_hash": "5192e33d23670c00021b2fe9e1aed488559f9c7589b6f318bb226dc073c9c2ae"
+    },
+    {
+      "id": "m2_C_d02_r0_passive_calibration",
+      "seed": 25160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "82381056bb7c8eddda854af59f7d47c4210fcb0fd65bce27685bee395a0f6407",
+      "npz_hash": "861a7d3a58581426c3dc86d142870a762d55b4da3ecc95dce7b3118f162bce37"
+    },
+    {
+      "id": "m2_C_d02_r0_active_calibration",
+      "seed": 25160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "bb97dec66241bca7aed65aec2551b7b014a189bb06662d45fb953ca0b2911573",
+      "npz_hash": "d91076babdc35cac137715247f065521d291174a56fa177c063ce59a1ecbad06"
+    },
+    {
+      "id": "m2_C_d02_r1_passive_calibration",
+      "seed": 25260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "8fea41bb65afef726051a0101ae53d9623da867b9b32d54e241ececcfe7a1ead",
+      "npz_hash": "e7ddb0aed03f1d4bd6b3d940f605ec7f45a2dd1f93b7742979504ec611fa797e"
+    },
+    {
+      "id": "m2_C_d02_r1_active_calibration",
+      "seed": 25260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "08826fa59ce3d04fed8bff1ebfae7e9e4f4dc8b9817335f43ecad416cba3e02a",
+      "npz_hash": "6dc72575c2be94477a6ccf1c7803d5cca1844fa653efbfb73a0aedf34530b4c0"
+    },
+    {
+      "id": "m2_C_d02_r2_passive_calibration",
+      "seed": 25360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "2ac2e4dd1c67d92c359558a19d04762658f39a81fa2965ab9de1f7e80f545305",
+      "npz_hash": "40e4219e3afddd922776e39b5d99c63192f1002456ec86ac4f4f7759115248d4"
+    },
+    {
+      "id": "m2_C_d02_r2_active_calibration",
+      "seed": 25360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "972fd02a2c71414ba424ace149ad93c84e0ba75d966533be2d589d507293aad1",
+      "npz_hash": "da66c3677952de2aef51c19c7ad805ad8ca34e632cf8c41006987508f208157a"
+    },
+    {
+      "id": "m2_C_d05_r0_passive_calibration",
+      "seed": 25460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "6a76d1bd0483d8b872e0d18c477663b555b1478f6338bdb022544fba33fe1416",
+      "npz_hash": "7cb259da396380852ebb00a3740e325e9f64c3286fd9219f1dec349bfce04667"
+    },
+    {
+      "id": "m2_C_d05_r0_active_calibration",
+      "seed": 25460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "b3cbd570801427e2504dce10937d761e9571ed2d8152d885cb6454778d4e80b8",
+      "npz_hash": "a2821ae45835a2fceff9a8339548d521137b4b8e49b9a57254bc8f8e3170065a"
+    },
+    {
+      "id": "m2_C_d05_r1_passive_calibration",
+      "seed": 25560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0e00ee2f209537bac8022879634d8458169849c6f5ce944cb75d722c73f882d4",
+      "npz_hash": "a66d7ef9fe1f0dc3b12390082b3df0a7f2a42486f9a05480106174af99c42c6d"
+    },
+    {
+      "id": "m2_C_d05_r1_active_calibration",
+      "seed": 25560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "635c8c6aed932815f4551754ffda7187df6cf42520d2318f7751c77cb99e7970",
+      "npz_hash": "31c922b141a4d86d4c8496521c77e90327e2ed393ac4e9b78ffaa8e2a3c03a87"
+    },
+    {
+      "id": "m2_C_d05_r2_passive_calibration",
+      "seed": 25660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "1f8951c21d558b0ee9efd26f4f83ec6aaed98dbd156e95bb72f0a8a960dc7e9b",
+      "npz_hash": "160cd9de363fcddd0eb003bba634107755a8c095255095c8c85f6928c45bcfce"
+    },
+    {
+      "id": "m2_C_d05_r2_active_calibration",
+      "seed": 25660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "ac8083a4ffb09b46b150968dc1a35d02c460aaa63b3b91a2218364aed95d72dc",
+      "npz_hash": "f1e6c53bf5f4f7e019fc9e18bec04999733916ef4e81f35e4b2d5093e80925cd"
+    },
+    {
+      "id": "m2_M_d02_r0_passive_calibration",
+      "seed": 25760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "2d774cfa1d7d1e22d1a33abe314f2a3f56b4bbedafce4590cda673ed67df500e",
+      "npz_hash": "c445884cb27d204535076afe411400d51a420f09406523ffb559cc65b1e0a16f"
+    },
+    {
+      "id": "m2_M_d02_r0_active_calibration",
+      "seed": 25760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "80c0d3c616858c47ae71d018624b44fab65f7dcdbbf87a4ea508f45b0aa5a34a",
+      "npz_hash": "3fa68a943a4beaa2a78db2b20d43c070152fbec5e187506f968f9677748a3f31"
+    },
+    {
+      "id": "m2_M_d02_r1_passive_calibration",
+      "seed": 25860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "87e1b473cfae41d79c9517c4bee6611e85cc08dc13c9a0d7431ffa18a3cde3f9",
+      "npz_hash": "be5a8992b23533f11f09386bf325b7ce818b0d02b483c45c715d4abd2f5bc6c4"
+    },
+    {
+      "id": "m2_M_d02_r1_active_calibration",
+      "seed": 25860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "6ea648dbe4d0e90ffda8ceff3c34768f5d1324d500a4aff84b930d90e8dc0243",
+      "npz_hash": "821972427f47f74896e8f53298331fc4e0b4ed9deff1ff28749981d0ea250773"
+    },
+    {
+      "id": "m2_M_d02_r2_passive_calibration",
+      "seed": 25960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "e80b2939c5fddbca8c0671dc80f8208383e3a979f9b2ea705ff80f944eaa431d",
+      "npz_hash": "11729fe264f54fb6da9cbb9bb6fc4679702d1f3660ede436b60d221b38d18535"
+    },
+    {
+      "id": "m2_M_d02_r2_active_calibration",
+      "seed": 25960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "733e62410c3e54f23b58cc44c843c5aca75d7d881f281ad4aed667fdaba88230",
+      "npz_hash": "10171cff089198ebcf5bcb47f528e499bb555c6c0f03f27657a2407a4e30eb2f"
+    },
+    {
+      "id": "m2_M_d05_r0_passive_calibration",
+      "seed": 26060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c6e876eef7bc46d698b7af0f743abecbb303cb7272940b8de50d0da2509d0da5",
+      "npz_hash": "f1035b9bad78b640769abfba54e08d23459914f1342a51d583cd3bdd09b4e399"
+    },
+    {
+      "id": "m2_M_d05_r0_active_calibration",
+      "seed": 26060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "5602fa8c834ecf0651ef310e9f970f492dfba97b6144f930e56b29ad03072ad5",
+      "npz_hash": "c28a49d228db02fbd04c9422424bf8a2209befeec673600275f518df5d3ceca9"
+    },
+    {
+      "id": "m2_M_d05_r1_passive_calibration",
+      "seed": 26160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "5148e21aebce725a5f63aaa27dce415882bfa3ba40d575e5d12619a456da0f25",
+      "npz_hash": "d8352789a701d6c57f722f68d23be6a2db7bcfcaee3c0a03f7b5bb8e20e4c89d"
+    },
+    {
+      "id": "m2_M_d05_r1_active_calibration",
+      "seed": 26160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "03660bdd81eaaefbcd428a817b538731e44f62768f8a9944724584e36044c332",
+      "npz_hash": "0fed8eb89608fcf8eed3fd6e1be7503fafc1dda925d3f980ffa2fc5b8199f2c7"
+    },
+    {
+      "id": "m2_M_d05_r2_passive_calibration",
+      "seed": 26260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "64954ecc2dd4ae99a76475c2a46a056dae9b4533daa6032e098835760cdc93fb",
+      "npz_hash": "60943b15bc1d52930d76c9758074a6892ae5bc1ca038b7be2f79c9ea817869cd"
+    },
+    {
+      "id": "m2_M_d05_r2_active_calibration",
+      "seed": 26260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "0362716c778e0c594ec23f9746ea8edf1c21da9a1abee7b0be77a2c135f1eba2",
+      "npz_hash": "624de693155849a38d8b5f464d1212f833d99dacfb7726801b0e7aba9a521c12"
+    },
+    {
+      "id": "m2_M_d10_r0_passive_calibration",
+      "seed": 26360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "927979976f95d1b963885e1b298c1f92b2db0ccec0a6d504bf41b2409ec4f973",
+      "npz_hash": "c819b4e33acd136f13524bde6057db076f1bebabe9335dc3eb6c390b03b0ca0c"
+    },
+    {
+      "id": "m2_M_d10_r0_active_calibration",
+      "seed": 26360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "86511ff1f15441ab813425447864a52fa0f4ca7bd9fe9912f8e2d300b01bffdc",
+      "npz_hash": "1a84a24682600179f6645f43402037c459e0b5cf6f9596ef1961c3872c683cb8"
+    },
+    {
+      "id": "m2_M_d10_r1_passive_calibration",
+      "seed": 26460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "76d113dce5e189fa9285aedb516243fb987ba6bcc57cc25dd3e76ce34be60943",
+      "npz_hash": "54de3c2f2a346c492d33d12d6264b1634639878944fe534d103e4a4f00a4188f"
+    },
+    {
+      "id": "m2_M_d10_r1_active_calibration",
+      "seed": 26460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c68aa9b6f7d6e62ecacd8fea8640fce448f511d7133680b49d29eeea0b256fd9",
+      "npz_hash": "2cc96ca70b39de170deeb0f5e64ab0dc77a492f5a013e7757d390d943cba032b"
+    },
+    {
+      "id": "m2_M_d10_r2_passive_calibration",
+      "seed": 26560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "240eb6aa7b020e2eea3828fc4477d697a59175ca4c19643413134dc7e3995106",
+      "npz_hash": "a2d04023d2b4687a68cfa056a2c0fd5ff975226380957035e91539998ea16190"
+    },
+    {
+      "id": "m2_M_d10_r2_active_calibration",
+      "seed": 26560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "bf3500b42482a624539d4da077b53d930c5e751ee172c268fd00fc47839f4935",
+      "npz_hash": "a15fd2bca5adb8c64e8ddfaed29d986dfe191061700aa56915ceb91c3f4c3015"
+    },
+    {
+      "id": "m2_S_d02_r0_passive_calibration",
+      "seed": 26660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "5d10b846a145b1dfc76157f608db1527e990341ee6138a58668398c793153a9b",
+      "npz_hash": "afa8e05cd52989338c1dc35d04fbfc4f489f337e18b16ba1370a3c734f20a04a"
+    },
+    {
+      "id": "m2_S_d02_r0_active_calibration",
+      "seed": 26660930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7207da56851d660b3784b7bcee3d3503c72801d426096240e81b306c0432ba14",
+      "npz_hash": "feb53fa209cf778a0b276628ddc97f00e03193f1104f2fc8659f32d83742f662"
+    },
+    {
+      "id": "m2_S_d02_r1_passive_calibration",
+      "seed": 26760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "e4ddf078a41d748b1c9794153071a27502d3c5d98b99caa3ef3c94da8e382756",
+      "npz_hash": "4cedc3f47b7507bcafdd03458fb3eef65d8a50d435df505a369b1772db9809a7"
+    },
+    {
+      "id": "m2_S_d02_r1_active_calibration",
+      "seed": 26760930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "108862b6aebeae9609f89d774866ea406ee47153ee3e67e9abb54ae89cfecca2",
+      "npz_hash": "c74d264d4f2f48e848bcb22401479a8d0f1346875ea05dd8c7075b500f71736d"
+    },
+    {
+      "id": "m2_S_d02_r2_passive_calibration",
+      "seed": 26860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "1802dd0f6834d1a28e2f61844256e5a05e98830e242489b4980fb9909753544c",
+      "npz_hash": "118deb8dbcb6905675ae66edc4195c930f504a66378daf7172b25867dc624a8b"
+    },
+    {
+      "id": "m2_S_d02_r2_active_calibration",
+      "seed": 26860930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "afa5250817826ad705bce382f6c4a67f9dd432af6fac6cc5736832fa45edcb1e",
+      "npz_hash": "df7b314e33bfb5b20f79573bc5ea0571b4c3838cc989cdc67ed748896b59beff"
+    },
+    {
+      "id": "m2_S_d05_r0_passive_calibration",
+      "seed": 26960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "cdb60901eceb9df22b3735eaad7c2d1993daf1c45cef9953253a00db99ac5dd9",
+      "npz_hash": "f5dff94716b88d3b73147e66cad16ccb54a922ce40c01e96ff2caeaac497c908"
+    },
+    {
+      "id": "m2_S_d05_r0_active_calibration",
+      "seed": 26960930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "67fb181e0f9eb111e128d8571212fd697f055ddf4cdd2fa7133cf3d238cb80f1",
+      "npz_hash": "d5180a94c13bd492e6542a7518723db99a4d3045e1090626121b72460bf0f1dd"
+    },
+    {
+      "id": "m2_S_d05_r1_passive_calibration",
+      "seed": 27060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "d32500cfee3f95c490f8d75985ef4995dabe52f47d5aa1fc643298573d9a1832",
+      "npz_hash": "01d066f81553e3c926fd97109f90a3fe983831cf4eb184f15e92a38b2fed970a"
+    },
+    {
+      "id": "m2_S_d05_r1_active_calibration",
+      "seed": 27060930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "59087f8f803fba4c3f147b50690bffbecd205562dffc2055fc4f4e718dac0a71",
+      "npz_hash": "3cda2ebaa38a4d27cee80b8b536db43433fb774d02ceb91ce5af8e24e50a6bc9"
+    },
+    {
+      "id": "m2_S_d05_r2_passive_calibration",
+      "seed": 27160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "b2ff497d950138510eb2bbde714b840489ea1e6b6b33fe9e60772567572907e5",
+      "npz_hash": "7746916d82ed2f9591da14d3e718a81871232b219842726ced4d4ec84f130dcb"
+    },
+    {
+      "id": "m2_S_d05_r2_active_calibration",
+      "seed": 27160930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "7b5e40dd4e86b72a84db295bb5d81c137643688cc88c7be31ccc6dca422fe609",
+      "npz_hash": "9f964513f385f34025c394fabcf877013c0d7b5bfe877813d5f67bde4bb15656"
+    },
+    {
+      "id": "m2_S_d10_r0_passive_calibration",
+      "seed": 27260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "9b65dc7de1373d447a6d1e2f1ac69eb9d865feb61c1750315987fa62ab3ece63",
+      "npz_hash": "4349dd77864dd5759c9d95b950087cf3dc13936b7a96f38cde07aa075521436d"
+    },
+    {
+      "id": "m2_S_d10_r0_active_calibration",
+      "seed": 27260930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "dcd4b2bd14abbb969715553e533dc722cccae792a66d12784066df36e60e49b4",
+      "npz_hash": "2fc937c43075e04f9a4c1fca2e44a89e53813a1c94b778f68fbc44d0bd132332"
+    },
+    {
+      "id": "m2_S_d10_r1_passive_calibration",
+      "seed": 27360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "ffe29c62a1c395b37eb9c6c7f2767c77b66579737736b94acad0e614ee827ca3",
+      "npz_hash": "d50a302ae11ba6cf62b5ec992f8476faf9b501dfb00f3b39cce5fd6fc6ec14ca"
+    },
+    {
+      "id": "m2_S_d10_r1_active_calibration",
+      "seed": 27360930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "26178aae603d2c2b897e4b2181ac07fe45c0dbb1df6f9c51dfeaca9a58e76642",
+      "npz_hash": "64c8d483ea7d60b193278084a4270a0c3c2cf6106a4e4fdf7a3ded9d40438db1"
+    },
+    {
+      "id": "m2_S_d10_r2_passive_calibration",
+      "seed": 27460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "149d354a3518afbb7479636dcd7cb17d59f8527ce514b8a368fb95bff88362a8",
+      "npz_hash": "948b079de844ec0958a0c604f6aa3ca127d87238c14b0b8e5d75b4788143dd97"
+    },
+    {
+      "id": "m2_S_d10_r2_active_calibration",
+      "seed": 27460930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "c3a52bdf00bc4b073d4ed29c356f0467996ee383fd4fec9c55515fc12ee71efb",
+      "npz_hash": "f8db46361bcd3cbbb5ea532608dc93c793e9726814bacc169892dfcbe5c3f702"
+    },
+    {
+      "id": "m2_H_passive_calibration",
+      "seed": 27560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "e4076d002aed1ef2f70ff9a089511b1798e905dc350536cf444a0b8d35a03469",
+      "npz_hash": "86f9d920bfc4086e9c481b33d02979e077467d54612c6a50f0db48a2eb6092bf"
+    },
+    {
+      "id": "m2_H_active_calibration",
+      "seed": 27560930,
+      "n": 499,
+      "phase": "calibration",
+      "source_hash": "67743d63db062344fd1d0bd7ec4169c30cc149ca06b266f2d0a625d1d332c409",
+      "npz_hash": "3db4f5cd6799e36a4572055620f730bf2b7d337168f45bd103027e91b07c42f2"
+    }
+  ],
+  "calibration_strata": 366,
+  "recomputed_diagnosis_rows": [],
+  "scope": "Full independent raw-noise regeneration, causal means/covariance, raw-map bank, scores, finite-rank thresholds, actual-stop outcomes and pointwise intervals. Scientific rates are retained, not pass targets.",
+  "pass": true
+}

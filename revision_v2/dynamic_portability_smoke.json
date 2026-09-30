@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "scope": "Source-only relocation/import/provenance engineering check; no ODE campaign or stochastic evaluation run",
+  "staged_root": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\dynamic_portability_smoke_source",
+  "campaign_outputs_copied": false,
+  "source": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\dynamic_portability_smoke_source\\reference\\reformer_diag",
+  "initial_condition": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\dynamic_portability_smoke_source\\reference\\upstream\\SSMR_simulator\\ICFull\\Mode1_np50.mat",
+  "state_count": 800,
+  "mode1_feed": [
+    0.0021,
+    0.0099
+  ],
+  "source_identity": {
+    "protocol_sha256": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+    "engine_sha256": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+    "runner_sha256": "2b2ce78f0b00b8d6dcc72e0fc18e1e05af0180b54ce7eb452cc1278f750571d5",
+    "source_manifest_sha256": "69f23d6af254fe3c524fb683c6eb7f32a9def38b96d7f7bd5c20f01eb5f195d1",
+    "reference_files_verified": 60
+  },
+  "statistical_freeze_check": "PASS"
+}

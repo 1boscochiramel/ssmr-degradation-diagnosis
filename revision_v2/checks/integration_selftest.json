@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": 344,
+  "negative_controls": {
+    "seed_overlap": true,
+    "omitted_cross_window_covariance": true,
+    "future_GC": true,
+    "true_score_zero": true,
+    "rank_off_by_one": true,
+    "dropped_inconclusive": true,
+    "changed_headline": true,
+    "same_action_zero_cost": true,
+    "wrong_command_quadrature": true
+  },
+  "model_sha256": "2291aad06beebe0ec49b900f89d048069483b5021059102adb41d68bdd42c5be",
+  "scope": "Manufactured input/analytic tests only, before calibration/evaluation; no scientific outcomes inspected."
+}

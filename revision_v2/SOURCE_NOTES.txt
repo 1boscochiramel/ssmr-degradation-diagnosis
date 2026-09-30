@@ -1,0 +1,94 @@
+SOURCE NOTES — SSMR major revision v2
+Prepared 2026-09-30 by cx-sources. Targeted primary-source review, not a systematic literature review or independent physical validation.
+
+Scope and provenance
+Read the historical EXTERNAL_REVIEW.html for the scientific gaps. Relevant sections of the primary PDFs below were inspected, and the benchmark instrument paragraph was also visually inspected in its rendered page. The downloaded PDFs, page-marked text extracts, retrieval URLs and SHA-256 values are in sources/source_manifest.json. These hashes identify local source bytes; they do not validate the papers' scientific claims. No simulations, source-model changes, author contact or instrument qualification were performed in this lane.
+
+PARAPHRASED below means the stated narrow claim is supported by the inspected primary passage. DESIGN INFERENCE means our recommended application, not a theorem or result demonstrated for this SSMR. UNRESOLVED marks information unavailable in the inspected sources.
+
+1. Simulation-calibrated tests with nuisance parameters
+
+[Dufour2006] Jean-Marie Dufour. Monte Carlo tests with nuisance parameters: A general approach to finite-sample inference and nonstandard asymptotics. Journal of Econometrics 133 (2006), 443–477.
+DOI: https://doi.org/10.1016/j.jeconom.2005.06.007
+Primary author version: https://jeanmariedufour.github.io/Dufour_1995_MCT_W.pdf
+Local: sources/dufour_mc.pdf; author manuscript dated 2005, distinct from the final journal pagination.
+Locations: PDF p.11 (printed p.6), Proposition 2.2 and eq.2.16–2.19; PDF pp.18–20 (printed pp.13–15), section 4, Proposition 4.1/4.2, eq.4.17/4.21. Section 2.2 treats ties.
+PARAPHRASED: Exchangeability of the observed and simulated statistics supports Monte Carlo rank tests. Maximizing the simulated p-value over a null nuisance set containing the true nuisance value supplies conservative type-I error control under the stated assumptions. Exact validity here permits conservatism.
+DESIGN INFERENCE: Fit bias/severity using the same procedure in observed and simulated replicates. A plug-in nuisance value, a finite nuisance grid, or an empirical quantile from selected training conditions does not automatically establish uniform validity over continuous nuisance parameters. Freeze the model family and tie rule. A sequential stop/extend/act procedure needs calibration of that complete procedure, or separately justified repeated-testing control; a fixed-test result alone does not establish stopping validity.
+Limit: No claim that the proposed SSMR score already satisfies these assumptions. Empirical held-out validation remains necessary and is scoped to its declared data-generating conditions.
+
+[Morris2019] Tim P. Morris, Ian R. White, Michael J. Crowther. Using simulation studies to evaluate statistical methods. Statistics in Medicine 38(11) (2019), 2074–2102.
+DOI: https://doi.org/10.1002/sim.8086
+Primary repository: https://discovery.ucl.ac.uk/id/eprint/10066118/
+Primary PDF: https://discovery.ucl.ac.uk/10066118/1/2019%20-%20Morris%20-%20simulation%20studies%20tutorial%20-%20stat%20med.pdf
+Local: sources/morris_simulation.pdf.
+Locations: PDF p.4, section 3 (ADEMP); PDF p.13, Table 6; section 5.2 and simulation-reporting discussion.
+PARAPHRASED: Plan aims, data-generating mechanisms, estimands, methods and performance measures explicitly; report Monte Carlo uncertainty in estimated performance. Coverage and rejection rates have sampling uncertainty from finite independent repetitions.
+DESIGN INFERENCE: Reserve separate calibration/design-selection and evaluation seeds; report true-cause rejection, wrong unique diagnosis, correct unique diagnosis, inconclusive outcomes and unconditional completion alongside conditional timing. Use whole experimental episodes as the independent units when samples within an episode are correlated. A held-out simulation result supports the evaluated mechanisms, not plant-wide validity or physical validation.
+Limit: This source is guidance for evaluating methods, not a proof of validity of the proposed diagnostic score.
+
+2. Active diagnosis and membrane-reformer context
+
+[Scott2014] Joseph K. Scott, Rolf Findeisen, Richard D. Braatz, Davide M. Raimondo. Input design for guaranteed fault diagnosis using zonotopes. Automatica 50 (2014), 1580–1589.
+DOI: https://doi.org/10.1016/j.automatica.2014.03.016
+Primary author PDF: https://web.mit.edu/braatzgroup/input_design_for_guaranteed_fault_diagnosis_using_zonotopes.pdf
+Local: sources/scott_active.pdf.
+Locations: PDF p.1 abstract/introduction; section 2 problem formulation.
+PARAPHRASED: This work designs separating inputs for fault modes represented by linear systems with bounded uncertainty while accounting for disturbance to other control objectives.
+DESIGN INFERENCE: Active excitation for diagnosis is established prior methodology. The current paper's contribution should be a scoped nonlinear benchmark result and verified decision consequences, rather than novelty of the general idea of making a feed move.
+Limit: Bounded linear-model guarantees do not transfer directly to a nonlinear SSMR with Gaussian errors, nuisance bias and evolving deterioration. A fixed tested feed step is not evidence of global minimum disruption.
+
+[Raimondo2016] Davide M. Raimondo, Giuseppe Roberto Marseglia, Richard D. Braatz, Joseph K. Scott. Closed-loop input design for guaranteed fault diagnosis using set-valued observers. Automatica 74 (2016), 107–117.
+DOI: https://doi.org/10.1016/j.automatica.2016.07.033
+Primary author PDF: https://web.mit.edu/braatzgroup/Raimondo_Automatica_2016.pdf
+Local: sources/raimondo_closed.pdf.
+Location: PDF p.1 abstract/introduction and stated model assumptions.
+PARAPHRASED: The method extends separating-input design to polytopic uncertainty and combines it with a constrained-zonotope observer in a moving-horizon closed-loop scheme. Online information can change the diagnostic input decision.
+Limit: The linear, bounded-uncertainty assumptions remain material. This is prior-art context; no numerical comparison against the current SSMR has been made here.
+
+[Serra2017] Maria Serra, Carlos Ocampo-Martinez, Mingming Li, Jordi Llorca. Model predictive control for ethanol steam reformers with membrane separation. International Journal of Hydrogen Energy 42(4) (2017), 1949–1961.
+DOI: https://doi.org/10.1016/j.ijhydene.2016.10.110
+Primary institution PDF: https://www.iri.upc.edu/files/scidoc/1812-Model-Predictive-Control-for-Ethanol-Steam-Reformers-with-Membrane-Separation.pdf
+Local: sources/serra_mpc.pdf; author manuscript.
+Locations: PDF pp.1–2, abstract and section 2.1.
+PARAPHRASED: This earlier membrane-reformer work develops a dynamic model using static experimental information and evaluates a reduced-order MPC approach for hydrogen production and ethanol-feed use in simulation.
+Limit: It supplies process-model/control context, not validation of catalyst-versus-membrane diagnosis or the present noise model. Its inspected experimental description did not resolve the missing flowmeter identity.
+
+[ArcilaOsorio2026] Mateo Arcila-Osorio, Francesco Destro, Carlos Ocampo-Martinez, Jordi Llorca, Richard D. Braatz. A benchmark simulator for advanced control of ethanol steam reforming. Renewable Energy 256 (2026), 124743.
+DOI: https://doi.org/10.1016/j.renene.2025.124743
+Primary author PDF: https://web.mit.edu/braatzgroup/Arcila-Osorio_RenewEnergy_2026.pdf
+Institutional record: https://upcommons.upc.edu/entities/publication/cac87be6-08e0-4db7-8df6-06df349e8950
+Local: sources/benchmark.pdf; sources/benchmark_p5.png is the inspected rendered page.
+Location: PDF p.5, section 3.3, including the limitations paragraph.
+PARAPHRASED: The experimental setup names an Agilent 3000 A MicroGC, a Bronkhorst electronic hydrogen mass flowmeter, a soap-bubble retentate meter, a Knauer smartline pump, a Fuji PXR4 controller and a membrane-surface K-type thermocouple. The release is deterministic, omits sensor noise/feed fluctuations and holds catalyst activity/membrane permeability fixed within each run, without explicit aging kinetics. The reported physical comparison is steady-state model validation.
+UNRESOLVED: The hydrogen-flowmeter model/range, thermocouple make/class, exact pump unit, calibration records, repeatability, response delays, channel covariance, drift and gain-error statistics are not identified there. Do not relabel the membrane-surface thermocouple as a specified outlet-temperature instrument. Do not promote steady-state model validation into validation of the added diagnosis experiment.
+
+3. Instrument uncertainty: what can and cannot be sourced
+
+[JCGM100] Joint Committee for Guides in Metrology. Evaluation of measurement data — Guide to the expression of uncertainty in measurement. JCGM 100:2008.
+DOI: https://doi.org/10.59161/JCGM100-2008E
+Official guide index: https://www.bipm.org/en/web/guest/publications/guides
+Official PDF: https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf/cb0ef43f-baa5-11cf-3f85-4dcd86f77bd6
+Local: sources/jcgm_100.pdf.
+Locations: clauses 4.3.3–4.3.7 (printed pp.12–13); F.2.3.1–F.2.4.2 (printed p.65, PDF p.77).
+PARAPHRASED: An uncertainty statement may represent a standard deviation, a multiple thereof, an interval or only bounds. Conversion requires knowing what it means and how it was obtained. A distribution assigned to bounds is an assumption requiring justification; it is not automatically Gaussian repeatability noise.
+DESIGN INFERENCE: Keep random repeatability, calibration bias, drift, gain error and response time separate. Until the actual instrument/configuration and relevant calibration or repeatability data are available, the diagnostic noise inputs must remain declared simulation assumptions/sensitivity cases. A manufacturer accuracy specification alone does not establish independent, per-sample Gaussian standard deviations.
+
+Optional manufacturer identity corroboration (not a diagnostic-noise source): Agilent Instrument & Accessories Catalog, 2009–2010 edition, printed pp.21–22, identifies the 3000A MicroGC family and configurations.
+https://www.agilent.com/cs/library/catalogs/Public/5990-3699EN.pdf
+Only the relevant catalogue entry was inspected online; not included among the locally downloaded PDFs. The actual rig's full configuration and repeatability under the SSMR gas mixture remain unresolved. No catalogue accuracy/RSD value was adopted.
+
+4. Recent adjacent work — bibliographic lead with explicit access limit
+
+[Santra2026] Srimanta Santra. Koopman–PCE-based confidence-bounded fault diagnosis and recovery for hydrogen demand tracking in a membrane reactor. Computers & Chemical Engineering 213 (issue labelled October 2026), 109728.
+DOI: https://doi.org/10.1016/j.compchemeng.2026.109728
+Primary publisher record: https://www.sciencedirect.com/science/article/pii/S009813542600181X
+Institutional listing: https://www.tuhh.de/ics-old/research/publications/peer-reviewed-publications/journal-publications-via-tore
+Status as of 2026-09-30: publisher-indexed abstract and metadata inspected; direct publisher full-text opening returned HTTP 403. Full paper not downloaded or audited. This is a limited-access bibliographic lead, not a checked method comparison.
+The indexed abstract concerns actuator loss-of-effectiveness, Koopman/PCE uncertainty and fault recovery in a membrane reactor. It is adjacent to the proposed application, and should prevent a blanket claim that confidence-bounded membrane-reactor fault diagnosis is new. It does not establish that catalyst-versus-membrane discrimination or the present experiment has already been solved. Do not cite abstract performance language as verified physical evidence.
+
+Use in this revision
+The substantive repair remains a frozen, observation-based diagnostic procedure with justified covariance/nuisance treatment, held-out episode-level evaluation of the complete acquisition/decision sequence, and implementable actions evaluated under the actual true fault. Reordering the headline, disclosing the threshold chronology and adding instrument specifications improve clarity, but cannot substitute for those checks. These are design recommendations grounded in the original review gaps and the bounded source claims above, not new evaluated findings from this source lane.
+
+Coverage limitations
+Targeted primary literature only; no systematic novelty claim. No original source/checker/model edited. No complete-paper methodological audit of every cited work. All sources support only the stated passages; no performance number from an external paper was imported as a new SSMR result. The current exact instrument gaps must remain visible in the revised report unless independently resolved.

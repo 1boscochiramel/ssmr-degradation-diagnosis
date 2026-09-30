@@ -1,0 +1,885 @@
+{
+  "generated_utc": "2026-09-30T14:43:20.277856+00:00",
+  "draft": false,
+  "verified_input_gate": true,
+  "gate_issues": [],
+  "inputs": {
+    "protocol.json": "1c6a2c31ec17a508a0136c3df7b2408bf8d4358e3923637de0ae75b73b61bf0d",
+    "PROTOCOL_FREEZE.json": "136e30577be11f4ee944fa2d77fedd88c9ff562f830c551e6b89912c2bae6385",
+    "POLICY_AMENDMENT_FREEZE.json": "6d24e847d6a14e1549593b9b7b73202c5fb62463648242b8ff9a04dcd4d66261",
+    "POLICY_AMENDMENT.txt": "ffce6f806a7b371f48b8d1cf373a2d1e76fe7d3959447d8a4cf60cec94755d21",
+    "results/summary.json": "fb5734e011c3755fa262d5db7690ded0d8bf65226da7e63ff079127495ea8a28",
+    "results/diagnosis_summary.csv": "28177fd6e0fc18fc31d380b332295e520fca48512de2fa32ce26d7504e4e8414",
+    "results/policy_summary.csv": "cafb0490767645590670ee7215819efda09c0cda3176d3b472b35282a3a47c28",
+    "results/policy_paired_differences.csv": "528894cd158261d3bf9713558ba31ef66e776648a4a196eb0eb6761e20a26cb5",
+    "results/calibration.json": "16ddb6b680e9491e2f6f156895ee1ef1e4e15d3e1d35873ea9967e2e5b06985f",
+    "checks/final_check.json": "2a7d797d29675edad02e9904d2c844cf4da2b934b2fb0eddf1fc9cfeb04aba74",
+    "revision_model.py": "2291aad06beebe0ec49b900f89d048069483b5021059102adb41d68bdd42c5be",
+    "revision_policy.py": "fcfcbcaa7454cb65ba48626506a862cb0aaa3f76e1ede4aad1fef5c8ae8dcfa2",
+    "dynamics.py": "c3873267636d2f3ae68d8d1dc968e248d66bed5dab79de45fa2f8ad158c77d27",
+    "SOURCE_NOTES.txt": "835bf9e70f48c7b800327d627dce46e51a2fb8fb4a25c2bdb2b860350a6e67f9",
+    "sources/source_manifest.json": "b1948dd276e6b51183884c183218ce83f728acd8eacb1a603cb28f33aff59fb3",
+    "results/policy_trials.csv": "857425c0452f2124c36a8753b50583f1b507817e8cae51a0c75c66087ffb78f9",
+    "results/EVALUATION_FREEZE.json": "649e33cbef9d86ebc90ccc30cdd42ff11d0f20a53a79f2b3adad1143a291cc06",
+    "dynamic_status.json": "3bd8a41fd32e4dec7f3953fd689d14094242ad1f36c88780f890d2c7a3eb0217",
+    "branch_costs.csv": "55b4a73c5b0bba8fc2fbf9561c2e9b849ecd59debc90f5f85c7a216f7f45a076",
+    "checks/MATH_FREEZE.json": "a8f59852ba6bf7224037992bf43bd1e8bc27501a46d1c7de6a6f493d0ba294fb",
+    "checks/INTEGRATION_FREEZE.json": "18eb18ba80710bf9ccaf1054f5dc2da78977e86f2721de3e8fe79eb402754217",
+    "dynamic_FORENSIC_FREEZE.json": "6846630d0205d887c4878408b0a7a34c070a11cdb414a791ed72fd48d831d7f7",
+    "dynamic_forensic_summary.json": "a3ec4cdd32885f71769220313368bb0de78f30feba1939482ca0cb6021b3a396",
+    "checks/dynamic_resolution.json": "368defc3bc90e39c70ce958ef2b6a978742a777fe933bf5f555a084dc7ea0795",
+    "checks/dynamic_verification.json": "d1eb11595c06f4d171696261b8e89c3f26186de2d289c70aef5520dcdfad4df7",
+    "checks/dynamic_verification_current.json": "664d25be934cfd1e44c5d981bb313662e55a8d404639d53e3f7ee70e2610f7e3",
+    "checks/DYNAMIC_IDENTITY_AMENDMENT.json": "7061e6f94cf8ca48ee1e36f553dd21bde111c8043ebf7404b47c7f39bfbf569a",
+    "checks/DYNAMIC_PORTABLE_ADAPTER.json": "f40df737b04f2606087ff8f9b13e75b0f658414ac2ed2a34842b5bd668e785b6",
+    "checks/verify_dynamic_resolution.py": "6571513a8d69378b31c70fc00b2f6b2ebb493a149bfa8dd33c2b9db29a7bcb83",
+    "checks/run_revision_checks.py": "dd9e9500add0a1a9147b161107d82c1342a2958289b471215d0c59b79f8be54b",
+    "checks/WRAPPER_SCHEMA_RESOLUTION.json": "19ff8f47d2e25084dca2f9907cd18c7f0ee28dba10c26eb35e536502aa840178",
+    "checks/final_check_wrapper_schema_failure.json": "146885fe5b961005266169024a1ea9dc71987848e9576ea77f45547d97689efc",
+    "checks/resolve_wrapper_schema.py": "dbf6c972c80c4779dda814e50dc9b930bb07f758685ec4b8388cbd249adbdb06",
+    "../full_rerun/checks/final_check_suite.json": "1a80aae52a74f9fae9152bb803c6077ad0a27b97967d4fc36152a3b0a1a65ceb"
+  },
+  "pdf": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\output\\pdf\\SSMR_MAJOR_REVISION.pdf",
+  "pdf_sha256": "aace094cc9dd490ffc6846299af30e131fbbff4b75bd14472df61b4b35789f95",
+  "qa": {
+    "pages": 18,
+    "bounds_pass": true,
+    "bounds_issues": [],
+    "rendered_all_pages": true,
+    "visual_inspection": "PASS: all 18 pages inspected as 144-dpi full-resolution images and all contact sheets inspected; no clipping, overlap, missing glyphs or isolated continuation pages. Final page 16 header refinement re-inspected; other 17 page PNG hashes unchanged.",
+    "minimum_body_size_pt": 10.2
+  },
+  "generator_sha256": "e7dcf34a3d5cd86c5ac1d9ab2d092c69fd31959b8b91e996b40937ff6fd51133",
+  "claim_ledger": [
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S1",
+        "active": false,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S1",
+        "Passive",
+        "0.0% to 99.8%",
+        "0.0% to 1.9%",
+        "0.2% to 5.2%"
+      ]
+    },
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S1",
+        "active": true,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S1",
+        "Active",
+        "0.0% to 99.8%",
+        "0.0% to 3.3%",
+        "0.2% to 5.3%"
+      ]
+    },
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S3",
+        "active": false,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S3",
+        "Passive",
+        "0.0% to 99.5%",
+        "0.0% to 2.7%",
+        "0.5% to 5.6%"
+      ]
+    },
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S3",
+        "active": true,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S3",
+        "Active",
+        "0.1% to 99.8%",
+        "0.0% to 2.0%",
+        "0.2% to 5.1%"
+      ]
+    },
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S4",
+        "active": false,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S4",
+        "Passive",
+        "0.0% to 99.9%",
+        "0.0% to 1.3%",
+        "0.1% to 5.3%"
+      ]
+    },
+    {
+      "section": "diagnosis_ranges",
+      "filter": {
+        "set": "S4",
+        "active": true,
+        "group": "covered_grid"
+      },
+      "displayed": [
+        "S4",
+        "Active",
+        "0.0% to 100.0%",
+        "0.0% to 1.4%",
+        "0.0% to 4.9%"
+      ]
+    },
+    {
+      "section": "central_case_readout",
+      "case_id": "m1_C_d05_r1",
+      "set": "S4",
+      "passive": {
+        "case_id": "m1_C_d05_r1",
+        "mode": "1",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "False",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "5.0",
+        "potential_true_rejected_at21": "23.0",
+        "correct_singleton": "673",
+        "wrong_singleton": "1",
+        "inconclusive": "322",
+        "incompatible": "4",
+        "early_singleton": "292",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.005",
+        "true_rejected_ci_lo": "0.00162541951756276",
+        "true_rejected_ci_hi": "0.01162947055981214",
+        "correct_singleton_rate": "0.673",
+        "correct_singleton_ci_lo": "0.6429471027235785",
+        "correct_singleton_ci_hi": "0.7020303123813987",
+        "wrong_singleton_rate": "0.001",
+        "wrong_singleton_ci_lo": "2.531748749129404e-05",
+        "wrong_singleton_ci_hi": "0.005558924279826698",
+        "inconclusive_rate": "0.322",
+        "inconclusive_ci_lo": "0.2931003763420352",
+        "inconclusive_ci_hi": "0.35195185521337063",
+        "incompatible_rate": "0.004",
+        "incompatible_ci_lo": "0.0010909079877259714",
+        "incompatible_ci_hi": "0.010209664683929856"
+      },
+      "active": {
+        "case_id": "m1_C_d05_r1",
+        "mode": "1",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "True",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "5.0",
+        "potential_true_rejected_at21": "23.0",
+        "correct_singleton": "882",
+        "wrong_singleton": "0",
+        "inconclusive": "113",
+        "incompatible": "5",
+        "early_singleton": "404",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.005",
+        "true_rejected_ci_lo": "0.00162541951756276",
+        "true_rejected_ci_hi": "0.01162947055981214",
+        "correct_singleton_rate": "0.882",
+        "correct_singleton_ci_lo": "0.8603722794655597",
+        "correct_singleton_ci_hi": "0.9013474836051032",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.113",
+        "inconclusive_ci_lo": "0.09403966675438756",
+        "inconclusive_ci_hi": "0.13427178080353835",
+        "incompatible_rate": "0.005",
+        "incompatible_ci_lo": "0.00162541951756276",
+        "incompatible_ci_hi": "0.01162947055981214"
+      }
+    },
+    {
+      "section": "central_case_readout",
+      "case_id": "m1_M_d05_r1",
+      "set": "S4",
+      "passive": {
+        "case_id": "m1_M_d05_r1",
+        "mode": "1",
+        "true_h": "M",
+        "nominal_drop": "0.05",
+        "active": "False",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "16.0",
+        "potential_true_rejected_at21": "35.0",
+        "correct_singleton": "939",
+        "wrong_singleton": "1",
+        "inconclusive": "45",
+        "incompatible": "15",
+        "early_singleton": "232",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.016",
+        "true_rejected_ci_lo": "0.009172319269222079",
+        "true_rejected_ci_hi": "0.02585324908137344",
+        "correct_singleton_rate": "0.939",
+        "correct_singleton_ci_lo": "0.9223292259508765",
+        "correct_singleton_ci_hi": "0.9530221244589198",
+        "wrong_singleton_rate": "0.001",
+        "wrong_singleton_ci_lo": "2.531748749129404e-05",
+        "wrong_singleton_ci_hi": "0.005558924279826698",
+        "inconclusive_rate": "0.045",
+        "inconclusive_ci_lo": "0.033009625431148756",
+        "inconclusive_ci_hi": "0.059752832693407795",
+        "incompatible_rate": "0.015",
+        "incompatible_ci_lo": "0.008419049750034378",
+        "incompatible_ci_hi": "0.02461970009704124"
+      },
+      "active": {
+        "case_id": "m1_M_d05_r1",
+        "mode": "1",
+        "true_h": "M",
+        "nominal_drop": "0.05",
+        "active": "True",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "0.0",
+        "potential_true_rejected_at21": "34.0",
+        "correct_singleton": "1000",
+        "wrong_singleton": "0",
+        "inconclusive": "0",
+        "incompatible": "0",
+        "early_singleton": "993",
+        "median_diagnosis_time_min": "16.0",
+        "median_correct_time_min": "16.0",
+        "true_rejected_rate": "0.0",
+        "true_rejected_ci_lo": "0.0",
+        "true_rejected_ci_hi": "0.003682083896865671",
+        "correct_singleton_rate": "1.0",
+        "correct_singleton_ci_lo": "0.9963179161031344",
+        "correct_singleton_ci_hi": "1.0",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.0",
+        "inconclusive_ci_lo": "0.0",
+        "inconclusive_ci_hi": "0.003682083896865671",
+        "incompatible_rate": "0.0",
+        "incompatible_ci_lo": "0.0",
+        "incompatible_ci_hi": "0.003682083896865671"
+      }
+    },
+    {
+      "section": "central_case_readout",
+      "case_id": "m2_C_d05_r1",
+      "set": "S4",
+      "passive": {
+        "case_id": "m2_C_d05_r1",
+        "mode": "2",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "False",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "18.0",
+        "potential_true_rejected_at21": "36.0",
+        "correct_singleton": "349",
+        "wrong_singleton": "1",
+        "inconclusive": "633",
+        "incompatible": "17",
+        "early_singleton": "91",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.018",
+        "true_rejected_ci_lo": "0.010701947929414703",
+        "true_rejected_ci_hi": "0.028299041249019146",
+        "correct_singleton_rate": "0.349",
+        "correct_singleton_ci_lo": "0.31943859773296795",
+        "correct_singleton_ci_hi": "0.3794536391460523",
+        "wrong_singleton_rate": "0.001",
+        "wrong_singleton_ci_lo": "2.531748749129404e-05",
+        "wrong_singleton_ci_hi": "0.005558924279826698",
+        "inconclusive_rate": "0.633",
+        "inconclusive_ci_lo": "0.6022699716904012",
+        "inconclusive_ci_hi": "0.6629443378664157",
+        "incompatible_rate": "0.017",
+        "incompatible_ci_lo": "0.009933512592716534",
+        "incompatible_ci_hi": "0.027079496864851435"
+      },
+      "active": {
+        "case_id": "m2_C_d05_r1",
+        "mode": "2",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "True",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "18.0",
+        "potential_true_rejected_at21": "40.0",
+        "correct_singleton": "638",
+        "wrong_singleton": "0",
+        "inconclusive": "344",
+        "incompatible": "18",
+        "early_singleton": "188",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.018",
+        "true_rejected_ci_lo": "0.010701947929414703",
+        "true_rejected_ci_hi": "0.028299041249019146",
+        "correct_singleton_rate": "0.638",
+        "correct_singleton_ci_lo": "0.6073422030315453",
+        "correct_singleton_ci_hi": "0.6678425184638984",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.344",
+        "inconclusive_ci_lo": "0.3145531139215216",
+        "inconclusive_ci_hi": "0.3743687345521477",
+        "incompatible_rate": "0.018",
+        "incompatible_ci_lo": "0.010701947929414703",
+        "incompatible_ci_hi": "0.028299041249019146"
+      }
+    },
+    {
+      "section": "central_case_readout",
+      "case_id": "m2_M_d05_r1",
+      "set": "S4",
+      "passive": {
+        "case_id": "m2_M_d05_r1",
+        "mode": "2",
+        "true_h": "M",
+        "nominal_drop": "0.05",
+        "active": "False",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "10.0",
+        "potential_true_rejected_at21": "38.0",
+        "correct_singleton": "972",
+        "wrong_singleton": "0",
+        "inconclusive": "18",
+        "incompatible": "10",
+        "early_singleton": "379",
+        "median_diagnosis_time_min": "21.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.01",
+        "true_rejected_ci_lo": "0.004805510691049308",
+        "true_rejected_ci_hi": "0.018313243055112515",
+        "correct_singleton_rate": "0.972",
+        "correct_singleton_ci_lo": "0.9597851126261566",
+        "correct_singleton_ci_hi": "0.9813153138044625",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.018",
+        "inconclusive_ci_lo": "0.010701947929414703",
+        "inconclusive_ci_hi": "0.028299041249019146",
+        "incompatible_rate": "0.01",
+        "incompatible_ci_lo": "0.004805510691049308",
+        "incompatible_ci_hi": "0.018313243055112515"
+      },
+      "active": {
+        "case_id": "m2_M_d05_r1",
+        "mode": "2",
+        "true_h": "M",
+        "nominal_drop": "0.05",
+        "active": "True",
+        "set": "S4",
+        "group": "covered_grid",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "2.0",
+        "potential_true_rejected_at21": "30.0",
+        "correct_singleton": "998",
+        "wrong_singleton": "0",
+        "inconclusive": "0",
+        "incompatible": "2",
+        "early_singleton": "998",
+        "median_diagnosis_time_min": "16.0",
+        "median_correct_time_min": "16.0",
+        "true_rejected_rate": "0.002",
+        "true_rejected_ci_lo": "0.00024230111687723185",
+        "true_rejected_ci_hi": "0.007205838911457516",
+        "correct_singleton_rate": "0.998",
+        "correct_singleton_ci_lo": "0.9927941610885425",
+        "correct_singleton_ci_hi": "0.9997576988831227",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.0",
+        "inconclusive_ci_lo": "0.0",
+        "inconclusive_ci_hi": "0.003682083896865671",
+        "incompatible_rate": "0.002",
+        "incompatible_ci_lo": "0.00024230111687723185",
+        "incompatible_ci_hi": "0.007205838911457516"
+      }
+    },
+    {
+      "section": "central_case_comparison",
+      "higher": 12,
+      "lower": 0,
+      "same": 0,
+      "comparisons": 12
+    },
+    {
+      "section": "stress",
+      "group": "double_noise",
+      "worst_rejection_case": {
+        "case_id": "m2_H",
+        "set": "S4",
+        "active": "False"
+      },
+      "displayed": [
+        "double noise",
+        "0.0% to 70.9%",
+        "99.8%",
+        "99.3% to 100.0%",
+        "17.4%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "drifting_bias",
+      "worst_rejection_case": {
+        "case_id": "m2_H",
+        "set": "S4",
+        "active": "False"
+      },
+      "displayed": [
+        "drifting bias",
+        "0.0% to 91.0%",
+        "94.1%",
+        "92.5% to 95.5%",
+        "17.0%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "faster_deterioration",
+      "worst_rejection_case": {
+        "case_id": "m1_C_fast",
+        "set": "S1",
+        "active": "True"
+      },
+      "displayed": [
+        "faster deterioration",
+        "0.3% to 99.9%",
+        "5.1%",
+        "3.8% to 6.7%",
+        "2.9%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "gain_error",
+      "worst_rejection_case": {
+        "case_id": "m2_H",
+        "set": "S3",
+        "active": "True"
+      },
+      "displayed": [
+        "gain error",
+        "0.0% to 97.3%",
+        "93.1%",
+        "91.3% to 94.6%",
+        "7.5%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "half_noise",
+      "worst_rejection_case": {
+        "case_id": "m1_C_d05_r1",
+        "set": "S1",
+        "active": "False"
+      },
+      "displayed": [
+        "half noise",
+        "0.0% to 100.0%",
+        "0.0%",
+        "0.0% to 0.4%",
+        "0.0%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "heldout_parameters",
+      "worst_rejection_case": {
+        "case_id": "m1_M_offgrid_d035",
+        "set": "S1",
+        "active": "True"
+      },
+      "displayed": [
+        "heldout parameters",
+        "0.0% to 99.9%",
+        "15.5%",
+        "13.3% to 17.9%",
+        "7.3%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "kinetic_mismatch",
+      "worst_rejection_case": {
+        "case_id": "m1_C_kinetic",
+        "set": "S1",
+        "active": "False"
+      },
+      "displayed": [
+        "kinetic mismatch",
+        "0.0% to 0.0%",
+        "100.0%",
+        "99.6% to 100.0%",
+        "0.0%"
+      ]
+    },
+    {
+      "section": "stress",
+      "group": "strong_correlation",
+      "worst_rejection_case": {
+        "case_id": "m1_H",
+        "set": "S3",
+        "active": "True"
+      },
+      "displayed": [
+        "strong correlation",
+        "0.0% to 78.9%",
+        "86.5%",
+        "84.2% to 88.6%",
+        "16.4%"
+      ]
+    },
+    {
+      "section": "stress_wrong_boundary",
+      "cell": {
+        "case_id": "m1_C_d05_r1",
+        "mode": "1",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "True",
+        "set": "S3",
+        "group": "double_noise",
+        "phase": "stress",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "831.0",
+        "potential_true_rejected_at21": "842.0",
+        "correct_singleton": "28",
+        "wrong_singleton": "174",
+        "inconclusive": "143",
+        "incompatible": "655",
+        "early_singleton": "128",
+        "median_diagnosis_time_min": "16.0",
+        "median_correct_time_min": "21.0",
+        "true_rejected_rate": "0.831",
+        "true_rejected_ci_lo": "0.8063072536435564",
+        "true_rejected_ci_hi": "0.8537255113063816",
+        "correct_singleton_rate": "0.028",
+        "correct_singleton_ci_lo": "0.018684686195537568",
+        "correct_singleton_ci_hi": "0.04021488737384334",
+        "wrong_singleton_rate": "0.174",
+        "wrong_singleton_ci_lo": "0.15099005847602556",
+        "wrong_singleton_ci_hi": "0.19894685799303644",
+        "inconclusive_rate": "0.143",
+        "inconclusive_ci_lo": "0.12187864287589154",
+        "inconclusive_ci_hi": "0.1662471565967218",
+        "incompatible_rate": "0.655",
+        "incompatible_ci_lo": "0.6246139976951355",
+        "incompatible_ci_hi": "0.6844700767243275"
+      }
+    },
+    {
+      "section": "stress_rejection_interpretation",
+      "cell": {
+        "case_id": "m1_C_kinetic",
+        "mode": "1",
+        "true_h": "C",
+        "nominal_drop": "0.05",
+        "active": "False",
+        "set": "S1",
+        "group": "kinetic_mismatch",
+        "phase": "evaluation",
+        "n": "1000",
+        "supported_label": "True",
+        "true_rejected": "1000.0",
+        "potential_true_rejected_at21": "1000.0",
+        "correct_singleton": "0",
+        "wrong_singleton": "0",
+        "inconclusive": "0",
+        "incompatible": "1000",
+        "early_singleton": "0",
+        "median_diagnosis_time_min": "",
+        "median_correct_time_min": "",
+        "true_rejected_rate": "1.0",
+        "true_rejected_ci_lo": "0.9963179161031344",
+        "true_rejected_ci_hi": "1.0",
+        "correct_singleton_rate": "0.0",
+        "correct_singleton_ci_lo": "0.0",
+        "correct_singleton_ci_hi": "0.003682083896865671",
+        "wrong_singleton_rate": "0.0",
+        "wrong_singleton_ci_lo": "0.0",
+        "wrong_singleton_ci_hi": "0.003682083896865671",
+        "inconclusive_rate": "0.0",
+        "inconclusive_ci_lo": "0.0",
+        "inconclusive_ci_hi": "0.003682083896865671",
+        "incompatible_rate": "1.0",
+        "incompatible_ci_lo": "0.9963179161031344",
+        "incompatible_ci_hi": "1.0"
+      }
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_C_d05_r1",
+      "set": "S1",
+      "displayed": [
+        "M1 C",
+        "S1",
+        "-0.1351",
+        "+3.3370",
+        "+3.3370"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_C_d05_r1",
+      "set": "S3",
+      "displayed": [
+        "M1 C",
+        "S3",
+        "-0.1335",
+        "+3.3193",
+        "+3.3193"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_C_d05_r1",
+      "set": "S4",
+      "displayed": [
+        "M1 C",
+        "S4",
+        "-0.1153",
+        "+2.7860",
+        "+2.7860"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_M_d05_r1",
+      "set": "S1",
+      "displayed": [
+        "M1 M",
+        "S1",
+        "-0.1619",
+        "+3.0340",
+        "+3.0340"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_M_d05_r1",
+      "set": "S3",
+      "displayed": [
+        "M1 M",
+        "S3",
+        "-0.1430",
+        "+2.7100",
+        "+2.7100"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m1_M_d05_r1",
+      "set": "S4",
+      "displayed": [
+        "M1 M",
+        "S4",
+        "-0.1484",
+        "+2.7900",
+        "+2.7900"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_C_d05_r1",
+      "set": "S1",
+      "displayed": [
+        "M2 C",
+        "S1",
+        "-0.1591",
+        "+3.2720",
+        "+3.2720"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_C_d05_r1",
+      "set": "S3",
+      "displayed": [
+        "M2 C",
+        "S3",
+        "-0.1597",
+        "+3.2885",
+        "+3.2885"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_C_d05_r1",
+      "set": "S4",
+      "displayed": [
+        "M2 C",
+        "S4",
+        "-0.1522",
+        "+3.0590",
+        "+3.0590"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_M_d05_r1",
+      "set": "S1",
+      "displayed": [
+        "M2 M",
+        "S1",
+        "-0.1073",
+        "+1.8910",
+        "+1.8910"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_M_d05_r1",
+      "set": "S3",
+      "displayed": [
+        "M2 M",
+        "S3",
+        "-0.1286",
+        "+2.0970",
+        "+2.0970"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy",
+      "case_id": "m2_M_d05_r1",
+      "set": "S4",
+      "displayed": [
+        "M2 M",
+        "S4",
+        "-0.1637",
+        "+2.4380",
+        "+2.4380"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "policy_signs",
+      "comparisons": 12,
+      "shortfall_reduced": 12,
+      "shortfall_increased": 0,
+      "reduced_with_more_ethanol": 12
+    },
+    {
+      "section": "healthy_bias_physical_outcomes",
+      "case_id": "m1_H",
+      "set": "S4",
+      "displayed": [
+        "M1 Healthy",
+        "-3.89684e-06",
+        "+3.292"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "healthy_bias_physical_outcomes",
+      "case_id": "m1_S_d05_r0",
+      "set": "S4",
+      "displayed": [
+        "M1 Meter bias",
+        "-1.4942e-06",
+        "+2.401"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "healthy_bias_physical_outcomes",
+      "case_id": "m2_H",
+      "set": "S4",
+      "displayed": [
+        "M2 Healthy",
+        "+0",
+        "+3.2275"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "healthy_bias_physical_outcomes",
+      "case_id": "m2_S_d05_r0",
+      "set": "S4",
+      "displayed": [
+        "M2 Meter bias",
+        "+0",
+        "+1.177"
+      ],
+      "scale": "mol to mmol, x1000"
+    },
+    {
+      "section": "all_policy_ethanol_signs",
+      "comparisons": 27,
+      "actual_ethanol_increased": 27
+    },
+    {
+      "section": "qualified_verification",
+      "source": "checks/final_check.json",
+      "affected_records": 32,
+      "original_frozen_dynamic_gate_pass": false,
+      "resolution": "EXACT_INPUT_AND_BITWISE_REPLAY_CONFIRMED_WITH_INTERPOLATED_EXPORT_LIMITATION"
+    }
+  ]
+}

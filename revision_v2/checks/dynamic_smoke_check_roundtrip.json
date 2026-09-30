@@ -1,0 +1,41 @@
+{
+  "pass": true,
+  "issues": [],
+  "records": [
+    {
+      "folder": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\dynamic_smoke_results\\preconditioned_C_20260930T143140\\branch",
+      "schema": "ssmr.dynamic-continuation.v1",
+      "hypothesis": "C",
+      "mode": 1,
+      "samples": 151,
+      "integrals": {
+        "command_ethanol_mol": 0.0315,
+        "actual_ethanol_mol": 0.0315,
+        "H2_produced_mol": 0.003365695553545984,
+        "H2_demand_mol": 0.0034103099999999997,
+        "H2_shortfall_mol": 5.3447695463857955e-05,
+        "IAE_mol": 6.228094447370005e-05
+      },
+      "health_outside_map_samples": 0,
+      "actual_feed_outside_map_samples": 0
+    },
+    {
+      "folder": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\dynamic_smoke_results\\preconditioned_C_20260930T143140\\truth",
+      "schema": "ssmr.dynamic-truth.v1",
+      "hypothesis": "C",
+      "mode": 1,
+      "samples": 211,
+      "integrals": {
+        "command_ethanol_mol": 0.0474,
+        "actual_ethanol_mol": 0.0474,
+        "H2_produced_mol": 0.005121507221172324,
+        "H2_demand_mol": 0.004774433999999999,
+        "H2_shortfall_mol": 2.5325197682538235e-05,
+        "IAE_mol": 0.00039772361653740067
+      },
+      "health_outside_map_samples": 0,
+      "actual_feed_outside_map_samples": 0
+    }
+  ],
+  "scope": "Independent saved-state/source/command/covariate/physical-accounting audit; not an independent reactor-equation solver."
+}

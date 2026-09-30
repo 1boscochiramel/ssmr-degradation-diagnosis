@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "issues": [],
+  "pdf_sha256": "aace094cc9dd490ffc6846299af30e131fbbff4b75bd14472df61b4b35789f95",
+  "final_check_sha256": "2a7d797d29675edad02e9904d2c844cf4da2b934b2fb0eddf1fc9cfeb04aba74",
+  "pages": 18,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "reviewer": "root; fresh source-binding, extracted-text, numerical-table and rendered-page review",
+  "result_claim_ledger_entries_recomputed": 40,
+  "scope": "Document release QA; scientific scope and retained frozen-gate failure are inherited explicitly from the checked report.",
+  "created_utc": "2026-09-30T14:53:29.172351+00:00"
+}

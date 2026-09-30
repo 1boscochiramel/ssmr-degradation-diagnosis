@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-30T18:24:39.801688+00:00",
+  "reason": "Display-only revision after visual review: show six decimals for small equal-resource differences, five decimals for control ethanol ranges, and round sub-display residuals to unsigned zero. Print adverse bias cost consistently as1.02075mmol. Previous four-decimal rendering passed its unchanged release check but hid one small contrast and produced inconsistent half-rounding in text versus table.",
+  "unchanged": "All raw values, scientific protocol, solver, physical acceptance thresholds and frozen scientific checker remain unchanged.",
+  "previous_check_sha256": "7318d1800e48751e43eaecda256684cab7358409f5b76bb5333471085438d2dd",
+  "previous_qa_sha256": "c3f300ddaf43016da67f7ec0c9b7e2b09c1adb2f03c9b88488f0931a66847eba",
+  "previous_pdf_sha256": "6dc255c25d90e66fe457428bfc0a5ad8eef035d8e28ed69ba8f25a8bff0618d9"
+}

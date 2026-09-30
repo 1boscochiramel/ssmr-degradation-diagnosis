@@ -1,0 +1,13 @@
+{
+  "status": "full_text_reviewed",
+  "full_paper_read_completed": true,
+  "comparison_sentence": "Santra (2026) studies actuator-fault estimation and tracking recovery on a three-state reformer surrogate, whereas this note uses the distributed benchmark dynamics to test calibrated diagnosis of catalyst, membrane, feed and meter faults and measure the hydrogen-ethanol trade-off of diagnosis-based action beyond the feed pulse.",
+  "access_statement": "Santra's full paper was read. Its implemented case is specified in Section 6.1, p.11; the estimator and recovery design are in Sections 5-5.2, pp.8-9. This establishes a difference in study scope, not superior performance. Its simulations were not independently reproduced.",
+  "reference": "Santra S. Koopman-PCE-based confidence-bounded fault diagnosis and recovery for hydrogen demand tracking in a membrane reactor. Computers & Chemical Engineering (2026), 109728. doi:10.1016/j.compchemeng.2026.109728.",
+  "source_hashes": {
+    "literature/fulltext_review.txt": "a2a31a17ca6eb4f36257c2cad2a8f7c80228e4f4588598787a5c2625ad86cbf4",
+    "literature/fulltext_access_manifest.json": "debbcd4ebc7d5c4ac3fa8e7072f9857b2bc0af5c6d8cd3e508257d1c61975392",
+    "literature/prior_work_trace.txt": "9c4ca70fe4794cfd09ecee578c70341566ea211bc6d484e0e9ad207f9e6d5345",
+    "C:\\Users\\Admin\\Downloads\\1-s2.0-S009813542600181X-main.pdf": "b7406abd151cafae6a4b761d6d48994b2472ee842f0eb0baac8c645887184f12"
+  }
+}

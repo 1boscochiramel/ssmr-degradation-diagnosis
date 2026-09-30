@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-09-30T16:00:40.781726+00:00",
+  "files": [
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\1-s2.0-S0098135422003003-main.pdf",
+      "pages": 42,
+      "sha256": "b91f9b6784277c39e9b1f625d88b9d1216110b2f88706e7b2ca0e1b3554e9124",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\1-s2.0-S009813542600181X-main.pdf",
+      "pages": 18,
+      "sha256": "b7406abd151cafae6a4b761d6d48994b2472ee842f0eb0baac8c645887184f12",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\Raimondo_Automatica_2016.pdf",
+      "pages": 11,
+      "sha256": "cf26542d1749811684b7a77123883aa399b59c31d9f7a4f2ea199a6528a8df84",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\input_design_for_guaranteed_fault_diagnosis_using_zonotopes.pdf",
+      "pages": 10,
+      "sha256": "3aa9ddb81150d4e043d9a56a147ac00bcd2ed80a5972bd91d546af37e80c0637",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\Postprint_Serra2017.pdf",
+      "pages": 24,
+      "sha256": "d2d031980434a27aa9deacad91e674e6c939b40d48d51987b3c276ba99cac332",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\1-s2.0-S0960148125024073-main.pdf",
+      "pages": 11,
+      "sha256": "7bb48f1e97e95a6e53e1b5bb47fc30fea58172fae099a15178b86e12d38d2a3c",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\nihms-1954472.pdf",
+      "pages": 54,
+      "sha256": "f3c68f3584566974cf13e3079a8c1c758842ab0ff05fcc2ff11e5d103a21db7a",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\1-s2.0-S0360319913005417-main.pdf",
+      "pages": 11,
+      "sha256": "6363933649553395881075412f183db581a3c6d016bc8682e458682ef37b24cc",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    },
+    {
+      "path": "C:\\Users\\Admin\\Downloads\\2395-Nonlinear-Dynamical-Analysis-for-an-Ethanol-Steam-Reformer -A-Singular-Distributed-Parameter-System.pdf",
+      "pages": 7,
+      "sha256": "87f06cd41573915fecdd0c0f8e45ff9281218d085ebd9fd8bb5fcc985592481e",
+      "access": "User explicitly provided this exact file as reference; read-only",
+      "reading_scope": "See literature/fulltext_review.txt and prior_work_trace.txt for actual reading coverage; inventory alone means only identity/first-page inspection."
+    }
+  ],
+  "distribution": "Do not include the supplied paper PDFs or extracted full text in review package"
+}

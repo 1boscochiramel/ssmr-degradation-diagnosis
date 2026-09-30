@@ -1,0 +1,1182 @@
+{
+  "status": "PASS",
+  "new_native_MATLAB_run": false,
+  "different_model_review": false,
+  "source_files": {
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\benchmark_audit\\CHECK_SPEC.txt": {
+      "sha256": "80c5327a828205ded9755cc27fd621e8c63017ee65c9f0379887d5c1326a0d2b",
+      "bytes": 2715
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\benchmark_audit\\check_findings.py": {
+      "sha256": "d44993e677fb2af7e632626f9d6dedb5269a18ea480eb40f2449ddd8325c236c",
+      "bytes": 9944
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\results\\policy_trials.csv": {
+      "sha256": "857425c0452f2124c36a8753b50583f1b507817e8cae51a0c75c66087ffb78f9",
+      "bytes": 11964677
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_feed_only_20260930\\outputs\\paired_trials.csv": {
+      "sha256": "54cb99cbc666d6f97d64674d0dc14d0483bb0535530841786e7d318ff30354cc",
+      "bytes": 8359850
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\sources\\benchmark.pdf": {
+      "sha256": "72cb53a7495d5b31cba654cfe33559bfd38fa038592af1e0dbfeae01428078ef",
+      "bytes": 1186915
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\sources\\benchmark.txt": {
+      "sha256": "8f71f2977c644233cab55fbcf7472bcd1e1246f8ab32dcd2c335e23c0e6e0340",
+      "bytes": 63343
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\control.m": {
+      "sha256": "45d0ca524bfcd82b35a2a308985ec030629f6dc519373368cf9493d38c2c2d83",
+      "bytes": 713
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\SSMR_simulation.m": {
+      "sha256": "87ffeacce4ddb9e563ce7a1493d7b5ba9aeee60418a21f5dcdb7ee1e510ad8a5",
+      "bytes": 7007
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\checks\\native_provenance_final.json": {
+      "sha256": "cbc2b40e38634d00ab1f9353e971bab8948ef8c56577087dfdab771135156302",
+      "bytes": 26507
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\checks\\native_git_identity.json": {
+      "sha256": "925350098faecf25141c163810d6b281b2430fcda644a54bdf621e8e514b87f2",
+      "bytes": 17148
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\STEP_np50_matlab.csv": {
+      "sha256": "4e9aa475c23145bdbf9ee9a13b0d49662a7b7063cd7774f1caa3ca0f0a369eb7",
+      "bytes": 1793
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\STEP_state.mat": {
+      "sha256": "11e87bf368458ee4d4575b424554c8e4f094de9b7bf3e9e6583f62e52eaa45e3",
+      "bytes": 16424
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\STEP_np200.csv": {
+      "sha256": "94fcb5e6a2e291b203b77c2ad9cec3950aa79875c473416e3733834115933672",
+      "bytes": 1793
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\STEP_np200_state.mat": {
+      "sha256": "e5f44236f6085ce9901e805c26ba3a337e789f953fd6da83c8252dc5d8d803f2",
+      "bytes": 55558
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS1_np50_matlab.csv": {
+      "sha256": "66d2394fb6b74e3118b3219f726f479c7c53385b373f06032929b4ce04e2f6fe",
+      "bytes": 17313
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS1_state.mat": {
+      "sha256": "9d0c63e0656dc76e9f6dd39c0548862a85b3c7b063ac079555a67007d32e8d1c",
+      "bytes": 27546
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS1_np200.csv": {
+      "sha256": "fbb211fa0b53c7b9cb235432f5bce298e735380f1ef915132447062b596182f1",
+      "bytes": 17332
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS1_np200_state.mat": {
+      "sha256": "c191de9fca31f00e9ae865aef6d8d9aeb0884e5aa29258ee530140d06c70b2e2",
+      "bytes": 117011
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2T_np50_matlab.csv": {
+      "sha256": "1f2d733225c6a3eb8c8f5e6e90576d944fa9795a172c85a91c7b8b776f75217b",
+      "bytes": 5480
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2T_state.mat": {
+      "sha256": "2d5bcc74c4b6c46b18b6a1beb95bc12f444a7cf5d58867108b260a9ebece88a5",
+      "bytes": 62814
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2T_np200.csv": {
+      "sha256": "18cd864e39fd0af52df8087c5c4a28699d46008ad8f91033d31cdd6a1c0192c2",
+      "bytes": 5504
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2T_np200_state.mat": {
+      "sha256": "935f31db0292657eab7fb52e2ed2497c022e486e9d3a6e99510c6b8c32d2b89f",
+      "bytes": 249308
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2P_np50_matlab.csv": {
+      "sha256": "40438c850c020a6bddd062d089af3f0764c434b1a2d78c8294194891221defb1",
+      "bytes": 5469
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2P_state.mat": {
+      "sha256": "e200b9b150d28bac903a9e7403a704d149f73a64002684b8029fa3378ac36b6b",
+      "bytes": 34218
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2P_np200.csv": {
+      "sha256": "e110415b43d02ed9edcb28417dcba659dca2751b11d2d2b16dd065587162cbf3",
+      "bytes": 5489
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2P_np200_state.mat": {
+      "sha256": "56f44491ee49e95e72a55a796035fe06aa2b6a7391a871865f9f5c205af4aca0",
+      "bytes": 138854
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np50.mat": {
+      "sha256": "82eaab8889bb9af2004d73a4280769b00a457baa4b306209b3bbdde5135c5a2c",
+      "bytes": 6175
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np50_H2O.mat": {
+      "sha256": "1fd4aafbd6e7b186f0e6fd5461715aaa6b06751ee4318dc0931be474129371b3",
+      "bytes": 756
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np200.mat": {
+      "sha256": "06775225f3e21b3c6045ec3b1e2f0977cc25351ac233d25fe431c06e65fa9694",
+      "bytes": 21782
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np200_H2O.mat": {
+      "sha256": "7ec4bf3c712509589e65499ce4b464bb4583ac7c4197051832943b70dbad1a2c",
+      "bytes": 11060
+    }
+  },
+  "source_IC_files": {
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np50.mat": {
+      "sha256": "82eaab8889bb9af2004d73a4280769b00a457baa4b306209b3bbdde5135c5a2c",
+      "bytes": 6175
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np200.mat": {
+      "sha256": "06775225f3e21b3c6045ec3b1e2f0977cc25351ac233d25fe431c06e65fa9694",
+      "bytes": 21782
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np50_H2O.mat": {
+      "sha256": "1fd4aafbd6e7b186f0e6fd5461715aaa6b06751ee4318dc0931be474129371b3",
+      "bytes": 756
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np200_H2O.mat": {
+      "sha256": "7ec4bf3c712509589e65499ce4b464bb4583ac7c4197051832943b70dbad1a2c",
+      "bytes": 11060
+    }
+  },
+  "checks": [
+    {
+      "name": "sign-crossing integration fixture",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/50/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/50/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/50/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/50/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/50/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/200/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/200/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/200/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/200/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/200/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STEP/common recorded time grid",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/50/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/50/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/50/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/50/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/50/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/200/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/200/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/200/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/200/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/200/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/common recorded time grid",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS1/literal no larger than conventional",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/50/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/50/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/50/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/50/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/50/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/200/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/200/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/200/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/200/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/200/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/common recorded time grid",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2T/literal no larger than conventional",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/50/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/50/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/50/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/50/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/50/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/200/shape and finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/200/increasing time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/200/saved np",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/200/CSV versus saved MATLAB arrays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/200/first feed from supplied IC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/common recorded time grid",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CS2P/literal no larger than conventional",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/persistent integral_error",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/persistent prev_error",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/if isempty(integral_error) && isempty(prev_error)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/integral_error = integral_error + error*t_s;",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/derivative_error = (error - prev_error)/t_s;",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/deltau = kp*error + ki*integral_error + kd*derivative_error;",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/prev_error = error;",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source/plain clear and no controller reset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "zero current error with retained integral changes command",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "controller bytes match earlier pinned Git blob check",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all active negative-control records joined",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "paired diagnostic ethanol matches original",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "paired diagnostic shortfall matches original",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/False/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/False/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/False/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/True/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/S1/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/True/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/S3/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/True/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_H/S4/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/False/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/False/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/False/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/True/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/S1/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/True/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/S3/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/True/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m1_S_d05_r0/S4/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/False/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/False/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/False/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/True/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/S1/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/True/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/S3/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/True/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_H/S4/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/False/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/False/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/False/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/True/S1/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/S1/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/True/S3/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/S3/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/True/S4/complete denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "m2_S_d05_r0/S4/paired denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all healthy/meter-bias cells retained",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "issues": [],
+  "integration_rule": [
+    {
+      "case": "CS1",
+      "conventional_iae_mmol": 0.0794605411010412,
+      "literal_equation13_mmol": 0.07932138421400342,
+      "difference_pct_conventional": 0.17512703174375255,
+      "sign_changing_intervals": 16
+    },
+    {
+      "case": "CS2T",
+      "conventional_iae_mmol": 0.2344397681128511,
+      "literal_equation13_mmol": 0.22678832222851,
+      "difference_pct_conventional": 3.2637150027626545,
+      "sign_changing_intervals": 7
+    },
+    {
+      "case": "CS2P",
+      "conventional_iae_mmol": 0.22493308876171272,
+      "literal_equation13_mmol": 0.2177059733638954,
+      "difference_pct_conventional": 3.2130067824185247,
+      "sign_changing_intervals": 3
+    }
+  ],
+  "mesh_sensitivity": [
+    {
+      "case": "STEP",
+      "max_H2_pct_nominal": 1.0139663662719895,
+      "at_display_min": 2.1,
+      "after_one_min_max_pct_nominal": 1.0139663662719895,
+      "np50_at_max_mol_min": 0.000232152208277458,
+      "np200_at_max_mol_min": 0.000229846915185084,
+      "finegrid_reset_log_confirmed": false,
+      "interpretation": "Recorded sensitivity to mesh and supplied initial state. No grid-convergence claim."
+    },
+    {
+      "case": "CS1",
+      "max_H2_pct_nominal": 0.14941738046878822,
+      "at_display_min": 10.2,
+      "after_one_min_max_pct_nominal": 0.14941738046878822,
+      "np50_at_max_mol_min": 0.000227949016904716,
+      "np200_at_max_mol_min": 0.000227609310513525,
+      "finegrid_reset_log_confirmed": false,
+      "interpretation": "Recorded sensitivity to mesh and supplied initial state. No grid-convergence claim."
+    },
+    {
+      "case": "CS2T",
+      "max_H2_pct_nominal": 12.084488766545217,
+      "at_display_min": 0.4,
+      "after_one_min_max_pct_nominal": 1.5089265177893412,
+      "np50_at_max_mol_min": 0.000177975331320926,
+      "np200_at_max_mol_min": 0.000211374320529016,
+      "finegrid_reset_log_confirmed": false,
+      "interpretation": "Recorded sensitivity to mesh and supplied initial state. No grid-convergence claim."
+    },
+    {
+      "case": "CS2P",
+      "max_H2_pct_nominal": 12.084488766545217,
+      "at_display_min": 0.4,
+      "after_one_min_max_pct_nominal": 1.2093540993823682,
+      "np50_at_max_mol_min": 0.000177975331320926,
+      "np200_at_max_mol_min": 0.000211374320529016,
+      "finegrid_reset_log_confirmed": true,
+      "interpretation": "Recorded sensitivity to mesh and supplied initial state. No grid-convergence claim."
+    }
+  ],
+  "PID_state": {
+    "source_confirmed": true,
+    "locations": {
+      "persistent integral_error": 3,
+      "persistent prev_error": 4,
+      "if isempty(integral_error) && isempty(prev_error)": 15,
+      "integral_error = integral_error + error*t_s;": 20,
+      "derivative_error = (error - prev_error)/t_s;": 21,
+      "deltau = kp*error + ki*integral_error + kd*derivative_error;": 22,
+      "prev_error = error;": 23
+    },
+    "simulation_start_line": 3,
+    "hypothetical_fixture_reset_delta": 0.0,
+    "hypothetical_fixture_retained_delta": 6.072000000000001e-07,
+    "warning": "Fixture demonstrates source logic only; no native simulation effect size claimed. Earlier +20.12 percent figure was screenshot-transcribed and is not a raw-CSV paired replication here."
+  },
+  "negative_controls": [
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": false,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 539,
+      "action_rate_pct": 53.9,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 9.018353689934739e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 960,
+        "MODEL_INCOMPATIBLE": 30,
+        "H": 5,
+        "S": 5
+      }
+    },
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": false,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 544,
+      "action_rate_pct": 54.4,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 9.000853047460439e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 974,
+        "MODEL_INCOMPATIBLE": 21,
+        "H": 3,
+        "S": 1,
+        "F": 1
+      }
+    },
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": false,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 510,
+      "action_rate_pct": 51.0,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 9.119857416285028e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 959,
+        "MODEL_INCOMPATIBLE": 38,
+        "C": 1,
+        "S": 1,
+        "F": 1
+      }
+    },
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": true,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 523,
+      "action_rate_pct": 52.3,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 5.1425755951601225e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 959,
+        "MODEL_INCOMPATIBLE": 30,
+        "H": 7,
+        "S": 4
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.2614999999999603,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -1.756483477704092e-06
+    },
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": true,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 527,
+      "action_rate_pct": 52.7,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 5.123865292702001e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 975,
+        "MODEL_INCOMPATIBLE": 21,
+        "H": 2,
+        "S": 1,
+        "F": 1
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.26349999999996065,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -1.7699173857553662e-06
+    },
+    {
+      "case_id": "m1_H",
+      "mode": 1,
+      "true_h": "H",
+      "active": true,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 498,
+      "action_rate_pct": 49.8,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 5.223019924209354e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 959,
+        "MODEL_INCOMPATIBLE": 37,
+        "F": 2,
+        "C": 1,
+        "S": 1
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.24899999999995817,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -1.6725215523836288e-06
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": false,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 973,
+      "action_rate_pct": 97.3,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 7.497539064634433e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 970,
+        "MODEL_INCOMPATIBLE": 22,
+        "S": 5,
+        "M": 3
+      }
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": false,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 967,
+      "action_rate_pct": 96.7,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 7.513263259983145e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 956,
+        "MODEL_INCOMPATIBLE": 32,
+        "M": 8,
+        "F": 3,
+        "S": 1
+      }
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": false,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 959,
+      "action_rate_pct": 95.9,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 7.546540863562029e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 957,
+        "MODEL_INCOMPATIBLE": 32,
+        "S": 9,
+        "M": 2
+      }
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": true,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 947,
+      "action_rate_pct": 94.7,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 3.718581341725066e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 936,
+        "S": 38,
+        "MODEL_INCOMPATIBLE": 15,
+        "F": 10,
+        "C": 1
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 1.020749999999901,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -3.1927893180884617e-06
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": true,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 890,
+      "action_rate_pct": 89.0,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 3.9346377053543455e-06,
+      "call_counts": {
+        "INCONCLUSIVE": 881,
+        "S": 78,
+        "MODEL_INCOMPATIBLE": 32,
+        "F": 8,
+        "C": 1
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.927999999999902,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -2.9943209358153417e-06
+    },
+    {
+      "case_id": "m1_S_d05_r0",
+      "mode": 1,
+      "true_h": "S",
+      "active": true,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 338,
+      "action_rate_pct": 33.8,
+      "nominal_command_mol_min": 0.0021,
+      "mean_H2_shortfall_mmol": 6.052336736772567e-06,
+      "call_counts": {
+        "S": 649,
+        "INCONCLUSIVE": 338,
+        "MODEL_INCOMPATIBLE": 13
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.3449999999999111,
+      "H2_shortfall_difference_vs_same_pulse_mmol": -1.1351652303326642e-06
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": false,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 594,
+      "action_rate_pct": 59.4,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 968,
+        "MODEL_INCOMPATIBLE": 22,
+        "S": 6,
+        "M": 4
+      }
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": false,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 580,
+      "action_rate_pct": 58.0,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 962,
+        "MODEL_INCOMPATIBLE": 32,
+        "S": 3,
+        "H": 3
+      }
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": false,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 596,
+      "action_rate_pct": 59.6,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 963,
+        "MODEL_INCOMPATIBLE": 30,
+        "M": 3,
+        "C": 3,
+        "S": 1
+      }
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": true,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 520,
+      "action_rate_pct": 52.0,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 967,
+        "MODEL_INCOMPATIBLE": 22,
+        "S": 7,
+        "M": 4
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.5199999999998954,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": true,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 517,
+      "action_rate_pct": 51.7,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 963,
+        "MODEL_INCOMPATIBLE": 32,
+        "H": 3,
+        "S": 2
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.5169999999998965,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    },
+    {
+      "case_id": "m2_H",
+      "mode": 2,
+      "true_h": "H",
+      "active": true,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 525,
+      "action_rate_pct": 52.5,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 962,
+        "MODEL_INCOMPATIBLE": 26,
+        "M": 10,
+        "S": 2
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.5249999999998948,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": false,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 984,
+      "action_rate_pct": 98.4,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 980,
+        "MODEL_INCOMPATIBLE": 15,
+        "M": 4,
+        "S": 1
+      }
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": false,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 966,
+      "action_rate_pct": 96.6,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 955,
+        "MODEL_INCOMPATIBLE": 32,
+        "M": 11,
+        "S": 2
+      }
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": false,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 965,
+      "action_rate_pct": 96.5,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "INCONCLUSIVE": 953,
+        "MODEL_INCOMPATIBLE": 31,
+        "M": 9,
+        "S": 4,
+        "C": 3
+      }
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": true,
+      "set": "S1",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 0,
+      "action_rate_pct": 0.0,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "S": 988,
+        "MODEL_INCOMPATIBLE": 12
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": -9.520162436160719e-14,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": true,
+      "set": "S3",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 11,
+      "action_rate_pct": 1.1,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "S": 980,
+        "INCONCLUSIVE": 11,
+        "MODEL_INCOMPATIBLE": 9
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.010999999999909884,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    },
+    {
+      "case_id": "m2_S_d05_r0",
+      "mode": 2,
+      "true_h": "S",
+      "active": true,
+      "set": "S4",
+      "episodes": 1000,
+      "non_nominal_followup_commands": 17,
+      "action_rate_pct": 1.7,
+      "nominal_command_mol_min": 0.0018,
+      "mean_H2_shortfall_mmol": 0.0,
+      "call_counts": {
+        "S": 977,
+        "INCONCLUSIVE": 17,
+        "MODEL_INCOMPATIBLE": 6
+      },
+      "extra_actual_ethanol_vs_same_pulse_mmol": 0.016999999999920537,
+      "H2_shortfall_difference_vs_same_pulse_mmol": 0.0
+    }
+  ],
+  "scope": "Independent arithmetic and source trace within same model family; no new simulation, no physical validation."
+}

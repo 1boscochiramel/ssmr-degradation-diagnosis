@@ -1,0 +1,22 @@
+{
+  "pass": false,
+  "issues": [
+    "Healthy/meter-bias range/difference_actual_ethanol_mol_mean",
+    "Healthy/meter-bias range/difference_H2_shortfall_mol_mean"
+  ],
+  "pdf_sha256": "d972d6ce42e2f76e940ad01ab415c0c203578cbff761a6d4d53be5b328f20cc3",
+  "amendment_check_sha256": "ccfcb0f0e2ac3aac5874325148ffa798be9ff9c3eb12e0cfd99ef7b3c46bdd51",
+  "pages": 6,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "numerical_claims_checked": 21,
+  "full_paper_read_completed": true,
+  "scope": "Release QA of six-page note; amendment computational pass; paper-access limitation remains explicit if unresolved.",
+  "created_utc": "2026-09-30T17:53:11.296321+00:00"
+}

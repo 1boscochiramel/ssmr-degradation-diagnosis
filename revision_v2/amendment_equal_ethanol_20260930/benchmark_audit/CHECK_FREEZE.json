@@ -1,0 +1,126 @@
+{
+  "at_utc": "2026-09-30T18:06:31.470311+00:00",
+  "scope": "Supplemental source and arithmetic check on prior observed evidence",
+  "files": {
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\benchmark_audit\\CHECK_SPEC.txt": {
+      "sha256": "80c5327a828205ded9755cc27fd621e8c63017ee65c9f0379887d5c1326a0d2b",
+      "bytes": 2715
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_equal_ethanol_20260930\\benchmark_audit\\check_findings.py": {
+      "sha256": "d44993e677fb2af7e632626f9d6dedb5269a18ea480eb40f2449ddd8325c236c",
+      "bytes": 9944
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\results\\policy_trials.csv": {
+      "sha256": "857425c0452f2124c36a8753b50583f1b507817e8cae51a0c75c66087ffb78f9",
+      "bytes": 11964677
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_feed_only_20260930\\outputs\\paired_trials.csv": {
+      "sha256": "54cb99cbc666d6f97d64674d0dc14d0483bb0535530841786e7d318ff30354cc",
+      "bytes": 8359850
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\sources\\benchmark.pdf": {
+      "sha256": "72cb53a7495d5b31cba654cfe33559bfd38fa038592af1e0dbfeae01428078ef",
+      "bytes": 1186915
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\sources\\benchmark.txt": {
+      "sha256": "8f71f2977c644233cab55fbcf7472bcd1e1246f8ab32dcd2c335e23c0e6e0340",
+      "bytes": 63343
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\control.m": {
+      "sha256": "45d0ca524bfcd82b35a2a308985ec030629f6dc519373368cf9493d38c2c2d83",
+      "bytes": 713
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\SSMR_simulation.m": {
+      "sha256": "87ffeacce4ddb9e563ce7a1493d7b5ba9aeee60418a21f5dcdb7ee1e510ad8a5",
+      "bytes": 7007
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\checks\\native_provenance_final.json": {
+      "sha256": "cbc2b40e38634d00ab1f9353e971bab8948ef8c56577087dfdab771135156302",
+      "bytes": 26507
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\checks\\native_git_identity.json": {
+      "sha256": "925350098faecf25141c163810d6b281b2430fcda644a54bdf621e8e514b87f2",
+      "bytes": 17148
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\STEP_np50_matlab.csv": {
+      "sha256": "4e9aa475c23145bdbf9ee9a13b0d49662a7b7063cd7774f1caa3ca0f0a369eb7",
+      "bytes": 1793
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\STEP_state.mat": {
+      "sha256": "11e87bf368458ee4d4575b424554c8e4f094de9b7bf3e9e6583f62e52eaa45e3",
+      "bytes": 16424
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\STEP_np200.csv": {
+      "sha256": "94fcb5e6a2e291b203b77c2ad9cec3950aa79875c473416e3733834115933672",
+      "bytes": 1793
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\STEP_np200_state.mat": {
+      "sha256": "e5f44236f6085ce9901e805c26ba3a337e789f953fd6da83c8252dc5d8d803f2",
+      "bytes": 55558
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS1_np50_matlab.csv": {
+      "sha256": "66d2394fb6b74e3118b3219f726f479c7c53385b373f06032929b4ce04e2f6fe",
+      "bytes": 17313
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS1_state.mat": {
+      "sha256": "9d0c63e0656dc76e9f6dd39c0548862a85b3c7b063ac079555a67007d32e8d1c",
+      "bytes": 27546
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS1_np200.csv": {
+      "sha256": "fbb211fa0b53c7b9cb235432f5bce298e735380f1ef915132447062b596182f1",
+      "bytes": 17332
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS1_np200_state.mat": {
+      "sha256": "c191de9fca31f00e9ae865aef6d8d9aeb0884e5aa29258ee530140d06c70b2e2",
+      "bytes": 117011
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2T_np50_matlab.csv": {
+      "sha256": "1f2d733225c6a3eb8c8f5e6e90576d944fa9795a172c85a91c7b8b776f75217b",
+      "bytes": 5480
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2T_state.mat": {
+      "sha256": "2d5bcc74c4b6c46b18b6a1beb95bc12f444a7cf5d58867108b260a9ebece88a5",
+      "bytes": 62814
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2T_np200.csv": {
+      "sha256": "18cd864e39fd0af52df8087c5c4a28699d46008ad8f91033d31cdd6a1c0192c2",
+      "bytes": 5504
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2T_np200_state.mat": {
+      "sha256": "935f31db0292657eab7fb52e2ed2497c022e486e9d3a6e99510c6b8c32d2b89f",
+      "bytes": 249308
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2P_np50_matlab.csv": {
+      "sha256": "40438c850c020a6bddd062d089af3f0764c434b1a2d78c8294194891221defb1",
+      "bytes": 5469
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\CS2P_state.mat": {
+      "sha256": "e200b9b150d28bac903a9e7403a704d149f73a64002684b8029fa3378ac36b6b",
+      "bytes": 34218
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2P_np200.csv": {
+      "sha256": "e110415b43d02ed9edcb28417dcba659dca2751b11d2d2b16dd065587162cbf3",
+      "bytes": 5489
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\CS2P_np200_state.mat": {
+      "sha256": "56f44491ee49e95e72a55a796035fe06aa2b6a7391a871865f9f5c205af4aca0",
+      "bytes": 138854
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np50.mat": {
+      "sha256": "82eaab8889bb9af2004d73a4280769b00a457baa4b306209b3bbdde5135c5a2c",
+      "bytes": 6175
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\baseline\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np50_H2O.mat": {
+      "sha256": "1fd4aafbd6e7b186f0e6fd5461715aaa6b06751ee4318dc0931be474129371b3",
+      "bytes": 756
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICFull\\Mode1_np200.mat": {
+      "sha256": "06775225f3e21b3c6045ec3b1e2f0977cc25351ac233d25fe431c06e65fa9694",
+      "bytes": 21782
+    },
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\full_rerun\\native_matlab\\finegrid\\SSMR_Benchmark-c6280844404cbef38da8a893a095a734bc0d4815\\SSMR_simulator\\ICH2O\\Mode2_np200_H2O.mat": {
+      "sha256": "7ec4bf3c712509589e65499ce4b464bb4583ac7c4197051832943b70dbad1a2c",
+      "bytes": 11060
+    }
+  }
+}

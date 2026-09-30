@@ -1,0 +1,23 @@
+{
+  "schema": "ssmr.dynamic-qualified-resolution.v1",
+  "issues": [],
+  "status": "EXACT_INPUT_AND_BITWISE_REPLAY_CONFIRMED_WITH_INTERPOLATED_EXPORT_LIMITATION",
+  "original_frozen_gate_pass": false,
+  "identity_corrected_gate_pass": false,
+  "original_issue_count": 176,
+  "identity_corrected_issue_count": 64,
+  "affected_records": 32,
+  "affected_counts": {
+    "truth": 8,
+    "branch": 24
+  },
+  "records_checked": 422,
+  "max_abs_export_difference": 2.2420775429197073e-44,
+  "forensic_freeze_sha256": "6846630d0205d887c4878408b0a7a34c070a11cdb414a791ed72fd48d831d7f7",
+  "forensic_result_sha256": "a3ec4cdd32885f71769220313368bb0de78f30feba1939482ca0cb6021b3a396",
+  "original_verification_sha256": "d1eb11595c06f4d171696261b8e89c3f26186de2d289c70aef5520dcdfad4df7",
+  "source_and_original_results_unchanged": true,
+  "scope": "Post hoc exact provenance resolution: actual solver input continuity and exact replay verified; exported dense-output first samples are not bit-identical to intended inputs. Original frozen failure retained. No relaxed tolerance, retuning, physical validation, or independent ODE implementation.",
+  "pass": true,
+  "identity_verification_sha256": "664d25be934cfd1e44c5d981bb313662e55a8d404639d53e3f7ee70e2610f7e3"
+}

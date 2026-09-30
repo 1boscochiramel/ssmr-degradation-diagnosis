@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_feed_only_20260930\\outputs\\paired_summary.csv",
+  "source_sha256": "534198c69166425d707db4ae442185a72dffe3bb40f02a9a1a43f65c8c226a0d",
+  "coordinates_sha256": "7d950789f8f5657e7c6bf5b67e173e16ddaa35bf502c7bef522ed6ba0ae9eb5c",
+  "png_sha256": "43580003cb723b7ca9ffa52e2346999ed29e8aa02fa80eba8b7e87e1ea36189d",
+  "points": 27,
+  "comparison": "Diagnostic minus same-pulse feed-only; y sign reversed to show shortfall avoided; no scalar value-of-information claim",
+  "monochrome": true
+}

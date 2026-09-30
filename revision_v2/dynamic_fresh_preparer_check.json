@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Source-only preparation and resume-guard engineering test; no new physics/statistics run",
+  "checks": {
+    "not_copied:dynamic_truth": true,
+    "not_copied:dynamic_branches": true,
+    "not_copied:results": true,
+    "not_copied:dynamic_status.json": true,
+    "not_copied:branch_costs.csv": true,
+    "not_copied:dynamic_foreensic_summary.json": true,
+    "not_copied:dynamic_forensic_results": true,
+    "not_copied:dynamic_FORENSIC_FREEZE.json": true,
+    "source_present:validate_resume.py": true,
+    "source_present:dynamic_dense_diagnosis.py": true,
+    "source_present:dynamic_forensic_replay.py": true,
+    "source_present:checks/DYNAMIC_IDENTITY_AMENDMENT.json": true,
+    "source_present:checks/DYNAMIC_PORTABLE_ADAPTER.json": true,
+    "source_present:provenance_original/dynamic_FORENSIC_FREEZE.json": true
+  },
+  "guard_report_sha256": "11a071a424216bc95fd063b905aa89cc978d91d97a2160a980fd415976c6a3b5",
+  "guide_sha256": "87677e939282eb3f6168a45eda3fd7b6fa69ee02f327438f27c488771f7faf78",
+  "preparer_sha256": "f171469573e62f6875af4f4663127aa724757943809a0f8184ab8eae0675b964"
+}

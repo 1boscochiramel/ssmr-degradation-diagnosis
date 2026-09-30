@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-09-30T18:24:39.821686+00:00",
+  "scope": "Presentation precision only; no scientific acceptance change; frozen before revised rendering",
+  "files": {
+    "NOTE_SPEC.json": "1a7cee5d5ae25e30d71b63f470b9d289ad5e3b797dcfc199fa81586f4985a395",
+    "verify_note.py": "7318d1800e48751e43eaecda256684cab7358409f5b76bb5333471085438d2dd",
+    "NOTE_CHECK_FREEZE.json": "f492ee70d68319f0c836f065a5196893a36c9f2d6b7699d187309dfcfe23d71d",
+    "verify_note_v2.py": "76cce694a09d473706f88241c7f7461f2ea61dc3911b47863bd900e3ce2823ea",
+    "PRECISION_REVISION.json": "8e0497e0d3c78d8b6b22b3f64cad7ee682c777f6a1e0d7b7a22d047dfae570e0"
+  }
+}

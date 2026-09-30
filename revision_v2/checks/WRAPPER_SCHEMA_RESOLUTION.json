@@ -1,0 +1,19 @@
+{
+  "schema": "ssmr.wrapper-schema-resolution.v1",
+  "created_utc": "2026-09-30T14:38:48.487735+00:00",
+  "issues": [],
+  "original_failure_sha256": "146885fe5b961005266169024a1ea9dc71987848e9576ea77f45547d97689efc",
+  "error": "Final wrapper compared SHA256 string to a structured digest record instead of its sha256 member.",
+  "correction": "Compare exact digest string with value[sha256]; resolve supplied revision root to an absolute path.",
+  "scientific_acceptance_changed": false,
+  "prior_files_checked": 522,
+  "primary_batch_pairs_rehashed": 382,
+  "physical_records_rehashed": 422,
+  "preserved_completed_sections": [
+    "statistical",
+    "policy",
+    "qualified dynamic"
+  ],
+  "corrected_wrapper_sha256": "dd9e9500add0a1a9147b161107d82c1342a2958289b471215d0c59b79f8be54b",
+  "pass": true
+}

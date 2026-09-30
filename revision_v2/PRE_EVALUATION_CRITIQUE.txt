@@ -1,0 +1,147 @@
+PRE-EVALUATION LOGIC CRITIQUE
+Reviewer: cx-critic, separate same-model review lane
+Date: 2026-09-30
+
+Scope and boundary
+Read revision_model.py, revision_policy.py, statistical_campaign.py, protocol.json,
+POLICY_AMENDMENT.txt and dynamic_API.txt. Checked the relevant historical Map
+implementation and freeze/checker wiring for context. No stochastic results were
+read, no calibration/evaluation or reactor campaign was run, and no MATLAB
+session was touched. This is a bounded source/logic review, not empirical
+verification of the new results or a proof of physical validity.
+
+Conclusion
+No critical held-out leakage or actual-stopping causality defect was identified
+in this short pass. The finite-stratum, marginal calibration claim in the
+protocol is supportable by the stated rank construction. One concrete resume-
+provenance weakness should be hardened; other findings below concern truthful
+interpretation and a policy implementation assumption, not a requirement for
+new instruments or expanded experiments. No positive scientific outcome is
+predicted by this review.
+
+ACTIONABLE FINDINGS
+
+P2 -- Cached stochastic batches are not bound to every defining input.
+Location: statistical_campaign.py:62-66; metadata recorded at78-85.
+Existing batches are accepted if the NPZ, physical truth and revision_model
+hashes match. Reuse does not verify stored phase/seed/n/noise_kwargs, protocol
+hash, pipeline hash or policy hash against the requested batch. Thus a versioned
+implementation repair or changed split definition can reuse stale observations
+or scores under a fresh invocation. This is not evidence that the present clean
+campaign is contaminated: no stochastic outcomes were inspected here. The
+independent integration freeze records the pipeline hash and its checker checks
+that hash, which is useful protection, but it does not replace validating each
+cached batch's defining metadata when resuming.
+Action: compare all requested batch-defining inputs before the cache-return,
+and reject or place incompatible batches in a new versioned output directory.
+At least verify seed, n, phase, stress_index/noise_kwargs, active, case_id,
+protocol, pipeline and policy identities. If changing frozen implementation,
+retain the old version and record a pre-evaluation amendment and new check hash.
+
+P2 -- Healthy status overlaps the fault candidate families by construction.
+Location: revision_model.py:98-116,124-136,159-163; decide at173-184.
+C and M include severity1/rate0; F includes gain1/rate0; S includes offset0/
+slope0. H is the same nominal healthy trajectory. C/F/S therefore contain the
+H template exactly; M represents the same nominal state through its own
+interpolant. A fault-family score can fit a healthy observation at least as well
+as the identical healthy template. Separate family thresholds do not turn those
+overlapping mechanisms into universally identifiable labels.
+This does not invalidate true-family retention calibration and is not a reason
+to tune thresholds after looking at healthy results. It limits the meaning and
+power of an exact healthy singleton. It also permits label ambiguity with the
+same baseline command, which the physical command comparison can legitimately
+handle.
+Action: explicitly disclose the shared zero-fault boundary, retain healthy
+inconclusive results, and do not call failure to isolate H proof of sensor
+inadequacy or a failure of the rank bound. Any future minimum-fault/equivalence-
+class redefinition is a different predeclared design, not a post-result fix.
+
+P2 -- Both reported diagnosis-time medians are conditional subsets.
+Location: statistical_campaign.py:150-163.
+median_diagnosis_time_min includes singleton calls, including wrong calls;
+median_correct_time_min includes only correct singleton calls. Inconclusive
+and incompatible records have acquisition completion at21 but are excluded
+from these medians. The code already preserves total n and each call count,
+so this is a presentation requirement rather than a scoring-code error.
+Action: show each median beside its explicit denominator. Name the first
+"median time among singleton calls" and the second "median time among correct
+singleton calls"; report the no-call fraction separately. These are times from
+the observation clock, not time from physical startup including preconditioning.
+
+P3 -- Maximum of separate minimum commands assumes upward feasibility.
+Location: revision_policy.py:21-32.
+Each retained fitted candidate produces a set of restoring grid commands, but
+the implementation stores only its minimum and returns the largest such
+minimum. That command restores every candidate only if each feasible set remains
+feasible at larger grid commands. For arbitrary nonmonotone responses, e.g.
+candidate A feasible at indices{2,3} and B at{4,5}, the returned4 fails A even
+though neither candidate individually raised cannot=True.
+The supplied historical map rows showed no downward H2 response as feed rose;
+that limited static check is reassuring but does not prove monotonicity of every
+interpolated/evolving fitted path. No failure on an actual campaign case is
+asserted. The code and protocol appropriately describe a bounded heuristic,
+not a uniformly safe or optimal controller.
+Action: retain the heuristic description. A cheap analytic/implementation
+guard can verify that the chosen command belongs to every candidate's feasible
+set, or explicitly record the monotonicity assumption. Do not claim that
+predicted_infeasible=False guarantees restoration under all parameter uncertainty
+or the dynamic plant.
+
+WHAT WAS CHECKED AND FOUND LOGICALLY CONSISTENT
+
+1. Split and template discipline. Calibration iterates covered_grid cases only
+   (statistical_campaign.py:101-108). Evaluation has a different phase offset
+   (53-57 and protocol seed specification), with paired active/passive random
+   streams intentionally sharing a seed. Covered-grid evaluation reuses the
+   same fixed deterministic truth strata with fresh observation noise; it must
+   not be called held-out parameter validation. Separately labelled off-grid
+   and physical/observation stresses receive no continuum calibration guarantee.
+   Template anchors use predeclared historical maps, not held-out ODE/noisy data.
+
+2. Sequential calibration. The score calibrated is the maximum true-family
+   score over the two looks (statistical_campaign.py:107-112); per-hypothesis
+   thresholds take the maximum across fixed covered strata. The rank threshold
+   uses ceil((n+1)*(1-alpha)) and becomes infinite when the rank exceeds n
+   (revision_model.py:168-171). This bounds the marginal true-family rejection
+   event for a covered fixed stratum under exchangeable calibration/test draws.
+   It is not a conditional guarantee for every realized calibration set, every
+   fixed persistent bias, every continuous parameter value, or misspecification.
+   The protocol already makes the marginal/finite-stratum limitation explicit.
+
+3. Actual stopping is causal. Available sample times are gated by acquisition
+   plus delay (revision_model.py:44-58). decide locks the first singleton at16
+   (173-184), and command fitting uses only the corresponding look's indices
+   and alive set (statistical_campaign.py:175-177). Later precomputed scores do
+   not revise that action. potential_true_rejected_at21 is a counterfactual
+   continuation diagnostic; it must remain distinct from rejection at the actual
+   stop, which the code also records at152-158.
+
+4. Observation covariance. Stationary AR1 sample errors plus one uniform
+   persistent instrument bias produce the within-instrument covariance coded
+   at revision_model.py:50-52. Cross-instrument independence is an explicit
+   assumption, not a measured property. The delayed GC windows use only arrived
+   samples and the cumulative windows need not be independent because the rank
+   calibration operates on complete paired-look trajectories.
+
+5. Command/outcome separation. revision_policy selects from observation-derived
+   retained plug-in fits, without true labels/states. The dynamic API branches
+   from the exact state at actual decision time and integrates prefix plus
+   continuation through the common horizon (dynamic_API.txt:75-89). The
+   statistical runner joins the selected case/activity/time/command branch
+   (statistical_campaign.py:193-208), preserving physical hydrogen shortfall and
+   actual/commanded ethanol rather than assigning zero cost to equal action
+   labels. The detailed ODE implementation is the independent checker's lane;
+   this pass audited the integration contract and join logic only.
+
+6. Policy amendment. Restoring the nominal healthy-map output in selection while
+   continuing to score physical outcomes against the benchmark demand is an
+   explicit, pre-evaluation target convention (revision_policy.py:13-15;
+   POLICY_AMENDMENT.txt:3-18). It fixes the rounded-demand zero-fault command
+   issue without changing observation statistics or calibration. It must not
+   be described as optimization of actual dynamic shortfall or economic value.
+
+No claim of laboratory calibration, universal identifiability, a safe controller,
+or economic payback is justified by this source review. The protocol already
+excludes those claims. Preserve those exclusions and any subsequent scientific
+failures in the final PDF rather than treating successful computation as a
+positive research conclusion.

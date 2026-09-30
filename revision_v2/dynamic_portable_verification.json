@@ -1,0 +1,24 @@
+{
+  "schema": "ssmr.portable-integrity.v1",
+  "created_utc": "2026-09-30T09:22:03.274972+00:00",
+  "artifact_root": "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2",
+  "passed": true,
+  "issues": [],
+  "records": {
+    "dynamic_truth": 170,
+    "dynamic_branches": 252
+  },
+  "unique_files_hashed": 2104,
+  "remapped_source_paths": [
+    "dynamics.py",
+    "reference/reformer_diag/benchmark_cases.py",
+    "reference/reformer_diag/diag/faultmodel.py",
+    "reference/reformer_diag/diag/hypotheses.py",
+    "reference/reformer_diag/diag/outputs_diag/map_mode1.csv",
+    "reference/reformer_diag/diag/outputs_diag/map_mode2.csv",
+    "reference/reformer_diag/model.py",
+    "reference/upstream/SSMR_simulator/ICFull/Mode1_np50.mat",
+    "reference/upstream/SSMR_simulator/ICFull/Mode2_np50.mat"
+  ],
+  "scope": "Hash integrity and complete physical record inventory after explicit source-root remapping; no metadata edits, scientific acceptance changes, stochastic recalibration, or independent ODE solve."
+}

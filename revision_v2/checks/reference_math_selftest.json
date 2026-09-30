@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "analytic_checks": [
+    "rank includes n+1 correction",
+    "insufficient calibration uses infinity",
+    "rank repeated-score ties retained",
+    "shared baseline covariance negative",
+    "constant bias persists only in level",
+    "AR1 physical sample lag and independent sensors",
+    "nearest bank recomputed with nonzero true score",
+    "strict rejection ties and causal early stop",
+    "excluded candidates cannot reenter",
+    "multiple survivors are inconclusive",
+    "switch-safe command total and H2 shortfall",
+    "same action name cannot erase actual feed difference",
+    "zero events is not zero upper risk"
+  ],
+  "count": 13,
+  "scope": "Analytic math fixtures only. Full schema negative controls follow final protocol freeze; no scientific evaluation results inspected."
+}

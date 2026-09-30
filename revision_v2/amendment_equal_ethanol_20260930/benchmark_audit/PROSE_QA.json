@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "source and arithmetic pass",
+      "pass": true
+    },
+    {
+      "name": "CS1 integration difference text",
+      "pass": true
+    },
+    {
+      "name": "CS2T integration difference text",
+      "pass": true
+    },
+    {
+      "name": "CS2P integration difference text",
+      "pass": true
+    },
+    {
+      "name": "CS2T mesh difference and timing",
+      "pass": true
+    },
+    {
+      "name": "CS2P mesh difference and timing",
+      "pass": true
+    },
+    {
+      "name": "healthy range",
+      "pass": true
+    },
+    {
+      "name": "all M1 shortfall changes below stated bound",
+      "pass": true
+    },
+    {
+      "name": "all M2 shortfall changes exactly zero",
+      "pass": true
+    },
+    {
+      "name": "M1 meterbias S1 action count",
+      "pass": true
+    },
+    {
+      "name": "M1 meterbias S1 extra ethanol",
+      "pass": true
+    },
+    {
+      "name": "native qualification",
+      "pass": true
+    },
+    {
+      "name": "no numerical PID effect size",
+      "pass": true
+    },
+    {
+      "name": "roundtrip distinction",
+      "pass": true
+    }
+  ],
+  "files": {
+    "findings_for_note.txt": "4b2e3c8da2388498fb5a010c7439149699d2c791abaa3a24cc45aa5402cecb2a",
+    "findings_evidence.json": "f808fd8626fd6b86fb882f8346ca6e216885cb4ff4de927865439265b72c6888",
+    "SOURCE_TRACE.txt": "4135ca34f848ac3779d76c5aca65fe1b4ee7b78226e87242c7f76ed1071fbf73"
+  }
+}

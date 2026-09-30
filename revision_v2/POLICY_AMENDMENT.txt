@@ -1,0 +1,22 @@
+PRE-EVALUATION POLICY AMENDMENT - 2026-09-30
+
+The published demand is rounded. The original frozen command-selection helper
+compared nominal healthy predictions to this rounded value; even a zero-fault
+prediction could consequently select the next coarse feed grid point. This was
+identified by source/analytic review before any stochastic calibration or
+evaluation. It was not selected after observing policy-performance outcomes.
+
+The revised policy uses the nominal healthy map output at baseline command as
+the restoring target for every candidate. A64-machine-epsilon relative allowance
+addresses floating-point evaluation roundoff only. Physical outcomes continue
+to use the benchmark's declared demand, and the difference is disclosed.
+
+The historical revision_model.py and protocol.json remain unchanged with their
+original design hashes. revision_policy.py is the explicitly selected replacement
+command policy. Diagnostic scores, covariance, template bank, stochastic law,
+calibration method, truth cases, action grid and physical cost integration are
+unchanged. No calibration or evaluation data existed at this amendment.
+
+Required independent analytic check: every zero-fault candidate in either mode
+selects baseline command at both decision times; different physical command
+choices must retain their actual integrated costs even when action labels agree.

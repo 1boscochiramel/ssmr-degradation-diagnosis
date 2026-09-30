@@ -1,0 +1,76 @@
+Source trace and coverage, 2026-09-30
+
+Checker: check_findings.py; acceptance specification: CHECK_SPEC.txt.
+Both were SHA256 frozen with every computational input before this audit was
+executed. They check already observed evidence; this is not prospective
+registration of the benchmark findings or a new native simulation campaign.
+
+1. IAE definition: CONFIRMED mathematical distinction, not a proved author bug.
+Primary source: major_revision_v2/sources/benchmark.pdf, printed page 8 Eq.(13),
+visually inspected at benchmark_page8_internal.png. Paper title: "A benchmark
+simulator for advanced control of ethanol steam reforming".
+Literal formula applied to the saved rows: sum(abs((e[k]+e[k-1])/2)*dt[k]).
+Conventional trapezoidal IAE: sum((abs(e[k])+abs(e[k-1]))/2*dt[k]).
+The latter exceeds the former on sign-crossing intervals. Both are numerical
+approximations. Do not call either an exact integral of interpolated |e|.
+Native baseline trace columns: displayed minutes, hydrogen mol/min, ethanol
+mol/min, setpoint mol/min. The checker recomputed all three closed-loop cases,
+with no row deletion or time shift, and matched saved MATLAB state arrays.
+Full three-case results are integration_rule[] in findings_evidence.json.
+Original paper-target failures are not relaxed or replaced by a new formula.
+This lane did not infer that integration-rule dependence explains the entire
+published discrepancy.
+
+2. Mesh/startup sensitivity: CONFIRMED saved-trajectory difference; QUALIFIED
+provenance and interpretation. Native baseline uses np=50; finegrid uses np=200.
+All four cases were compared, not just the largest change. Both grids have
+different supplied IC files, whose hashes and first applied feed were checked.
+Both disturbance cases have the same recorded startup maximum at 0.4 min.
+Full-curve and after-one-minute maxima are both retained; the latter are only
+descriptive, and do not replace the full maximum. Two grids do not demonstrate
+numerical convergence or isolate the effect of mesh from IC choice.
+full_rerun/checks/native_provenance_final.json preserves missing execution-log
+confirmation of controller reset for fine-grid STEP, CS1, CS2T. CS2P has reset-log
+evidence. The source-file hash discrepancy in that older provenance file is
+separately explained by CRLF normalization in native_git_identity.json; pinned
+Git blob identity and reset-log completeness are different claims. This lane
+does not relabel the all-case fine-grid provenance gate as passed.
+
+3. PID state carryover: CONFIRMED source mechanism, effect magnitude NOT REPLAYED.
+Primary source: baseline pinned SSMR_simulator/control.m, persistent declarations
+lines 3-4; emptiness initialization lines 15-18; state updates lines 19-23.
+SSMR_simulation.m line 3 starts with clear; close all; clc; and contains no
+clear control. Current control.m bytes match the earlier checked pinned Git
+blob. The scalar check demonstrates that retained integral state changes the
+output even if current error is zero. Its numbers are synthetic fixtures,
+not native-plant measurements and must not appear as benchmark effect sizes.
+MathWorks documentation consulted read-only:
+https://www.mathworks.com/help/matlab/ref/persistent.html
+https://www.mathworks.com/help/matlab/ref/clear.html
+The documented remedy for this standalone function is clearing the named
+function before independent cases. Do not generalize this to resetting a
+controller on every sample, or to clearing persistent state in nested functions.
+The original +20.12% claim came from a transcribed MATLAB screenshot. It is
+not promoted to a raw-CSV remeasurement by this lane and is omitted from the
+half-page note wording.
+
+4. Healthy/meter-bias action rates: CONFIRMED complete existing-record census.
+Inputs: results/policy_trials.csv and
+amendment_feed_only_20260930/outputs/paired_trials.csv.
+All healthy (H) and meter-bias (S) cases, both modes, S1/S3/S4, all trial IDs
+0 through 999 are preserved. negative_controls.csv has 24 rows because it also
+retains passive-policy counts; select active=True for the 12 requested cells.
+The counted event is abs(command_mol_min - nominal) > 1e-12 after the diagnostic
+decision. Nominal is 0.0021 (Mode 1) or 0.0018 (Mode 2) mol/min. This count does
+not count the planned feed pulse that every active episode received. Costs are
+whole-horizon active-minus-same-pulse-control amounts in mmol, averaged over
+all 1000 episodes, not just the action episodes. Small Mode 1 shortfall changes
+are retained as nonzero in evidence. Mode 2 shortfall change is exactly zero
+in saved records. The tiny M2/S1 ethanol residual is CSV roundtrip precision,
+not a non-nominal action. No most-favorable cell is selected as representative.
+
+Limits: this was a separate source/arithmetic pass within the same model family.
+It is not a different-model review. No new MATLAB run and no physical validation.
+Only benchmark paper page 8 was visually read for this bounded lane; full paper
+reading by other sessions is a separate evidence claim. No user Download files,
+confidential work documents, or original results were modified.

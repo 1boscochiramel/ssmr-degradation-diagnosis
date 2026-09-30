@@ -1,0 +1,66 @@
+DATED PROTOCOL AMENDMENT: SAME-PULSE FEED-ONLY CONTROL
+30 September 2026; supplemental analysis after the original study was read.
+
+Question
+After applying exactly the same acquisition feed pulse, what physical benefit
+and additional ethanol use arise from the existing diagnosis-based feed action,
+compared with returning the command to nominal without using the diagnosis?
+
+Status and unchanged method
+This is a dated, outcome-aware amendment, not retrospective preregistration or
+a new held-out diagnostic evaluation. Original diagnostic results and physical
+branches already exist. The diagnostic model, calibration, random draws, sensor
+sets, stopping rule, original feed policy, plant model and numerical settings
+stay frozen. No new machinery, threshold, classifier, controller or fault case
+is introduced. New execution reintegrates the no-diagnosis continuations using
+the original saved physical prefixes and the exact frozen dynamic engine.
+
+Control schedule
+For every one of the original nine policy-designated cases, command nominal
+ethanol through minute10, then the original +0.0003mol/min move, subject to the
+original bounds. End the pulse at a fixed minute16 or fixed minute21, then
+command nominal ethanol until minute31. Thus the only two pulse durations are
+the existing six- and eleven-minute durations. Each physical control arm has
+a preassigned clock and reads no observation, diagnosis, label or fitted fault.
+The evolving true fault remains unchanged. All eighteen arms are reported,
+including healthy, meter-bias and feed-loss cases; no outcome-based selection.
+
+Primary paired comparison
+For each original active trial, compare its original full-horizon outcome with
+the control having the same case and original pulse-ending decision time.
+Retain every trial and each original sensor set; no conditioning on correct
+diagnosis, singleton calls, or a favorable outcome. This schedule-yoked contrast
+has identical pulse, initial physical state and fault history. It measures the
+incremental consequence of the existing downstream diagnostic action at that
+schedule. The pairing uses the old stopping time only to select an already
+fixed control arm; the control's command never uses a diagnosis.
+
+Interpretation
+Because the original stopping time is diagnosis-dependent, the primary paired
+contrast is a conditional action ablation, not a deployable diagnosis-free
+policy, the value of all diagnostic information, or an economic net benefit.
+The two fixed-duration controls are separately available as genuinely blind
+policies. Comparisons of the diagnostic sequence with a fixed duration that
+differs from its actual stopping time also change pulse exposure and are not
+the primary matched contrast. Other diagnosis-free feed actions are not tested.
+
+Measures
+Integrate true hydrogen shortfall, hydrogen production, actual ethanol and
+commanded ethanol over the original common0..31min horizon. Report diagnostic
+minus matched feed-only mean, SD, minimum and maximum over all1000 original
+active trials per case and sensor set, with unrounded per-trial amounts in mol.
+Display mol or explicitly converted mmol; negative shortfall is favorable and
+positive ethanol is additional feed. No currency, repair efficacy or sensor
+cost is invented. SD describes episode variation, not uncertainty in the mean.
+
+Verification and stopping
+Before execution, hash this amendment, its structured specification, original
+evidence inventory, new runner and independent deterministic checker. The
+checker must reject wrong timing, command, pairing, costs or changed parents.
+Fresh continuations must match the archived corresponding active nominal-feed
+branch state arrays and CSV files exactly, and cost arithmetic must be rebuilt
+from raw interval/trace evidence. Retain all failures; do not relax the check.
+Stop after eighteen physical arms and all original active trial comparisons,
+then report the results whether favorable, zero, or unfavorable. A separate
+same-model agent checks the arithmetic; no external or cross-model peer review
+is implied. Original exported-start-state qualification remains disclosed.

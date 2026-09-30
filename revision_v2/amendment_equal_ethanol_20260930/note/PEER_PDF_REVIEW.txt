@@ -1,0 +1,87 @@
+SSMR local note: bounded same-model PDF and data review
+Reviewer: cx-equal-run / Codex, 2026-09-30
+Status: COMPLETE; no remaining material PDF/prose issue identified in this bounded review.
+Reviewed PDF SHA256: 9672550bcd2c141eb4a815d1bf29f3ee1f7674ea0bb72e8e4432af11c12cd208
+PDF: output/pdf/SSMR_SCIENTIFIC_NOTE_V3_LOCAL_REVIEW.pdf (six pages)
+
+Scope
+All six rendered pages and extracted text were read. After the source and
+metric corrections, changed pages 1, 2, 4, 5 and 6 were read again; final
+page-2/page-3 hashes matched the previously inspected versions.
+This is an internal same-model review, not a different-model or external
+journal review. The reviewer implemented the equal-resource runner earlier;
+this review does not substitute for the separately frozen checker.
+No generator, scientific source, protocol, frozen check, or result was edited.
+Only this review record was written.
+
+Resolved main-outcome wording
+The earlier statement that these tests show no 'production advantage' was too
+broad: total hydrogen produced is a separate saved quantity and its mean
+favored diagnostic action in both membrane cases. Root corrected the title,
+main takeaway and relevant body text to address hydrogen demand and mean
+hydrogen shortfall. Page 5 now explicitly distinguishes total production from
+unmet demand and acknowledges the opposite total-production ordering for the
+membrane cases. The changed pages are consistent with paired_summary.csv.
+
+Resolved source wording
+Page 2 originally implied correlated composition channels. revision_model.py
+constructs separate per-feature covariance blocks with block_diag and separate
+random feature draws. Root changed the text to within-channel serial noise,
+record-level bias and delay, with nominal sensor channels independent. The
+corrected final page-2 text and image agree with that source.
+
+Data and interpretation checks
+- Rejoined all 27 figure-coordinate keys to the full prior same-pulse summary.
+  Extra actual ethanol and avoided shortfall agree exactly with the saved
+  difference columns after the stated mol-to-mmol conversion. No original
+  case/sensor pair is omitted. Axes, marker fill and labels are legible.
+- All 12 active healthy/meter-bias cells are displayed. Counts, denominators,
+  extra-ethanol ranges and the distinction between follow-up action and the
+  diagnostic pulse agree with negative_controls.csv. The near-zero M2/S1
+  residual is displayed as rounded zero, not as a non-nominal action.
+- Recomputed the four means from all 4000 paired equal-resource records.
+  Every case has both positive and negative shortfall differences. Pages 1
+  and 5 correctly identify a mean comparison; page 5 explicitly acknowledges
+  that individual episodes favor both arms. This is not per-trial dominance.
+- The page-5 six-decimal differences retain the small M1 membrane result as
+  +0.000027 mmol. The meter-bias cost range and prose consistently show
+  1.02075 mmol. The table units, common baseline and per-episode resource
+  matching are explicit. Rounding is not used as a new scientific gate.
+- The retrospective resource budget, changed temporal feed profile, absence
+  of a unique information-value claim, and lack of solver-refinement evidence
+  for the small differences are explicit. No optimal-policy, economic-return,
+  field-validation or universal blind-policy superiority claim is made.
+- Central nominal discrimination and stress failure are separated. The
+  selected kinetic failures are reported rather than hidden. Stress outcomes
+  are not presented as control-safety tests; noise/bias/delay are assumptions.
+
+Benchmark and literature qualifications
+The three code observations agree with benchmark_audit/SOURCE_TRACE.txt:
+Equation (13) and absolute-error trapezoids differ at sign crossings; grid and
+supplied IC both change, so the saved comparison is not mesh convergence; PID
+persistent-state carryover is source-confirmed, not a newly measured native
+plant effect. Missing reset logs and the omitted screenshot-only effect size
+remain explicit. The historical exported-start-byte failure remains failed;
+the separate forensic resolution is not relabelled as passing that old gate.
+The Santra surrogate distinction matches the retained full-text source trace
+and access manifest. This reviewer did not reread all external papers in this
+bounded pass. The note neither asserts novelty certification nor prior-work
+superiority. Different-model review and user rewrite remain pending.
+
+Source integrity and layout
+AMENDMENT_FREEZE.json bindings, CHECK_FREEZE.json bindings and the check's
+amendment inputs all matched their frozen SHA256 values during this review.
+The scientific checker remains complete=true, pass=true, issues=[].
+All six pages are legible, with no observed clipping, overlapping table text,
+missing rows, broken glyphs or footer/page-number defects. Both material wording issues were resolved and the changed final page images
+were reinspected. No further material issue was found in this bounded pass.
+This record is a review judgement, not a new physics experiment or an
+additional frozen scientific acceptance check.
+
+Final inspected render SHA256 values:
+page-1.png: 438df3dabccf4c3527b325457df64de080c3f9cbd69a0a4d6cdb05217ac9ce0a
+page-2.png: 01dcd3b9629b840653f3ac98e7e1ee3f93a387f1d59c4915df1cf6fa006e4fec
+page-3.png: 24d4f82003cb65b149dc3d3bb16af831311c1dc34ecd18b7deb914c6ee880679
+page-4.png: 60067288c5e1122c00b4b2cc66459f58dc1250c40c987038cd1764e617449b8e
+page-5.png: e5572317dd5689f70f38caa4f14b23b2188d04f063a22a89e1fc154e79c26c08
+page-6.png: 99617aee12fe133a1670cf342fdfbf2e874a3d93a21878679554f991d8f00588

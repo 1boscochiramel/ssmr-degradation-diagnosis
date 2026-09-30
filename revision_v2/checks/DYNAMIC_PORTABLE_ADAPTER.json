@@ -1,0 +1,12 @@
+{
+  "schema": "ssmr.dynamic-readonly-path-adapter.v1",
+  "created_utc": "2026-09-30T09:33:17.481496+00:00",
+  "parent_sha256": "00e86dc5772549dcd6500c9b55b408eea8bd064fefcedf9f9f519ca1af891277",
+  "checker_sha256": "72819873615ea1137fa8df29322e97f46f1535fcd78c4b3a5e4329b3627299c4",
+  "resolver_sha256": "90fcbe3360dcac2e92d1d95f4e4925c96fa2b2def5cf164b108a1649413c6651",
+  "changes": [
+    "Optional source resolver applied only to source-file hashing and initial-condition file reading."
+  ],
+  "numerical_gates_unchanged": true,
+  "records_unmodified": true
+}

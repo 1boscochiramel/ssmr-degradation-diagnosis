@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-09-30T09:12:45.338680+00:00",
+  "files": {
+    "revision_policy.py": "fcfcbcaa7454cb65ba48626506a862cb0aaa3f76e1ede4aad1fef5c8ae8dcfa2",
+    "POLICY_AMENDMENT.txt": "ffce6f806a7b371f48b8d1cf373a2d1e76fe7d3959447d8a4cf60cec94755d21",
+    "checks/policy_amendment_check.json": "40cc2ff44e03bf2db1978f2dc1f4fa98a4dcf53ab8f6f1304e4be3990b34a583"
+  },
+  "chronology": "Before stochastic calibration or evaluation; physical truth campaign in progress and unaffected; original frozen files retained."
+}

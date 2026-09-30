@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": {
+    "all_four_means_diagnostic_minus_blind_positive": true,
+    "every_case_has_trials_favoring_each_arm": true,
+    "four_cases": true,
+    "M1_membrane_displayed_small_difference": true,
+    "mean_wording_and_no_refinement_limit_printed": true,
+    "mixed_trial_direction_printed": true,
+    "membrane_total_production_and_shortfall_both_higher": true,
+    "headline_limited_to_shortfall": true,
+    "total_production_distinction_printed": true
+  },
+  "source_sha256": "24c225aab4d6ed43f5a3e4e89336e61c346b3fefd92793f44f42fc1daa04df78",
+  "pdf_sha256": "9672550bcd2c141eb4a815d1bf29f3ee1f7674ea0bb72e8e4432af11c12cd208",
+  "scope": "Interpretation of existing checked values only; no changed scientific acceptance gate"
+}

@@ -1,0 +1,74 @@
+EQUAL-ETHANOL COMPARATOR: INDEPENDENT CHECK SPECIFICATION
+Owner cx-equal-check. Dated, outcome-aware amendment; freeze before its new outputs.
+Same-model internal computational verification, not a new reactor solver or external review.
+
+Estimand and fixed population
+Diagnostic sequence minus a retrospective constant-feed benchmark, for every original
+active S4 trial in m1_C_d05_r1, m1_M_d05_r1, m2_C_d05_r1, m2_M_d05_r1. All original
+trial IDs 0..999 remain, including no-calls, wrong calls and incompatible records.
+This is 4000 paired records and four separate groups, not new independent plants.
+No random draws, diagnosis, thresholds, original policy or original ODE changes.
+The comparator uses each original trial's realized ethanol budget; its physical
+command thereafter uses no observation, call, fitted fault or sensor-dependent stop.
+It is not a deployable universal blind policy or a pure value-of-information estimate.
+
+Resource and time alignment
+The common physical source is that case's saved active truth state at minute10.
+Rebuild original diagnostic actual ethanol on [10,31] from endpoint rates in its
+causal acquisition prefix [10,original stop] and selected original branch to31.
+The blind arm commands budget/21 constantly throughout [10,31], with no pulse,
+clipping, rounding or command-grid projection. C/M truth has feed_gain=1, so actual
+and commanded feed agree. Dedupe only identical (case_id, float budget.hex()).
+Show full [0,31] and intervention [10,31] physical accounts. Shared [0,10] prefix
+cancels from paired differences. All integration intervals and timestamps must
+cover the selected window exactly, with no gap, overlap or double-counted event.
+
+Frozen acceptance rules
+1. Verify every parent-inventory file SHA256 and size, all amendment/checker freezes,
+   protocol source bindings, unchanged original diagnostics/results and engine.
+   Original qualified final audit must remain qualified; its exact exported-start
+   byte gate must remain false and its separate forensic resolution must remain bound.
+2. Match the complete case/S4/trial inventory and all original decision metadata.
+   Prepared command copies must equal their original policy_trials.csv values exactly;
+   the distinct historical policy_decisions.csv command uses the existing arithmetic
+   tolerance because that prior aggregation serialized some last decimal bits differently.
+   Both original exports remain byte-preserved; raw branch command identity is exact.
+   Rebuild unique resource identities from raw original rates, never from saved costs.
+   Every new arm must be used and every trial must select the correct unique arm.
+3. New solve_ivp supplied y0 and returned sol.y[:,0] must equal the saved parent t10
+   state exactly; inspect instrumented arrays and hashes. Dense exported-first-state
+   equality is separately disclosed and never substituted for solver-input identity.
+   Original failed export gate is not relaxed. Any mismatching new dense export is
+   reported explicitly with the unchanged interpolation semantics.
+4. New metadata/scenario, absolute-time deterioration, solver settings, source hashes,
+   state/time arrays and finite outputs must match the frozen source and protocol.
+   Check command bounds and exact constant command/rate in every saved interval.
+   Recompute observables from saved states using the unchanged pinned equations;
+   this verifies export consistency, not independent physical validity.
+5. Independently rebuild H2 shortfall, H2 production, actual/commanded ethanol and
+   demand using endpoint trapezoids on the existing sample grid. Shortfall applies
+   max(demand-H2,0) at each endpoint BEFORE averaging, not net deficit clipping.
+   Check interval integrals, arm totals, paired differences and every reported
+   group mean/sample SD/min/max. No benefit sign or superiority rate is required.
+6. Equal-resource acceptance: |actual-target| <= 1e-12 mol + 1e-12*|target|.
+   This is floating-point accounting tolerance for constant delivered feed, not an
+   ODE approximation threshold. It is fixed before new integration. Other arithmetic
+   and state-to-observable comparisons use 1e-13 absolute +1e-9 relative, much tighter
+   than source ODE tolerance; time joins use 1e-10 min absolute. Source/array identity
+   uses exact equality where specified, never those numeric tolerances.
+7. Fresh execution timestamps must follow checker/root freezes; output directories
+   are new. Every execution must finish and be bound to source/spec/arm identity.
+   Independent pass certifies computational accounting and the declared comparison,
+   regardless of favorable, zero or unfavorable scientific results.
+
+Engineering checks before freeze
+Synthetic accounting fixtures cover endpoint clipping, signed contrasts, constant
+resource, exact resource-key separation, out-of-bounds rejection, temporal gaps and
+window errors, sample SD, and missing/duplicate trial keys. No amendment outcome is
+used to select a tolerance, case, schedule, claim or fixture.
+
+Presentation boundary
+Do not call tiny floating residuals literally zero unless exact. Report resource
+residuals, separate cases and scope. The equal-total comparator changes feed timing
+and removes the pulse. Beating it would not prove optimality, superiority to every
+blind command, unique diagnostic information value, economic benefit or plant validity.
