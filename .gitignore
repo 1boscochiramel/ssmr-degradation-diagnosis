@@ -1,0 +1,6 @@
+upstream/
+__pycache__/
+*.pyc
+*.aux
+*.out
+reformer_diag/note/*.log

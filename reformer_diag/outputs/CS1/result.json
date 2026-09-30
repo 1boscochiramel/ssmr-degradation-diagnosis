@@ -1,0 +1,39 @@
+{
+  "case": "CS1",
+  "protocol_sha256": "4acaea47e627d99d31ee57a6bfb1dc5eb51fc0630537d12ae09f6306c7af3c8d",
+  "config_sha256": "1a6a53e783ae4d5a035a7b23f1df458c931efc9b39fd50edce65fe779702a866",
+  "scope": "Python simulation of pinned code; no physical validation",
+  "solver": {
+    "nfev": 4524,
+    "njev": 301,
+    "nlu": 1087,
+    "accepted_min": 8.981612714939458e-14,
+    "ic": "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\upstream\\SSMR_simulator\\ICFull\\Mode1_np50.mat",
+    "wall_seconds": 248.8286972999922
+  },
+  "tracking": {
+    "published_iae_mol": 7.95e-05,
+    "conventional_iae_mol": 7.957258858120678e-05,
+    "paper_literal_iae_mol": 7.943014922051942e-05,
+    "relative_deviation_pct": 0.09130639145507577,
+    "status": "PASS",
+    "paper_literal_deviation_pct": 0.08786261569883379
+  },
+  "trajectory_display": {
+    "max_absolute_deviation_mol_min": 7.880408807765132e-08,
+    "max_nominal_deviation_pct": 0.03466140383615477,
+    "reference_uncertainty_bound_mol_min": 1.7876683937767633e-08,
+    "status": "PASS",
+    "samples_compared": 300,
+    "time_definition": "upstream display labels and last RHS output"
+  },
+  "trajectory_physical": {
+    "max_absolute_deviation_mol_min": 7.444737510242091e-06,
+    "max_nominal_deviation_pct": 3.274513538465165,
+    "reference_uncertainty_bound_mol_min": 1.7876683937767633e-08,
+    "status": "FAIL",
+    "samples_compared": 300,
+    "time_definition": "physical accepted endpoints"
+  },
+  "execution_status": "COMPLETED_CASE_NOT_M1_ACCEPTANCE"
+}

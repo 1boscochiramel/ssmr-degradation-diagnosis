@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\WHEC\reformer_benchmark\reformer_diag\diag\figures.py", line 117, in <module>
+    fig_m3(); fig_v1()
+    ~~~~~~^^
+  File "C:\Users\Admin\Desktop\WHEC\reformer_benchmark\reformer_diag\diag\figures.py", line 88, in fig_m3
+    ax.set_title('Mode 1, 5% H2 drop: catalyst (a_c=%.3f) vs membrane (a_m=%.3f)' % (r['theta']['C'], r['theta']['M']), fontsize=9)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ValueError: unsupported format character 'H' (0x48) at index 11

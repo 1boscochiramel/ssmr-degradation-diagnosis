@@ -1,0 +1,40 @@
+{
+  "run": "STEP_Radau_tight",
+  "case": "STEP",
+  "numerical_domain_extension": false,
+  "settings": {
+    "method": "Radau",
+    "rtol": 1e-06,
+    "atol": 1e-07,
+    "max_step_min": 0.05,
+    "sample_min": 0.1,
+    "dense_sample_min": 0.005
+  },
+  "model_sha256": "df3f87565f15983789cdc94c96a29223c9525d8342889f6450316dab4b3c2d9b",
+  "scope": "Python simulation; no native equivalence or physical validation",
+  "solver": {
+    "nfev": 1877,
+    "njev": 53,
+    "nlu": 408,
+    "accepted_min": 6.8689723369742e-13,
+    "ic": "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\upstream\\SSMR_simulator\\ICFull\\Mode1_np50.mat",
+    "wall_seconds": 28.288394499977585
+  },
+  "execution_status": "COMPLETED_CASE_NOT_M1_ACCEPTANCE",
+  "trajectory_display": {
+    "max_absolute_deviation_mol_min": 2.673369812877891e-05,
+    "max_nominal_deviation_pct": 11.758622293330625,
+    "reference_uncertainty_bound_mol_min": 1.0934617687374872e-08,
+    "status": "FAIL",
+    "samples_compared": 40,
+    "time_definition": "upstream display labels and last RHS output"
+  },
+  "trajectory_physical": {
+    "max_absolute_deviation_mol_min": 2.457662308023292e-06,
+    "max_nominal_deviation_pct": 1.0809848553459767,
+    "reference_uncertainty_bound_mol_min": 1.0934617687374872e-08,
+    "status": "PASS",
+    "samples_compared": 39,
+    "time_definition": "physical accepted endpoints"
+  }
+}

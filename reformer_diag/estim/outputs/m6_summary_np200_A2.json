@@ -1,0 +1,34 @@
+[
+  {
+    "truth":"np200",
+    "excitation":"active",
+    "estimator":"EKF",
+    "accuracy":0.7333333333,
+    "calibration":0.5788617886,
+    "median_time":16.0
+  },
+  {
+    "truth":"np200",
+    "excitation":"active",
+    "estimator":"MHE",
+    "accuracy":0.5333333333,
+    "calibration":0.281300813,
+    "median_time":29.5
+  },
+  {
+    "truth":"np200",
+    "excitation":"passive",
+    "estimator":"EKF",
+    "accuracy":0.7333333333,
+    "calibration":0.5674796748,
+    "median_time":13.0
+  },
+  {
+    "truth":"np200",
+    "excitation":"passive",
+    "estimator":"MHE",
+    "accuracy":0.8666666667,
+    "calibration":0.3674796748,
+    "median_time":19.0
+  }
+]

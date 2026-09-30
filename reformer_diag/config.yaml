@@ -1,0 +1,90 @@
+milestone: M1
+upstream_commit: c6280844404cbef38da8a893a095a734bc0d4815
+protocol_sha256: 4acaea47e627d99d31ee57a6bfb1dc5eb51fc0630537d12ae09f6306c7af3c8d
+seed: 20260929
+versions:
+  python: 3.13.9
+  numpy: 2.4.6
+  scipy: 1.17.1
+  matplotlib: 3.11.0
+  PyYAML: 6.0.3
+  pytest: 9.1.0
+solver:
+  method: BDF
+  rtol: 0.0001
+  atol: 1.0e-05
+  max_step_min: 0.1
+  sample_min: 0.1
+  dense_sample_min: 0.005
+sensitivity:
+  methods:
+  - BDF
+  - Radau
+  cases:
+  - STEP
+  - CS2T
+  rtol: 1.0e-06
+  atol: 1.0e-07
+  max_step_min: 0.05
+thresholds:
+  tracking_relative_pct: 2.0
+  time_constant_relative_pct: 5.0
+  trajectory_nominal_pct: 2.0
+  solver_nominal_pct: 0.5
+paper_targets:
+  CS1_iae_mol: 7.95e-05
+  CS2T_iae_mol: 0.000262
+  CS2P_iae_mol: 0.000248
+  STEP_tau_min: 0.25
+  STEP_dead_min: 0.15
+cases:
+  STEP:
+    mode: 1
+    np: 50
+    duration_min: 4
+    step_min: 2
+    step_to_mol_min: 0.0024
+  CS1:
+    mode: 1
+    np: 50
+    duration_min: 30
+    closed_loop: true
+    profile: 1
+  CS2T:
+    mode: 2
+    np: 50
+    duration_min: 10
+    closed_loop: true
+    profile: 0
+    steam: true
+    disturbance: 1.1
+    disturbance_min: 5
+  CS2P:
+    mode: 2
+    np: 50
+    duration_min: 10
+    closed_loop: true
+    profile: 0
+    steam: true
+    disturbance: 2.2
+    disturbance_min: 5
+  GRID50:
+    mode: 1
+    np: 50
+    duration_min: 1
+    step_min: 0.4
+    step_to_mol_min: 0.0024
+  GRID200:
+    mode: 1
+    np: 200
+    duration_min: 1
+    step_min: 0.4
+    step_to_mol_min: 0.0024
+  IC_DRIFT:
+    mode: 1
+    np: 50
+    duration_min: 1
+input_audit_sha256: eb582704e63b67bb28b3aee420160573d790f8a7bde3582cf7e86bd4086e5b43
+reference_manifest_sha256: fdde759e237d2669861a1b9b466fb7b7bedc9e815e0430378580027b5ecaa345
+future_measurement_research: Not authorized for evaluation until its protocol is frozen
+  and M1 passes.

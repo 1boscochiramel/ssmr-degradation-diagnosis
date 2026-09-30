@@ -1,0 +1,1 @@
+Checked 2026-09-30 03:52: no frozen trace was overwritten by the killed A2 start (0 files newer than m6_runs.csv); all 168 frozen traces are here.

@@ -1,0 +1,28 @@
+{
+  "provenance": "Transcribed by the Claude lane from the MATLAB Online command window (Bosco's account), 2026-09-30 ~02:55-03:00 IST; screenshots in evidence/. Numbers were computed INSIDE MATLAB; the Python traces were typed into MATLAB as integers (H2 x 1e10, ethanol x 1e9) and verified by checksum.",
+  "runtime": "MATLAB 26.1.0.3346988 (R2026a) Update 5, MATLAB Online",
+  "upstream": "github.com/arcmateo/SSMR_Benchmark archive at commit c6280844404cbef38da8a893a095a734bc0d4815 (websave+unzip in MATLAB Drive/ssmr_native)",
+  "patches": "Config lines only (Mode, Disturbance, Dist_time, initial_conditions, t, setpoint_profile, simulation_type) via regexprep on a copy run_<CASE>.m; STEP adds the input step line before the open-loop ode15s call (same as P5). Solver options, model, PID untouched. Plots produced by the script were closed.",
+  "typed_checksums_match": {"STEP": [97785673, 90000000], "CS1": [684339876, 634052688], "CS2T": [271369827, 202221134], "CS2P": [269054345, 211209245]},
+  "wall_seconds": {"CS2T_first": 21.834631},
+  "fresh_session_results": {
+    "note": "Each closed-loop case preceded by `clear control` (resets persistent PID state). STEP is open loop.",
+    "STEP": {"rows": 41, "max_dH2_pct_nominal_vs_python": 0.0145, "at_row": 23, "max_dEtOH_pct_nominal": 0.0000},
+    "CS1":  {"rows": 301, "max_dH2_pct_nominal_vs_python": 0.0347, "at_row": 216, "max_dEtOH_pct_nominal": 0.0149,
+             "IAE_matlab_mol": 7.946054e-05, "IAE_matlab_paper_literal_mol": 7.932138e-05, "IAE_python_same_grid_mol": 7.957252e-05,
+             "IAE_rel_diff_pct": 0.141, "matlab_vs_published_pct": -0.05},
+    "CS2T": {"rows": 101, "max_dH2_pct_nominal_vs_python": 0.0564, "at_row": 80, "max_dEtOH_pct_nominal": 0.0358,
+             "IAE_matlab_mol": 2.344398e-04, "IAE_matlab_paper_literal_mol": 2.267883e-04, "IAE_python_same_grid_mol": 2.344475e-04,
+             "IAE_rel_diff_pct": 0.003, "matlab_vs_published_pct": -10.52, "first_run_vs_fresh_max_abs_dH2": 0.0},
+    "CS2P": {"rows": 101, "max_dH2_pct_nominal_vs_python": 0.0177, "at_row": 6, "max_dEtOH_pct_nominal": 0.0112,
+             "IAE_matlab_mol": 2.249331e-04, "IAE_matlab_paper_literal_mol": 2.177060e-04, "IAE_python_same_grid_mol": 2.249426e-04,
+             "IAE_rel_diff_pct": 0.004, "matlab_vs_published_pct": -9.30}
+  },
+  "contaminated_first_session": {
+    "note": "Cases run back-to-back in one session (CS2T, CS2P, CS1, STEP). control.m keeps integral_error/prev_error as persistent variables and SSMR_simulation.m's `clear` does not reset them, so CS2P and CS1 inherited PID state. Kept as evidence of a reproducibility pitfall; not used for equivalence.",
+    "CS1_IAE_matlab_mol": 9.54977e-05, "CS1_vs_published_pct": 20.12, "CS1_max_dH2_pct": 0.3629,
+    "CS2P_IAE_matlab_mol": 2.27234e-04, "CS2P_max_dH2_pct": 0.2010
+  },
+  "IC_last_rhs_test": "From ICFull/Mode1_np50 with u_ss, one 0.1-min ode15s interval: F_H2 at IC = last-RHS = endpoint = last-RHS without NonNegative = 2.273536482e-04 (10 digits).",
+  "gates_approved_2026_09_30": {"max_dH2_pct_nominal": 0.5, "IAE_rel_diff_pct": 1.0, "max_dEtOH_pct_nominal": 0.5, "paper_IAE_pct": 2.0}
+}

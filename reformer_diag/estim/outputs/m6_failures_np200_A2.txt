@@ -1,0 +1,14 @@
+truth  history  excitation  estimator
+np200  H1       active      EKF                     BOTH
+                            MHE                     BOTH
+                passive     EKF                     BOTH
+                            MHE                     BOTH
+       H2       active      EKF                     BOTH
+                            MHE          NOT_ESTABLISHED
+                passive     EKF                     BOTH
+       H3       active      EKF                     BOTH
+                            MHE                     BOTH
+                passive     EKF                     BOTH
+                            MHE                     BOTH
+       H4       active      EKF                     BOTH
+                passive     EKF                     BOTH

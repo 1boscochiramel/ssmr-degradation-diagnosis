@@ -1,0 +1,30 @@
+{
+  "case": "CS2T_np50_p7",
+  "runtime": "GNU Octave 11.3.0 portable Windows",
+  "is_matlab": false,
+  "command": [
+    "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\runtime\\claude_octave11\\octave-11.3.0-w64\\mingw64\\bin\\octave-cli.exe",
+    "--no-gui",
+    "--quiet",
+    "--eval",
+    "run_case"
+  ],
+  "run_case_sha256": "17e7f144413b36f8d9c159f4a04fcee6b840a14c552582a7bce5bd117bb4383a",
+  "helper_sha256": {
+    "p6_jac.m": "247273e853e3f1ea762f42fef6ce615a975a0fc85332bb99ad11e01fede54b7d",
+    "p6_jacfun.m": "57ff82415e8460ef86ed21721a242cc26c20fc4025f8e3da4aeecdf586fc5107",
+    "p6_pattern.m": "d79c507cbff5de578e7aae31b1adf95a63b0a24cc54901409d6ef463d83238d8"
+  },
+  "upstream_sha256": {
+    "control.m": "3418d6e6ee14156cf2316f384952a894c7a0a916a2a4d987f9a056dc43b040f2",
+    "Parameters.m": "d98d3503968f48a4ff35b0f2d047f9efa7940fbd6f6f46caded79ca41cd7ef03",
+    "Profile.m": "7ef949cda9c90b7794b9935affc548b708f65d172c5dd7cda976c41139c79e27",
+    "SSMR_function.m": "0b8bee30d3a0f32296ad25c2511f164959335e846c14e1397b48ad9c42e15044",
+    "SSMR_simulation.m": "decedfcfacc578166ba2efb2ac0685a4fe9ca4a6dc0f84aed359f83726a59871"
+  },
+  "started": "2026-09-30T01:52:47",
+  "status": "FAILED",
+  "exit_code": 1,
+  "wall_seconds": 751.8,
+  "finished": "2026-09-30T02:05:19"
+}

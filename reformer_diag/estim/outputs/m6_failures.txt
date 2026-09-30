@@ -1,0 +1,43 @@
+truth    history  excitation  estimator
+kinpert  H1       active      EKF                    HEALTHY
+                              MHE                    HEALTHY
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H2       active      MHE            NOT_ESTABLISHED
+                  passive     MHE            NOT_ESTABLISHED
+         H3       active      EKF                    HEALTHY
+                              MHE                    HEALTHY
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H4       active      MHE            NOT_ESTABLISHED
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H7       active      EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+nominal  H1       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H2       active      EKF                       BOTH
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H3       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H4       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H5       active      EKF                   CATALYST
+                  passive     EKF                   CATALYST
+         H6       active      EKF          CATALYST,MEMBRANE
+                              MHE                   MEMBRANE
+                  passive     EKF          CATALYST,MEMBRANE
+                              MHE                   MEMBRANE
+         H7       active      EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                   MEMBRANE

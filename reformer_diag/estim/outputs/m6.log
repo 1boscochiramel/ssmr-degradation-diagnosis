@@ -1,0 +1,221 @@
+nominal H1 passive MHE 1 BOTH False 0.0 nan
+nominal H1 passive MHE 2 BOTH False 0.0 nan
+nominal H1 passive MHE 0 BOTH False 0.0 nan
+nominal H1 passive EKF 2 BOTH False 0.0 nan
+nominal H1 passive EKF 1 BOTH False 0.39 nan
+nominal H1 passive EKF 0 BOTH False 0.0 nan
+nominal H1 active MHE 0 BOTH False 0.0 nan
+nominal H1 active MHE 2 BOTH False 0.0 nan
+nominal H1 active MHE 1 BOTH False 0.0 nan
+nominal H1 active EKF 1 BOTH False 0.34 nan
+nominal H1 active EKF 0 BOTH False 0.0 nan
+nominal H1 active EKF 2 BOTH False 0.0 nan
+nominal H2 passive MHE 2 MEMBRANE True 0.0 6.0
+nominal H2 passive MHE 0 BOTH False 0.0 nan
+nominal H2 passive MHE 1 MEMBRANE True 0.0 45.0
+nominal H2 passive EKF 0 MEMBRANE True 0.17 5.0
+nominal H2 passive EKF 1 BOTH False 0.0 nan
+nominal H2 passive EKF 2 MEMBRANE True 0.8 4.0
+nominal H2 active MHE 0 NOT_ESTABLISHED False 0.0 nan
+nominal H2 active MHE 1 NOT_ESTABLISHED False 0.0 nan
+nominal H2 active MHE 2 NOT_ESTABLISHED False 0.0 nan
+nominal H2 active EKF 0 MEMBRANE True 0.12 5.0
+nominal H2 active EKF 2 MEMBRANE True 0.63 4.0
+nominal H2 active EKF 1 BOTH False 0.0 nan
+nominal H3 passive MHE 0 BOTH False 0.0 nan
+nominal H3 passive MHE 2 BOTH False 0.0 nan
+nominal H3 passive MHE 1 BOTH False 0.0 nan
+nominal H3 passive EKF 0 BOTH False 0.02 nan
+nominal H3 passive EKF 1 BOTH False 0.59 nan
+nominal H3 passive EKF 2 BOTH False 0.0 nan
+nominal H3 active MHE 0 BOTH False 0.0 nan
+nominal H3 active MHE 1 BOTH False 0.0 nan
+nominal H3 active MHE 2 BOTH False 0.0 nan
+nominal H3 active EKF 0 BOTH False 0.05 nan
+nominal H3 active EKF 1 BOTH False 0.56 nan
+nominal H3 active EKF 2 BOTH False 0.0 nan
+nominal H4 passive MHE 1 MEMBRANE True 0.71 31.0
+nominal H4 passive MHE 0 BOTH False 0.63 nan
+nominal H4 passive MHE 2 MEMBRANE True 0.73 30.0
+nominal H4 passive EKF 0 MEMBRANE True 0.93 21.0
+nominal H4 passive EKF 1 BOTH False 0.15 nan
+nominal H4 passive EKF 2 MEMBRANE True 0.88 21.0
+nominal H4 active MHE 1 MEMBRANE True 0.15 55.0
+nominal H4 active MHE 0 BOTH False 0.0 nan
+nominal H4 active MHE 2 BOTH False 0.0 nan
+nominal H4 active EKF 0 BOTH False 0.0 nan
+nominal H4 active EKF 1 BOTH False 0.0 nan
+nominal H4 active EKF 2 MEMBRANE True 0.61 33.0
+nominal H5 passive MHE 1 HEALTHY True 1.0 1.0
+nominal H5 passive MHE 0 HEALTHY True 1.0 1.0
+nominal H5 passive MHE 2 HEALTHY True 1.0 1.0
+nominal H5 passive EKF 0 HEALTHY True 0.54 1.0
+nominal H5 passive EKF 1 CATALYST False 0.0 nan
+nominal H5 passive EKF 2 HEALTHY True 0.93 1.0
+nominal H5 active MHE 1 HEALTHY True 1.0 1.0
+nominal H5 active MHE 0 HEALTHY True 1.0 1.0
+nominal H5 active EKF 0 HEALTHY True 0.63 1.0
+nominal H5 active EKF 1 CATALYST False 0.0 nan
+nominal H5 active MHE 2 HEALTHY True 1.0 1.0
+nominal H5 active EKF 2 HEALTHY True 0.95 1.0
+nominal H6 passive MHE 1 MEMBRANE False 0.66 nan
+nominal H6 passive MHE 0 NOT_ESTABLISHED True 0.51 1.0
+nominal H6 passive MHE 2 MEMBRANE False 0.34 nan
+nominal H6 passive EKF 0 NOT_ESTABLISHED True 0.02 1.0
+nominal H6 passive EKF 1 CATALYST False 0.0 nan
+nominal H6 passive EKF 2 MEMBRANE False 0.0 nan
+nominal H6 active MHE 0 NOT_ESTABLISHED True 0.44 58.0
+nominal H6 active MHE 1 MEMBRANE False 0.56 nan
+nominal H6 active EKF 0 NOT_ESTABLISHED True 0.07 1.0
+nominal H6 active EKF 1 CATALYST False 0.0 nan
+nominal H6 active MHE 2 MEMBRANE False 0.34 nan
+nominal H6 active EKF 2 MEMBRANE False 0.05 nan
+nominal H7 passive MHE 0 BOTH True 0.0 22.0
+nominal H7 passive MHE 1 BOTH True 0.0 34.0
+nominal H7 passive MHE 2 BOTH True 0.0 35.0
+nominal H7 passive EKF 0 BOTH True 0.1 25.0
+nominal H7 passive EKF 1 BOTH True 0.1 9.0
+nominal H7 passive EKF 2 MEMBRANE False 0.0 nan
+nominal H7 active MHE 1 NOT_ESTABLISHED False 0.0 nan
+nominal H7 active MHE 0 BOTH True 0.0 60.0
+nominal H7 active MHE 2 BOTH True 0.0 57.0
+nominal H7 active EKF 0 BOTH True 0.07 24.0
+nominal H7 active EKF 1 BOTH True 0.15 9.0
+kinpert H1 passive MHE 0 HEALTHY False 0.0 nan
+nominal H7 active EKF 2 MEMBRANE False 0.0 nan
+kinpert H1 passive MHE 1 HEALTHY False 0.0 nan
+kinpert H1 passive MHE 2 HEALTHY False 0.0 nan
+kinpert H1 passive EKF 0 HEALTHY False 0.0 nan
+kinpert H1 passive EKF 1 HEALTHY False 0.0 nan
+kinpert H1 passive EKF 2 HEALTHY False 0.0 nan
+kinpert H1 active MHE 0 HEALTHY False 0.0 nan
+kinpert H1 active MHE 1 HEALTHY False 0.0 nan
+kinpert H1 active MHE 2 HEALTHY False 0.0 nan
+kinpert H1 active EKF 0 HEALTHY False 0.0 nan
+kinpert H1 active EKF 1 HEALTHY False 0.0 nan
+kinpert H1 active EKF 2 HEALTHY False 0.0 nan
+kinpert H2 passive MHE 0 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 passive MHE 1 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 passive MHE 2 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 passive EKF 0 MEMBRANE True 0.0 20.0
+kinpert H2 passive EKF 1 MEMBRANE True 0.0 20.0
+kinpert H2 passive EKF 2 MEMBRANE True 0.0 20.0
+kinpert H2 active MHE 0 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 active MHE 1 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 active MHE 2 NOT_ESTABLISHED False 0.0 nan
+kinpert H2 active EKF 0 MEMBRANE True 0.0 17.0
+kinpert H2 active EKF 1 MEMBRANE True 0.0 18.0
+kinpert H3 passive MHE 0 HEALTHY False 0.0 nan
+kinpert H3 passive MHE 1 HEALTHY False 0.0 nan
+kinpert H2 active EKF 2 MEMBRANE True 0.0 17.0
+kinpert H3 passive MHE 2 HEALTHY False 0.0 nan
+kinpert H3 passive EKF 0 HEALTHY False 0.0 nan
+kinpert H3 passive EKF 1 HEALTHY False 0.0 nan
+kinpert H3 passive EKF 2 HEALTHY False 0.0 nan
+kinpert H3 active MHE 0 HEALTHY False 0.0 nan
+kinpert H3 active MHE 1 HEALTHY False 0.0 nan
+kinpert H3 active MHE 2 HEALTHY False 0.0 nan
+kinpert H3 active EKF 0 HEALTHY False 0.0 nan
+kinpert H3 active EKF 1 HEALTHY False 0.0 nan
+kinpert H3 active EKF 2 HEALTHY False 0.0 nan
+kinpert H4 passive MHE 0 HEALTHY False 0.0 nan
+kinpert H4 passive MHE 1 HEALTHY False 0.0 nan
+kinpert H4 passive MHE 2 HEALTHY False 0.0 nan
+kinpert H4 passive EKF 0 HEALTHY False 0.0 nan
+kinpert H4 passive EKF 1 HEALTHY False 0.0 nan
+kinpert H4 passive EKF 2 MEMBRANE True 0.0 60.0
+kinpert H4 active MHE 1 NOT_ESTABLISHED False 0.0 nan
+kinpert H4 active MHE 0 NOT_ESTABLISHED False 0.0 nan
+kinpert H4 active MHE 2 NOT_ESTABLISHED False 0.0 nan
+kinpert H4 active EKF 0 MEMBRANE True 0.0 56.0
+kinpert H4 active EKF 1 MEMBRANE True 0.0 55.0
+kinpert H4 active EKF 2 MEMBRANE True 0.0 55.0
+kinpert H5 passive MHE 0 HEALTHY True 1.0 1.0
+kinpert H5 passive MHE 1 HEALTHY True 1.0 1.0
+kinpert H5 passive MHE 2 HEALTHY True 1.0 1.0
+kinpert H5 passive EKF 0 HEALTHY True 0.8 10.0
+kinpert H5 passive EKF 1 HEALTHY True 0.76 16.0
+kinpert H5 passive EKF 2 HEALTHY True 0.78 10.0
+kinpert H5 active MHE 0 HEALTHY True 1.0 1.0
+kinpert H5 active MHE 1 HEALTHY True 1.0 1.0
+kinpert H5 active MHE 2 HEALTHY True 1.0 1.0
+kinpert H5 active EKF 0 HEALTHY True 0.78 10.0
+kinpert H5 active EKF 1 HEALTHY True 0.66 16.0
+kinpert H5 active EKF 2 HEALTHY True 0.78 13.0
+kinpert H6 passive MHE 0 HEALTHY True 1.0 1.0
+kinpert H6 passive MHE 1 HEALTHY True 1.0 1.0
+kinpert H6 passive MHE 2 HEALTHY True 1.0 1.0
+kinpert H6 passive EKF 0 HEALTHY True 0.8 10.0
+kinpert H6 passive EKF 1 HEALTHY True 0.76 16.0
+kinpert H6 passive EKF 2 HEALTHY True 0.78 10.0
+kinpert H6 active MHE 0 HEALTHY True 1.0 1.0
+kinpert H6 active MHE 1 HEALTHY True 1.0 1.0
+kinpert H6 active MHE 2 HEALTHY True 1.0 1.0
+kinpert H6 active EKF 1 HEALTHY True 0.68 16.0
+kinpert H6 active EKF 0 HEALTHY True 0.8 10.0
+kinpert H6 active EKF 2 HEALTHY True 0.78 13.0
+kinpert H7 passive MHE 1 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 passive MHE 0 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 passive MHE 2 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 passive EKF 0 MEMBRANE False 0.0 nan
+kinpert H7 passive EKF 1 MEMBRANE False 0.0 nan
+kinpert H7 passive EKF 2 MEMBRANE False 0.0 nan
+kinpert H7 active MHE 0 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 active MHE 1 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 active MHE 2 NOT_ESTABLISHED False 0.0 nan
+kinpert H7 active EKF 0 MEMBRANE False 0.0 nan
+kinpert H7 active EKF 1 MEMBRANE False 0.0 nan
+kinpert H7 active EKF 2 MEMBRANE False 0.0 nan
+     truth excitation estimator  accuracy  calibration  median_time
+0  kinpert     active       EKF  0.571429     0.213705         16.5
+1  kinpert     active       MHE  0.285714     0.285714          1.0
+2  kinpert    passive       EKF  0.476190     0.222997         16.0
+3  kinpert    passive       MHE  0.285714     0.285714          1.0
+4  nominal     active       EKF  0.380952     0.202091          4.5
+5  nominal     active       MHE  0.333333     0.213705         55.0
+6  nominal    passive       EKF  0.428571     0.267131          5.0
+7  nominal    passive       MHE  0.523810     0.313589         22.0
+FAILURES (kept):
+truth    history  excitation  estimator
+kinpert  H1       active      EKF                    HEALTHY
+                              MHE                    HEALTHY
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H2       active      MHE            NOT_ESTABLISHED
+                  passive     MHE            NOT_ESTABLISHED
+         H3       active      EKF                    HEALTHY
+                              MHE                    HEALTHY
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H4       active      MHE            NOT_ESTABLISHED
+                  passive     EKF                    HEALTHY
+                              MHE                    HEALTHY
+         H7       active      EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+nominal  H1       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H2       active      EKF                       BOTH
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H3       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H4       active      EKF                       BOTH
+                              MHE                       BOTH
+                  passive     EKF                       BOTH
+                              MHE                       BOTH
+         H5       active      EKF                   CATALYST
+                  passive     EKF                   CATALYST
+         H6       active      EKF          CATALYST,MEMBRANE
+                              MHE                   MEMBRANE
+                  passive     EKF          CATALYST,MEMBRANE
+                              MHE                   MEMBRANE
+         H7       active      EKF                   MEMBRANE
+                              MHE            NOT_ESTABLISHED
+                  passive     EKF                   MEMBRANE

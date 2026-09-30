@@ -1,0 +1,42 @@
+{
+  "mode": 1,
+  "u_cmd": 0.0021,
+  "move": 0.0003,
+  "H2_drop_frac": 0.05,
+  "theta": {
+    "C": 0.6731925672038667,
+    "M": 0.9488164842195013,
+    "F": 0.9622564615152633,
+    "S_mol_min": -1.1367682411410013e-05
+  },
+  "actions": {
+    "C": "COMPENSATE",
+    "M": "COMPENSATE",
+    "F": "COMPENSATE",
+    "S": "RECALIBRATE"
+  },
+  "u_required": {
+    "C": 0.0021851011114806355,
+    "M": 0.00218836851320164,
+    "F": 0.002182372998891724
+  },
+  "membrane_equivalent_rate_per_min": 0.001337262417853697,
+  "move_cost_ethanol_mol": 0.0018,
+  "move_H2_extra_mol_min_under_C": 3.740816976037815e-05,
+  "move_H2_extra_mol_min_under_M": 3.602234362501844e-05
+}
+truth_C_S1 E5: declare C | E5: declare C {'E5': {'C': 0.0, 'M': 36.32}, 'E10': {'C': 0.0, 'M': 54.22}}
+truth_C_S2 E5: declare C | E5: declare C {'E5': {'C': 0.0, 'M': 36.32}, 'E10': {'C': 0.0, 'M': 54.22}}
+truth_C_S3 E5: declare C | E5: declare C {'E5': {'C': 0.0, 'M': 36.93}, 'E10': {'C': 0.0, 'M': 55.15}}
+truth_C_S4 E5: declare C | E5: declare C {'E5': {'C': 0.0, 'M': 52.68}, 'E10': {'C': 0.0, 'M': 71.14}}
+truth_M_S1 E5: declare M | E5: declare M {'E5': {'C': 45.32, 'M': 0.0}, 'E10': {'C': 67.94, 'M': 0.0}}
+truth_M_S2 E5: declare M | E5: declare M {'E5': {'C': 45.32, 'M': 0.0}, 'E10': {'C': 67.94, 'M': 0.0}}
+truth_M_S3 E5: declare M | E5: declare M {'E5': {'C': 46.05, 'M': 0.0}, 'E10': {'C': 69.07, 'M': 0.0}}
+truth_M_S4 E5: declare M | E5: declare M {'E5': {'C': 66.04, 'M': 0.0}, 'E10': {'C': 91.82, 'M': 0.0}}
+H2_mol_min     resid/sd    +0.000 after-bias   0.000  move-resid/sd   +7.038
+T_out_K        resid/sd    +0.002 after-bias   0.000  move-resid/sd   -0.032
+waste_m3_min   resid/sd    -0.623 after-bias   0.000  move-resid/sd   -0.789
+y_H2           resid/sd    -2.169 after-bias   0.169  move-resid/sd   -0.155
+y_CH4          resid/sd    +3.532 after-bias   2.127  move-resid/sd   +0.458
+y_CO           resid/sd    -1.363 after-bias   0.764  move-resid/sd   -0.376
+y_CO2          resid/sd    -0.510 after-bias   0.000  move-resid/sd   +0.155

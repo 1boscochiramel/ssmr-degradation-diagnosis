@@ -1,0 +1,81 @@
+{
+  "case": "STEP",
+  "protocol_sha256": "4acaea47e627d99d31ee57a6bfb1dc5eb51fc0630537d12ae09f6306c7af3c8d",
+  "config_sha256": "1a6a53e783ae4d5a035a7b23f1df458c931efc9b39fd50edce65fe779702a866",
+  "scope": "Python simulation of pinned code; no physical validation",
+  "solver": {
+    "nfev": 690,
+    "njev": 41,
+    "nlu": 160,
+    "accepted_min": 6.868972336974192e-13,
+    "ic": "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\upstream\\SSMR_simulator\\ICFull\\Mode1_np50.mat",
+    "wall_seconds": 30.63705929997377
+  },
+  "dynamics": {
+    "start": [
+      0.15,
+      0.25
+    ],
+    "delay_min": 0.2034650268727802,
+    "tau_min": 0.05047303495919385,
+    "cost": 0.07334450603633234,
+    "success": true,
+    "all_starts": [
+      {
+        "start": [
+          0.15,
+          0.25
+        ],
+        "delay_min": 0.2034650268727802,
+        "tau_min": 0.05047303495919385,
+        "cost": 0.07334450603633234,
+        "success": true
+      },
+      {
+        "start": [
+          0.05,
+          0.05
+        ],
+        "delay_min": 0.2034650266019932,
+        "tau_min": 0.05047303552357654,
+        "cost": 0.0733445060363328,
+        "success": true
+      },
+      {
+        "start": [
+          0.3,
+          0.5
+        ],
+        "delay_min": 0.20346502682480377,
+        "tau_min": 0.05047303503712535,
+        "cost": 0.07334450603633245,
+        "success": true
+      }
+    ],
+    "published_tau_min": 0.25,
+    "published_delay_min": 0.15,
+    "tau_deviation_pct": 79.81078601632245,
+    "delay_deviation_pct": 35.64335124852014,
+    "fit_rmse_mol_min": 7.260188735972191e-07,
+    "fit_max_residual_mol_min": 4.775571939377227e-06,
+    "bound_contact": false,
+    "status": "FAIL_DYNAMICS_REFERENCE_AMBIGUITY"
+  },
+  "trajectory_display": {
+    "max_absolute_deviation_mol_min": 2.677624157766307e-05,
+    "max_nominal_deviation_pct": 11.777334719276137,
+    "reference_uncertainty_bound_mol_min": 1.0934617687374872e-08,
+    "status": "FAIL",
+    "samples_compared": 40,
+    "time_definition": "upstream display labels and last RHS output"
+  },
+  "trajectory_physical": {
+    "max_absolute_deviation_mol_min": 2.490278057158148e-06,
+    "max_nominal_deviation_pct": 1.0953306549073902,
+    "reference_uncertainty_bound_mol_min": 1.0934617687374872e-08,
+    "status": "PASS",
+    "samples_compared": 39,
+    "time_definition": "physical accepted endpoints"
+  },
+  "execution_status": "COMPLETED_CASE_NOT_M1_ACCEPTANCE"
+}

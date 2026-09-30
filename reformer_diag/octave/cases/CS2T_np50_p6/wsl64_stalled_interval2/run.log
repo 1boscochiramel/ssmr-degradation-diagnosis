@@ -1,0 +1,16 @@
+warning: load: '/mnt/c/Users/Admin/Desktop/WHEC/reformer_benchmark/upstream/SSMR_simulator/ICH2O/Mode2_np50_H2O.mat' found by searching load path
+warning: called from
+    run_case at line 89 column 1
+
+warning: load: '/mnt/c/Users/Admin/Desktop/WHEC/reformer_benchmark/upstream/SSMR_simulator/ICFull/Mode2_np50.mat' found by searching load path
+warning: called from
+    p6_pattern at line 12 column 5
+    run_case at line 101 column 12
+
+warning: load: '/mnt/c/Users/Admin/Desktop/WHEC/reformer_benchmark/upstream/SSMR_simulator/ICH2O/Mode2_np50_H2O.mat' found by searching load path
+warning: called from
+    p6_pattern at line 12 column 5
+    run_case at line 101 column 12
+
+P6 pattern: nnz 104224, colours 244
+ROW 1 0 0 0.00027637899999999999 11.6

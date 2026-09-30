@@ -1,0 +1,425 @@
+{
+  "mode1_scale0.5_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale0.5_S1+E": {
+    "H2_shortfall_avoided_mol_min": 2.1397498588653295e-06,
+    "ethanol_excess_avoided_mol_min": 2.19660714507011e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 14,
+      "DIFFERENT_ACTION": 5
+    }
+  },
+  "mode1_scale0.5_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale0.5_S2+E": {
+    "H2_shortfall_avoided_mol_min": 2.1397498588653295e-06,
+    "ethanol_excess_avoided_mol_min": 2.1966071481466203e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 14,
+      "DIFFERENT_ACTION": 5
+    }
+  },
+  "mode1_scale0.5_S3": {
+    "H2_shortfall_avoided_mol_min": 1.1340928772524393e-07,
+    "ethanol_excess_avoided_mol_min": 3.7253060793657457e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 16,
+      "DISTINGUISHABLE": 3
+    }
+  },
+  "mode1_scale0.5_S3+E": {
+    "H2_shortfall_avoided_mol_min": 2.1397498588653295e-06,
+    "ethanol_excess_avoided_mol_min": 2.2213931555921803e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 14,
+      "DIFFERENT_ACTION": 5
+    }
+  },
+  "mode1_scale0.5_S4": {
+    "H2_shortfall_avoided_mol_min": 8.014671088813386e-07,
+    "ethanol_excess_avoided_mol_min": 6.2424555238937795e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 13,
+      "DISTINGUISHABLE": 6
+    }
+  },
+  "mode1_scale0.5_S4+E": {
+    "H2_shortfall_avoided_mol_min": 2.259418930874909e-06,
+    "ethanol_excess_avoided_mol_min": 2.2974747389134014e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 16,
+      "DIFFERENT_ACTION": 3
+    }
+  },
+  "mode1_scale1.0_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale1.0_S1+E": {
+    "H2_shortfall_avoided_mol_min": 2.0998586253367174e-06,
+    "ethanol_excess_avoided_mol_min": 2.0946246639369297e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 11,
+      "DIFFERENT_ACTION": 8
+    }
+  },
+  "mode1_scale1.0_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale1.0_S2+E": {
+    "H2_shortfall_avoided_mol_min": 2.0998586253367174e-06,
+    "ethanol_excess_avoided_mol_min": 2.094624672772565e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 11,
+      "DIFFERENT_ACTION": 8
+    }
+  },
+  "mode1_scale1.0_S3": {
+    "H2_shortfall_avoided_mol_min": 5.122799658251336e-07,
+    "ethanol_excess_avoided_mol_min": 3.2289113987783807e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 17,
+      "DISTINGUISHABLE": 2
+    }
+  },
+  "mode1_scale1.0_S3+E": {
+    "H2_shortfall_avoided_mol_min": 2.0998586253367174e-06,
+    "ethanol_excess_avoided_mol_min": 2.29510370376875e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 12,
+      "DIFFERENT_ACTION": 7
+    }
+  },
+  "mode1_scale1.0_S4": {
+    "H2_shortfall_avoided_mol_min": 8.612970163101112e-07,
+    "ethanol_excess_avoided_mol_min": 5.8052074003868235e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 14,
+      "DISTINGUISHABLE": 5
+    }
+  },
+  "mode1_scale1.0_S4+E": {
+    "H2_shortfall_avoided_mol_min": 2.0998586253367174e-06,
+    "ethanol_excess_avoided_mol_min": 2.2951087147235803e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DISTINGUISHABLE": 12,
+      "DIFFERENT_ACTION": 7
+    }
+  },
+  "mode1_scale2.0_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale2.0_S1+E": {
+    "H2_shortfall_avoided_mol_min": 1.5613709441757962e-06,
+    "ethanol_excess_avoided_mol_min": 2.2544969327087746e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DIFFERENT_ACTION": 11,
+      "DISTINGUISHABLE": 8
+    }
+  },
+  "mode1_scale2.0_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 19
+    }
+  },
+  "mode1_scale2.0_S2+E": {
+    "H2_shortfall_avoided_mol_min": 1.5613709441757962e-06,
+    "ethanol_excess_avoided_mol_min": 2.2544969433125632e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DIFFERENT_ACTION": 11,
+      "DISTINGUISHABLE": 8
+    }
+  },
+  "mode1_scale2.0_S3": {
+    "H2_shortfall_avoided_mol_min": 3.1284385534500133e-07,
+    "ethanol_excess_avoided_mol_min": 2.6315789473684207e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 18,
+      "DISTINGUISHABLE": 1
+    }
+  },
+  "mode1_scale2.0_S3+E": {
+    "H2_shortfall_avoided_mol_min": 1.5613709441757962e-06,
+    "ethanol_excess_avoided_mol_min": 2.2545352945144545e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DIFFERENT_ACTION": 11,
+      "DISTINGUISHABLE": 8
+    }
+  },
+  "mode1_scale2.0_S4": {
+    "H2_shortfall_avoided_mol_min": 4.125619105842256e-07,
+    "ethanol_excess_avoided_mol_min": 4.908061270603061e-06,
+    "unnecessary_interventions_avoided": 0.043859649122807015,
+    "regions": {
+      "DIFFERENT_ACTION": 17,
+      "DISTINGUISHABLE": 2
+    }
+  },
+  "mode1_scale2.0_S4+E": {
+    "H2_shortfall_avoided_mol_min": 1.4616513460774629e-06,
+    "ethanol_excess_avoided_mol_min": 2.254601821633029e-05,
+    "unnecessary_interventions_avoided": 0.07017543859649122,
+    "regions": {
+      "DIFFERENT_ACTION": 11,
+      "DISTINGUISHABLE": 8
+    }
+  },
+  "mode2_scale0.5_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale0.5_S1+E": {
+    "H2_shortfall_avoided_mol_min": 4.682976060728477e-06,
+    "ethanol_excess_avoided_mol_min": 1.2294597661198182e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DISTINGUISHABLE": 8,
+      "SAME_ACTION": 4
+    }
+  },
+  "mode2_scale0.5_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale0.5_S2+E": {
+    "H2_shortfall_avoided_mol_min": 4.682976060728477e-06,
+    "ethanol_excess_avoided_mol_min": 1.2294597661198182e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DISTINGUISHABLE": 8,
+      "SAME_ACTION": 4
+    }
+  },
+  "mode2_scale0.5_S3": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale0.5_S3+E": {
+    "H2_shortfall_avoided_mol_min": 4.682976060728477e-06,
+    "ethanol_excess_avoided_mol_min": 1.2294597661198182e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DISTINGUISHABLE": 8,
+      "SAME_ACTION": 4
+    }
+  },
+  "mode2_scale0.5_S4": {
+    "H2_shortfall_avoided_mol_min": 1.9192348906921007e-07,
+    "ethanol_excess_avoided_mol_min": 1.1576086807867412e-06,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 11,
+      "DISTINGUISHABLE": 1
+    }
+  },
+  "mode2_scale0.5_S4+E": {
+    "H2_shortfall_avoided_mol_min": 4.682976060728477e-06,
+    "ethanol_excess_avoided_mol_min": 1.2294597661198182e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DISTINGUISHABLE": 8,
+      "SAME_ACTION": 4
+    }
+  },
+  "mode2_scale1.0_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale1.0_S1+E": {
+    "H2_shortfall_avoided_mol_min": 4.606217396960787e-06,
+    "ethanol_excess_avoided_mol_min": 1.275514055493131e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "SAME_ACTION": 5,
+      "DISTINGUISHABLE": 5,
+      "DIFFERENT_ACTION": 2
+    }
+  },
+  "mode2_scale1.0_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale1.0_S2+E": {
+    "H2_shortfall_avoided_mol_min": 4.606217396960787e-06,
+    "ethanol_excess_avoided_mol_min": 1.2755140739286228e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "SAME_ACTION": 5,
+      "DISTINGUISHABLE": 5,
+      "DIFFERENT_ACTION": 2
+    }
+  },
+  "mode2_scale1.0_S3": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale1.0_S3+E": {
+    "H2_shortfall_avoided_mol_min": 4.606217396960787e-06,
+    "ethanol_excess_avoided_mol_min": 1.2755152243626725e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "SAME_ACTION": 5,
+      "DISTINGUISHABLE": 5,
+      "DIFFERENT_ACTION": 2
+    }
+  },
+  "mode2_scale1.0_S4": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 4.188636410981963e-07,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale1.0_S4+E": {
+    "H2_shortfall_avoided_mol_min": 4.606217396960787e-06,
+    "ethanol_excess_avoided_mol_min": 1.2755165751017045e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DISTINGUISHABLE": 6,
+      "SAME_ACTION": 4,
+      "DIFFERENT_ACTION": 2
+    }
+  },
+  "mode2_scale2.0_S1": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale2.0_S1+E": {
+    "H2_shortfall_avoided_mol_min": 4.375927990833546e-06,
+    "ethanol_excess_avoided_mol_min": 1.3482852705049776e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 5,
+      "DISTINGUISHABLE": 4,
+      "SAME_ACTION": 3
+    }
+  },
+  "mode2_scale2.0_S2": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale2.0_S2+E": {
+    "H2_shortfall_avoided_mol_min": 4.375927990833546e-06,
+    "ethanol_excess_avoided_mol_min": 1.3482853076151736e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 5,
+      "DISTINGUISHABLE": 4,
+      "SAME_ACTION": 3
+    }
+  },
+  "mode2_scale2.0_S3": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 0.0,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale2.0_S3+E": {
+    "H2_shortfall_avoided_mol_min": 4.375927990833546e-06,
+    "ethanol_excess_avoided_mol_min": 1.348287603557563e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 5,
+      "DISTINGUISHABLE": 4,
+      "SAME_ACTION": 3
+    }
+  },
+  "mode2_scale2.0_S4": {
+    "H2_shortfall_avoided_mol_min": 0.0,
+    "ethanol_excess_avoided_mol_min": 4.460603604492409e-07,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 12
+    }
+  },
+  "mode2_scale2.0_S4+E": {
+    "H2_shortfall_avoided_mol_min": 4.375927990833546e-06,
+    "ethanol_excess_avoided_mol_min": 1.3482902990224585e-05,
+    "unnecessary_interventions_avoided": 0.0,
+    "regions": {
+      "DIFFERENT_ACTION": 5,
+      "DISTINGUISHABLE": 4,
+      "SAME_ACTION": 3
+    }
+  }
+}

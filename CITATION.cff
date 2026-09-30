@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the original benchmark."
+title: "SSMR degradation diagnosis: when is knowing the cause worth the measurement?"
+version: 0.1.0-draft
+date-released: 2026-09-30
+authors:
+  - family-names: Chiramel
+    given-names: Bosco
+license: MIT
+references:
+  - type: article
+    title: "A benchmark simulator for advanced control of ethanol steam reforming"
+    authors:
+      - family-names: Arcila-Osorio
+        given-names: Mateo
+      - family-names: Destro
+        given-names: Francesco
+      - family-names: Ocampo-Martinez
+        given-names: Carlos
+      - family-names: Llorca
+        given-names: Jordi
+      - family-names: Braatz
+        given-names: Richard D.
+    journal: "Renewable Energy"
+    volume: 256
+    start: 124743
+    year: 2026
+    doi: 10.1016/j.renene.2025.124743

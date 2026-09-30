@@ -1,0 +1,51 @@
+{
+  "start": [
+    0.05,
+    0.05
+  ],
+  "delay_min": 0.19308318170235164,
+  "tau_min": 0.05116719179292274,
+  "cost": 0.07301377484024438,
+  "success": true,
+  "all_starts": [
+    {
+      "start": [
+        0.15,
+        0.25
+      ],
+      "delay_min": 0.1930831819302678,
+      "tau_min": 0.0511671913282975,
+      "cost": 0.0730137748402444,
+      "success": true
+    },
+    {
+      "start": [
+        0.05,
+        0.05
+      ],
+      "delay_min": 0.19308318170235164,
+      "tau_min": 0.05116719179292274,
+      "cost": 0.07301377484024438,
+      "success": true
+    },
+    {
+      "start": [
+        0.3,
+        0.5
+      ],
+      "delay_min": 0.19308318173323008,
+      "tau_min": 0.05116719174416625,
+      "cost": 0.07301377484024443,
+      "success": true
+    }
+  ],
+  "published_tau_min": 0.25,
+  "published_delay_min": 0.15,
+  "tau_deviation_pct": 79.53312328283091,
+  "delay_deviation_pct": 28.722121134901098,
+  "fit_rmse_mol_min": 7.24356138447643e-07,
+  "fit_max_residual_mol_min": 4.933487840712666e-06,
+  "bound_contact": false,
+  "status": "FAIL_DYNAMICS_REFERENCE_AMBIGUITY",
+  "scope": "Post-failure diagnostic: same frozen extraction method applied to digitised paper curve; not a second process simulation or changed acceptance target."
+}

@@ -1,0 +1,118 @@
+{
+  "CS1_np50_p6/wsl64": {
+    "case": "CS1",
+    "np": 50,
+    "variant": "p6",
+    "runtime": "wsl64",
+    "rows": 301,
+    "vs_paper": {
+      "published_iae_mol": 7.95e-05,
+      "conventional_iae_mol": 7.880355484940128e-05,
+      "paper_literal_iae_mol": 7.869186158411663e-05,
+      "relative_deviation_pct": 0.8760316359732195,
+      "status": "PASS",
+      "paper_literal_deviation_pct": 1.0165263092872525
+    },
+    "vs_python": {
+      "CS1": {
+        "rows_compared": 301,
+        "rows_a": 301,
+        "rows_b": 301,
+        "max_abs_dH2_mol_min": 2.7259710788299493e-07,
+        "max_dH2_pct_nominal": 0.11989985128169943,
+        "max_abs_dEtOH_mol_min": 1.4908172211434458e-06,
+        "max_dEtOH_pct_nominal": 0.07099129624492599,
+        "max_rel_dH2_pct": 0.12638719352726926,
+        "iae_a_mol": 7.880355484940128e-05,
+        "iae_b_mol": 7.957258858120678e-05,
+        "iae_rel_diff_pct": 0.966455591702496,
+        "proposed_gate": "PASS"
+      }
+    },
+    "vs_wrapper_octave": {
+      "native_outputs_jacobian_v2": {
+        "rows_compared": 301,
+        "rows_a": 301,
+        "rows_b": 301,
+        "max_abs_dH2_mol_min": 2.7689215153790304e-07,
+        "max_dH2_pct_nominal": 0.12178899493208963,
+        "max_abs_dEtOH_mol_min": 3.867488574662778e-07,
+        "max_dEtOH_pct_nominal": 0.018416612260298944,
+        "max_rel_dH2_pct": 0.14490772856357922,
+        "iae_a_mol": 7.880355484940128e-05,
+        "iae_b_mol": 7.884428171180183e-05,
+        "iae_rel_diff_pct": 0.05165480808032618,
+        "proposed_gate": "PASS"
+      }
+    }
+  },
+  "STEP_np50_p6/wsl64": {
+    "case": "STEP",
+    "np": 50,
+    "variant": "p6",
+    "runtime": "wsl64",
+    "rows": 41,
+    "step_63pct_display_time_min": 2.162450246898595,
+    "step_63pct_note": "Linear interpolation on 0.1-min display samples; y_output(k) is labelled time (k-1)*t_s as in upstream plots. Coarse; not the dense FOPDT fit.",
+    "vs_python": {
+      "STEP": {
+        "rows_compared": 40,
+        "rows_a": 41,
+        "rows_b": 40,
+        "max_abs_dH2_mol_min": 1.2874429438498554e-06,
+        "max_dH2_pct_nominal": 0.5662723962850249,
+        "max_abs_dEtOH_mol_min": 0.0,
+        "max_dEtOH_pct_nominal": 0.0,
+        "max_rel_dH2_pct": 0.5546233863803419,
+        "iae_a_mol": 6.67569025601859e-05,
+        "iae_b_mol": 6.6544288874574e-05,
+        "iae_rel_diff_pct": 0.3195070369038563,
+        "proposed_gate": "FAIL"
+      },
+      "STEP_BDF_tight": {
+        "rows_compared": 40,
+        "rows_a": 41,
+        "rows_b": 40,
+        "max_abs_dH2_mol_min": 1.2545780057621073e-06,
+        "max_dH2_pct_nominal": 0.5518169927787095,
+        "max_abs_dEtOH_mol_min": 0.0,
+        "max_dEtOH_pct_nominal": 0.0,
+        "max_rel_dH2_pct": 0.540388842161221,
+        "iae_a_mol": 6.67569025601859e-05,
+        "iae_b_mol": 6.654380858438764e-05,
+        "iae_rel_diff_pct": 0.3202311083953423,
+        "proposed_gate": "FAIL"
+      },
+      "STEP_Radau_tight": {
+        "rows_compared": 40,
+        "rows_a": 41,
+        "rows_b": 40,
+        "max_abs_dH2_mol_min": 1.2548275873505493e-06,
+        "max_dH2_pct_nominal": 0.5519267694214965,
+        "max_abs_dEtOH_mol_min": 0.0,
+        "max_dEtOH_pct_nominal": 0.0,
+        "max_rel_dH2_pct": 0.5404969263769177,
+        "iae_a_mol": 6.67569025601859e-05,
+        "iae_b_mol": 6.654382149745977e-05,
+        "iae_rel_diff_pct": 0.3202116408872996,
+        "proposed_gate": "FAIL"
+      }
+    },
+    "vs_wrapper_octave": {
+      "native_outputs_jacobian_v2": {
+        "rows_compared": 40,
+        "rows_a": 41,
+        "rows_b": 40,
+        "max_abs_dH2_mol_min": 1.2480212401653871e-06,
+        "max_dH2_pct_nominal": 0.5489330472150862,
+        "max_abs_dEtOH_mol_min": 0.0,
+        "max_dEtOH_pct_nominal": 0.0,
+        "max_rel_dH2_pct": 0.5375494416452306,
+        "iae_a_mol": 6.67569025601859e-05,
+        "iae_b_mol": 6.663508810078837e-05,
+        "iae_rel_diff_pct": 0.18280828144667485,
+        "proposed_gate": "FAIL"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "Report fidelity, not M1 scientific acceptance",
+  "pass": true,
+  "checks": [
+    {
+      "check": "acceptance.py unchanged",
+      "pass": true
+    },
+    {
+      "check": "config.yaml unchanged",
+      "pass": true
+    },
+    {
+      "check": "protocol_2026-09-29_M1.md unchanged",
+      "pass": true
+    },
+    {
+      "check": "time constant regenerated",
+      "pass": true
+    },
+    {
+      "check": "trajectory_display regenerated",
+      "pass": true
+    },
+    {
+      "check": "trajectory_physical regenerated",
+      "pass": true
+    },
+    {
+      "check": "failed time-constant gate retained",
+      "pass": true
+    },
+    {
+      "check": "other baseline cases not fabricated",
+      "pass": true
+    },
+    {
+      "check": "printed tau matches output",
+      "pass": true
+    },
+    {
+      "check": "printed trajectory difference matches output",
+      "pass": true
+    },
+    {
+      "check": "paper-curve diagnostic regenerated",
+      "pass": true
+    }
+  ],
+  "M1_status": "FAILED_OR_UNRESOLVED",
+  "quoted_values": {
+    "python_tau_min": 0.05047303495919385,
+    "physical_endpoint_deviation_pct": 1.0953306549073902,
+    "paper_curve_tau_min": 0.05116719179292274
+  }
+}

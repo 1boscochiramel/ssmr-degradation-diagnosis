@@ -1,0 +1,48 @@
+{
+  "run": "CS2T_Radau_tight",
+  "case": "CS2T",
+  "numerical_domain_extension": true,
+  "settings": {
+    "method": "Radau",
+    "rtol": 1e-06,
+    "atol": 1e-07,
+    "max_step_min": 0.05,
+    "sample_min": 0.1,
+    "dense_sample_min": 0.005
+  },
+  "model_sha256": "865e48ca3cbfee6169291c1b2749dda3196817b8aaeacb0212218f0c883f0da6",
+  "scope": "Python simulation; no native equivalence or physical validation",
+  "solver": {
+    "nfev": 10175,
+    "njev": 254,
+    "nlu": 1672,
+    "accepted_min": -1.9093139511628112e-19,
+    "ic": "C:\\Users\\Admin\\Desktop\\WHEC\\reformer_benchmark\\upstream\\SSMR_simulator\\ICH2O\\Mode2_np50_H2O.mat",
+    "wall_seconds": 145.4850275000208
+  },
+  "execution_status": "COMPLETED_CASE_NOT_M1_ACCEPTANCE",
+  "tracking": {
+    "published_iae_mol": 0.000262,
+    "conventional_iae_mol": 0.0002344477758297131,
+    "paper_literal_iae_mol": 0.0002267976531757447,
+    "relative_deviation_pct": 10.516116095529362,
+    "status": "FAIL",
+    "paper_literal_deviation_pct": 13.436010238265386
+  },
+  "trajectory_display": {
+    "max_absolute_deviation_mol_min": 0.0001705959956831617,
+    "max_nominal_deviation_pct": 61.72538278348272,
+    "reference_uncertainty_bound_mol_min": 4.1701627752435893e-07,
+    "status": "FAIL",
+    "samples_compared": 100,
+    "time_definition": "upstream display labels and last RHS output"
+  },
+  "trajectory_physical": {
+    "max_absolute_deviation_mol_min": 4.446169788874409e-05,
+    "max_nominal_deviation_pct": 16.08722004520752,
+    "reference_uncertainty_bound_mol_min": 4.1701627752435893e-07,
+    "status": "FAIL",
+    "samples_compared": 99,
+    "time_definition": "physical accepted endpoints"
+  }
+}
