@@ -1,6 +1,6 @@
 {
-  "pdf_sha256": "87d520a64a3133d2e93e7d72cd3384f105b7d16dc90c59608a69dd33cb9bf3e5",
-  "generator_sha256": "28b39a228540f43a567048f090925bdf5c67029fca559f66ed9455b3c7585370",
+  "pdf_sha256": "e9308d46347b1efa338b3aa66a534bf925f027ee079147a67743389fd27c1c67",
+  "generator_sha256": "ea226427d72f8d28350204bf49cdd20fa4a556dc6c311a309f0d43e522a524ae",
   "inputs": {
     "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\results\\diagnosis_summary.csv": "28177fd6e0fc18fc31d380b332295e520fca48512de2fa32ce26d7504e4e8414",
     "C:\\Users\\Admin\\Desktop\\WHEC\\reviews\\ssmr_external_20260930\\major_revision_v2\\amendment_feed_only_20260930\\outputs\\paired_summary.csv": "534198c69166425d707db4ae442185a72dffe3bb40f02a9a1a43f65c8c226a0d",
@@ -375,5 +375,5 @@
   "pages": 6,
   "different_model_review": "done 2026-10-01 on V3 (gpt-oss:120b-cloud via tools/ask_model.ps1); findings addressed in V4",
   "user_rewrite": "pending",
-  "created_utc": "2026-09-30T18:56:23.651267+00:00"
+  "created_utc": "2026-09-30T19:19:27.384185+00:00"
 }

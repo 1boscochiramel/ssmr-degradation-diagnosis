@@ -5,14 +5,16 @@ A reproducible extension of the SSMR ethanol-steam-reforming benchmark
 [doi:10.1016/j.renene.2025.124743](https://doi.org/10.1016/j.renene.2025.124743);
 code: [arcmateo/SSMR_Benchmark](https://github.com/arcmateo/SSMR_Benchmark), MIT).
 
-**Status: local review draft v0.2 (1 Oct 2026). Simulation only.** All claims are scoped to the
+**Status: technical note v4 and code, v0.2 (1 Oct 2026). Simulation only.** All claims are scoped to the
 benchmark model, the authors' exponential deterioration mechanisms, Modes 1-2, np = 50 and a declared
 noise model. No experimental, lifetime or savings claims. The current six-page note is
-[`revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf`](revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf);
+[`revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_TECHNICAL_NOTE_V4.pdf`](revision_v2/amendment_equal_ethanol_20260930/output/pdf/SSMR_TECHNICAL_NOTE_V4.pdf);
 every number in it is recomputed from the staged CSVs by
 `revision_v2/amendment_equal_ethanol_20260930/note_v4_20261001/verify_note_v4.py` (56/56 checks).
 
-## What is where
+The note is also at the repository root: [`SSMR_TECHNICAL_NOTE_V4.pdf`](SSMR_TECHNICAL_NOTE_V4.pdf).
+
+
 
 - `reformer_diag/` : milestones M1-M7 of the first pass (Python port, native MATLAB and Octave
   checks, measurement layer, operating map, note v1, estimators, controllers). Table below.

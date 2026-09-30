@@ -7,7 +7,7 @@ import numpy as np, pandas as pd, fitz
 HERE = Path(__file__).resolve().parent; E = HERE.parent; ROOT = E.parent
 OLD = ROOT / 'amendment_feed_only_20260930'
 NATIVE = Path(r'C:\Users\Admin\Desktop\WHEC\reformer_benchmark\work\audit_check\ssmr_native\baseline')
-PDF = E / 'output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf'
+PDF = E / 'output/pdf/SSMR_TECHNICAL_NOTE_V4.pdf'
 CENTRAL = ['m1_C_d05_r1', 'm1_M_d05_r1', 'm2_C_d05_r1', 'm2_M_d05_r1']
 PUB = {'CS1': 7.95e-5, 'CS2T': 2.62e-4, 'CS2P': 2.48e-4}
 

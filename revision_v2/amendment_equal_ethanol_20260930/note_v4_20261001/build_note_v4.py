@@ -67,8 +67,8 @@ class Note:
         assert read(E / 'benchmark_audit/findings_evidence.json')['status'] == 'PASS'
         assert len(self.eq) == 4 and set(self.eq.case_id) == set(CENTRAL) and len(self.tr) == 4000
         self.claims = []; self.page = 0
-        self.pdf = E / 'output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf'; self.pdf.parent.mkdir(parents=True, exist_ok=True)
-        self.c = canvas.Canvas(str(self.pdf), pagesize=A4); self.c.setTitle('Does diagnosis help meet hydrogen demand?'); self.c.setAuthor('Local computational research draft v4')
+        self.pdf = E / 'output/pdf/SSMR_TECHNICAL_NOTE_V4.pdf'; self.pdf.parent.mkdir(parents=True, exist_ok=True)
+        self.c = canvas.Canvas(str(self.pdf), pagesize=A4); self.c.setTitle('Does diagnosis help meet hydrogen demand?'); self.c.setAuthor('Bosco Chiramel')
 
     # ---- layout helpers (unchanged from V3) ----
     def p(self, text, style='body', gap=8):
@@ -88,9 +88,9 @@ class Note:
     def start(self, title):
         if self.page: self.c.showPage()
         self.page += 1; self.y = H - 73; self.c.setFillColor(colors.black); self.c.setFont('Bold', 8)
-        self.c.drawString(L, H - 35, f'SSMR / LOCAL REVIEW DRAFT V4 / {DATE}')
+        self.c.drawString(L, H - 35, f'SSMR BENCHMARK EXTENSION / TECHNICAL NOTE V4 / {DATE}')
         self.c.setStrokeColor(colors.HexColor('#bbbbbb')); self.c.line(L, H - 46, W - L, H - 46)
-        self.c.setFont('Body', 7); self.c.drawString(L, 29, 'Simulation only | Different-model review done 1 Oct 2026 | User rewrite pending')
+        self.c.setFont('Body', 7); self.c.drawString(L, 29, 'Simulation only | 56 displayed numbers recomputed by an independent script | Not externally reviewed')
         self.c.drawRightString(W - L, 29, f'{self.page} / 6'); self.p(esc(title), 'title', 13)
     def diag(self, c, a, s='S4'):
         r = self.d[(self.d.case_id == c) & (self.d.active == a) & (self.d['set'] == s) & (self.d['group'] == 'covered_grid')]; assert len(r) == 1; return r.iloc[0]
@@ -220,7 +220,7 @@ class Note:
         self.p('The feed pulse can improve nominal cause discrimination. The control comparisons measure physical outcomes against two specified feed schedules. They do not establish an optimal policy, a net economic return, or a unique benefit of diagnostic information. A better blind schedule may exist. Resource matching is retrospective; it does not give a real operator an unknown future budget.')
         self.h('What still fails or remains unverified')
         self.p('The selected kinetic-mismatch cases fail completely. Instrument noise, bias and delay are assumed. The healthy-plant action rate is unacceptable as evidence of safe deployment. Only a finite set of simulated faults and conditions is covered; no rig has validated this procedure.')
-        self.p('The original exact exported-start-state byte check remains failed. A separate forensic check supported the intended solver input and unchanged physical quantities; that qualification has not been erased. Some fine-grid native reset logs are also missing. This amendment is Python-only. Same-model checks are complete. A different model (gpt-oss-120b, 1 October 2026) reviewed version 3 cold; its two material findings, the per-episode counts behind the headline and the unqualified precision of the mean differences, are addressed in this version. The user\'s own rewrite remains pending. This is a local review draft, not an externally approved note.', 'small')
+        self.p('The original exact exported-start-state byte check remains failed. A separate forensic check supported the intended solver input and unchanged physical quantities; that qualification has not been erased. Some fine-grid native reset logs are also missing. This amendment is Python-only. Same-model checks are complete. A different model (gpt-oss-120b, 1 October 2026) reviewed version 3 cold; its two material findings, the per-episode counts behind the headline and the unqualified precision of the mean differences, are addressed in this version. This note has not been externally reviewed.', 'small')
         self.h('One-sentence difference from Santra (2026)')
         self.p('Santra (2026) studies actuator-fault estimation and tracking recovery on a three-state reformer surrogate, whereas this note tests calibrated diagnosis of catalyst, membrane, feed and meter faults on distributed benchmark dynamics and compares the resulting feed sequence with blind controls [4].')
         self.p('The full Santra paper was read, including the implemented model in Section 6.1. Active input design for fault diagnosis is established work [5,6], and membrane-reformer tracking with ethanol-use objectives also predates this note [7]. No first-method or head-to-head superiority claim is made. The benchmark\'s conference predecessor (Arcila-Osorio et al., IFAC-PapersOnLine 59(9), 2025, 91-96) has not yet been opened and is therefore not cited.', 'small')

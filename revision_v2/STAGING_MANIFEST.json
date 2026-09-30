@@ -366,28 +366,28 @@
    "bytes": 7379
   },
   "amendment_equal_ethanol_20260930/note_v4_20261001/build_note_v4.py": {
-   "sha256": "28b39a228540f43a567048f090925bdf5c67029fca559f66ed9455b3c7585370",
-   "bytes": 28895
+   "sha256": "ea226427d72f8d28350204bf49cdd20fa4a556dc6c311a309f0d43e522a524ae",
+   "bytes": 28835
   },
   "amendment_equal_ethanol_20260930/note_v4_20261001/note_input_manifest.json": {
-   "sha256": "a55b97152efb32d2224f044c7ae2c3077c29141cf365925cf40e0570200635a0",
+   "sha256": "8953ce85e18828b48204d7aabac54c4c329a9ad69fb2d75c98ece604bc2921cd",
    "bytes": 10522
   },
   "amendment_equal_ethanol_20260930/note_v4_20261001/verify_note_v4.py": {
-   "sha256": "62236063f361468ddce9ad14d4603a2f53c7e312f133654ce68959bde0d1a9fb",
-   "bytes": 5595
+   "sha256": "0bd4de099e909ada549fbdc9a1c176147046be018104bff8ce768622f1f65b52",
+   "bytes": 5581
   },
   "amendment_equal_ethanol_20260930/note_v4_20261001/VERIFY_V4.json": {
-   "sha256": "d3cba3d5760f6f4f4506c4810d777c93b41e0f65786ba9ce98394eebeb6e49b4",
-   "bytes": 5520
+   "sha256": "eb32fda9c1e7b1e39ba71094d3f29dba2de46b3739fe1c99d4e8aeea321a4ac1",
+   "bytes": 5506
   },
   "amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V3_LOCAL_REVIEW.pdf": {
    "sha256": "9672550bcd2c141eb4a815d1bf29f3ee1f7674ea0bb72e8e4432af11c12cd208",
    "bytes": 165928
   },
-  "amendment_equal_ethanol_20260930/output/pdf/SSMR_SCIENTIFIC_NOTE_V4_LOCAL_REVIEW.pdf": {
-   "sha256": "87d520a64a3133d2e93e7d72cd3384f105b7d16dc90c59608a69dd33cb9bf3e5",
-   "bytes": 167475
+  "amendment_equal_ethanol_20260930/output/pdf/SSMR_TECHNICAL_NOTE_V4.pdf": {
+   "sha256": "e9308d46347b1efa338b3aa66a534bf925f027ee079147a67743389fd27c1c67",
+   "bytes": 167645
   },
   "amendment_equal_ethanol_20260930/outputs/arm_costs.csv": {
    "sha256": "57dce1203546ddeee2525082ee7558cc188c48ac0adb1132fddd535d8a3b11fd",
@@ -799,7 +799,7 @@
   }
  },
  "n_files": 199,
- "total_bytes": 37128676,
+ "total_bytes": 37128758,
  "excluded_top_level_items": [
   ".research",
   "__pycache__",
